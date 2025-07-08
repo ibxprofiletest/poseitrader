@@ -1601,7 +1601,7 @@
       }
       function G(e) {
         let { name: t } = e,
-          i = "/diverse_icons/".concat(t, ".png");
+          i = "".concat(t, ".png");
         return (0, n.jsx)(s.default, {
           size: { xs: 6, md: 3 },
           sx: {
