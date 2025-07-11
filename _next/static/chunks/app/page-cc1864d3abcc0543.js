@@ -41,229 +41,189 @@
         return e.json();
       }
       function w() {
-        let [e, t] = h.useInView({ triggerOnce: !0 }),
-          [i, u] = (0, r.useState)(null),
-          [g, w] = (0, r.useState)(null),
-          [k, C] = (0, r.useState)(null);
-        return (
-          (0, r.useEffect)(() => {
-            (async () => {
-              try {
-                let [e, t, i] = await Promise.all([v(), j(), b()]),
-                  n = 100 * Math.floor(e.approximate_member_count / 100);
-                C(n);
-                let r = t.match(/<text[^>]*>([0-9]+[a-zA-Z]+)<\/text>/),
-                  a = r ? r[1].trim() : null;
-                if (a) {
-                  if (a.endsWith("k")) {
-                    let e = parseFloat(a.slice(0, -1)),
-                      t = 1e3 * e;
-                    console.log("Downloads:", t), w(t);
-                  } else {
-                    let e = Number(a);
-                    console.log("Downloads:", e), w(e);
-                  }
-                } else console.error("No matches found for downloads.");
-                let s = 100 * Math.floor(i.stargazers_count / 100);
-                u(s);
-              } catch (e) {
-                console.error("Error fetching data:", e);
-              }
-            })();
-          }, []),
-          (0, n.jsxs)(r.default, {
-            sx: {
-              justifyContent: "center",
-              position: "relative",
-              width: "100%",
-              display: "flex",
-              zIndex: 1,
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundColor: "#1B1B1D",
-            },
-            children: [
-              (0, n.jsx)(r.default, {
+        let [e, t] = h.useInView({ triggerOnce: !0 });
+        
+        return (0, n.jsxs)(r.default, {
+          sx: {
+            justifyContent: "center",
+            position: "relative",
+            width: "100%",
+            display: "flex",
+            zIndex: 1,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundColor: "#1B1B1D",
+          },
+          children: [
+            (0, n.jsx)(r.default, {
+              sx: {
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                top: "10%",
+                opacity: 0.7,
+                zIndex: 0,
+                backgroundImage: "url(hero2.png)",
+                backgroundSize: "contain",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                transform: "scale(3)",
+                transformOrigin: "center",
+              },
+            }),
+            (0, n.jsx)(r.default, {
+              sx: {
+                maxWidth: "1200px !important",
+                display: "flex",
+                justifyContent: "space-between",
+                width: "100%",
+                zIndex: 1,
+              },
+              children: (0, n.jsxs)(r.default, {
                 sx: {
-                  position: "absolute",
+                  mt: { md: "12rem", xs: "8rem" },
+                  mb: { md: "6.5rem", xs: "5rem" },
                   width: "100%",
-                  height: "100%",
-                  top: "10%",
-                  opacity: 0.7,
-                  zIndex: 0,
-                  backgroundImage: "url(hero2.png)",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  transform: "scale(3)",
-                  transformOrigin: "center",
+                  p: "1rem",
                 },
-              }),
-              (0, n.jsx)(r.default, {
-                sx: {
-                  maxWidth: "1200px !important",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  width: "100%",
-                  zIndex: 1,
-                },
-                children: (0, n.jsxs)(r.default, {
-                  sx: {
-                    mt: { md: "12rem", xs: "8rem" },
-                    mb: { md: "6.5rem", xs: "5rem" },
-                    width: "100%",
-                    p: "1rem",
-                  },
-                  children: [
-                    (0, n.jsx)(r.default, {
-                      sx: { mb: "0.5rem" },
-                      children: (0, n.jsxs)(a.default, {
-                        color: "#EEEEEE",
-                        fontFamily: y.GC.style.fontFamily,
-                        fontWeight: "500",
-                        fontSize: { md: "3.7rem", xs: "3rem" },
-                        lineHeight: "1.1",
-                        align: "center",
-                        children: [
-                          "The fastest, most reliable",
-                          (0, r.jsx)("br", {}),
-                          "open-source trading platform",
-                        ],
-                      }),
-                    }),
-                    (0, n.jsx)(a.default, {
-                      color: "#D0D0DC",
-                      fontFamily: y.Tv.style.fontFamily,
-                      fontSize: { md: "1.1rem", xs: "1.2rem" },
-                      mt: { md: "2.5rem", xs: "1rem" },
-                      maxWidth: { md: "68%", xs: "100%" },
-                      fontWeight: "350",
-                      lineHeight: "1.4",
+                children: [
+                  (0, n.jsx)(r.default, {
+                    sx: { mb: "0.5rem" },
+                    children: (0, n.jsxs)(a.default, {
+                      color: "#EEEEEE",
+                      fontFamily: y.GC.style.fontFamily,
+                      fontWeight: "500",
+                      fontSize: { md: "3.7rem", xs: "3rem" },
+                      lineHeight: "1.1",
                       align: "center",
-                      m: "0 auto",
-                      children:
-                        "Trade any asset class in one platform. Event-driven backtests on any historical data. Live trading with no code changes.",
+                      children: [
+                        "The fastest, most reliable",
+                        (0, n.jsx)("br", {}),
+                        "open-source trading platform",
+                      ],
                     }),
-                    (0, n.jsx)(r.default, {
+                  }),
+                  (0, n.jsx)(a.default, {
+                    color: "#D0D0DC",
+                    fontFamily: y.Tv.style.fontFamily,
+                    fontSize: { md: "1.1rem", xs: "1.2rem" },
+                    mt: { md: "2.5rem", xs: "1rem" },
+                    maxWidth: { md: "68%", xs: "100%" },
+                    fontWeight: "350",
+                    lineHeight: "1.4",
+                    align: "center",
+                    m: "0 auto",
+                    children:
+                      "Trade any asset class in one platform. Event-driven backtests on any historical data. Live trading with no code changes.",
+                  }),
+                  (0, n.jsx)(r.default, {
+                    sx: {
+                      display: "flex",
+                      justifyContent: { md: "flex-start", xs: "center" },
+                      width: "100%",
+                      mt: { md: "6.7rem", xs: "4rem" },
+                    },
+                    children: (0, n.jsxs)(s.default, {
+                      container: !0,
+                      spacing: { md: 1, xs: 1 },
                       sx: {
-                        display: "flex",
-                        justifyContent: { md: "flex-start", xs: "center" },
-                        width: "100%",
-                        mt: { md: "6.7rem", xs: "4rem" },
-                      },
-                      children: (0, n.jsxs)(s.default, {
-                        container: !0,
-                        spacing: { md: 1, xs: 1 },
-                        sx: {
-                          display: "grid",
-                          gridTemplateColumns: {
-                            xs: "repeat(1, minmax(200px, 1fr))",
-                            sm: "repeat(3, minmax(200px, 1fr))",
-                          },
-                          gap: { xs: 1, md: 1 },
-                          width: "100%",
-                          justifyContent: "center",
-                          justifyItems: "center",
-                          maxWidth: { sm: "900px", xs: "100%" },
-                          margin: "0 auto",
+                        display: "grid",
+                        gridTemplateColumns: {
+                          xs: "repeat(1, minmax(200px, 1fr))",
+                          sm: "repeat(3, minmax(200px, 1fr))",
                         },
-                        children: [
-                          (0, n.jsx)(S, {
-                            icon: c.H3b,
-                            description: "GitHub Stars",
-                            data: i,
-                            children: null !== i ? "null" : "9,400+",
-                          }),
-                          (0, n.jsx)(S, {
-                            icon: l.mSE,
-                            description: "Downloads",
-                            data: g,
-                            children: null !== g ? null : "659,000+",
-                          }),
-                          (0, n.jsx)(S, {
-                            icon: d.Nxe,
-                            description: "Discord Members",
-                            data: k,
-                            children: null !== k ? null : "2,400+",
-                          }),
-                        ],
-                      }),
-                    }),
-                    (0, n.jsx)(r.default, {
-                      ref: e,
-                      sx: {
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        flexDirection: { md: "row", xs: "column" },
+                        gap: { xs: 1, md: 1 },
                         width: "100%",
-                        mt: "3.5rem",
-                        gap: "1.5rem",
+                        justifyContent: "center",
+                        justifyItems: "center",
+                        maxWidth: { sm: "900px", xs: "100%" },
+                        margin: "0 auto",
                       },
-                      children: (0, n.jsx)(f.P.div, {
-                        initial: { opacity: 0, y: 100 },
-                        animate: t ? { opacity: 1, y: 0 } : {},
-                        transition: { duration: 0.8 },
-                        children: (0, n.jsx)(m(), {
-                          href: "/getting_started",
-                          children: (0, n.jsxs)(r.default, {
-                            sx: {
-                              backgroundImage:
-                                "linear-gradient(0deg, rgba(0,205,178,0.24) 10%, rgba(47,173,215,1) 100%)",
-                              borderRadius: "50px",
-                              padding: "13px 25px",
-                              transition: "all 0.3s",
-                              display: "flex",
-                              alignItems: "center",
-                              animation: "gradientAnimation 9s ease infinite",
-                              border: "2px solid #2f3d50",
-                              "& svg": { color: "#EEEEEE" },
-                              "&:hover": {
-                                cursor: "pointer",
-                                boxShadow: "0 0 20px rgba(47,172,214,0.5)",
-                              },
-                              "&:hover svg": { transform: "translateX(5px)" },
-                              svg: { transition: "all 0.3s" },
-                              "@keyframes gradientAnimation": {
-                                "0%": { backgroundPosition: "0% 50%" },
-                                "50%": { backgroundPosition: "100% 50%" },
-                                "100%": { backgroundPosition: "0% 50%" },
-                              },
+                      children: [
+                        (0, n.jsx)(S, {
+                          icon: c.H3b,
+                          description: "GitHub Stars",
+                          data: "9,400+",
+                        }),
+                        (0, n.jsx)(S, {
+                          icon: l.mSE,
+                          description: "Downloads",
+                          data: "659,000+",
+                        }),
+                        (0, n.jsx)(S, {
+                          icon: d.Nxe,
+                          description: "Discord Members",
+                          data: "2,400+",
+                        }),
+                      ],
+                    }),
+                  }),
+                  (0, n.jsx)(r.default, {
+                    ref: e,
+                    sx: {
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      flexDirection: { md: "row", xs: "column" },
+                      width: "100%",
+                      mt: "3.5rem",
+                      gap: "1.5rem",
+                    },
+                    children: (0, n.jsx)(f.P.div, {
+                      initial: { opacity: 0, y: 100 },
+                      animate: t ? { opacity: 1, y: 0 } : {},
+                      transition: { duration: 0.8 },
+                      children: (0, n.jsx)(m(), {
+                        href: "/getting_started",
+                        children: (0, n.jsxs)(r.default, {
+                          sx: {
+                            backgroundImage:
+                              "linear-gradient(0deg, rgba(0,205,178,0.24) 10%, rgba(47,173,215,1) 100%)",
+                            borderRadius: "50px",
+                            padding: "13px 25px",
+                            transition: "all 0.3s",
+                            display: "flex",
+                            alignItems: "center",
+                            animation: "gradientAnimation 9s ease infinite",
+                            border: "2px solid #2f3d50",
+                            "& svg": { color: "#EEEEEE" },
+                            "&:hover": {
+                              cursor: "pointer",
+                              boxShadow: "0 0 20px rgba(47,172,214,0.5)",
                             },
-                            children: [
-                              (0, n.jsx)(a.default, {
-                                color: "#EEEEEE",
-                                fontSize: "1.1rem",
-                                fontWeight: "300",
-                                fontFamily: y.HM.style.fontFamily,
-                                children: "Get Started",
-                              }),
-                              (0, n.jsx)(x.TEl, { fontSize: "2rem" }),
-                            ],
-                          }),
+                            "&:hover svg": { transform: "translateX(5px)" },
+                            svg: { transition: "all 0.3s" },
+                            "@keyframes gradientAnimation": {
+                              "0%": { backgroundPosition: "0% 50%" },
+                              "50%": { backgroundPosition: "100% 50%" },
+                              "100%": { backgroundPosition: "0% 50%" },
+                            },
+                          },
+                          children: [
+                            (0, n.jsx)(a.default, {
+                              color: "#EEEEEE",
+                              fontSize: "1.1rem",
+                              fontWeight: "300",
+                              fontFamily: y.HM.style.fontFamily,
+                              children: "Get Started",
+                            }),
+                            (0, n.jsx)(x.TEl, { fontSize: "2rem" }),
+                          ],
                         }),
                       }),
                     }),
-                  ],
-                }),
+                  }),
+                ],
               }),
-            ],
-          })
-        );
+            }),
+          ],
+        });
       }
       let k = (e) => e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       function S(e) {
-        let { children: t, description: i, data: s } = e,
-          [o, l] = (0, h.useInView)({ triggerOnce: !0 }),
-          [d, c] = (0, r.useState)(0);
-
-        (0, r.useEffect)(() => {
-          if (s !== null) {
-            let e = Math.floor(s);
-            c(k(e));
-          }
-        }, [s]);
+        let { description: i, data: s, icon: Icon } = e,
+          [o, l] = (0, h.useInView)({ triggerOnce: !0 });
 
         return (
           (0, n.jsx)(r.default, {
@@ -301,7 +261,7 @@
                   fontWeight: "700",
                   lineHeight: "1.2",
                   transform: "all 0.3s ease",
-                  children: null == t ? `${d}+` : t,
+                  children: s,
                 }),
                 (0, n.jsx)(a.default, {
                   color: "#B4B3B7",
