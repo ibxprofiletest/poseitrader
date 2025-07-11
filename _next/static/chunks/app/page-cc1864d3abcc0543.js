@@ -24,21 +24,45 @@
         g = i(97178),
         y = i(59822);
       async function b() {
-        let e = await fetch(
-          "https://api.github.com/repos/nautechsystems/nautilus_trader"
-        );
-        if (!e.ok) console.log("Failed to fetch data");
-        return e.json();
+        try {
+          let e = await fetch(
+            "https://api.github.com/repos/nautechsystems/nautilus_trader"
+          );
+          if (!e.ok) {
+            console.error("Failed to fetch GitHub data:", e.status);
+            return { stargazers_count: 9400 }; // Default fallback value
+          }
+          return await e.json();
+        } catch (error) {
+          console.error("Error fetching GitHub data:", error);
+          return { stargazers_count: 9400 }; // Default fallback value
+        }
       }
       async function j() {
-        let e = await fetch("/api/downloads");
-        if (!e.ok) console.log("Failed to fetch data");
-        return e.text();
+        try {
+          let e = await fetch("/api/downloads");
+          if (!e.ok) {
+            console.error("Failed to fetch downloads data:", e.status);
+            return "659000"; // Default fallback value
+          }
+          return await e.text();
+        } catch (error) {
+          console.error("Error fetching downloads data:", error);
+          return "659000"; // Default fallback value
+        }
       }
       async function v() {
-        let e = await fetch("/api/discord");
-        if (!e.ok) console.log("Failed to fetch data");
-        return e.json();
+        try {
+          let e = await fetch("/api/discord");
+          if (!e.ok) {
+            console.error("Failed to fetch Discord data:", e.status);
+            return { members: 2400 }; // Default fallback value
+          }
+          return await e.json();
+        } catch (error) {
+          console.error("Error fetching Discord data:", error);
+          return { members: 2400 }; // Default fallback value
+        }
       }
       function w() {
         let [e, t] = h.useInView({ triggerOnce: !0 });
