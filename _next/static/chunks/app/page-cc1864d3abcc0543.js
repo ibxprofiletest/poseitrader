@@ -256,20 +256,19 @@
       function S(e) {
         let { children: t, description: i, data: s } = e,
           [o, l] = (0, h.useInView)({ triggerOnce: !0 }),
-          [d, c] = (0, r.useState)(0),
-          x = (0, n.z)(0, { bounce: 0, duration: 500 });
+          [d, c] = (0, r.useState)(0);
+
+        (0, r.useEffect)(() => {
+          if (s !== null) {
+            let e = Math.floor(s);
+            c(k(e));
+          }
+        }, [s]);
+
         return (
-          (0, r.useEffect)(() => {
-            let e = x.on("change", (e) => {
-              let t = Math.round(e);
-              c(() => k(Math.floor(t)));
-            });
-            return x.set(Math.floor(s)), () => e();
-          }, [x, s]),
           (0, n.jsx)(r.default, {
             sx: {
-              backgroundImage:
-                "radial-gradient(circle at 50% 0, #0f2026, #1b1d1c)",
+              backgroundImage: "radial-gradient(circle at 50% 0, #0f2026, #1b1d1c)",
               borderRadius: "10px",
               width: "100%",
               maxWidth: { xs: "100%", sm: "280px" },
@@ -291,8 +290,7 @@
               children: [
                 (0, n.jsx)(a.default, {
                   sx: {
-                    backgroundImage:
-                      "linear-gradient(90deg, rgba(0,205,178,1) 10%, rgba(47,173,215,1) 100%)",
+                    backgroundImage: "linear-gradient(90deg, rgba(0,205,178,1) 10%, rgba(47,173,215,1) 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -303,7 +301,7 @@
                   fontWeight: "700",
                   lineHeight: "1.2",
                   transform: "all 0.3s ease",
-                  children: null == t ? "".concat(d, "+") : t,
+                  children: null == t ? `${d}+` : t,
                 }),
                 (0, n.jsx)(a.default, {
                   color: "#B4B3B7",
