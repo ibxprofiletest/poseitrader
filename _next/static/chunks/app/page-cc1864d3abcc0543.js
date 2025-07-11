@@ -33,12 +33,11 @@
         return "670,000+";
       }
       function w() {
-        const [e, t] = (0, h.useInView)({ triggerOnce: !0 });
         const [downloads, setDownloads] = (0, p.useState)("670,000+");
         const [stars, setStars] = (0, p.useState)("9,700+");
         const [xFollowers, setXFollowers] = (0, p.useState)("2,500+");
+        const [e, t] = (0, h.useInView)({ triggerOnce: !0 });
 
-        // Only update state if values are different
         (0, p.useEffect)(() => {
           const updateStats = async () => {
             try {
@@ -48,19 +47,9 @@
                 getXFollowers()
               ]);
               
-              if (downloadsCount !== downloads) {
-                setDownloads(downloadsCount);
-              }
-              
-              const newStars = starsCount.stargazers_count + "+";
-              if (newStars !== stars) {
-                setStars(newStars);
-              }
-              
-              const newFollowers = followersCount.followers_count + "+";
-              if (newFollowers !== xFollowers) {
-                setXFollowers(newFollowers);
-              }
+              setDownloads(downloadsCount);
+              setStars(starsCount.stargazers_count + "+");
+              setXFollowers(followersCount.followers_count + "+");
             } catch (error) {
               console.error("Error fetching stats:", error);
             }
