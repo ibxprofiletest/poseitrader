@@ -26,7 +26,7 @@
       async function b() {
         return { stargazers_count: 9700 };
       }
-      async function x() {
+      async function getXFollowers() {
         return { followers_count: 2500 };
       }
       async function j() {
@@ -38,14 +38,14 @@
         let [e, t] = (0, h.useInView)({ triggerOnce: !0 }),
           [i, u] = (0, p.useState)(null),
           [g, w] = (0, p.useState)(null),
-          [x, y] = (0, p.useState)(null);
+          [xFollowers, setXFollowers] = (0, p.useState)(null);
         return (
           (0, p.useEffect)(() => {
             (async () => {
               try {
-                let [t, i, f] = await Promise.all([j(), b(), x()]);
+                let [t, i, f] = await Promise.all([j(), b(), getXFollowers()]);
                 let r = t.match(/<text[^>]*>([0-9]+[a-zA-Z]+)<\/text>/)?.[1] || "0";
-                u(r), w(i.stargazers_count + "+"), y(f.followers_count + "+");
+                u(r), w(i.stargazers_count + "+"), setXFollowers(f.followers_count + "+");
               } catch (e) {
                 console.error("Error fetching stats:", e);
               }
@@ -103,7 +103,7 @@
                     (0, n.jsx)("p", {
                       className: "MuiTypography-root MuiTypography-body1 css-1yr2bxo",
                       transform: "all 0.3s ease",
-                      children: x || (0, n.jsx)("span", {
+                      children: xFollowers || (0, n.jsx)("span", {
                         className: "MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-l91id0",
                         style: { width: "90px", height: "40px" },
                       }),
