@@ -1,15 +1,22 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [8974],
   {
-    22300: (e, t, i) => {
-      Promise.resolve().then(() => i(47078));
+    22300: function(e, t, i) {
+      Promise.resolve().then(function() {
+        return i(47078);
+      });
     },
-    47078: (e, t, i) => {
+    47078: function(e, t, i) {
       "use strict";
-      i.r(t), i.d(t, { default: () => et });
+      i.r(t);
+      i.d(t, {
+        default: function() {
+          return et;
+        }
+      });
       var n = i(95155),
         r = i(54581),
-        p = i(67294), // React import
+        p = i(67294),
         a = i(71116),
         s = i(91468),
         o = i(17775),
@@ -23,6 +30,7 @@
         f = i(36545),
         g = i(97178),
         y = i(59822);
+
       const STATIC_DATA = {
         stats: {
           github: "9,400+",
@@ -30,6 +38,7 @@
           discord: "2,400+"
         }
       };
+
       function w() {
         let [e, t] = h.useInView({ triggerOnce: !0 });
         
@@ -43,7 +52,7 @@
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            backgroundColor: "#1B1B1D",
+            backgroundColor: "#1B1B1D"
           },
           children: [
             (0, n.jsx)(r.default, {
@@ -59,8 +68,8 @@
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 transform: "scale(3)",
-                transformOrigin: "center",
-              },
+                transformOrigin: "center"
+              }
             }),
             (0, n.jsx)(r.default, {
               sx: {
@@ -68,14 +77,14 @@
                 display: "flex",
                 justifyContent: "space-between",
                 width: "100%",
-                zIndex: 1,
+                zIndex: 1
               },
               children: (0, n.jsxs)(r.default, {
                 sx: {
                   mt: { md: "12rem", xs: "8rem" },
                   mb: { md: "6.5rem", xs: "5rem" },
                   width: "100%",
-                  p: "1rem",
+                  p: "1rem"
                 },
                 children: [
                   (0, n.jsx)(r.default, {
@@ -90,9 +99,9 @@
                       children: [
                         "The fastest, most reliable",
                         (0, n.jsx)("br", {}),
-                        "open-source trading platform",
-                      ],
-                    }),
+                        "open-source trading platform"
+                      ]
+                    })
                   }),
                   (0, n.jsx)(a.default, {
                     color: "#D0D0DC",
@@ -104,15 +113,14 @@
                     lineHeight: "1.4",
                     align: "center",
                     m: "0 auto",
-                    children:
-                      "Trade any asset class in one platform. Event-driven backtests on any historical data. Live trading with no code changes.",
+                    children: "Trade any asset class in one platform. Event-driven backtests on any historical data. Live trading with no code changes."
                   }),
                   (0, n.jsx)(r.default, {
                     sx: {
                       display: "flex",
                       justifyContent: { md: "flex-start", xs: "center" },
                       width: "100%",
-                      mt: { md: "6.7rem", xs: "4rem" },
+                      mt: { md: "6.7rem", xs: "4rem" }
                     },
                     children: (0, n.jsxs)(s.default, {
                       container: !0,
@@ -121,93 +129,38 @@
                         display: "grid",
                         gridTemplateColumns: {
                           xs: "repeat(1, minmax(200px, 1fr))",
-                          sm: "repeat(3, minmax(200px, 1fr))",
+                          sm: "repeat(3, minmax(200px, 1fr))"
                         },
                         gap: { xs: 1, md: 1 },
                         width: "100%",
                         justifyContent: "center",
                         justifyItems: "center",
                         maxWidth: { sm: "900px", xs: "100%" },
-                        margin: "0 auto",
+                        margin: "0 auto"
                       },
                       children: [
                         (0, n.jsx)(S, {
                           icon: c.H3b,
                           description: "GitHub Stars",
-                          data: STATIC_DATA.stats.github,
+                          data: STATIC_DATA.stats.github
                         }),
                         (0, n.jsx)(S, {
                           icon: l.mSE,
                           description: "Downloads",
-                          data: STATIC_DATA.stats.downloads,
+                          data: STATIC_DATA.stats.downloads
                         }),
                         (0, n.jsx)(S, {
                           icon: d.Nxe,
                           description: "Discord Members",
-                          data: STATIC_DATA.stats.discord,
-                        }),
-                      ],
-                    }),
-                  }),
-                  (0, n.jsx)(r.default, {
-                    ref: e,
-                    sx: {
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      flexDirection: { md: "row", xs: "column" },
-                      width: "100%",
-                      mt: "3.5rem",
-                      gap: "1.5rem",
-                    },
-                    children: (0, n.jsx)(f.P.div, {
-                      initial: { opacity: 0, y: 100 },
-                      animate: t ? { opacity: 1, y: 0 } : {},
-                      transition: { duration: 0.8 },
-                      children: (0, n.jsx)(m(), {
-                        href: "/getting_started",
-                        children: (0, n.jsxs)(r.default, {
-                          sx: {
-                            backgroundImage:
-                              "linear-gradient(0deg, rgba(0,205,178,0.24) 10%, rgba(47,173,215,1) 100%)",
-                            borderRadius: "50px",
-                            padding: "13px 25px",
-                            transition: "all 0.3s",
-                            display: "flex",
-                            alignItems: "center",
-                            animation: "gradientAnimation 9s ease infinite",
-                            border: "2px solid #2f3d50",
-                            "& svg": { color: "#EEEEEE" },
-                            "&:hover": {
-                              cursor: "pointer",
-                              boxShadow: "0 0 20px rgba(47,172,214,0.5)",
-                            },
-                            "&:hover svg": { transform: "translateX(5px)" },
-                            svg: { transition: "all 0.3s" },
-                            "@keyframes gradientAnimation": {
-                              "0%": { backgroundPosition: "0% 50%" },
-                              "50%": { backgroundPosition: "100% 50%" },
-                              "100%": { backgroundPosition: "0% 50%" },
-                            },
-                          },
-                          children: [
-                            (0, n.jsx)(a.default, {
-                              color: "#EEEEEE",
-                              fontSize: "1.1rem",
-                              fontWeight: "300",
-                              fontFamily: y.HM.style.fontFamily,
-                              children: "Get Started",
-                            }),
-                            (0, n.jsx)(x.TEl, { fontSize: "2rem" }),
-                          ],
-                        }),
-                      }),
-                    }),
-                  }),
-                ],
-              }),
-            }),
-          ],
+                          data: STATIC_DATA.stats.discord
+                        })
+                      ]
+                    })
+                  })
+                ]
+              })
+            })
+          ]
         });
       }
       function S(e) {
