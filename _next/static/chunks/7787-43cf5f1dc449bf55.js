@@ -168,7 +168,7 @@
                           }),
                         })
                       : (0, n.jsx)(o(), {
-                          href: "https://x.com/PoseiTrader",
+                          href: "https://discord.com/invite/PoseiTrader",
                           target: "_blank",
                           children: (0, n.jsxs)(i.default, {
                             sx: {
@@ -308,6 +308,16 @@
                             href: "https://github.com/poseisysstems",
                             target: "_blank",
                             children: (0, n.jsx)(d.Tv0, { color: "black" }),
+                          }),
+                          (0, n.jsx)(o(), {
+                            href: "https://discord.gg/PoseiTrader",
+                            target: "_blank",
+                            children: (0, n.jsx)(x.O4U, { color: "black" }),
+                          }),
+                          (0, n.jsx)(o(), {
+                            href: "https://www.linkedin.com/company/nautechsystems/",
+                            target: "_blank",
+                            children: (0, n.jsx)(x.QEs, { color: "black" }),
                           }),
                           (0, n.jsx)(o(), {
                             href: "https://x.com/PoseiTrader",
@@ -982,7 +992,7 @@
                                   })
                                 : null,
                               (0, n.jsx)(p(), {
-                                href: "https://x.com/PoseiTrader",
+                                href: "https://discord.com/invite/PoseiTrader",
                                 target: "_blank",
                                 children: (0, n.jsxs)(a.default, {
                                   sx: {
@@ -1014,7 +1024,7 @@
                                       flexGrow: 1,
                                       whiteSpace: "nowrap",
                                       fontFamily: y.HM.style.fontFamily,
-                                      children: "Join X",
+                                      children: "Join Discord",
                                     }),
                                     (0, n.jsx)(b.TEl, { fontSize: "1.1rem" }),
                                   ],

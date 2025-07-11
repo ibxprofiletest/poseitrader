@@ -1,22 +1,14 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [8974],
   {
-    22300: function(e, t, i) {
-      Promise.resolve().then(function() {
-        return i(47078);
-      });
+    22300: (e, t, i) => {
+      Promise.resolve().then(i.bind(i, 47078));
     },
-    47078: function(e, t, i) {
+    47078: (e, t, i) => {
       "use strict";
-      i.r(t);
-      i.d(t, {
-        default: function() {
-          return et;
-        }
-      });
+      i.r(t), i.d(t, { default: () => et });
       var n = i(95155),
         r = i(54581),
-        p = i(67294),
         a = i(71116),
         s = i(91468),
         o = i(17775),
@@ -24,190 +16,307 @@
         d = i(59432),
         c = i(59948),
         x = i(23671),
-        h = i(3096),
+        p = i(12115),
         u = i(6874),
         m = i.n(u),
         f = i(36545),
         g = i(97178),
+        h = i(3096),
         y = i(59822);
-
-      // Static data
-      var STATIC_DATA = {
-        stats: {
-          github: "9400+",
-          downloads: "659000+",
-          x: "2400+"
-        }
-      };
-
-      function w() {
-        let [e, t] = h.useInView({ triggerOnce: !0 });
-        
-        return (0, n.jsxs)(r.default, {
-          sx: {
-            justifyContent: "center",
-            position: "relative",
-            width: "100%",
-            display: "flex",
-            zIndex: 1,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundColor: "#1B1B1D"
-          },
-          children: [
-            (0, n.jsx)(r.default, {
-              sx: {
-                position: "absolute",
-                width: "100%",
-                height: "100%",
-                top: "10%",
-                opacity: 0.7,
-                zIndex: 0,
-                backgroundImage: "url(hero2.png)",
-                backgroundSize: "contain",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                transform: "scale(3)",
-                transformOrigin: "center"
-              }
-            }),
-            (0, n.jsx)(r.default, {
-              sx: {
-                maxWidth: "1200px !important",
-                display: "flex",
-                justifyContent: "space-between",
-                width: "100%",
-                zIndex: 1
-              },
-              children: (0, n.jsxs)(r.default, {
-                sx: {
-                  mt: { md: "12rem", xs: "8rem" },
-                  mb: { md: "6.5rem", xs: "5rem" },
-                  width: "100%",
-                  p: "1rem"
-                },
-                children: [
-                  (0, n.jsx)(r.default, {
-                    sx: { mb: "0.5rem" },
-                    children: (0, n.jsxs)(a.default, {
-                      color: "#EEEEEE",
-                      fontFamily: y.GC.style.fontFamily,
-                      fontWeight: "500",
-                      fontSize: { md: "3.7rem", xs: "3rem" },
-                      lineHeight: "1.1",
-                      align: "center",
-                      children: [
-                        "The fastest, most reliable",
-                        (0, n.jsx)("br", {}),
-                        "open-source trading platform"
-                      ]
-                    })
-                  }),
-                  (0, n.jsx)(a.default, {
-                    color: "#D0D0DC",
-                    fontFamily: y.Tv.style.fontFamily,
-                    fontSize: { md: "1.1rem", xs: "1.2rem" },
-                    mt: { md: "2.5rem", xs: "1rem" },
-                    maxWidth: { md: "68%", xs: "100%" },
-                    fontWeight: "350",
-                    lineHeight: "1.4",
-                    align: "center",
-                    m: "0 auto",
-                    children: "Trade any asset class in one platform. Event-driven backtests on any historical data. Live trading with no code changes."
-                  }),
-                  (0, n.jsx)(r.default, {
-                    sx: {
-                      display: "flex",
-                      justifyContent: { md: "flex-start", xs: "center" },
-                      width: "100%",
-                      mt: { md: "6.7rem", xs: "4rem" }
-                    },
-                    children: (0, n.jsxs)(s.default, {
-                      container: !0,
-                      spacing: { md: 1, xs: 1 },
-                      sx: {
-                        display: "grid",
-                        gridTemplateColumns: {
-                          xs: "repeat(1, minmax(200px, 1fr))",
-                          sm: "repeat(3, minmax(200px, 1fr))"
-                        },
-                        gap: { xs: 1, md: 1 },
-                        width: "100%",
-                        justifyContent: "center",
-                        justifyItems: "center",
-                        maxWidth: { sm: "900px", xs: "100%" },
-                        margin: "0 auto"
-                      },
-                      children: [
-                        (0, n.jsx)(S, {
-                          icon: c.H3b,
-                          description: "GitHub Stars",
-                          data: STATIC_DATA.stats.github
-                        }),
-                        (0, n.jsx)(S, {
-                          icon: l.mSE,
-                          description: "Downloads",
-                          data: STATIC_DATA.stats.downloads
-                        }),
-                        (0, n.jsx)(S, {
-                          icon: d.Nxe,
-                          description: "X Followers",
-                          data: STATIC_DATA.stats.x
-                        })
-                      ]
-                    })
-                  })
-                ]
-              })
-            })
-          ]
-        });
+      async function b() {
+        let e = await fetch(
+          "https://api.github.com/repos/nautechsystems/nautilus_trader"
+        );
+        if (!e.ok) console.log("Failed to fetch data");
+        return e.json();
       }
-      function S(e) {
-        let { description: i, data: s, icon: Icon } = e;
-        return (0, n.jsx)(r.default, {
-          sx: {
-            backgroundImage: "radial-gradient(circle at 50% 0, #0f2026, #1b1d1c)",
-            borderRadius: "10px",
-            width: "100%",
-            maxWidth: { xs: "100%", sm: "280px" },
-          },
-          children: (0, n.jsxs)(r.default, {
+      async function j() {
+        let e = await fetch("/api/downloads");
+        if (!e.ok) console.log("Failed to fetch data");
+        return e.text();
+      }
+      async function v() {
+        let e = await fetch("/api/discord");
+        if (!e.ok) console.log("Failed to fetch data");
+        return e.json();
+      }
+      function w() {
+        let [e, t] = (0, h.useInView)({ triggerOnce: !0 }),
+          [i, u] = (0, p.useState)(null),
+          [g, w] = (0, p.useState)(null),
+          [k, C] = (0, p.useState)(null);
+        return (
+          (0, p.useEffect)(() => {
+            (async () => {
+              try {
+                let [e, t, i] = await Promise.all([v(), j(), b()]),
+                  n = 100 * Math.floor(e.approximate_member_count / 100);
+                C(n);
+                let r = t.match(/<text[^>]*>([0-9]+[a-zA-Z]+)<\/text>/),
+                  a = r ? r[1].trim() : null;
+                if (a) {
+                  if (a.endsWith("k")) {
+                    let e = parseFloat(a.slice(0, -1)),
+                      t = 1e3 * e;
+                    console.log("Downloads:", t), w(t);
+                  } else {
+                    let e = Number(a);
+                    console.log("Downloads:", e), w(e);
+                  }
+                } else console.error("No matches found for downloads.");
+                let s = 100 * Math.floor(i.stargazers_count / 100);
+                u(s);
+              } catch (e) {
+                console.error("Error fetching data:", e);
+              }
+            })();
+          }, []),
+          (0, n.jsxs)(r.default, {
             sx: {
-              height: "100%",
-              display: "flex",
               justifyContent: "center",
-              gap: "0.3rem",
-              alignItems: "center",
-              padding: "1.3rem",
               position: "relative",
-              transition: "all 0.3s",
-              border: "2px solid #1e353d",
-              flexDirection: "column",
-              borderRadius: "10px",
+              width: "100%",
+              display: "flex",
+              zIndex: 1,
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundColor: "#1B1B1D",
             },
             children: [
-              (0, n.jsx)(Icon, {
-                sx: { fontSize: "2rem", color: "#2FACD6" },
+              (0, n.jsx)(r.default, {
+                sx: {
+                  position: "absolute",
+                  width: "100%",
+                  height: "100%",
+                  top: "10%",
+                  opacity: 0.7,
+                  zIndex: 0,
+                  backgroundImage: "url(hero2.png)",
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  transform: "scale(3)",
+                  transformOrigin: "center",
+                },
               }),
-              (0, n.jsx)(a.default, {
-                color: "#EEEEEE",
-                fontSize: "2rem",
-                fontWeight: "500",
-                fontFamily: y.GC.style.fontFamily,
-                children: s,
-              }),
-              (0, n.jsx)(a.default, {
-                color: "#D0D0DC",
-                fontSize: "0.9rem",
-                fontWeight: "300",
-                fontFamily: y.Tv.style.fontFamily,
-                children: i,
+              (0, n.jsx)(r.default, {
+                sx: {
+                  maxWidth: "1200px !important",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  width: "100%",
+                  zIndex: 1,
+                },
+                children: (0, n.jsxs)(r.default, {
+                  sx: {
+                    mt: { md: "12rem", xs: "8rem" },
+                    mb: { md: "6.5rem", xs: "5rem" },
+                    width: "100%",
+                    p: "1rem",
+                  },
+                  children: [
+                    (0, n.jsx)(r.default, {
+                      sx: { mb: "0.5rem" },
+                      children: (0, n.jsxs)(a.default, {
+                        color: "#EEEEEE",
+                        fontFamily: y.GC.style.fontFamily,
+                        fontWeight: "500",
+                        fontSize: { md: "3.7rem", xs: "3rem" },
+                        lineHeight: "1.1",
+                        align: "center",
+                        children: [
+                          "The fastest, most reliable",
+                          (0, n.jsx)("br", {}),
+                          "open-source trading platform",
+                        ],
+                      }),
+                    }),
+                    (0, n.jsx)(a.default, {
+                      color: "#D0D0DC",
+                      fontFamily: y.Tv.style.fontFamily,
+                      fontSize: { md: "1.1rem", xs: "1.2rem" },
+                      mt: { md: "2.5rem", xs: "1rem" },
+                      maxWidth: { md: "68%", xs: "100%" },
+                      fontWeight: "350",
+                      lineHeight: "1.4",
+                      align: "center",
+                      m: "0 auto",
+                      children:
+                        "Trade any asset class in one platform. Event-driven backtests on any historical data. Live trading with no code changes.",
+                    }),
+                    (0, n.jsx)(r.default, {
+                      sx: {
+                        display: "flex",
+                        justifyContent: { md: "flex-start", xs: "center" },
+                        width: "100%",
+                        mt: { md: "6.7rem", xs: "4rem" },
+                      },
+                      children: (0, n.jsxs)(s.default, {
+                        container: !0,
+                        spacing: { md: 1, xs: 1 },
+                        sx: {
+                          display: "grid",
+                          gridTemplateColumns: {
+                            xs: "repeat(1, minmax(200px, 1fr))",
+                            sm: "repeat(3, minmax(200px, 1fr))",
+                          },
+                          gap: { xs: 1, md: 1 },
+                          width: "100%",
+                          justifyContent: "center",
+                          justifyItems: "center",
+                          maxWidth: { sm: "900px", xs: "100%" },
+                          margin: "0 auto",
+                        },
+                        children: [
+                          (0, n.jsx)(S, {
+                            icon: c.H3b,
+                            description: "GitHub Stars",
+                            data: i,
+                            children: null !== i ? "null" : "9,400+",
+                          }),
+                          (0, n.jsx)(S, {
+                            icon: l.mSE,
+                            description: "Downloads",
+                            data: g,
+                            children: null !== g ? null : "659,000+",
+                          }),
+                          (0, n.jsx)(S, {
+                            icon: d.Nxe,
+                            description: "Discord Members",
+                            data: k,
+                            children: null !== k ? null : "2,400+",
+                          }),
+                        ],
+                      }),
+                    }),
+                    (0, n.jsx)(r.default, {
+                      ref: e,
+                      sx: {
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        flexDirection: { md: "row", xs: "column" },
+                        width: "100%",
+                        mt: "3.5rem",
+                        gap: "1.5rem",
+                      },
+                      children: (0, n.jsx)(f.P.div, {
+                        initial: { opacity: 0, y: 100 },
+                        animate: t ? { opacity: 1, y: 0 } : {},
+                        transition: { duration: 0.8 },
+                        children: (0, n.jsx)(m(), {
+                          href: "/getting_started",
+                          children: (0, n.jsxs)(r.default, {
+                            sx: {
+                              backgroundImage:
+                                "linear-gradient(0deg, rgba(0,205,178,0.24) 10%, rgba(47,173,215,1) 100%)",
+                              borderRadius: "50px",
+                              padding: "13px 25px",
+                              transition: "all 0.3s",
+                              display: "flex",
+                              alignItems: "center",
+                              animation: "gradientAnimation 9s ease infinite",
+                              border: "2px solid #2f3d50",
+                              "& svg": { color: "#EEEEEE" },
+                              "&:hover": {
+                                cursor: "pointer",
+                                boxShadow: "0 0 20px rgba(47,172,214,0.5)",
+                              },
+                              "&:hover svg": { transform: "translateX(5px)" },
+                              svg: { transition: "all 0.3s" },
+                              "@keyframes gradientAnimation": {
+                                "0%": { backgroundPosition: "0% 50%" },
+                                "50%": { backgroundPosition: "100% 50%" },
+                                "100%": { backgroundPosition: "0% 50%" },
+                              },
+                            },
+                            children: [
+                              (0, n.jsx)(a.default, {
+                                color: "#EEEEEE",
+                                fontSize: "1.1rem",
+                                fontWeight: "300",
+                                fontFamily: y.HM.style.fontFamily,
+                                children: "Get Started",
+                              }),
+                              (0, n.jsx)(x.TEl, { fontSize: "2rem" }),
+                            ],
+                          }),
+                        }),
+                      }),
+                    }),
+                  ],
+                }),
               }),
             ],
-          }),
-        });
+          })
+        );
+      }
+      let k = (e) => e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      function S(e) {
+        let { children: t, description: i, data: s } = e,
+          [o, l] = (0, h.useInView)({ triggerOnce: !0 }),
+          [d, c] = (0, p.useState)(0),
+          x = (0, g.z)(0, { bounce: 0, duration: 500 });
+        return (
+          (0, p.useEffect)(() => {
+            let e = x.on("change", (e) => {
+              let t = Math.round(e);
+              c(() => k(Math.floor(t)));
+            });
+            return x.set(Math.floor(s)), () => e();
+          }, [x, s]),
+          (0, n.jsx)(r.default, {
+            sx: {
+              backgroundImage:
+                "radial-gradient(circle at 50% 0, #0f2026, #1b1d1c)",
+              borderRadius: "10px",
+              width: "100%",
+              maxWidth: { xs: "100%", sm: "280px" },
+            },
+            children: (0, n.jsxs)(r.default, {
+              sx: {
+                height: "100%",
+                display: "flex",
+                justifyContent: "center",
+                gap: "0.3rem",
+                alignItems: "center",
+                padding: "1.3rem",
+                position: "relative",
+                transition: "all 0.3s",
+                border: "2px solid #1e353d",
+                flexDirection: "column",
+                borderRadius: "10px",
+              },
+              children: [
+                (0, n.jsx)(a.default, {
+                  sx: {
+                    backgroundImage:
+                      "linear-gradient(90deg, rgba(0,205,178,1) 10%, rgba(47,173,215,1) 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                    textFillColor: "transparent",
+                  },
+                  fontFamily: y.Tv.style.fontFamily,
+                  fontSize: { md: "2rem", xs: "1.5rem" },
+                  fontWeight: "700",
+                  lineHeight: "1.2",
+                  transform: "all 0.3s ease",
+                  children: null == t ? "".concat(d, "+") : t,
+                }),
+                (0, n.jsx)(a.default, {
+                  color: "#B4B3B7",
+                  fontSize: { md: "1rem", xs: "1rem" },
+                  fontFamily: y.Tv.style.fontFamily,
+                  fontWeight: "500",
+                  lineHeight: "1.2",
+                  children: i,
+                }),
+              ],
+            }),
+          })
+        );
       }
       var C = i(66766);
       let I = [
@@ -1113,9 +1222,11 @@
         M = i(18096);
       function V() {
         let [e, t] = (0, h.useInView)({ triggerOnce: !0 }),
-          [i, o] = (0, r.useState)(0),
-          [d, c] = (0, r.useState)(!1),
-          [x, u] = (0, r.useState)(""),
+          [i, o] = (0, p.useState)(0),
+          [d, c] = (0, p.useState)(!1),
+          [x, u] = (0, p.useState)(""),
+          [m, g] = (0, p.useState)("1.0.0"),
+          [b, j] = (0, p.useState)(!0),
           v = () => {
             let e = navigator.platform || "",
               t = navigator.userAgent || "";
@@ -1142,19 +1253,30 @@
                     v();
                   })
               : v();
+          },
+          k = async () => {
+            try {
+              j(!0);
+              let e = await fetch("/api/version");
+              if (e.ok) {
+                let t = await e.json();
+                g(t.version);
+              }
+            } catch (e) {
+              console.error("Error fetching version:", e);
+            } finally {
+              j(!1);
+            }
           };
-
-        (0, r.useEffect)(() => {
-          w();
+        (0, p.useEffect)(() => {
+          w(), k();
         }, []);
-
         let S = (e) => {
             navigator.clipboard.writeText(e),
               c(!0),
               setTimeout(() => c(!1), 2e3);
           },
           C = [{ tab: "Python", command: "pip install -U posei_trader" }];
-
         return (0, n.jsx)(r.default, {
           sx: { backgroundColor: "#1b1b1d" },
           children: (0, n.jsx)(r.default, {
@@ -1359,8 +1481,11 @@
                               fontFamily: y.Tv.style.fontFamily,
                               textAlign: "left",
                               children: [
-                                "Latest release: PoseiTrader 1.0.0",
-                                x && " | System detected: ".concat(x),
+                                "Latest release: PoseiTrader",
+                                " ",
+                                b ? "..." : m,
+                                " ",
+                                x && "| System detected: ".concat(x),
                               ],
                             }),
                           }),
@@ -1475,7 +1600,8 @@
         });
       }
       function G(e) {
-        let { name: t } = e;
+        let { name: t } = e,
+          i = "".concat(t, ".png");
         return (0, n.jsx)(s.default, {
           size: { xs: 6, md: 3 },
           sx: {
@@ -1486,19 +1612,13 @@
             height: "125px",
           },
           children: (0, n.jsx)(C.default, {
-            priority: true,
-            src: "/product_icons/" + t + ".svg",
+            priority: !0,
+            src: i,
             alt: t,
             width: 160,
             height: 40,
             style: { filter: "grayscale(100%)" },
-            onError: function(e) {
-              console.error("Failed to load image: " + t);
-              if (e.currentTarget) {
-                e.currentTarget.style.display = "none";
-              }
-            }
-          })
+          }),
         });
       }
       var X = i(14426),
@@ -1506,10 +1626,10 @@
         Z = i(67350),
         K = i(46108);
       function Q() {
-        let [e, t] = (0, r.useState)("SUBSCRIBE TO OUR NEWSLETTER"),
-          [i, s] = (0, r.useState)(""),
-          [o, l] = (0, r.useState)(!1),
-          [d, c] = (0, r.useState)(!1),
+        let [e, t] = (0, p.useState)("SUBSCRIBE TO OUR NEWSLETTER"),
+          [i, s] = (0, p.useState)(""),
+          [o, l] = (0, p.useState)(!1),
+          [d, c] = (0, p.useState)(!1),
           x = async () => {
             if ((l(!0), s(""), e && "SUBSCRIBE TO OUR NEWSLETTER" !== e))
               try {
@@ -1743,24 +1863,21 @@
       var $ = i(83692),
         ee = i(65100);
       function et() {
-        return (0, n.jsxs)(n.Fragment, {
+        return (0, n.jsxs)(r.default, {
+          sx: { width: "100%" },
           children: [
+            (0, n.jsx)($.default, { gettingStarted: !0 }),
             (0, n.jsx)(w, {}),
             (0, n.jsx)(z, {}),
-            (0, n.jsx)(F, {}),
             (0, n.jsx)(W, {}),
-            (0, n.jsx)(D, {}),
-            (0, n.jsx)(_, {}),
-            (0, n.jsx)(O, {}),
             (0, n.jsx)(R, {}),
+            (0, n.jsx)(_, {}),
             (0, n.jsx)(H, {}),
-            (0, n.jsx)(U, {}),
             (0, n.jsx)(V, {}),
             (0, n.jsx)(q, {}),
-            (0, n.jsx)(G, {}),
-            (0, n.jsx)(Q, {}),
-            (0, n.jsx)(Y, {})
-          ]
+            (0, n.jsx)(Y, {}),
+            (0, n.jsx)(ee.default, { gettingStarted: !0 }),
+          ],
         });
       }
     },

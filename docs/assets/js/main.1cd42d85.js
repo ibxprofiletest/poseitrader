@@ -26456,6 +26456,18 @@
                 "aria-label": "GitHub repository",
               },
               {
+                href: "https://discord.gg/PoseiTrader",
+                position: "right",
+                className: "header-discord-link common-social",
+                "aria-label": "Discord",
+              },
+              {
+                href: "https://www.linkedin.com/company/nautechsystems/",
+                position: "right",
+                className: "header-linkedin-link common-social",
+                "aria-label": "Linkedin",
+              },
+              {
                 href: "https://twitter.com/PoseiTrader",
                 position: "right",
                 className: "header-x-link common-social",
