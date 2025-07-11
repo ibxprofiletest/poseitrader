@@ -34,17 +34,23 @@
       }
       function w() {
         let [e, t] = (0, h.useInView)({ triggerOnce: !0 }),
-          [i, u] = (0, p.useState)(null),
-          [g, w] = (0, p.useState)(null),
+          [downloads, setDownloads] = (0, p.useState)(null),
+          [stars, setStars] = (0, p.useState)(null),
           [xFollowers, setXFollowers] = (0, p.useState)(null);
         return (
           (0, p.useEffect)(() => {
             (async () => {
               try {
-                let [t, i, f] = await Promise.all([j(), b(), getXFollowers()]);
-                u(t), w(i.stargazers_count + "+"), setXFollowers(f.followers_count + "+");
+                let [downloadsCount, starsCount, followersCount] = await Promise.all([j(), b(), getXFollowers()]);
+                setDownloads(downloadsCount);
+                setStars(starsCount.stargazers_count + "+");
+                setXFollowers(followersCount.followers_count + "+");
               } catch (e) {
                 console.error("Error fetching stats:", e);
+                // Set fallback values in case of error
+                setDownloads("670,000+");
+                setStars("9,700+");
+                setXFollowers("2,500+");
               }
             })();
           }, []),
@@ -60,7 +66,7 @@
                     (0, n.jsx)("p", {
                       className: "MuiTypography-root MuiTypography-body1 css-1yr2bxo",
                       transform: "all 0.3s ease",
-                      children: g || (0, n.jsx)("span", {
+                      children: stars || (0, n.jsx)("span", {
                         className: "MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-l91id0",
                         style: { width: "90px", height: "40px" },
                       }),
@@ -80,7 +86,7 @@
                     (0, n.jsx)("p", {
                       className: "MuiTypography-root MuiTypography-body1 css-1yr2bxo",
                       transform: "all 0.3s ease",
-                      children: i || (0, n.jsx)("span", {
+                      children: downloads || (0, n.jsx)("span", {
                         className: "MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-l91id0",
                         style: { width: "90px", height: "40px" },
                       }),
