@@ -9,6 +9,7 @@
       i.r(t), i.d(t, { default: () => et });
       var n = i(95155),
         r = i(54581),
+        React = i(67294), // Add React import
         a = i(71116),
         s = i(91468),
         o = i(17775),
@@ -1863,27 +1864,19 @@
       var $ = i(83692),
         ee = i(65100);
       function et() {
-        const [isClient, setIsClient] = React.useState(false);
-
-        React.useEffect(() => {
-          setIsClient(true);
-        }, []);
-
         return (0, n.jsxs)(r.default, {
           sx: { width: "100%" },
           children: [
             (0, n.jsx)($.default, { gettingStarted: !0 }),
-            isClient && [
-              (0, n.jsx)(w, {}),
-              (0, n.jsx)(z, {}),
-              (0, n.jsx)(W, {}),
-              (0, n.jsx)(R, {}),
-              (0, n.jsx)(_, {}),
-              (0, n.jsx)(H, {}),
-              (0, n.jsx)(V, {}),
-              (0, n.jsx)(q, {}),
-              (0, n.jsx)(Y, {})
-            ],
+            (0, n.jsx)(w, {}),
+            (0, n.jsx)(z, {}),
+            (0, n.jsx)(W, {}),
+            (0, n.jsx)(R, {}),
+            (0, n.jsx)(_, {}),
+            (0, n.jsx)(H, {}),
+            (0, n.jsx)(V, {}),
+            (0, n.jsx)(q, {}),
+            (0, n.jsx)(Y, {}),
             (0, n.jsx)(ee.default, { gettingStarted: !0 }),
           ],
         });
