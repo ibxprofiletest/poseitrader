@@ -24,92 +24,226 @@
         h = i(3096),
         y = i(59822);
       async function b() {
-        return { stargazers_count: 9700 };
-      }
-      async function getXFollowers() {
-        return { followers_count: 2500 };
+        let e = await fetch(
+          "https://api.github.com/repos/nautechsystems/nautilus_trader"
+        );
+        if (!e.ok) console.log("Failed to fetch data");
+        return e.json();
       }
       async function j() {
-        return "670,000+";
+        let e = await fetch("/api/downloads");
+        if (!e.ok) console.log("Failed to fetch data");
+        return e.text();
+      }
+      async function v() {
+        let e = await fetch("/api/discord");
+        if (!e.ok) console.log("Failed to fetch data");
+        return e.json();
       }
       function w() {
-        const [downloads, setDownloads] = (0, p.useState)("670,000+");
-        const [stars, setStars] = (0, p.useState)("9,700+");
-        const [xFollowers, setXFollowers] = (0, p.useState)("2,500+");
-        const [e, t] = (0, h.useInView)({ triggerOnce: !0 });
-
-        (0, p.useEffect)(() => {
-          const updateStats = async () => {
-            try {
-              const [downloadsCount, starsCount, followersCount] = await Promise.all([
-                j(),
-                b(),
-                getXFollowers()
-              ]);
-              
-              setDownloads(downloadsCount);
-              setStars(starsCount.stargazers_count + "+");
-              setXFollowers(followersCount.followers_count + "+");
-            } catch (error) {
-              console.error("Error fetching stats:", error);
-            }
-          };
-          
-          updateStats();
-        }, []);
-
+        let [e, t] = (0, h.useInView)({ triggerOnce: !0 }),
+          [i, u] = (0, p.useState)(null),
+          [g, w] = (0, p.useState)(null),
+          [k, C] = (0, p.useState)(null);
         return (
-          (0, n.jsxs)("div", {
-            ref: e,
-            className: "MuiBox-root css-1cxf3be",
+          (0, p.useEffect)(() => {
+            (async () => {
+              try {
+                let [e, t, i] = await Promise.all([v(), j(), b()]),
+                  n = 100 * Math.floor(e.approximate_member_count / 100);
+                C(n);
+                let r = t.match(/<text[^>]*>([0-9]+[a-zA-Z]+)<\/text>/),
+                  a = r ? r[1].trim() : null;
+                if (a) {
+                  if (a.endsWith("k")) {
+                    let e = parseFloat(a.slice(0, -1)),
+                      t = 1e3 * e;
+                    console.log("Downloads:", t), w(t);
+                  } else {
+                    let e = Number(a);
+                    console.log("Downloads:", e), w(e);
+                  }
+                } else console.error("No matches found for downloads.");
+                let s = 100 * Math.floor(i.stargazers_count / 100);
+                u(s);
+              } catch (e) {
+                console.error("Error fetching data:", e);
+              }
+            })();
+          }, []),
+          (0, n.jsxs)(r.default, {
+            sx: {
+              justifyContent: "center",
+              position: "relative",
+              width: "100%",
+              display: "flex",
+              zIndex: 1,
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundColor: "#1B1B1D",
+            },
             children: [
-              (0, n.jsx)("div", {
-                className: "MuiBox-root css-9u8dvq",
-                children: (0, n.jsxs)("div", {
-                  className: "MuiBox-root css-9u8dvq",
-                  children: [
-                    (0, n.jsx)("p", {
-                      className: "MuiTypography-root MuiTypography-body1 css-1yr2bxo",
-                      transform: "all 0.3s ease",
-                      children: stars
-                    }),
-                    (0, n.jsx)("p", {
-                      className: "MuiTypography-root MuiTypography-body1 css-6q6x2s",
-                      children: "GitHub Stars",
-                    }),
-                  ],
-                }),
+              (0, n.jsx)(r.default, {
+                sx: {
+                  position: "absolute",
+                  width: "100%",
+                  height: "100%",
+                  top: "10%",
+                  opacity: 0.7,
+                  zIndex: 0,
+                  backgroundImage: "url(hero2.png)",
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  transform: "scale(3)",
+                  transformOrigin: "center",
+                },
               }),
-              (0, n.jsx)("div", {
-                className: "MuiBox-root css-9u8dvq",
-                children: (0, n.jsxs)("div", {
-                  className: "MuiBox-root css-9u8dvq",
+              (0, n.jsx)(r.default, {
+                sx: {
+                  maxWidth: "1200px !important",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  width: "100%",
+                  zIndex: 1,
+                },
+                children: (0, n.jsxs)(r.default, {
+                  sx: {
+                    mt: { md: "12rem", xs: "8rem" },
+                    mb: { md: "6.5rem", xs: "5rem" },
+                    width: "100%",
+                    p: "1rem",
+                  },
                   children: [
-                    (0, n.jsx)("p", {
-                      className: "MuiTypography-root MuiTypography-body1 css-1yr2bxo",
-                      transform: "all 0.3s ease",
-                      children: downloads
+                    (0, n.jsx)(r.default, {
+                      sx: { mb: "0.5rem" },
+                      children: (0, n.jsxs)(a.default, {
+                        color: "#EEEEEE",
+                        fontFamily: y.GC.style.fontFamily,
+                        fontWeight: "500",
+                        fontSize: { md: "3.7rem", xs: "3rem" },
+                        lineHeight: "1.1",
+                        align: "center",
+                        children: [
+                          "The fastest, most reliable",
+                          (0, n.jsx)("br", {}),
+                          "open-source trading platform",
+                        ],
+                      }),
                     }),
-                    (0, n.jsx)("p", {
-                      className: "MuiTypography-root MuiTypography-body1 css-6q6x2s",
-                      children: "Downloads",
+                    (0, n.jsx)(a.default, {
+                      color: "#D0D0DC",
+                      fontFamily: y.Tv.style.fontFamily,
+                      fontSize: { md: "1.1rem", xs: "1.2rem" },
+                      mt: { md: "2.5rem", xs: "1rem" },
+                      maxWidth: { md: "68%", xs: "100%" },
+                      fontWeight: "350",
+                      lineHeight: "1.4",
+                      align: "center",
+                      m: "0 auto",
+                      children:
+                        "Trade any asset class in one platform. Event-driven backtests on any historical data. Live trading with no code changes.",
                     }),
-                  ],
-                }),
-              }),
-              (0, n.jsx)("div", {
-                className: "MuiBox-root css-9u8dvq",
-                children: (0, n.jsxs)("div", {
-                  className: "MuiBox-root css-9u8dvq",
-                  children: [
-                    (0, n.jsx)("p", {
-                      className: "MuiTypography-root MuiTypography-body1 css-1yr2bxo",
-                      transform: "all 0.3s ease",
-                      children: xFollowers
+                    (0, n.jsx)(r.default, {
+                      sx: {
+                        display: "flex",
+                        justifyContent: { md: "flex-start", xs: "center" },
+                        width: "100%",
+                        mt: { md: "6.7rem", xs: "4rem" },
+                      },
+                      children: (0, n.jsxs)(s.default, {
+                        container: !0,
+                        spacing: { md: 1, xs: 1 },
+                        sx: {
+                          display: "grid",
+                          gridTemplateColumns: {
+                            xs: "repeat(1, minmax(200px, 1fr))",
+                            sm: "repeat(3, minmax(200px, 1fr))",
+                          },
+                          gap: { xs: 1, md: 1 },
+                          width: "100%",
+                          justifyContent: "center",
+                          justifyItems: "center",
+                          maxWidth: { sm: "900px", xs: "100%" },
+                          margin: "0 auto",
+                        },
+                        children: [
+                          (0, n.jsx)(S, {
+                            icon: c.H3b,
+                            description: "GitHub Stars",
+                            data: i,
+                            children: null !== i ? "null" : "9,400+",
+                          }),
+                          (0, n.jsx)(S, {
+                            icon: l.mSE,
+                            description: "Downloads",
+                            data: g,
+                            children: null !== g ? null : "659,000+",
+                          }),
+                          (0, n.jsx)(S, {
+                            icon: d.Nxe,
+                            description: "Discord Members",
+                            data: k,
+                            children: null !== k ? null : "2,400+",
+                          }),
+                        ],
+                      }),
                     }),
-                    (0, n.jsx)("p", {
-                      className: "MuiTypography-root MuiTypography-body1 css-6q6x2s",
-                      children: "X Followers",
+                    (0, n.jsx)(r.default, {
+                      ref: e,
+                      sx: {
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        flexDirection: { md: "row", xs: "column" },
+                        width: "100%",
+                        mt: "3.5rem",
+                        gap: "1.5rem",
+                      },
+                      children: (0, n.jsx)(f.P.div, {
+                        initial: { opacity: 0, y: 100 },
+                        animate: t ? { opacity: 1, y: 0 } : {},
+                        transition: { duration: 0.8 },
+                        children: (0, n.jsx)(m(), {
+                          href: "/getting_started",
+                          children: (0, n.jsxs)(r.default, {
+                            sx: {
+                              backgroundImage:
+                                "linear-gradient(0deg, rgba(0,205,178,0.24) 10%, rgba(47,173,215,1) 100%)",
+                              borderRadius: "50px",
+                              padding: "13px 25px",
+                              transition: "all 0.3s",
+                              display: "flex",
+                              alignItems: "center",
+                              animation: "gradientAnimation 9s ease infinite",
+                              border: "2px solid #2f3d50",
+                              "& svg": { color: "#EEEEEE" },
+                              "&:hover": {
+                                cursor: "pointer",
+                                boxShadow: "0 0 20px rgba(47,172,214,0.5)",
+                              },
+                              "&:hover svg": { transform: "translateX(5px)" },
+                              svg: { transition: "all 0.3s" },
+                              "@keyframes gradientAnimation": {
+                                "0%": { backgroundPosition: "0% 50%" },
+                                "50%": { backgroundPosition: "100% 50%" },
+                                "100%": { backgroundPosition: "0% 50%" },
+                              },
+                            },
+                            children: [
+                              (0, n.jsx)(a.default, {
+                                color: "#EEEEEE",
+                                fontSize: "1.1rem",
+                                fontWeight: "300",
+                                fontFamily: y.HM.style.fontFamily,
+                                children: "Get Started",
+                              }),
+                              (0, n.jsx)(x.TEl, { fontSize: "2rem" }),
+                            ],
+                          }),
+                        }),
+                      }),
                     }),
                   ],
                 }),
