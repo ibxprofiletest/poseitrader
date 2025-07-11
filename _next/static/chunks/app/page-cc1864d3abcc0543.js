@@ -1863,19 +1863,27 @@
       var $ = i(83692),
         ee = i(65100);
       function et() {
+        const [isClient, setIsClient] = React.useState(false);
+
+        React.useEffect(() => {
+          setIsClient(true);
+        }, []);
+
         return (0, n.jsxs)(r.default, {
           sx: { width: "100%" },
           children: [
             (0, n.jsx)($.default, { gettingStarted: !0 }),
-            (0, n.jsx)(w, {}),
-            (0, n.jsx)(z, {}),
-            (0, n.jsx)(W, {}),
-            (0, n.jsx)(R, {}),
-            (0, n.jsx)(_, {}),
-            (0, n.jsx)(H, {}),
-            (0, n.jsx)(V, {}),
-            (0, n.jsx)(q, {}),
-            (0, n.jsx)(Y, {}),
+            isClient && [
+              (0, n.jsx)(w, {}),
+              (0, n.jsx)(z, {}),
+              (0, n.jsx)(W, {}),
+              (0, n.jsx)(R, {}),
+              (0, n.jsx)(_, {}),
+              (0, n.jsx)(H, {}),
+              (0, n.jsx)(V, {}),
+              (0, n.jsx)(q, {}),
+              (0, n.jsx)(Y, {})
+            ],
             (0, n.jsx)(ee.default, { gettingStarted: !0 }),
           ],
         });

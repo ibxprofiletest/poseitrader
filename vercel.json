@@ -1,4 +1,10 @@
 {
-    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" },{ "source": "/terms.html", "destination": "/terms.html" },{ "source": "/privacy.html", "destination": "/privacy.html" },{ "source": "/cookies.html", "destination": "/cookies.html" }]
-  }
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/index.html" },
+    { "source": "/terms.html", "destination": "/terms.html" },
+    { "source": "/privacy.html", "destination": "/privacy.html" },
+    { "source": "/cookies.html", "destination": "/cookies.html" }
+  ]
+}
   
