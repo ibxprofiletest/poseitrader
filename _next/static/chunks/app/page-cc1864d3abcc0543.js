@@ -9,7 +9,7 @@
       i.r(t), i.d(t, { default: () => et });
       var n = i(95155),
         r = i(54581),
-        React = i(67294), // Add React import
+        p = i(67294), // React import
         a = i(71116),
         s = i(91468),
         o = i(17775),
@@ -17,12 +17,11 @@
         d = i(59432),
         c = i(59948),
         x = i(23671),
-        p = i(12115),
+        h = i(3096),
         u = i(6874),
         m = i.n(u),
         f = i(36545),
         g = i(97178),
-        h = i(3096),
         y = i(59822);
       async function b() {
         let e = await fetch(
@@ -42,12 +41,12 @@
         return e.json();
       }
       function w() {
-        let [e, t] = (0, h.useInView)({ triggerOnce: !0 }),
-          [i, u] = (0, p.useState)(null),
-          [g, w] = (0, p.useState)(null),
-          [k, C] = (0, p.useState)(null);
+        let [e, t] = h.useInView({ triggerOnce: !0 }),
+          [i, u] = (0, r.useState)(null),
+          [g, w] = (0, r.useState)(null),
+          [k, C] = (0, r.useState)(null);
         return (
-          (0, p.useEffect)(() => {
+          (0, r.useEffect)(() => {
             (async () => {
               try {
                 let [e, t, i] = await Promise.all([v(), j(), b()]),
@@ -128,7 +127,7 @@
                         align: "center",
                         children: [
                           "The fastest, most reliable",
-                          (0, n.jsx)("br", {}),
+                          (0, r.jsx)("br", {}),
                           "open-source trading platform",
                         ],
                       }),
@@ -257,10 +256,10 @@
       function S(e) {
         let { children: t, description: i, data: s } = e,
           [o, l] = (0, h.useInView)({ triggerOnce: !0 }),
-          [d, c] = (0, p.useState)(0),
-          x = (0, g.z)(0, { bounce: 0, duration: 500 });
+          [d, c] = (0, r.useState)(0),
+          x = (0, n.z)(0, { bounce: 0, duration: 500 });
         return (
-          (0, p.useEffect)(() => {
+          (0, r.useEffect)(() => {
             let e = x.on("change", (e) => {
               let t = Math.round(e);
               c(() => k(Math.floor(t)));
@@ -1223,11 +1222,11 @@
         M = i(18096);
       function V() {
         let [e, t] = (0, h.useInView)({ triggerOnce: !0 }),
-          [i, o] = (0, p.useState)(0),
-          [d, c] = (0, p.useState)(!1),
-          [x, u] = (0, p.useState)(""),
-          [m, g] = (0, p.useState)("1.0.0"),
-          [b, j] = (0, p.useState)(!0),
+          [i, o] = (0, r.useState)(0),
+          [d, c] = (0, r.useState)(!1),
+          [x, u] = (0, r.useState)(""),
+          [m, g] = (0, r.useState)("1.0.0"),
+          [b, j] = (0, r.useState)(!0),
           v = () => {
             let e = navigator.platform || "",
               t = navigator.userAgent || "";
@@ -1269,7 +1268,7 @@
               j(!1);
             }
           };
-        (0, p.useEffect)(() => {
+        (0, r.useEffect)(() => {
           w(), k();
         }, []);
         let S = (e) => {
@@ -1627,10 +1626,10 @@
         Z = i(67350),
         K = i(46108);
       function Q() {
-        let [e, t] = (0, p.useState)("SUBSCRIBE TO OUR NEWSLETTER"),
-          [i, s] = (0, p.useState)(""),
-          [o, l] = (0, p.useState)(!1),
-          [d, c] = (0, p.useState)(!1),
+        let [e, t] = (0, r.useState)("SUBSCRIBE TO OUR NEWSLETTER"),
+          [i, s] = (0, r.useState)(""),
+          [o, l] = (0, r.useState)(!1),
+          [d, c] = (0, r.useState)(!1),
           x = async () => {
             if ((l(!0), s(""), e && "SUBSCRIBE TO OUR NEWSLETTER" !== e))
               try {
