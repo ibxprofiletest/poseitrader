@@ -33,27 +33,43 @@
         return "670,000+";
       }
       function w() {
-        let [e, t] = (0, h.useInView)({ triggerOnce: !0 }),
-          [downloads, setDownloads] = (0, p.useState)(null),
-          [stars, setStars] = (0, p.useState)(null),
-          [xFollowers, setXFollowers] = (0, p.useState)(null);
-        return (
-          (0, p.useEffect)(() => {
-            (async () => {
-              try {
-                let [downloadsCount, starsCount, followersCount] = await Promise.all([j(), b(), getXFollowers()]);
+        const [e, t] = (0, h.useInView)({ triggerOnce: !0 });
+        const [downloads, setDownloads] = (0, p.useState)("670,000+");
+        const [stars, setStars] = (0, p.useState)("9,700+");
+        const [xFollowers, setXFollowers] = (0, p.useState)("2,500+");
+
+        // Only update state if values are different
+        (0, p.useEffect)(() => {
+          const updateStats = async () => {
+            try {
+              const [downloadsCount, starsCount, followersCount] = await Promise.all([
+                j(),
+                b(),
+                getXFollowers()
+              ]);
+              
+              if (downloadsCount !== downloads) {
                 setDownloads(downloadsCount);
-                setStars(starsCount.stargazers_count + "+");
-                setXFollowers(followersCount.followers_count + "+");
-              } catch (e) {
-                console.error("Error fetching stats:", e);
-                // Set fallback values in case of error
-                setDownloads("670,000+");
-                setStars("9,700+");
-                setXFollowers("2,500+");
               }
-            })();
-          }, []),
+              
+              const newStars = starsCount.stargazers_count + "+";
+              if (newStars !== stars) {
+                setStars(newStars);
+              }
+              
+              const newFollowers = followersCount.followers_count + "+";
+              if (newFollowers !== xFollowers) {
+                setXFollowers(newFollowers);
+              }
+            } catch (error) {
+              console.error("Error fetching stats:", error);
+            }
+          };
+          
+          updateStats();
+        }, []);
+
+        return (
           (0, n.jsxs)("div", {
             ref: e,
             className: "MuiBox-root css-1cxf3be",
@@ -66,10 +82,7 @@
                     (0, n.jsx)("p", {
                       className: "MuiTypography-root MuiTypography-body1 css-1yr2bxo",
                       transform: "all 0.3s ease",
-                      children: stars || (0, n.jsx)("span", {
-                        className: "MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-l91id0",
-                        style: { width: "90px", height: "40px" },
-                      }),
+                      children: stars
                     }),
                     (0, n.jsx)("p", {
                       className: "MuiTypography-root MuiTypography-body1 css-6q6x2s",
@@ -86,10 +99,7 @@
                     (0, n.jsx)("p", {
                       className: "MuiTypography-root MuiTypography-body1 css-1yr2bxo",
                       transform: "all 0.3s ease",
-                      children: downloads || (0, n.jsx)("span", {
-                        className: "MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-l91id0",
-                        style: { width: "90px", height: "40px" },
-                      }),
+                      children: downloads
                     }),
                     (0, n.jsx)("p", {
                       className: "MuiTypography-root MuiTypography-body1 css-6q6x2s",
@@ -106,10 +116,7 @@
                     (0, n.jsx)("p", {
                       className: "MuiTypography-root MuiTypography-body1 css-1yr2bxo",
                       transform: "all 0.3s ease",
-                      children: xFollowers || (0, n.jsx)("span", {
-                        className: "MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-l91id0",
-                        style: { width: "90px", height: "40px" },
-                      }),
+                      children: xFollowers
                     }),
                     (0, n.jsx)("p", {
                       className: "MuiTypography-root MuiTypography-body1 css-6q6x2s",
