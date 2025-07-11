@@ -30,12 +30,13 @@
           );
           if (!e.ok) {
             console.error("Failed to fetch GitHub data:", e.status);
-            return { stargazers_count: 9400 }; // Default fallback value
+            return { stargazers_count: 9400 };
           }
-          return await e.json();
+          let data = await e.json();
+          return { stargazers_count: data.stargazers_count || 9400 };
         } catch (error) {
           console.error("Error fetching GitHub data:", error);
-          return { stargazers_count: 9400 }; // Default fallback value
+          return { stargazers_count: 9400 };
         }
       }
       async function j() {
@@ -43,12 +44,13 @@
           let e = await fetch("/api/downloads");
           if (!e.ok) {
             console.error("Failed to fetch downloads data:", e.status);
-            return "659000"; // Default fallback value
+            return "659000";
           }
-          return await e.text();
+          let data = await e.text();
+          return data || "659000";
         } catch (error) {
           console.error("Error fetching downloads data:", error);
-          return "659000"; // Default fallback value
+          return "659000";
         }
       }
       async function v() {
@@ -56,12 +58,13 @@
           let e = await fetch("/api/discord");
           if (!e.ok) {
             console.error("Failed to fetch Discord data:", e.status);
-            return { members: 2400 }; // Default fallback value
+            return { members: 2400 };
           }
-          return await e.json();
+          let data = await e.json();
+          return { members: data.members || 2400 };
         } catch (error) {
           console.error("Error fetching Discord data:", error);
-          return { members: 2400 }; // Default fallback value
+          return { members: 2400 };
         }
       }
       function w() {
@@ -168,17 +171,17 @@
                         (0, n.jsx)(S, {
                           icon: c.H3b,
                           description: "GitHub Stars",
-                          data: "9,400+",
+                          data: b,
                         }),
                         (0, n.jsx)(S, {
                           icon: l.mSE,
                           description: "Downloads",
-                          data: "659,000+",
+                          data: j,
                         }),
                         (0, n.jsx)(S, {
                           icon: d.Nxe,
                           description: "Discord Members",
-                          data: "2,400+",
+                          data: v,
                         }),
                       ],
                     }),
@@ -247,58 +250,80 @@
       let k = (e) => e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       function S(e) {
         let { description: i, data: s, icon: Icon } = e,
-          [o, l] = (0, h.useInView)({ triggerOnce: !0 });
+          [o, l] = (0, h.useInView)({ triggerOnce: !0 }),
+          [value, setValue] = (0, r.useState)(s);
 
-        return (
-          (0, n.jsx)(r.default, {
+        (0, r.useEffect)(() => {
+          if (typeof s === 'function') {
+            s().then(result => {
+              if (result && typeof result === 'object') {
+                // Handle GitHub response
+                if ('stargazers_count' in result) {
+                  setValue(k(result.stargazers_count));
+                }
+                // Handle Discord response
+                else if ('members' in result) {
+                  setValue(k(result.members));
+                }
+              } else if (typeof result === 'string') {
+                // Handle downloads response
+                setValue(k(result));
+              }
+            }).catch(error => {
+              console.error('Error loading stat:', error);
+              setValue(s); // Fallback to initial value
+            });
+          }
+        }, [s]);
+
+        return (0, n.jsx)(r.default, {
+          sx: {
+            backgroundImage: "radial-gradient(circle at 50% 0, #0f2026, #1b1d1c)",
+            borderRadius: "10px",
+            width: "100%",
+            maxWidth: { xs: "100%", sm: "280px" },
+          },
+          children: (0, n.jsxs)(r.default, {
             sx: {
-              backgroundImage: "radial-gradient(circle at 50% 0, #0f2026, #1b1d1c)",
+              height: "100%",
+              display: "flex",
+              justifyContent: "center",
+              gap: "0.3rem",
+              alignItems: "center",
+              padding: "1.3rem",
+              position: "relative",
+              transition: "all 0.3s",
+              border: "2px solid #1e353d",
+              flexDirection: "column",
               borderRadius: "10px",
-              width: "100%",
-              maxWidth: { xs: "100%", sm: "280px" },
             },
-            children: (0, n.jsxs)(r.default, {
-              sx: {
-                height: "100%",
-                display: "flex",
-                justifyContent: "center",
-                gap: "0.3rem",
-                alignItems: "center",
-                padding: "1.3rem",
-                position: "relative",
-                transition: "all 0.3s",
-                border: "2px solid #1e353d",
-                flexDirection: "column",
-                borderRadius: "10px",
-              },
-              children: [
-                (0, n.jsx)(a.default, {
-                  sx: {
-                    backgroundImage: "linear-gradient(90deg, rgba(0,205,178,1) 10%, rgba(47,173,215,1) 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                    textFillColor: "transparent",
-                  },
-                  fontFamily: y.Tv.style.fontFamily,
-                  fontSize: { md: "2rem", xs: "1.5rem" },
-                  fontWeight: "700",
-                  lineHeight: "1.2",
-                  transform: "all 0.3s ease",
-                  children: s,
-                }),
-                (0, n.jsx)(a.default, {
-                  color: "#B4B3B7",
-                  fontSize: { md: "1rem", xs: "1rem" },
-                  fontFamily: y.Tv.style.fontFamily,
-                  fontWeight: "500",
-                  lineHeight: "1.2",
-                  children: i,
-                }),
-              ],
-            }),
-          })
-        );
+            children: [
+              (0, n.jsx)(a.default, {
+                sx: {
+                  backgroundImage: "linear-gradient(90deg, rgba(0,205,178,1) 10%, rgba(47,173,215,1) 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  textFillColor: "transparent",
+                },
+                fontFamily: y.Tv.style.fontFamily,
+                fontSize: { md: "2rem", xs: "1.5rem" },
+                fontWeight: "700",
+                lineHeight: "1.2",
+                transform: "all 0.3s ease",
+                children: value,
+              }),
+              (0, n.jsx)(a.default, {
+                color: "#B4B3B7",
+                fontSize: { md: "1rem", xs: "1rem" },
+                fontFamily: y.Tv.style.fontFamily,
+                fontWeight: "500",
+                lineHeight: "1.2",
+                children: i,
+              }),
+            ],
+          }),
+        });
       }
       var C = i(66766);
       let I = [
