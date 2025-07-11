@@ -24,9 +24,11 @@
         g = i(97178),
         y = i(59822);
       const STATIC_DATA = {
-        github: "9,400+",
-        downloads: "659,000+",
-        discord: "2,400+"
+        stats: {
+          github: "9,400+",
+          downloads: "659,000+",
+          discord: "2,400+"
+        }
       };
       function w() {
         let [e, t] = h.useInView({ triggerOnce: !0 });
@@ -132,17 +134,17 @@
                         (0, n.jsx)(S, {
                           icon: c.H3b,
                           description: "GitHub Stars",
-                          data: STATIC_DATA.github,
+                          data: STATIC_DATA.stats.github,
                         }),
                         (0, n.jsx)(S, {
                           icon: l.mSE,
                           description: "Downloads",
-                          data: STATIC_DATA.downloads,
+                          data: STATIC_DATA.stats.downloads,
                         }),
                         (0, n.jsx)(S, {
                           icon: d.Nxe,
                           description: "Discord Members",
-                          data: STATIC_DATA.discord,
+                          data: STATIC_DATA.stats.discord,
                         }),
                       ],
                     }),
@@ -209,9 +211,7 @@
         });
       }
       function S(e) {
-        let { description: i, data: s, icon: Icon } = e,
-          [o, l] = (0, h.useInView)({ triggerOnce: !0 });
-
+        let { description: i, data: s, icon: Icon } = e;
         return (0, n.jsx)(r.default, {
           sx: {
             backgroundImage: "radial-gradient(circle at 50% 0, #0f2026, #1b1d1c)",
@@ -234,27 +234,21 @@
               borderRadius: "10px",
             },
             children: [
+              (0, n.jsx)(Icon, {
+                sx: { fontSize: "2rem", color: "#2FACD6" },
+              }),
               (0, n.jsx)(a.default, {
-                sx: {
-                  backgroundImage: "linear-gradient(90deg, rgba(0,205,178,1) 10%, rgba(47,173,215,1) 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                  textFillColor: "transparent",
-                },
-                fontFamily: y.Tv.style.fontFamily,
-                fontSize: { md: "2rem", xs: "1.5rem" },
-                fontWeight: "700",
-                lineHeight: "1.2",
-                transform: "all 0.3s ease",
+                color: "#EEEEEE",
+                fontSize: "2rem",
+                fontWeight: "500",
+                fontFamily: y.GC.style.fontFamily,
                 children: s,
               }),
               (0, n.jsx)(a.default, {
-                color: "#B4B3B7",
-                fontSize: { md: "1rem", xs: "1rem" },
+                color: "#D0D0DC",
+                fontSize: "0.9rem",
+                fontWeight: "300",
                 fontFamily: y.Tv.style.fontFamily,
-                fontWeight: "500",
-                lineHeight: "1.2",
                 children: i,
               }),
             ],
@@ -1528,17 +1522,6 @@
       }
       function G(e) {
         let { name: t } = e;
-        const getImagePath = (name) => {
-          // Try different variations of the image name
-          const variations = [
-            `/_next/image/${name}.png`,
-            `/_next/image/${name}-1.png`,
-            `/_next/image/${name.charAt(0).toUpperCase() + name.slice(1)}.png`,
-            `/_next/image/${name.charAt(0).toUpperCase() + name.slice(1)}-1.png`
-          ];
-          return variations[0]; // Start with first variation
-        };
-
         return (0, n.jsx)(s.default, {
           size: { xs: 6, md: 3 },
           sx: {
@@ -1550,25 +1533,14 @@
           },
           children: (0, n.jsx)(C.default, {
             priority: !0,
-            src: getImagePath(t.toLowerCase()),
+            src: `/product_icons/${t}.svg`,
             alt: t,
             width: 160,
             height: 40,
             style: { filter: "grayscale(100%)" },
             onError: (e) => {
               console.error(`Failed to load image: ${t}`);
-              // Try next variation on error
-              const currentSrc = e.currentTarget.src;
-              const variations = [
-                `/_next/image/${t.toLowerCase()}.png`,
-                `/_next/image/${t.toLowerCase()}-1.png`,
-                `/_next/image/${t.charAt(0).toUpperCase() + t.slice(1)}.png`,
-                `/_next/image/${t.charAt(0).toUpperCase() + t.slice(1)}-1.png`
-              ];
-              const currentIndex = variations.indexOf(currentSrc);
-              if (currentIndex < variations.length - 1) {
-                e.currentTarget.src = variations[currentIndex + 1];
-              } else {
+              if (e.currentTarget) {
                 e.currentTarget.style.display = 'none';
               }
             }
