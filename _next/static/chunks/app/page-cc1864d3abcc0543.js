@@ -35,23 +35,15 @@
         if (!e.ok) console.log("Failed to fetch data");
         return e.text();
       }
-      async function v() {
-        let e = await fetch("/api/discord");
-        if (!e.ok) console.log("Failed to fetch data");
-        return e.json();
-      }
       function w() {
         let [e, t] = (0, h.useInView)({ triggerOnce: !0 }),
           [i, u] = (0, p.useState)(null),
-          [g, w] = (0, p.useState)(null),
-          [k, C] = (0, p.useState)(null);
+          [g, w] = (0, p.useState)(null);
         return (
           (0, p.useEffect)(() => {
             (async () => {
               try {
-                let [e, t, i] = await Promise.all([v(), j(), b()]),
-                  n = 100 * Math.floor(e.approximate_member_count / 100);
-                C(n);
+                let [t, i] = await Promise.all([j(), b()]);
                 let r = t.match(/<text[^>]*>([0-9]+[a-zA-Z]+)<\/text>/),
                   a = r ? r[1].trim() : null;
                 if (a) {
@@ -180,12 +172,6 @@
                             description: "Downloads",
                             data: g,
                             children: null !== g ? null : "659,000+",
-                          }),
-                          (0, n.jsx)(S, {
-                            icon: d.Nxe,
-                            description: "Discord Members",
-                            data: k,
-                            children: null !== k ? null : "2,400+",
                           }),
                         ],
                       }),

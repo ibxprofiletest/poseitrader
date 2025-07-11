@@ -310,16 +310,6 @@
                             children: (0, n.jsx)(d.Tv0, { color: "black" }),
                           }),
                           (0, n.jsx)(o(), {
-                            href: "https://discord.gg/PoseiTrader",
-                            target: "_blank",
-                            children: (0, n.jsx)(x.O4U, { color: "black" }),
-                          }),
-                          (0, n.jsx)(o(), {
-                            href: "https://www.linkedin.com/company/nautechsystems/",
-                            target: "_blank",
-                            children: (0, n.jsx)(x.QEs, { color: "black" }),
-                          }),
-                          (0, n.jsx)(o(), {
                             href: "https://x.com/PoseiTrader",
                             target: "_blank",
                             children: (0, n.jsx)(d.tZq, { color: "black" }),
