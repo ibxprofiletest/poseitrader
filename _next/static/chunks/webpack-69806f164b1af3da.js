@@ -7,12 +7,17 @@
     if (void 0 !== n) return n.exports;
     var a = (t[o] = { exports: {} });
     try {
+      if (typeof e[o] !== 'function') {
+        console.error("Module not found or not a function:", o);
+        delete t[o];
+        return {};
+      }
       e[o](a, a.exports, r);
       return a.exports;
     } catch (error) {
       console.error("Error loading module:", error);
       delete t[o];
-      throw error;
+      return {};
     }
   }
   (r.m = e),

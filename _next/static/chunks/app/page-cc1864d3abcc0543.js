@@ -32,10 +32,10 @@
         y = i(59822);
 
       var STATIC_DATA = {
-        stats: {
-          github: "9,400+",
-          downloads: "659,000+",
-          discord: "2,400+"
+        "stats": {
+          "github": "9400+",
+          "downloads": "659000+",
+          "discord": "2400+"
         }
       };
 
