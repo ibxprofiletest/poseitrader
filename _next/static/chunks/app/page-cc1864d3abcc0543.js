@@ -30,9 +30,7 @@
         return { followers_count: 2500 };
       }
       async function j() {
-        let e = await fetch("/api/downloads");
-        if (!e.ok) console.log("Failed to fetch data");
-        return e.text();
+        return "670,000+";
       }
       function w() {
         let [e, t] = (0, h.useInView)({ triggerOnce: !0 }),
@@ -44,8 +42,7 @@
             (async () => {
               try {
                 let [t, i, f] = await Promise.all([j(), b(), getXFollowers()]);
-                let r = t.match(/<text[^>]*>([0-9]+[a-zA-Z]+)<\/text>/)?.[1] || "0";
-                u(r), w(i.stargazers_count + "+"), setXFollowers(f.followers_count + "+");
+                u(t), w(i.stargazers_count + "+"), setXFollowers(f.followers_count + "+");
               } catch (e) {
                 console.error("Error fetching stats:", e);
               }
