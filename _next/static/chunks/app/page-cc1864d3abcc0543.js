@@ -31,9 +31,14 @@
         g = i(97178),
         y = i(59822);
 
-      // Import config
-      var config = require('../../config.json');
-      var STATIC_DATA = config;
+      // Static data
+      var STATIC_DATA = {
+        stats: {
+          github: "9400+",
+          downloads: "659000+",
+          x: "2400+"
+        }
+      };
 
       function w() {
         let [e, t] = h.useInView({ triggerOnce: !0 });
