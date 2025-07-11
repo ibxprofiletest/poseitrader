@@ -2,7 +2,7 @@
   [8974],
   {
     22300: (e, t, i) => {
-      Promise.resolve().then(i.bind(i, 47078));
+      Promise.resolve().then(() => i(47078));
     },
     47078: (e, t, i) => {
       "use strict";
@@ -1183,8 +1183,6 @@
           [i, o] = (0, r.useState)(0),
           [d, c] = (0, r.useState)(!1),
           [x, u] = (0, r.useState)(""),
-          [m, g] = (0, r.useState)("1.0.0"),
-          [b, j] = (0, r.useState)(!0),
           v = () => {
             let e = navigator.platform || "",
               t = navigator.userAgent || "";
@@ -1211,30 +1209,19 @@
                     v();
                   })
               : v();
-          },
-          k = async () => {
-            try {
-              j(!0);
-              let e = await fetch("/api/version");
-              if (e.ok) {
-                let t = await e.json();
-                g(t.version);
-              }
-            } catch (e) {
-              console.error("Error fetching version:", e);
-            } finally {
-              j(!1);
-            }
           };
+
         (0, r.useEffect)(() => {
-          w(), k();
+          w();
         }, []);
+
         let S = (e) => {
             navigator.clipboard.writeText(e),
               c(!0),
               setTimeout(() => c(!1), 2e3);
           },
           C = [{ tab: "Python", command: "pip install -U posei_trader" }];
+
         return (0, n.jsx)(r.default, {
           sx: { backgroundColor: "#1b1b1d" },
           children: (0, n.jsx)(r.default, {
@@ -1439,11 +1426,8 @@
                               fontFamily: y.Tv.style.fontFamily,
                               textAlign: "left",
                               children: [
-                                "Latest release: PoseiTrader",
-                                " ",
-                                b ? "..." : m,
-                                " ",
-                                x && "| System detected: ".concat(x),
+                                "Latest release: PoseiTrader 1.0.0",
+                                x && " | System detected: ".concat(x),
                               ],
                             }),
                           }),
@@ -1558,8 +1542,7 @@
         });
       }
       function G(e) {
-        let { name: t } = e,
-          i = "".concat(t, ".png");
+        let { name: t } = e;
         return (0, n.jsx)(s.default, {
           size: { xs: 6, md: 3 },
           sx: {
@@ -1571,11 +1554,14 @@
           },
           children: (0, n.jsx)(C.default, {
             priority: !0,
-            src: i,
+            src: `/images/${t}.png`,
             alt: t,
             width: 160,
             height: 40,
             style: { filter: "grayscale(100%)" },
+            onError: (e) => {
+              e.currentTarget.style.display = 'none';
+            }
           }),
         });
       }
