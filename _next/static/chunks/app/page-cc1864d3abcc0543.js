@@ -31,13 +31,9 @@
         g = i(97178),
         y = i(59822);
 
-      var STATIC_DATA = {
-        "stats": {
-          "github": "9400+",
-          "downloads": "659000+",
-          "discord": "2400+"
-        }
-      };
+      // Import config
+      var config = require('../../config.json');
+      var STATIC_DATA = config;
 
       function w() {
         let [e, t] = h.useInView({ triggerOnce: !0 });
@@ -151,8 +147,8 @@
                         }),
                         (0, n.jsx)(S, {
                           icon: d.Nxe,
-                          description: "Discord Members",
-                          data: STATIC_DATA.stats.discord
+                          description: "X Followers",
+                          data: STATIC_DATA.stats.x
                         })
                       ]
                     })
