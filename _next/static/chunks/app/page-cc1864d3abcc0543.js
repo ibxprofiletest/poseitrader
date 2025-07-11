@@ -1543,6 +1543,17 @@
       }
       function G(e) {
         let { name: t } = e;
+        const getImagePath = (name) => {
+          // Try different variations of the image name
+          const variations = [
+            `/_next/image/${name}.png`,
+            `/_next/image/${name}-1.png`,
+            `/_next/image/${name.charAt(0).toUpperCase() + name.slice(1)}.png`,
+            `/_next/image/${name.charAt(0).toUpperCase() + name.slice(1)}-1.png`
+          ];
+          return variations[0]; // Start with first variation
+        };
+
         return (0, n.jsx)(s.default, {
           size: { xs: 6, md: 3 },
           sx: {
@@ -1554,13 +1565,27 @@
           },
           children: (0, n.jsx)(C.default, {
             priority: !0,
-            src: `/images/${t}.png`,
+            src: getImagePath(t.toLowerCase()),
             alt: t,
             width: 160,
             height: 40,
             style: { filter: "grayscale(100%)" },
             onError: (e) => {
-              e.currentTarget.style.display = 'none';
+              console.error(`Failed to load image: ${t}`);
+              // Try next variation on error
+              const currentSrc = e.currentTarget.src;
+              const variations = [
+                `/_next/image/${t.toLowerCase()}.png`,
+                `/_next/image/${t.toLowerCase()}-1.png`,
+                `/_next/image/${t.charAt(0).toUpperCase() + t.slice(1)}.png`,
+                `/_next/image/${t.charAt(0).toUpperCase() + t.slice(1)}-1.png`
+              ];
+              const currentIndex = variations.indexOf(currentSrc);
+              if (currentIndex < variations.length - 1) {
+                e.currentTarget.src = variations[currentIndex + 1];
+              } else {
+                e.currentTarget.style.display = 'none';
+              }
             }
           }),
         });
