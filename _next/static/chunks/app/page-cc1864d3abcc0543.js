@@ -23,50 +23,11 @@
         f = i(36545),
         g = i(97178),
         y = i(59822);
-      async function b() {
-        try {
-          let e = await fetch(
-            "https://api.github.com/repos/nautechsystems/nautilus_trader"
-          );
-          if (!e.ok) {
-            console.error("Failed to fetch GitHub data:", e.status);
-            return { stargazers_count: 9400 };
-          }
-          let data = await e.json();
-          return { stargazers_count: data.stargazers_count || 9400 };
-        } catch (error) {
-          console.error("Error fetching GitHub data:", error);
-          return { stargazers_count: 9400 };
-        }
-      }
-      async function j() {
-        try {
-          let e = await fetch("/api/downloads");
-          if (!e.ok) {
-            console.error("Failed to fetch downloads data:", e.status);
-            return "659000";
-          }
-          let data = await e.text();
-          return data || "659000";
-        } catch (error) {
-          console.error("Error fetching downloads data:", error);
-          return "659000";
-        }
-      }
-      async function v() {
-        try {
-          let e = await fetch("/api/discord");
-          if (!e.ok) {
-            console.error("Failed to fetch Discord data:", e.status);
-            return { members: 2400 };
-          }
-          let data = await e.json();
-          return { members: data.members || 2400 };
-        } catch (error) {
-          console.error("Error fetching Discord data:", error);
-          return { members: 2400 };
-        }
-      }
+      const STATIC_DATA = {
+        github: "9,400+",
+        downloads: "659,000+",
+        discord: "2,400+"
+      };
       function w() {
         let [e, t] = h.useInView({ triggerOnce: !0 });
         
@@ -171,17 +132,17 @@
                         (0, n.jsx)(S, {
                           icon: c.H3b,
                           description: "GitHub Stars",
-                          data: b,
+                          data: STATIC_DATA.github,
                         }),
                         (0, n.jsx)(S, {
                           icon: l.mSE,
                           description: "Downloads",
-                          data: j,
+                          data: STATIC_DATA.downloads,
                         }),
                         (0, n.jsx)(S, {
                           icon: d.Nxe,
                           description: "Discord Members",
-                          data: v,
+                          data: STATIC_DATA.discord,
                         }),
                       ],
                     }),
@@ -247,34 +208,9 @@
           ],
         });
       }
-      let k = (e) => e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       function S(e) {
         let { description: i, data: s, icon: Icon } = e,
-          [o, l] = (0, h.useInView)({ triggerOnce: !0 }),
-          [value, setValue] = (0, r.useState)(s);
-
-        (0, r.useEffect)(() => {
-          if (typeof s === 'function') {
-            s().then(result => {
-              if (result && typeof result === 'object') {
-                // Handle GitHub response
-                if ('stargazers_count' in result) {
-                  setValue(k(result.stargazers_count));
-                }
-                // Handle Discord response
-                else if ('members' in result) {
-                  setValue(k(result.members));
-                }
-              } else if (typeof result === 'string') {
-                // Handle downloads response
-                setValue(k(result));
-              }
-            }).catch(error => {
-              console.error('Error loading stat:', error);
-              setValue(s); // Fallback to initial value
-            });
-          }
-        }, [s]);
+          [o, l] = (0, h.useInView)({ triggerOnce: !0 });
 
         return (0, n.jsx)(r.default, {
           sx: {
@@ -311,7 +247,7 @@
                 fontWeight: "700",
                 lineHeight: "1.2",
                 transform: "all 0.3s ease",
-                children: value,
+                children: s,
               }),
               (0, n.jsx)(a.default, {
                 color: "#B4B3B7",
@@ -1881,20 +1817,23 @@
       var $ = i(83692),
         ee = i(65100);
       function et() {
-        return (0, n.jsxs)(r.default, {
-          sx: { width: "100%" },
+        return (0, n.jsxs)(n.Fragment, {
           children: [
-            (0, n.jsx)($.default, { gettingStarted: !0 }),
             (0, n.jsx)(w, {}),
             (0, n.jsx)(z, {}),
+            (0, n.jsx)(F, {}),
             (0, n.jsx)(W, {}),
-            (0, n.jsx)(R, {}),
+            (0, n.jsx)(D, {}),
             (0, n.jsx)(_, {}),
+            (0, n.jsx)(O, {}),
+            (0, n.jsx)(R, {}),
             (0, n.jsx)(H, {}),
+            (0, n.jsx)(U, {}),
             (0, n.jsx)(V, {}),
             (0, n.jsx)(q, {}),
+            (0, n.jsx)(G, {}),
+            (0, n.jsx)(Q, {}),
             (0, n.jsx)(Y, {}),
-            (0, n.jsx)(ee.default, { gettingStarted: !0 }),
           ],
         });
       }
