@@ -5,14 +5,15 @@
   function r(o) {
     var n = t[o];
     if (void 0 !== n) return n.exports;
-    var a = (t[o] = { exports: {} }),
-      i = !0;
+    var a = (t[o] = { exports: {} });
     try {
-      e[o](a, a.exports, r), (i = !1);
-    } finally {
-      i && delete t[o];
+      e[o](a, a.exports, r);
+      return a.exports;
+    } catch (error) {
+      console.error("Error loading module:", error);
+      delete t[o];
+      throw error;
     }
-    return a.exports;
   }
   (r.m = e),
     (() => {
@@ -155,7 +156,7 @@
           else {
             var a = new Promise((r, o) => (n = e[t] = [r, o]));
             o.push((n[2] = a));
-            var i = r.p + r.u(t);
+            var i = "/_next/static/chunks/" + r.u(t);
             var u = new Error();
             r.l(
               i,

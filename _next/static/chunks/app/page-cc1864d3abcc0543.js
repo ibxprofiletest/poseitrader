@@ -31,7 +31,7 @@
         g = i(97178),
         y = i(59822);
 
-      const STATIC_DATA = {
+      var STATIC_DATA = {
         stats: {
           github: "9,400+",
           downloads: "659,000+",
@@ -1485,19 +1485,19 @@
             height: "125px",
           },
           children: (0, n.jsx)(C.default, {
-            priority: !0,
-            src: `/product_icons/${t}.svg`,
+            priority: true,
+            src: "/product_icons/" + t + ".svg",
             alt: t,
             width: 160,
             height: 40,
             style: { filter: "grayscale(100%)" },
-            onError: (e) => {
-              console.error(`Failed to load image: ${t}`);
+            onError: function(e) {
+              console.error("Failed to load image: " + t);
               if (e.currentTarget) {
-                e.currentTarget.style.display = 'none';
+                e.currentTarget.style.display = "none";
               }
             }
-          }),
+          })
         });
       }
       var X = i(14426),
@@ -1758,8 +1758,8 @@
             (0, n.jsx)(q, {}),
             (0, n.jsx)(G, {}),
             (0, n.jsx)(Q, {}),
-            (0, n.jsx)(Y, {}),
-          ],
+            (0, n.jsx)(Y, {})
+          ]
         });
       }
     },
