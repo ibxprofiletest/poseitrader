@@ -168,7 +168,7 @@
                           }),
                         })
                       : (0, n.jsx)(o(), {
-                          href: "https://discord.com/invite/PoseiTrader",
+                          href: "https://x.com/PoseiTrader",
                           target: "_blank",
                           children: (0, n.jsxs)(i.default, {
                             sx: {
@@ -992,7 +992,7 @@
                                   })
                                 : null,
                               (0, n.jsx)(p(), {
-                                href: "https://discord.com/invite/PoseiTrader",
+                                href: "https://x.com/PoseiTrader",
                                 target: "_blank",
                                 children: (0, n.jsxs)(a.default, {
                                   sx: {
@@ -1024,7 +1024,7 @@
                                       flexGrow: 1,
                                       whiteSpace: "nowrap",
                                       fontFamily: y.HM.style.fontFamily,
-                                      children: "Join Discord",
+                                      children: "Join X",
                                     }),
                                     (0, n.jsx)(b.TEl, { fontSize: "1.1rem" }),
                                   ],
