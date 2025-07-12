@@ -183,7 +183,7 @@
                           }),
                           (0, n.jsx)(S, {
                             icon: d.Nxe,
-                            description: "Discord Members",
+                            description: "X Followers",
                             data: k,
                             children: null !== k ? null : "2,400+",
                           }),
