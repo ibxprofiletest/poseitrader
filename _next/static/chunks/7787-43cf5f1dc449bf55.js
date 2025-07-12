@@ -168,7 +168,7 @@
                           }),
                         })
                       : (0, n.jsx)(o(), {
-                          href: "https://discord.com/invite/PoseiTrader",
+                          href: "https://x.com/PoseiTrader",
                           target: "_blank",
                           children: (0, n.jsxs)(i.default, {
                             sx: {

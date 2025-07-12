@@ -326,13 +326,13 @@
                                   mt: "0.9rem",
                                   children: [
                                     (0, n.jsx)(a(), {
-                                      href: "https://discord.gg/PoseiTrader",
+                                      href: "https://x.com/PoseiTrader",
                                       target: "_blank",
                                       children: (0, n.jsxs)(i.default, {
                                         sx: { display: "flex", gap: "5px" },
                                         children: [
                                           (0, n.jsx)(h, {
-                                            children: "Discord",
+                                            children: "Twitter(X)",
                                           }),
                                           (0, n.jsx)(d.P_O, {
                                             color: "#2be6e0",
@@ -343,7 +343,7 @@
                                     }),
                                     (0, n.jsx)(g, {
                                       children:
-                                        "Join our Discord server for real-time assistance, discussions, and to stay updated with the latest news and updates.",
+                                        "Join our Twitter(X) server for real-time assistance, discussions, and to stay updated with the latest news and updates.",
                                     }),
                                   ],
                                 }),
