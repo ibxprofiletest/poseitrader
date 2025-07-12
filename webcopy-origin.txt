@@ -36370,9 +36370,7 @@ Uri: docs/latestopensearch.xml
 File Name: C:\Downloaded Web Sites\nautilustrader.io\docs\opensearch.xml
 Content Type: application/xml
 
-Uri: https://nautilustrader.io/education/
-File Name: C:\Downloaded Web Sites\nautilustrader.io\education\index.htm
-Content Type: text/html
+
 
 Uri: https://nautilustrader.io/favicon.ico
 File Name: C:\Downloaded Web Sites\nautilustrader.io\favicon.ico
@@ -36670,13 +36668,7 @@ Uri: https://nautilustrader.io/_next/static/chunks/app/consulting/page-6f2bd7289
 File Name: C:\Downloaded Web Sites\nautilustrader.io\_next\static\chunks\app\consulting\page-6f2bd7289eed48e3.js
 Content Type: application/javascript
 
-Uri: https://nautilustrader.io/_next/static/chunks/app/education/layout-c30b20dcf0635cc1.js
-File Name: C:\Downloaded Web Sites\nautilustrader.io\_next\static\chunks\app\education\layout-c30b20dcf0635cc1.js
-Content Type: application/javascript
 
-Uri: https://nautilustrader.io/_next/static/chunks/app/education/page-8941fd2fc7c39e20.js
-File Name: C:\Downloaded Web Sites\nautilustrader.io\_next\static\chunks\app\education\page-8941fd2fc7c39e20.js
-Content Type: application/javascript
 
 Uri: https://nautilustrader.io/_next/static/chunks/app/getting_started/layout-0d0c46aebb1fb555.js
 File Name: C:\Downloaded Web Sites\nautilustrader.io\_next\static\chunks\app\getting_started\layout-0d0c46aebb1fb555.js

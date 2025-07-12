@@ -361,22 +361,6 @@
                           { text: "Legal", link: "/legal" },
                         ],
                       },
-                      {
-                        category: "Resources",
-                        items: [
-                          {
-                            text: "Docs",
-                            link: "/docs/latest",
-                            newTab: !0,
-                            external: !0,
-                          },
-                          {
-                            text: "Education",
-                            link: "/education",
-                            disable: !0,
-                          },
-                        ],
-                      },
                       { category: "Blog", link: "/blog", disable: !0 },
                     ].map((e) =>
                       (0, n.jsxs)(
@@ -637,12 +621,6 @@
                   link: "/docs/latest",
                   newTab: !0,
                   description: "Access PoseiTrader documentation.",
-                },
-                {
-                  text: "Education",
-                  link: "/education",
-                  disable: !0,
-                  description: "Accelerate your learning curve (coming soon).",
                 },
               ],
             },
