@@ -195,7 +195,7 @@
                                 fontSize: { md: "18px", xs: "14px" },
                                 fontWeight: "550",
                                 fontFamily: f.Tv.style.fontFamily,
-                                children: "Join our Discord community",
+                                children: "Join our Twitter(X) community",
                               }),
                               (0, n.jsx)(u.TEl, { fontSize: "1.5rem" }),
                             ],
