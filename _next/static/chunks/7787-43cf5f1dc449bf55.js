@@ -1014,7 +1014,7 @@
                                       flexGrow: 1,
                                       whiteSpace: "nowrap",
                                       fontFamily: y.HM.style.fontFamily,
-                                      children: "Join Discord",
+                                      children: "Join X",
                                     }),
                                     (0, n.jsx)(b.TEl, { fontSize: "1.1rem" }),
                                   ],
