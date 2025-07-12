@@ -36524,11 +36524,8 @@ Uri: https://nautilustrader.io/_next/image/?url=%2Fnautilus-logo-white.png&w=640
 File Name: C:\Downloaded Web Sites\nautilustrader.io\_next\image\nautilus-logo-white.png
 Content Type: image/png
 
-Uri: https://nautilustrader.io/_next/image/?url=%2Fteam%2Fceo.jpg&w=384&q=75
-File Name: C:\Downloaded Web Sites\nautilustrader.io\_next\image\ceo-1.jpg
-Content Type: image/jpeg
 
-Uri: https://nautilustrader.io/_next/image/?url=%2Fteam%2Fceo.jpg&w=640&q=75
+Uri: https://nautilustrader.io/_next/image/ceo.jpg
 File Name: C:\Downloaded Web Sites\nautilustrader.io\_next\image\ceo.jpg
 Content Type: image/jpeg
 
