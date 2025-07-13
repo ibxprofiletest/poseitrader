@@ -361,7 +361,7 @@
                           { text: "Legal", link: "/legal" },
                         ],
                       },
-                      { category: "Blog", link: "/blog", disable: !0 },
+                      { category: "Blog", link: "/blog" },
                     ].map((e) =>
                       (0, n.jsxs)(
                         i.default,
