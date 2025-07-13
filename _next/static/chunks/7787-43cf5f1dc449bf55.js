@@ -391,9 +391,6 @@
                                           ? "default"
                                           : "pointer",
                                       },
-                                      onClick: (t) =>
-                                        e.disable && t.preventDefault(),
-                                      "aria-disabled": e.disable,
                                       children: (0, n.jsxs)(i.default, {
                                         sx: {
                                           display: "flex",
