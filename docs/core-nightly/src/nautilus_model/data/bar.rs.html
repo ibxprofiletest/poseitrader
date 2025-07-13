@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `crates/model/src/data/bar.rs`."><title>bar.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-84e720fa.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="nautilus_model" data-themes="" data-resource-suffix="" data-rustdoc-version="1.90.0-nightly (28f1c8079 2025-06-24)" data-channel="nightly" data-search-js="search-92309212.js" data-settings-js="settings-5514c975.js" ><script src="../../../static.files/storage-4e99c027.js"></script><script defer src="../../../static.files/src-script-813739b1.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-340f468f.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-32bb7600.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1><div class="sub-heading">nautilus_model/data/</div>bar.rs</h1><rustdoc-toolbar></rustdoc-toolbar></div><div class="example-wrap digits-4"><pre class="rust"><code><a href=#1 id=1 data-nosnippet>1</a><span class="comment">// -------------------------------------------------------------------------------------------------
 <a href=#2 id=2 data-nosnippet>2</a>//  Copyright (C) 2015-2025 Posei Systems Pty Ltd. All rights reserved.
-<a href=#3 id=3 data-nosnippet>3</a>//  https://nautechsystems.io
+<a href=#3 id=3 data-nosnippet>3</a>//  https://poseitrader.io
 <a href=#4 id=4 data-nosnippet>4</a>//
 <a href=#5 id=5 data-nosnippet>5</a>//  Licensed under the GNU Lesser General Public License Version 3.0 (the "License");
 <a href=#6 id=6 data-nosnippet>6</a>//  You may not use this file except in compliance with the License.
@@ -323,7 +323,7 @@
 <a href=#323 id=323 data-nosnippet>323</a>)]
 <a href=#324 id=324 data-nosnippet>324</a>#[cfg_attr(
 <a href=#325 id=325 data-nosnippet>325</a>    feature = <span class="string">"python"</span>,
-<a href=#326 id=326 data-nosnippet>326</a>    pyo3::pyclass(module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model"</span>)
+<a href=#326 id=326 data-nosnippet>326</a>    pyo3::pyclass(module = <span class="string">"posei_trader.core.nautilus_pyo3.model"</span>)
 <a href=#327 id=327 data-nosnippet>327</a>)]
 <a href=#328 id=328 data-nosnippet>328</a></span><span class="kw">pub struct </span>BarSpecification {
 <a href=#329 id=329 data-nosnippet>329</a>    <span class="doccomment">/// The step for binning samples for bar aggregation.
@@ -449,7 +449,7 @@
 <a href=#449 id=449 data-nosnippet>449</a>#[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
 <a href=#450 id=450 data-nosnippet>450</a>#[cfg_attr(
 <a href=#451 id=451 data-nosnippet>451</a>    feature = <span class="string">"python"</span>,
-<a href=#452 id=452 data-nosnippet>452</a>    pyo3::pyclass(module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model"</span>)
+<a href=#452 id=452 data-nosnippet>452</a>    pyo3::pyclass(module = <span class="string">"posei_trader.core.nautilus_pyo3.model"</span>)
 <a href=#453 id=453 data-nosnippet>453</a>)]
 <a href=#454 id=454 data-nosnippet>454</a></span><span class="kw">pub enum </span>BarType {
 <a href=#455 id=455 data-nosnippet>455</a>    Standard {
@@ -764,7 +764,7 @@
 <a href=#764 id=764 data-nosnippet>764</a>#[serde(tag = <span class="string">"type"</span>)]
 <a href=#765 id=765 data-nosnippet>765</a>#[cfg_attr(
 <a href=#766 id=766 data-nosnippet>766</a>    feature = <span class="string">"python"</span>,
-<a href=#767 id=767 data-nosnippet>767</a>    pyo3::pyclass(module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model"</span>)
+<a href=#767 id=767 data-nosnippet>767</a>    pyo3::pyclass(module = <span class="string">"posei_trader.core.nautilus_pyo3.model"</span>)
 <a href=#768 id=768 data-nosnippet>768</a>)]
 <a href=#769 id=769 data-nosnippet>769</a></span><span class="kw">pub struct </span>Bar {
 <a href=#770 id=770 data-nosnippet>770</a>    <span class="doccomment">/// The bar type for this bar.

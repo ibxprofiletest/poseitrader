@@ -25,8 +25,8 @@
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>price</strong> (<a href="../index.htm#nautilus_trader.model.Price"><em>Price</em></a>) – The price for the level.</li>
-<li><strong>orders</strong> (<em>list</em> <em>[</em><a href="../data/index.htm#nautilus_trader.model.data.BookOrder"><em>BookOrder</em></a> <em>]</em>) – The orders for the level.</li>
+<li><strong>price</strong> (<a href="../index.htm#posei_trader.model.Price"><em>Price</em></a>) – The price for the level.</li>
+<li><strong>orders</strong> (<em>list</em> <em>[</em><a href="../data/index.htm#posei_trader.model.data.BookOrder"><em>BookOrder</em></a> <em>]</em>) – The orders for the level.</li>
 </ul>
 </li>
 <li><strong>Raises:</strong>
@@ -42,14 +42,14 @@ double</li>
 <p>Return the orders for the level.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../data/index.htm#nautilus_trader.model.data.BookOrder">BookOrder</a>]</li>
+list[<a href="../data/index.htm#posei_trader.model.data.BookOrder">BookOrder</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="price">price<a href="#price" class="hash-link" aria-label="Direct link to price" title="Direct link to price">​</a></h4>
 <p>Price</p>
 <p>Return the price for the level.</p>
 <ul>
 <li><strong>Return type:</strong>
-<a href="../index.htm#nautilus_trader.model.Price">Price</a></li>
+<a href="../index.htm#posei_trader.model.Price">Price</a></li>
 <li><strong>Type:</strong>
 BookLevel.price</li>
 </ul>
@@ -69,7 +69,7 @@ BookLevel.side</li>
 double</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-orderbook"><em>class</em> OrderBook<a href="#class-orderbook" class="hash-link" aria-label="Direct link to class-orderbook" title="Direct link to class-orderbook">​</a></h3>
-<p>Bases: <a href="../../core/index.htm#nautilus_trader.core.Data"><code>Data</code></a></p>
+<p>Bases: <a href="../../core/index.htm#posei_trader.core.Data"><code>Data</code></a></p>
 <p>OrderBook(InstrumentId instrument_id, BookType book_type) -&gt; None</p>
 <p>Provides an order book which can handle L1/L2/L3 granularity data.</p>
 <ul>
@@ -85,7 +85,7 @@ double</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>order</strong> (<a href="../data/index.htm#nautilus_trader.model.data.BookOrder"><em>BookOrder</em></a>) – The order to add.</li>
+<li><strong>order</strong> (<a href="../data/index.htm#posei_trader.model.data.BookOrder"><em>BookOrder</em></a>) – The order to add.</li>
 <li><strong>ts_event</strong> (<em>uint64_t</em>) – UNIX timestamp (nanoseconds) when the book event occurred.</li>
 <li><strong>flags</strong> (<em>uint8_t</em> <em>,</em> <em>default 0</em>) – The record flags bit field, indicating event end and data information.</li>
 <li><strong>sequence</strong> (<em>uint64_t</em> <em>,</em> <em>default 0</em>) – The unique sequence number for the update. If default 0 then will increment the sequence.</li>
@@ -98,13 +98,13 @@ double</li>
 <p>Apply the given data to the order book.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>delta</strong> (<a href="../data/index.htm#nautilus_trader.model.data.OrderBookDelta"><em>OrderBookDelta</em></a> <em>,</em> <a href="../data/index.htm#nautilus_trader.model.data.OrderBookDeltas"><em>OrderBookDeltas</em></a>) – The data to apply.</li>
+<strong>delta</strong> (<a href="../data/index.htm#posei_trader.model.data.OrderBookDelta"><em>OrderBookDelta</em></a> <em>,</em> <a href="../data/index.htm#posei_trader.model.data.OrderBookDeltas"><em>OrderBookDeltas</em></a>) – The data to apply.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="apply_deltaself-orderbookdelta-delta--void">apply_delta(self, OrderBookDelta delta) → void<a href="#apply_deltaself-orderbookdelta-delta--void" class="hash-link" aria-label="Direct link to apply_delta(self, OrderBookDelta delta) → void" title="Direct link to apply_delta(self, OrderBookDelta delta) → void">​</a></h4>
 <p>Apply the order book delta.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>delta</strong> (<a href="../data/index.htm#nautilus_trader.model.data.OrderBookDelta"><em>OrderBookDelta</em></a>) – The delta to apply.</li>
+<strong>delta</strong> (<a href="../data/index.htm#posei_trader.model.data.OrderBookDelta"><em>OrderBookDelta</em></a>) – The delta to apply.</li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If delta.book_type is not equal to self.type.</li>
 </ul>
@@ -112,13 +112,13 @@ double</li>
 <p>Apply the bulk deltas to the order book.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>deltas</strong> (<a href="../data/index.htm#nautilus_trader.model.data.OrderBookDeltas"><em>OrderBookDeltas</em></a>) – The deltas to apply.</li>
+<strong>deltas</strong> (<a href="../data/index.htm#posei_trader.model.data.OrderBookDeltas"><em>OrderBookDeltas</em></a>) – The deltas to apply.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="apply_depthself-orderbookdepth10-depth--void">apply_depth(self, OrderBookDepth10 depth) → void<a href="#apply_depthself-orderbookdepth10-depth--void" class="hash-link" aria-label="Direct link to apply_depth(self, OrderBookDepth10 depth) → void" title="Direct link to apply_depth(self, OrderBookDepth10 depth) → void">​</a></h4>
 <p>Apply the depth update to the order book.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>depth</strong> (<a href="../data/index.htm#nautilus_trader.model.data.OrderBookDepth10"><em>OrderBookDepth10</em></a>) – The depth update to apply.</li>
+<strong>depth</strong> (<a href="../data/index.htm#posei_trader.model.data.OrderBookDepth10"><em>OrderBookDepth10</em></a>) – The depth update to apply.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="asksself--list">asks(self) → list<a href="#asksself--list" class="hash-link" aria-label="Direct link to asks(self) → list" title="Direct link to asks(self) → list">​</a></h4>
 <p>Return the bid levels for the order book.</p>
@@ -126,7 +126,7 @@ double</li>
 <li><strong>Returns:</strong>
 Sorted in ascending order of price.</li>
 <li><strong>Return type:</strong>
-list[<a href="#nautilus_trader.model.book.BookLevel">BookLevel</a>]</li>
+list[<a href="#posei_trader.model.book.BookLevel">BookLevel</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="best_ask_priceself">best_ask_price(self)<a href="#best_ask_priceself" class="hash-link" aria-label="Direct link to best_ask_price(self)" title="Direct link to best_ask_price(self)">​</a></h4>
 <p>Return the best ask price in the book (if no asks then returns <code>None</code>).</p>
@@ -158,7 +158,7 @@ double</li>
 <li><strong>Returns:</strong>
 Sorted in descending order of price.</li>
 <li><strong>Return type:</strong>
-list[<a href="#nautilus_trader.model.book.BookLevel">BookLevel</a>]</li>
+list[<a href="#posei_trader.model.book.BookLevel">BookLevel</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="book_type">book_type<a href="#book_type" class="hash-link" aria-label="Direct link to book_type" title="Direct link to book_type">​</a></h4>
 <p>BookType</p>
@@ -190,7 +190,7 @@ OrderBook.book_type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>order</strong> (<a href="../orders/index.htm#nautilus_trader.model.orders.Order"><em>Order</em></a>) – The order to delete.</li>
+<li><strong>order</strong> (<a href="../orders/index.htm#posei_trader.model.orders.Order"><em>Order</em></a>) – The order to delete.</li>
 <li><strong>ts_event</strong> (<em>uint64_t</em>) – UNIX timestamp (nanoseconds) when the book event occurred.</li>
 <li><strong>flags</strong> (<em>uint8_t</em> <em>,</em> <em>default 0</em>) – The record flags bit field, indicating event end and data information.</li>
 <li><strong>sequence</strong> (<em>uint64_t</em> <em>,</em> <em>default 0</em>) – The unique sequence number for the update. If default 0 then will increment the sequence.</li>
@@ -209,7 +209,7 @@ of the order book.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>quantity</strong> (<a href="../index.htm#nautilus_trader.model.Quantity"><em>Quantity</em></a>) – The quantity for the calculation.</li>
+<li><strong>quantity</strong> (<a href="../index.htm#posei_trader.model.Quantity"><em>Quantity</em></a>) – The quantity for the calculation.</li>
 <li><strong>order_side</strong> (<em>OrderSide</em>) – The order side for the calculation.</li>
 </ul>
 </li>
@@ -226,7 +226,7 @@ of the order book.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>price</strong> (<a href="../index.htm#nautilus_trader.model.Price"><em>Price</em></a>) – The quantity for the calculation.</li>
+<li><strong>price</strong> (<a href="../index.htm#posei_trader.model.Price"><em>Price</em></a>) – The quantity for the calculation.</li>
 <li><strong>order_side</strong> (<em>OrderSide</em>) – The order side for the calculation.</li>
 </ul>
 </li>
@@ -240,7 +240,7 @@ double</li>
 <p>Return the books instrument ID.</p>
 <ul>
 <li><strong>Return type:</strong>
-<a href="../identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a></li>
+<a href="../identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a></li>
 <li><strong>Type:</strong>
 OrderBook.instrument_id</li>
 </ul>
@@ -287,7 +287,7 @@ OrderBook.sequence</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>order</strong> (<a href="../orders/index.htm#nautilus_trader.model.orders.Order"><em>Order</em></a>) – The order to simulate fills for.</li>
+<li><strong>order</strong> (<a href="../orders/index.htm#posei_trader.model.orders.Order"><em>Order</em></a>) – The order to simulate fills for.</li>
 <li><strong>price_prec</strong> (<em>uint8_t</em>) – The price precision for the fills.</li>
 <li><strong>size_prec</strong> (<em>uint8_t</em>) – The size precision for the fills (based on the instrument definition).</li>
 <li><strong>is_aggressive</strong> (<em>bool</em>) – If the order is an aggressive liquidity taking order.</li>
@@ -332,7 +332,7 @@ OrderBook.ts_last</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>order</strong> (<a href="../orders/index.htm#nautilus_trader.model.orders.Order"><em>Order</em></a>) – The order to update.</li>
+<li><strong>order</strong> (<a href="../orders/index.htm#posei_trader.model.orders.Order"><em>Order</em></a>) – The order to update.</li>
 <li><strong>ts_event</strong> (<em>uint64_t</em>) – UNIX timestamp (nanoseconds) when the book event occurred.</li>
 <li><strong>flags</strong> (<em>uint8_t</em> <em>,</em> <em>default 0</em>) – The record flags bit field, indicating event end and data information.</li>
 <li><strong>sequence</strong> (<em>uint64_t</em> <em>,</em> <em>default 0</em>) – The unique sequence number for the update. If default 0 then will increment the sequence.</li>
@@ -353,7 +353,7 @@ OrderBook.update_count</li>
 <p>This operation is only valid for <code>L1_MBP</code> books maintaining a top level.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>tick</strong> (<a href="../data/index.htm#nautilus_trader.model.data.QuoteTick"><em>QuoteTick</em></a>) – The quote tick to update with.</li>
+<strong>tick</strong> (<a href="../data/index.htm#posei_trader.model.data.QuoteTick"><em>QuoteTick</em></a>) – The quote tick to update with.</li>
 <li><strong>Raises:</strong>
 <strong>RuntimeError</strong> – If book_type is not <code>L1_MBP</code>.</li>
 </ul>
@@ -361,10 +361,10 @@ OrderBook.update_count</li>
 <p>Update the order book with the given trade tick.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>tick</strong> (<a href="../data/index.htm#nautilus_trader.model.data.TradeTick"><em>TradeTick</em></a>) – The trade tick to update with.</li>
+<strong>tick</strong> (<a href="../data/index.htm#posei_trader.model.data.TradeTick"><em>TradeTick</em></a>) – The trade tick to update with.</li>
 <li><strong>Raises:</strong>
 <strong>RuntimeError</strong> – If book_type is not <code>L1_MBP</code>.</li>
 </ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="py_should_handle_own_book_orderorder-order--bool">py_should_handle_own_book_order(Order order) → bool<a href="#py_should_handle_own_book_orderorder-order--bool" class="hash-link" aria-label="Direct link to py_should_handle_own_book_order(Order order) → bool" title="Direct link to py_should_handle_own_book_order(Order order) → bool">​</a></h3></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="../index.htm"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Model</div></a><a class="pagination-nav__link pagination-nav__link--next" href="../data/index.htm"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Data</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#class-booklevel" class="table-of-contents__link toc-highlight"><em>class</em> BookLevel</a></li><li><a href="#class-orderbook" class="table-of-contents__link toc-highlight"><em>class</em> OrderBook</a></li><li><a href="#py_should_handle_own_book_orderorder-order--bool" class="table-of-contents__link toc-highlight">py_should_handle_own_book_order(Order order) → bool</a></li></ul></div></div></div><div class="footer-wrapper MuiBox-root css-0"><div class="social-footer-box MuiBox-root css-0"><style data-emotion="css 17rjyz3">.css-17rjyz3{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(25, 118, 210, 0.4);padding:12px;margin-right:10px;}.css-17rjyz3:hover{text-decoration-color:inherit;}</style><style data-emotion="css jl1bw5">.css-jl1bw5{margin:0;font:inherit;color:#1976d2;-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(25, 118, 210, 0.4);padding:12px;margin-right:10px;}.css-jl1bw5:hover{text-decoration-color:inherit;}</style><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways github-footer css-jl1bw5" href="https://github.com/poseisysstems" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways discord-footer css-jl1bw5" href="" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways linkedin-footer css-jl1bw5" href="https://www.linkedin.com/company/nautechsystems/" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways x-footer css-jl1bw5" href="https://twitter.com/PoseiTrader" target="_blank"></a></div><div class="footer-copyright">© 2025 Posei Systems Pty Ltd. All rights reserved.</div></div></div></div></main></div></div></div></div>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="py_should_handle_own_book_orderorder-order--bool">py_should_handle_own_book_order(Order order) → bool<a href="#py_should_handle_own_book_orderorder-order--bool" class="hash-link" aria-label="Direct link to py_should_handle_own_book_order(Order order) → bool" title="Direct link to py_should_handle_own_book_order(Order order) → bool">​</a></h3></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="../index.htm"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Model</div></a><a class="pagination-nav__link pagination-nav__link--next" href="../data/index.htm"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Data</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#class-booklevel" class="table-of-contents__link toc-highlight"><em>class</em> BookLevel</a></li><li><a href="#class-orderbook" class="table-of-contents__link toc-highlight"><em>class</em> OrderBook</a></li><li><a href="#py_should_handle_own_book_orderorder-order--bool" class="table-of-contents__link toc-highlight">py_should_handle_own_book_order(Order order) → bool</a></li></ul></div></div></div><div class="footer-wrapper MuiBox-root css-0"><div class="social-footer-box MuiBox-root css-0"><style data-emotion="css 17rjyz3">.css-17rjyz3{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(25, 118, 210, 0.4);padding:12px;margin-right:10px;}.css-17rjyz3:hover{text-decoration-color:inherit;}</style><style data-emotion="css jl1bw5">.css-jl1bw5{margin:0;font:inherit;color:#1976d2;-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(25, 118, 210, 0.4);padding:12px;margin-right:10px;}.css-jl1bw5:hover{text-decoration-color:inherit;}</style><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways github-footer css-jl1bw5" href="https://github.com/poseisysstems" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways discord-footer css-jl1bw5" href="" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways linkedin-footer css-jl1bw5" href="https://www.linkedin.com/company/poseitrader/" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways x-footer css-jl1bw5" href="https://twitter.com/PoseiTrader" target="_blank"></a></div><div class="footer-copyright">© 2025 Posei Systems Pty Ltd. All rights reserved.</div></div></div></div></main></div></div></div></div>
 </body>
 </html>

@@ -744,7 +744,7 @@
                             <p>
                               Bases:
                               <a
-                                href="../common/index.htm#nautilus_trader.common.actor.Actor"
+                                href="../common/index.htm#posei_trader.common.actor.Actor"
                                 ><code>Actor</code></a
                               >
                             </p>
@@ -755,14 +755,14 @@
                                 <ul>
                                   <li>
                                     <strong>trader</strong> (<a
-                                      href="#nautilus_trader.trading.Trader"
+                                      href="#posei_trader.trading.Trader"
                                       ><em>Trader</em></a
                                     >) – The reference to the trader instance to
                                     control.
                                   </li>
                                   <li>
                                     <strong>config</strong> (<a
-                                      href="../config/index.htm#nautilus_trader.common.config.ActorConfig"
+                                      href="../config/index.htm#posei_trader.common.config.ActorConfig"
                                       ><em>ActorConfig</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The
@@ -782,7 +782,7 @@
                             >
                               create_actor(actor:
                               <a
-                                href="../common/index.htm#nautilus_trader.common.actor.Actor"
+                                href="../common/index.htm#posei_trader.common.actor.Actor"
                                 >Actor</a
                               >, start: bool = True) → None<a
                                 href="#create_actoractor-actor-start-bool--true--none"
@@ -799,7 +799,7 @@
                                 <ul>
                                   <li>
                                     <strong>actor</strong> (<a
-                                      href="../common/index.htm#nautilus_trader.common.actor.Actor"
+                                      href="../common/index.htm#posei_trader.common.actor.Actor"
                                       ><em>Actor</em></a
                                     >) – The actor to add.
                                   </li>
@@ -831,7 +831,7 @@
                             >
                               create_actor_from_config(actor_config:
                               <a
-                                href="../config/index.htm#nautilus_trader.common.config.ImportableActorConfig"
+                                href="../config/index.htm#posei_trader.common.config.ImportableActorConfig"
                                 >ImportableActorConfig</a
                               >, start: bool = True) → None<a
                                 href="#create_actor_from_configactor_config-importableactorconfig-start-bool--true--none"
@@ -850,7 +850,7 @@
                                 <ul>
                                   <li>
                                     <strong>actor_config</strong> (<a
-                                      href="../config/index.htm#nautilus_trader.common.config.ImportableActorConfig"
+                                      href="../config/index.htm#posei_trader.common.config.ImportableActorConfig"
                                       ><em>ImportableActorConfig</em></a
                                     >) – The actor config of the actor to add.
                                   </li>
@@ -882,7 +882,7 @@
                             >
                               create_strategy(strategy:
                               <a
-                                href="#nautilus_trader.trading.strategy.Strategy"
+                                href="#posei_trader.trading.strategy.Strategy"
                                 >Strategy</a
                               >, start: bool = True) → None<a
                                 href="#create_strategystrategy-strategy-start-bool--true--none"
@@ -901,7 +901,7 @@
                                 <ul>
                                   <li>
                                     <strong>strategy</strong> (<a
-                                      href="#nautilus_trader.trading.Strategy"
+                                      href="#posei_trader.trading.Strategy"
                                       ><em>Strategy</em></a
                                     >) – The strategy to add.
                                   </li>
@@ -933,7 +933,7 @@
                             >
                               create_strategy_from_config(strategy_config:
                               <a
-                                href="../config/index.htm#nautilus_trader.trading.config.ImportableStrategyConfig"
+                                href="../config/index.htm#posei_trader.trading.config.ImportableStrategyConfig"
                                 >ImportableStrategyConfig</a
                               >, start: bool = True) → None<a
                                 href="#create_strategy_from_configstrategy_config-importablestrategyconfig-start-bool--true--none"
@@ -953,7 +953,7 @@
                                 <ul>
                                   <li>
                                     <strong>strategy_config</strong> (<a
-                                      href="../config/index.htm#nautilus_trader.trading.config.ImportableStrategyConfig"
+                                      href="../config/index.htm#posei_trader.trading.config.ImportableStrategyConfig"
                                       ><em>ImportableStrategyConfig</em></a
                                     >) – The strategy config of the strategy to
                                     add.
@@ -986,7 +986,7 @@
                             >
                               execute(command:
                               <a
-                                href="../core/index.htm#nautilus_trader.core.message.Command"
+                                href="../core/index.htm#posei_trader.core.message.Command"
                                 >Command</a
                               >) → None<a
                                 href="#executecommand-command--none"
@@ -1017,25 +1017,25 @@
                                 <ul>
                                   <li>
                                     <strong>portfolio</strong> (<a
-                                      href="../portfolio/index.htm#nautilus_trader.portfolio.PortfolioFacade"
+                                      href="../portfolio/index.htm#posei_trader.portfolio.PortfolioFacade"
                                       ><em>PortfolioFacade</em></a
                                     >) – The read-only portfolio for the actor.
                                   </li>
                                   <li>
                                     <strong>msgbus</strong> (<a
-                                      href="../common/index.htm#nautilus_trader.common.component.MessageBus"
+                                      href="../common/index.htm#posei_trader.common.component.MessageBus"
                                       ><em>MessageBus</em></a
                                     >) – The message bus for the actor.
                                   </li>
                                   <li>
                                     <strong>cache</strong> (<a
-                                      href="../cache/index.htm#nautilus_trader.cache.base.CacheFacade"
+                                      href="../cache/index.htm#posei_trader.cache.base.CacheFacade"
                                       ><em>CacheFacade</em></a
                                     >) – The read-only cache for the actor.
                                   </li>
                                   <li>
                                     <strong>clock</strong> (<a
-                                      href="../common/index.htm#nautilus_trader.common.component.Clock"
+                                      href="../common/index.htm#posei_trader.common.component.Clock"
                                       ><em>Clock</em></a
                                     >) – The clock for the actor.
                                   </li>
@@ -1064,7 +1064,7 @@
                             >
                               remove_actor(actor:
                               <a
-                                href="../common/index.htm#nautilus_trader.common.actor.Actor"
+                                href="../common/index.htm#posei_trader.common.actor.Actor"
                                 >Actor</a
                               >) → None<a
                                 href="#remove_actoractor-actor--none"
@@ -1083,7 +1083,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>actor</strong> (<a
-                                  href="../common/index.htm#nautilus_trader.common.actor.Actor"
+                                  href="../common/index.htm#posei_trader.common.actor.Actor"
                                   ><em>Actor</em></a
                                 >) – The actor to remove.
                               </li>
@@ -1099,7 +1099,7 @@
                             >
                               remove_actor_from_id(actor_id:
                               <a
-                                href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ComponentId"
+                                href="../model/identifiers/index.htm#posei_trader.model.identifiers.ComponentId"
                                 >ComponentId</a
                               >) → None<a
                                 href="#remove_actor_from_idactor_id-componentid--none"
@@ -1118,7 +1118,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>actor_id</strong> (<a
-                                  href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ComponentId"
+                                  href="../model/identifiers/index.htm#posei_trader.model.identifiers.ComponentId"
                                   ><em>ComponentId</em></a
                                 >) – The ID of the actor to remove.
                               </li>
@@ -1134,7 +1134,7 @@
                             >
                               remove_strategy(strategy:
                               <a
-                                href="#nautilus_trader.trading.strategy.Strategy"
+                                href="#posei_trader.trading.strategy.Strategy"
                                 >Strategy</a
                               >) → None<a
                                 href="#remove_strategystrategy-strategy--none"
@@ -1153,7 +1153,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>strategy</strong> (<a
-                                  href="#nautilus_trader.trading.Strategy"
+                                  href="#posei_trader.trading.Strategy"
                                   ><em>Strategy</em></a
                                 >) – The strategy to remove.
                               </li>
@@ -1169,7 +1169,7 @@
                             >
                               remove_strategy_from_id(strategy_id:
                               <a
-                                href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"
+                                href="../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"
                                 >StrategyId</a
                               >) → None<a
                                 href="#remove_strategy_from_idstrategy_id-strategyid--none"
@@ -1190,7 +1190,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>strategy_id</strong> (<a
-                                  href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"
+                                  href="../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"
                                   ><em>StrategyId</em></a
                                 >) – The ID of the strategy to remove.
                               </li>
@@ -1206,7 +1206,7 @@
                             >
                               start_actor(actor:
                               <a
-                                href="../common/index.htm#nautilus_trader.common.actor.Actor"
+                                href="../common/index.htm#posei_trader.common.actor.Actor"
                                 >Actor</a
                               >) → None<a
                                 href="#start_actoractor-actor--none"
@@ -1234,7 +1234,7 @@
                             >
                               start_actor_from_id(actor_id:
                               <a
-                                href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ComponentId"
+                                href="../model/identifiers/index.htm#posei_trader.model.identifiers.ComponentId"
                                 >ComponentId</a
                               >) → None<a
                                 href="#start_actor_from_idactor_id-componentid--none"
@@ -1253,7 +1253,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>actor_id</strong> (<a
-                                  href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ComponentId"
+                                  href="../model/identifiers/index.htm#posei_trader.model.identifiers.ComponentId"
                                   ><em>ComponentId</em></a
                                 >) – The ID of the actor to start.
                               </li>
@@ -1269,7 +1269,7 @@
                             >
                               start_strategy(strategy:
                               <a
-                                href="#nautilus_trader.trading.strategy.Strategy"
+                                href="#posei_trader.trading.strategy.Strategy"
                                 >Strategy</a
                               >) → None<a
                                 href="#start_strategystrategy-strategy--none"
@@ -1297,7 +1297,7 @@
                             >
                               start_strategy_from_id(strategy_id:
                               <a
-                                href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"
+                                href="../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"
                                 >StrategyId</a
                               >) → None<a
                                 href="#start_strategy_from_idstrategy_id-strategyid--none"
@@ -1318,7 +1318,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>strategy_id</strong> (<a
-                                  href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"
+                                  href="../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"
                                   ><em>StrategyId</em></a
                                 >) – The ID of the strategy to start.
                               </li>
@@ -1334,7 +1334,7 @@
                             >
                               stop_actor(actor:
                               <a
-                                href="../common/index.htm#nautilus_trader.common.actor.Actor"
+                                href="../common/index.htm#posei_trader.common.actor.Actor"
                                 >Actor</a
                               >) → None<a
                                 href="#stop_actoractor-actor--none"
@@ -1353,7 +1353,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>actor</strong> (<a
-                                  href="../common/index.htm#nautilus_trader.common.actor.Actor"
+                                  href="../common/index.htm#posei_trader.common.actor.Actor"
                                   ><em>Actor</em></a
                                 >) – The actor to stop.
                               </li>
@@ -1369,7 +1369,7 @@
                             >
                               stop_actor_from_id(actor_id:
                               <a
-                                href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ComponentId"
+                                href="../model/identifiers/index.htm#posei_trader.model.identifiers.ComponentId"
                                 >ComponentId</a
                               >) → None<a
                                 href="#stop_actor_from_idactor_id-componentid--none"
@@ -1388,7 +1388,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>actor_id</strong> (<a
-                                  href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ComponentId"
+                                  href="../model/identifiers/index.htm#posei_trader.model.identifiers.ComponentId"
                                   ><em>ComponentId</em></a
                                 >) – The ID of the actor to stop.
                               </li>
@@ -1404,7 +1404,7 @@
                             >
                               stop_strategy(strategy:
                               <a
-                                href="#nautilus_trader.trading.strategy.Strategy"
+                                href="#posei_trader.trading.strategy.Strategy"
                                 >Strategy</a
                               >) → None<a
                                 href="#stop_strategystrategy-strategy--none"
@@ -1423,7 +1423,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>strategy</strong> (<a
-                                  href="#nautilus_trader.trading.Strategy"
+                                  href="#posei_trader.trading.Strategy"
                                   ><em>Strategy</em></a
                                 >) – The strategy to stop.
                               </li>
@@ -1439,7 +1439,7 @@
                             >
                               stop_strategy_from_id(strategy_id:
                               <a
-                                href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"
+                                href="../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"
                                 >StrategyId</a
                               >) → None<a
                                 href="#stop_strategy_from_idstrategy_id-strategyid--none"
@@ -1460,7 +1460,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>strategy_id</strong> (<a
-                                  href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"
+                                  href="../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"
                                   ><em>StrategyId</em></a
                                 >) – The ID of the strategy to stop.
                               </li>
@@ -1485,7 +1485,7 @@
                             <p>
                               Bases:
                               <a
-                                href="../common/index.htm#nautilus_trader.common.actor.Actor"
+                                href="../common/index.htm#posei_trader.common.actor.Actor"
                                 ><code>Actor</code></a
                               >
                             </p>
@@ -1523,7 +1523,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>config</strong> (<a
-                                  href="../config/index.htm#nautilus_trader.trading.config.StrategyConfig"
+                                  href="../config/index.htm#posei_trader.trading.config.StrategyConfig"
                                   ><em>StrategyConfig</em></a
                                 >
                                 <em>,</em> <em>optional</em>) – The trading
@@ -1587,7 +1587,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The instrument for the orders to
                                     cancel.
@@ -1599,7 +1599,7 @@
                                   </li>
                                   <li>
                                     <strong>client_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.ClientId"
                                       ><em>ClientId</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The specific
@@ -1640,7 +1640,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>order</strong> (<a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >) – The order to cancel the GTD expiry for.
                               </li>
@@ -1674,13 +1674,13 @@
                                 <ul>
                                   <li>
                                     <strong>order</strong> (<a
-                                      href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                      href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                       ><em>Order</em></a
                                     >) – The order to cancel.
                                   </li>
                                   <li>
                                     <strong>client_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.ClientId"
                                       ><em>ClientId</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The specific
@@ -1733,14 +1733,14 @@
                                     <strong>orders</strong> (<em>list</em>
                                     <em>[</em
                                     ><a
-                                      href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                      href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                       ><em>Order</em></a
                                     >
                                     <em>]</em>) – The orders to cancel.
                                   </li>
                                   <li>
                                     <strong>client_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.ClientId"
                                       ><em>ClientId</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The specific
@@ -1791,7 +1791,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>strategy_id</strong> (<a
-                                  href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"
+                                  href="../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"
                                   ><em>StrategyId</em></a
                                 >) – The new strategy ID to change to.
                               </li>
@@ -1847,7 +1847,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The instrument for the positions to
                                     close.
@@ -1860,7 +1860,7 @@
                                   </li>
                                   <li>
                                     <strong>client_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.ClientId"
                                       ><em>ClientId</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The specific
@@ -1927,13 +1927,13 @@
                                 <ul>
                                   <li>
                                     <strong>position</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Position"
+                                      href="../model/index.htm#posei_trader.model.Position"
                                       ><em>Position</em></a
                                     >) – The position to close.
                                   </li>
                                   <li>
                                     <strong>client_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.ClientId"
                                       ><em>ClientId</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The specific
@@ -2015,7 +2015,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../core/index.htm#nautilus_trader.core.Event"
+                                  href="../core/index.htm#posei_trader.core.Event"
                                   ><em>Event</em></a
                                 >) – The event received.
                               </li>
@@ -2116,13 +2116,13 @@
                                 <ul>
                                   <li>
                                     <strong>order</strong> (<a
-                                      href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                      href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                       ><em>Order</em></a
                                     >) – The order to update.
                                   </li>
                                   <li>
                                     <strong>quantity</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Quantity"
+                                      href="../model/index.htm#posei_trader.model.Quantity"
                                       ><em>Quantity</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The updated
@@ -2130,7 +2130,7 @@
                                   </li>
                                   <li>
                                     <strong>price</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Price"
+                                      href="../model/index.htm#posei_trader.model.Price"
                                       ><em>Price</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The updated
@@ -2138,7 +2138,7 @@
                                   </li>
                                   <li>
                                     <strong>trigger_price</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Price"
+                                      href="../model/index.htm#posei_trader.model.Price"
                                       ><em>Price</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The updated
@@ -2147,7 +2147,7 @@
                                   </li>
                                   <li>
                                     <strong>client_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.ClientId"
                                       ><em>ClientId</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The specific
@@ -2234,7 +2234,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderAccepted"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderAccepted"
                                   ><em>OrderAccepted</em></a
                                 >) – The event received.
                               </li>
@@ -2276,7 +2276,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderCancelRejected"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderCancelRejected"
                                   ><em>OrderCancelRejected</em></a
                                 >) – The event received.
                               </li>
@@ -2318,7 +2318,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderCanceled"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderCanceled"
                                   ><em>OrderCanceled</em></a
                                 >) – The event received.
                               </li>
@@ -2359,7 +2359,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderDenied"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderDenied"
                                   ><em>OrderDenied</em></a
                                 >) – The event received.
                               </li>
@@ -2401,7 +2401,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderEmulated"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderEmulated"
                                   ><em>OrderEmulated</em></a
                                 >) – The event received.
                               </li>
@@ -2442,7 +2442,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderEvent"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderEvent"
                                   ><em>OrderEvent</em></a
                                 >) – The event received.
                               </li>
@@ -2484,7 +2484,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderExpired"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderExpired"
                                   ><em>OrderExpired</em></a
                                 >) – The event received.
                               </li>
@@ -2525,7 +2525,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderFilled"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderFilled"
                                   ><em>OrderFilled</em></a
                                 >) – The event received.
                               </li>
@@ -2567,7 +2567,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderInitialized"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderInitialized"
                                   ><em>OrderInitialized</em></a
                                 >) – The event received.
                               </li>
@@ -2609,7 +2609,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderModifyRejected"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderModifyRejected"
                                   ><em>OrderModifyRejected</em></a
                                 >) – The event received.
                               </li>
@@ -2651,7 +2651,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderPendingCancel"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderPendingCancel"
                                   ><em>OrderPendingCancel</em></a
                                 >) – The event received.
                               </li>
@@ -2693,7 +2693,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderPendingUpdate"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderPendingUpdate"
                                   ><em>OrderPendingUpdate</em></a
                                 >) – The event received.
                               </li>
@@ -2735,7 +2735,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderRejected"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderRejected"
                                   ><em>OrderRejected</em></a
                                 >) – The event received.
                               </li>
@@ -2777,7 +2777,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderReleased"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderReleased"
                                   ><em>OrderReleased</em></a
                                 >) – The event received.
                               </li>
@@ -2819,7 +2819,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderSubmitted"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderSubmitted"
                                   ><em>OrderSubmitted</em></a
                                 >) – The event received.
                               </li>
@@ -2861,7 +2861,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderTriggered"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderTriggered"
                                   ><em>OrderTriggered</em></a
                                 >) – The event received.
                               </li>
@@ -2903,7 +2903,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.OrderUpdated"
+                                  href="../model/events/index.htm#posei_trader.model.events.OrderUpdated"
                                   ><em>OrderUpdated</em></a
                                 >) – The event received.
                               </li>
@@ -2945,7 +2945,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.PositionChanged"
+                                  href="../model/events/index.htm#posei_trader.model.events.PositionChanged"
                                   ><em>PositionChanged</em></a
                                 >) – The event received.
                               </li>
@@ -2987,7 +2987,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.PositionClosed"
+                                  href="../model/events/index.htm#posei_trader.model.events.PositionClosed"
                                   ><em>PositionClosed</em></a
                                 >) – The event received.
                               </li>
@@ -3029,7 +3029,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.PositionEvent"
+                                  href="../model/events/index.htm#posei_trader.model.events.PositionEvent"
                                   ><em>PositionEvent</em></a
                                 >) – The event received.
                               </li>
@@ -3071,7 +3071,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../model/events/index.htm#nautilus_trader.model.events.PositionOpened"
+                                  href="../model/events/index.htm#posei_trader.model.events.PositionOpened"
                                   ><em>PositionOpened</em></a
                                 >) – The event received.
                               </li>
@@ -3203,13 +3203,13 @@
                                 <ul>
                                   <li>
                                     <strong>order</strong> (<a
-                                      href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                      href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                       ><em>Order</em></a
                                     >) – The order to query.
                                   </li>
                                   <li>
                                     <strong>client_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.ClientId"
                                       ><em>ClientId</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The specific
@@ -3248,32 +3248,32 @@
                                 <ul>
                                   <li>
                                     <strong>trader_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.TraderId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.TraderId"
                                       ><em>TraderId</em></a
                                     >) – The trader ID for the strategy.
                                   </li>
                                   <li>
                                     <strong>portfolio</strong> (<a
-                                      href="../portfolio/index.htm#nautilus_trader.portfolio.PortfolioFacade"
+                                      href="../portfolio/index.htm#posei_trader.portfolio.PortfolioFacade"
                                       ><em>PortfolioFacade</em></a
                                     >) – The read-only portfolio for the
                                     strategy.
                                   </li>
                                   <li>
                                     <strong>msgbus</strong> (<a
-                                      href="../common/index.htm#nautilus_trader.common.component.MessageBus"
+                                      href="../common/index.htm#posei_trader.common.component.MessageBus"
                                       ><em>MessageBus</em></a
                                     >) – The message bus for the strategy.
                                   </li>
                                   <li>
                                     <strong>cache</strong> (<a
-                                      href="../cache/index.htm#nautilus_trader.cache.base.CacheFacade"
+                                      href="../cache/index.htm#posei_trader.cache.base.CacheFacade"
                                       ><em>CacheFacade</em></a
                                     >) – The read-only cache for the strategy.
                                   </li>
                                   <li>
                                     <strong>clock</strong> (<a
-                                      href="../common/index.htm#nautilus_trader.common.component.Clock"
+                                      href="../common/index.htm#posei_trader.common.component.Clock"
                                       ><em>Clock</em></a
                                     >) – The clock for the strategy.
                                   </li>
@@ -3331,13 +3331,13 @@
                                 <ul>
                                   <li>
                                     <strong>order</strong> (<a
-                                      href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                      href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                       ><em>Order</em></a
                                     >) – The order to submit.
                                   </li>
                                   <li>
                                     <strong>position_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.PositionId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.PositionId"
                                       ><em>PositionId</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The position
@@ -3348,7 +3348,7 @@
                                   </li>
                                   <li>
                                     <strong>client_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.ClientId"
                                       ><em>ClientId</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The specific
@@ -3424,13 +3424,13 @@
                                 <ul>
                                   <li>
                                     <strong>order_list</strong> (<a
-                                      href="../model/orders/index.htm#nautilus_trader.model.orders.OrderList"
+                                      href="../model/orders/index.htm#posei_trader.model.orders.OrderList"
                                       ><em>OrderList</em></a
                                     >) – The order list to submit.
                                   </li>
                                   <li>
                                     <strong>position_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.PositionId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.PositionId"
                                       ><em>PositionId</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The position
@@ -3441,7 +3441,7 @@
                                   </li>
                                   <li>
                                     <strong>client_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.ClientId"
                                       ><em>ClientId</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The specific
@@ -3488,7 +3488,7 @@
                             >
                               to_importable_config(self) →
                               <a
-                                href="../config/index.htm#nautilus_trader.trading.config.ImportableStrategyConfig"
+                                href="../config/index.htm#posei_trader.trading.config.ImportableStrategyConfig"
                                 >ImportableStrategyConfig</a
                               ><a
                                 href="#to_importable_configself--importablestrategyconfig"
@@ -3506,7 +3506,7 @@
                               <li>
                                 <strong>Return type:</strong>
                                 <a
-                                  href="../config/index.htm#nautilus_trader.trading.config.ImportableStrategyConfig"
+                                  href="../config/index.htm#posei_trader.trading.config.ImportableStrategyConfig"
                                   >ImportableStrategyConfig</a
                                 >
                               </li>
@@ -3545,7 +3545,7 @@
                             <p>
                               Bases:
                               <a
-                                href="../common/index.htm#nautilus_trader.common.component.Component"
+                                href="../common/index.htm#posei_trader.common.component.Component"
                                 ><code>Component</code></a
                               >
                             </p>
@@ -3559,55 +3559,55 @@
                                 <ul>
                                   <li>
                                     <strong>trader_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.TraderId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.TraderId"
                                       ><em>TraderId</em></a
                                     >) – The ID for the trader.
                                   </li>
                                   <li>
                                     <strong>instance_id</strong> (<a
-                                      href="../core/index.htm#nautilus_trader.core.UUID4"
+                                      href="../core/index.htm#posei_trader.core.UUID4"
                                       ><em>UUID4</em></a
                                     >) – The instance ID for the trader.
                                   </li>
                                   <li>
                                     <strong>msgbus</strong> (<a
-                                      href="../common/index.htm#nautilus_trader.common.component.MessageBus"
+                                      href="../common/index.htm#posei_trader.common.component.MessageBus"
                                       ><em>MessageBus</em></a
                                     >) – The message bus for the trader.
                                   </li>
                                   <li>
                                     <strong>cache</strong> (<a
-                                      href="../cache/index.htm#nautilus_trader.cache.Cache"
+                                      href="../cache/index.htm#posei_trader.cache.Cache"
                                       ><em>Cache</em></a
                                     >) – The cache for the trader.
                                   </li>
                                   <li>
                                     <strong>portfolio</strong> (<a
-                                      href="../portfolio/index.htm#nautilus_trader.portfolio.Portfolio"
+                                      href="../portfolio/index.htm#posei_trader.portfolio.Portfolio"
                                       ><em>Portfolio</em></a
                                     >) – The portfolio for the trader.
                                   </li>
                                   <li>
                                     <strong>data_engine</strong> (<a
-                                      href="../data/index.htm#nautilus_trader.data.engine.DataEngine"
+                                      href="../data/index.htm#posei_trader.data.engine.DataEngine"
                                       ><em>DataEngine</em></a
                                     >) – The data engine for the trader.
                                   </li>
                                   <li>
                                     <strong>risk_engine</strong> (<a
-                                      href="../risk/index.htm#nautilus_trader.risk.engine.RiskEngine"
+                                      href="../risk/index.htm#posei_trader.risk.engine.RiskEngine"
                                       ><em>RiskEngine</em></a
                                     >) – The risk engine for the trader.
                                   </li>
                                   <li>
                                     <strong>exec_engine</strong> (<a
-                                      href="../execution/index.htm#nautilus_trader.execution.engine.ExecutionEngine"
+                                      href="../execution/index.htm#posei_trader.execution.engine.ExecutionEngine"
                                       ><em>ExecutionEngine</em></a
                                     >) – The execution engine for the trader.
                                   </li>
                                   <li>
                                     <strong>clock</strong> (<a
-                                      href="../common/index.htm#nautilus_trader.common.component.Clock"
+                                      href="../common/index.htm#posei_trader.common.component.Clock"
                                       ><em>Clock</em></a
                                     >) – The clock for the trader.
                                   </li>

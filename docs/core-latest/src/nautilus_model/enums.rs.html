@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `crates/model/src/enums.rs`."><title>enums.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-84e720fa.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="nautilus_model" data-themes="" data-resource-suffix="" data-rustdoc-version="1.90.0-nightly (28f1c8079 2025-06-24)" data-channel="nightly" data-search-js="search-92309212.js" data-settings-js="settings-5514c975.js" ><script src="../../static.files/storage-4e99c027.js"></script><script defer src="../../static.files/src-script-813739b1.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-340f468f.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-32bb7600.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1><div class="sub-heading">nautilus_model/</div>enums.rs</h1><rustdoc-toolbar></rustdoc-toolbar></div><div class="example-wrap digits-4"><pre class="rust"><code><a href=#1 id=1 data-nosnippet>1</a><span class="comment">// -------------------------------------------------------------------------------------------------
 <a href=#2 id=2 data-nosnippet>2</a>//  Copyright (C) 2015-2025 Posei Systems Pty Ltd. All rights reserved.
-<a href=#3 id=3 data-nosnippet>3</a>//  https://nautechsystems.io
+<a href=#3 id=3 data-nosnippet>3</a>//  https://poseitrader.io
 <a href=#4 id=4 data-nosnippet>4</a>//
 <a href=#5 id=5 data-nosnippet>5</a>//  Licensed under the GNU Lesser General Public License Version 3.0 (the "License");
 <a href=#6 id=6 data-nosnippet>6</a>//  You may not use this file except in compliance with the License.
@@ -55,7 +55,7 @@
 <a href=#55 id=55 data-nosnippet>55</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#56 id=56 data-nosnippet>56</a>#[cfg_attr(
 <a href=#57 id=57 data-nosnippet>57</a>    feature = <span class="string">"python"</span>,
-<a href=#58 id=58 data-nosnippet>58</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#58 id=58 data-nosnippet>58</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#59 id=59 data-nosnippet>59</a>)]
 <a href=#60 id=60 data-nosnippet>60</a></span><span class="kw">pub enum </span>AccountType {
 <a href=#61 id=61 data-nosnippet>61</a>    <span class="doccomment">/// An account with unleveraged cash assets only.
@@ -87,7 +87,7 @@
 <a href=#87 id=87 data-nosnippet>87</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#88 id=88 data-nosnippet>88</a>#[cfg_attr(
 <a href=#89 id=89 data-nosnippet>89</a>    feature = <span class="string">"python"</span>,
-<a href=#90 id=90 data-nosnippet>90</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#90 id=90 data-nosnippet>90</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#91 id=91 data-nosnippet>91</a>)]
 <a href=#92 id=92 data-nosnippet>92</a></span><span class="kw">pub enum </span>AggregationSource {
 <a href=#93 id=93 data-nosnippet>93</a>    <span class="doccomment">/// The data is externally aggregated (outside the Posei system boundary).
@@ -118,7 +118,7 @@
 <a href=#118 id=118 data-nosnippet>118</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#119 id=119 data-nosnippet>119</a>#[cfg_attr(
 <a href=#120 id=120 data-nosnippet>120</a>    feature = <span class="string">"python"</span>,
-<a href=#121 id=121 data-nosnippet>121</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#121 id=121 data-nosnippet>121</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#122 id=122 data-nosnippet>122</a>)]
 <a href=#123 id=123 data-nosnippet>123</a></span><span class="kw">pub enum </span>AggressorSide {
 <a href=#124 id=124 data-nosnippet>124</a>    <span class="doccomment">/// There was no specific aggressor for the trade.
@@ -162,7 +162,7 @@
 <a href=#162 id=162 data-nosnippet>162</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#163 id=163 data-nosnippet>163</a>#[cfg_attr(
 <a href=#164 id=164 data-nosnippet>164</a>    feature = <span class="string">"python"</span>,
-<a href=#165 id=165 data-nosnippet>165</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#165 id=165 data-nosnippet>165</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#166 id=166 data-nosnippet>166</a>)]
 <a href=#167 id=167 data-nosnippet>167</a>#[allow(non_camel_case_types)]
 <a href=#168 id=168 data-nosnippet>168</a></span><span class="kw">pub enum </span>AssetClass {
@@ -218,7 +218,7 @@
 <a href=#218 id=218 data-nosnippet>218</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#219 id=219 data-nosnippet>219</a>#[cfg_attr(
 <a href=#220 id=220 data-nosnippet>220</a>    feature = <span class="string">"python"</span>,
-<a href=#221 id=221 data-nosnippet>221</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#221 id=221 data-nosnippet>221</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#222 id=222 data-nosnippet>222</a>)]
 <a href=#223 id=223 data-nosnippet>223</a></span><span class="kw">pub enum </span>InstrumentClass {
 <a href=#224 id=224 data-nosnippet>224</a>    <span class="doccomment">/// A spot market instrument class. The current market price of an instrument that is bought or sold for immediate delivery and payment.
@@ -269,7 +269,7 @@
 <a href=#269 id=269 data-nosnippet>269</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#270 id=270 data-nosnippet>270</a>#[cfg_attr(
 <a href=#271 id=271 data-nosnippet>271</a>    feature = <span class="string">"python"</span>,
-<a href=#272 id=272 data-nosnippet>272</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#272 id=272 data-nosnippet>272</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#273 id=273 data-nosnippet>273</a>)]
 <a href=#274 id=274 data-nosnippet>274</a></span><span class="kw">pub enum </span>BarAggregation {
 <a href=#275 id=275 data-nosnippet>275</a>    <span class="doccomment">/// Based on a number of ticks.
@@ -328,7 +328,7 @@
 <a href=#328 id=328 data-nosnippet>328</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#329 id=329 data-nosnippet>329</a>#[cfg_attr(
 <a href=#330 id=330 data-nosnippet>330</a>    feature = <span class="string">"python"</span>,
-<a href=#331 id=331 data-nosnippet>331</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#331 id=331 data-nosnippet>331</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#332 id=332 data-nosnippet>332</a>)]
 <a href=#333 id=333 data-nosnippet>333</a></span><span class="kw">pub enum </span>BarIntervalType {
 <a href=#334 id=334 data-nosnippet>334</a>    <span class="doccomment">/// Left-open interval `(start, end]`: start is exclusive, end is inclusive (default).
@@ -359,7 +359,7 @@
 <a href=#359 id=359 data-nosnippet>359</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#360 id=360 data-nosnippet>360</a>#[cfg_attr(
 <a href=#361 id=361 data-nosnippet>361</a>    feature = <span class="string">"python"</span>,
-<a href=#362 id=362 data-nosnippet>362</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#362 id=362 data-nosnippet>362</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#363 id=363 data-nosnippet>363</a>)]
 <a href=#364 id=364 data-nosnippet>364</a></span><span class="kw">pub enum </span>BetSide {
 <a href=#365 id=365 data-nosnippet>365</a>    <span class="doccomment">/// A "Back" bet signifies support for a specific outcome.
@@ -415,7 +415,7 @@
 <a href=#415 id=415 data-nosnippet>415</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#416 id=416 data-nosnippet>416</a>#[cfg_attr(
 <a href=#417 id=417 data-nosnippet>417</a>    feature = <span class="string">"python"</span>,
-<a href=#418 id=418 data-nosnippet>418</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#418 id=418 data-nosnippet>418</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#419 id=419 data-nosnippet>419</a>)]
 <a href=#420 id=420 data-nosnippet>420</a></span><span class="kw">pub enum </span>BookAction {
 <a href=#421 id=421 data-nosnippet>421</a>    <span class="doccomment">/// An order is added to the book.
@@ -462,7 +462,7 @@
 <a href=#462 id=462 data-nosnippet>462</a>#[allow(non_camel_case_types)]
 <a href=#463 id=463 data-nosnippet>463</a>#[cfg_attr(
 <a href=#464 id=464 data-nosnippet>464</a>    feature = <span class="string">"python"</span>,
-<a href=#465 id=465 data-nosnippet>465</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#465 id=465 data-nosnippet>465</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#466 id=466 data-nosnippet>466</a>)]
 <a href=#467 id=467 data-nosnippet>467</a></span><span class="kw">pub enum </span>BookType {
 <a href=#468 id=468 data-nosnippet>468</a>    <span class="doccomment">/// Top-of-book best bid/ask, one level per side.
@@ -508,7 +508,7 @@
 <a href=#508 id=508 data-nosnippet>508</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#509 id=509 data-nosnippet>509</a>#[cfg_attr(
 <a href=#510 id=510 data-nosnippet>510</a>    feature = <span class="string">"python"</span>,
-<a href=#511 id=511 data-nosnippet>511</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#511 id=511 data-nosnippet>511</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#512 id=512 data-nosnippet>512</a>)]
 <a href=#513 id=513 data-nosnippet>513</a></span><span class="kw">pub enum </span>ContingencyType {
 <a href=#514 id=514 data-nosnippet>514</a>    <span class="doccomment">/// Not a contingent order.
@@ -543,7 +543,7 @@
 <a href=#543 id=543 data-nosnippet>543</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#544 id=544 data-nosnippet>544</a>#[cfg_attr(
 <a href=#545 id=545 data-nosnippet>545</a>    feature = <span class="string">"python"</span>,
-<a href=#546 id=546 data-nosnippet>546</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#546 id=546 data-nosnippet>546</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#547 id=547 data-nosnippet>547</a>)]
 <a href=#548 id=548 data-nosnippet>548</a></span><span class="kw">pub enum </span>CurrencyType {
 <a href=#549 id=549 data-nosnippet>549</a>    <span class="doccomment">/// A type of cryptocurrency or crypto token.
@@ -575,7 +575,7 @@
 <a href=#575 id=575 data-nosnippet>575</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#576 id=576 data-nosnippet>576</a>#[cfg_attr(
 <a href=#577 id=577 data-nosnippet>577</a>    feature = <span class="string">"python"</span>,
-<a href=#578 id=578 data-nosnippet>578</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#578 id=578 data-nosnippet>578</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#579 id=579 data-nosnippet>579</a>)]
 <a href=#580 id=580 data-nosnippet>580</a></span><span class="kw">pub enum </span>InstrumentCloseType {
 <a href=#581 id=581 data-nosnippet>581</a>    <span class="doccomment">/// When the market session ended.
@@ -616,7 +616,7 @@
 <a href=#616 id=616 data-nosnippet>616</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#617 id=617 data-nosnippet>617</a>#[cfg_attr(
 <a href=#618 id=618 data-nosnippet>618</a>    feature = <span class="string">"python"</span>,
-<a href=#619 id=619 data-nosnippet>619</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#619 id=619 data-nosnippet>619</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#620 id=620 data-nosnippet>620</a>)]
 <a href=#621 id=621 data-nosnippet>621</a>#[allow(clippy::enum_variant_names)]
 <a href=#622 id=622 data-nosnippet>622</a></span><span class="kw">pub enum </span>LiquiditySide {
@@ -649,7 +649,7 @@
 <a href=#649 id=649 data-nosnippet>649</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#650 id=650 data-nosnippet>650</a>#[cfg_attr(
 <a href=#651 id=651 data-nosnippet>651</a>    feature = <span class="string">"python"</span>,
-<a href=#652 id=652 data-nosnippet>652</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#652 id=652 data-nosnippet>652</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#653 id=653 data-nosnippet>653</a>)]
 <a href=#654 id=654 data-nosnippet>654</a></span><span class="kw">pub enum </span>MarketStatus {
 <a href=#655 id=655 data-nosnippet>655</a>    <span class="doccomment">/// The instrument is trading.
@@ -687,7 +687,7 @@
 <a href=#687 id=687 data-nosnippet>687</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#688 id=688 data-nosnippet>688</a>#[cfg_attr(
 <a href=#689 id=689 data-nosnippet>689</a>    feature = <span class="string">"python"</span>,
-<a href=#690 id=690 data-nosnippet>690</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#690 id=690 data-nosnippet>690</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#691 id=691 data-nosnippet>691</a>)]
 <a href=#692 id=692 data-nosnippet>692</a></span><span class="kw">pub enum </span>MarketStatusAction {
 <a href=#693 id=693 data-nosnippet>693</a>    <span class="doccomment">/// No change.
@@ -771,7 +771,7 @@
 <a href=#771 id=771 data-nosnippet>771</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#772 id=772 data-nosnippet>772</a>#[cfg_attr(
 <a href=#773 id=773 data-nosnippet>773</a>    feature = <span class="string">"python"</span>,
-<a href=#774 id=774 data-nosnippet>774</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#774 id=774 data-nosnippet>774</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#775 id=775 data-nosnippet>775</a>)]
 <a href=#776 id=776 data-nosnippet>776</a></span><span class="kw">pub enum </span>OmsType {
 <a href=#777 id=777 data-nosnippet>777</a>    <span class="doccomment">/// There is no specific type of order management specified (will defer to the venue OMS).
@@ -806,7 +806,7 @@
 <a href=#806 id=806 data-nosnippet>806</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#807 id=807 data-nosnippet>807</a>#[cfg_attr(
 <a href=#808 id=808 data-nosnippet>808</a>    feature = <span class="string">"python"</span>,
-<a href=#809 id=809 data-nosnippet>809</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#809 id=809 data-nosnippet>809</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#810 id=810 data-nosnippet>810</a>)]
 <a href=#811 id=811 data-nosnippet>811</a></span><span class="kw">pub enum </span>OptionKind {
 <a href=#812 id=812 data-nosnippet>812</a>    <span class="doccomment">/// A Call option gives the holder the right, but not the obligation, to buy an underlying asset at a specified strike price within a specified period of time.
@@ -838,7 +838,7 @@
 <a href=#838 id=838 data-nosnippet>838</a>#[allow(clippy::enum_variant_names)]
 <a href=#839 id=839 data-nosnippet>839</a>#[cfg_attr(
 <a href=#840 id=840 data-nosnippet>840</a>    feature = <span class="string">"python"</span>,
-<a href=#841 id=841 data-nosnippet>841</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#841 id=841 data-nosnippet>841</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#842 id=842 data-nosnippet>842</a>)]
 <a href=#843 id=843 data-nosnippet>843</a></span><span class="kw">pub enum </span>OrderSide {
 <a href=#844 id=844 data-nosnippet>844</a>    <span class="doccomment">/// No order side is specified.
@@ -965,7 +965,7 @@
 <a href=#965 id=965 data-nosnippet>965</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#966 id=966 data-nosnippet>966</a>#[cfg_attr(
 <a href=#967 id=967 data-nosnippet>967</a>    feature = <span class="string">"python"</span>,
-<a href=#968 id=968 data-nosnippet>968</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#968 id=968 data-nosnippet>968</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#969 id=969 data-nosnippet>969</a>)]
 <a href=#970 id=970 data-nosnippet>970</a></span><span class="kw">pub enum </span>OrderStatus {
 <a href=#971 id=971 data-nosnippet>971</a>    <span class="doccomment">/// The order is initialized (instantiated) within the Posei system.
@@ -1019,7 +1019,7 @@
 <a href=#1019 id=1019 data-nosnippet>1019</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#1020 id=1020 data-nosnippet>1020</a>#[cfg_attr(
 <a href=#1021 id=1021 data-nosnippet>1021</a>    feature = <span class="string">"python"</span>,
-<a href=#1022 id=1022 data-nosnippet>1022</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#1022 id=1022 data-nosnippet>1022</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#1023 id=1023 data-nosnippet>1023</a>)]
 <a href=#1024 id=1024 data-nosnippet>1024</a></span><span class="kw">pub enum </span>OrderType {
 <a href=#1025 id=1025 data-nosnippet>1025</a>    <span class="doccomment">/// A market order to buy or sell at the best available price in the current market.
@@ -1065,7 +1065,7 @@
 <a href=#1065 id=1065 data-nosnippet>1065</a>#[allow(clippy::enum_variant_names)]
 <a href=#1066 id=1066 data-nosnippet>1066</a>#[cfg_attr(
 <a href=#1067 id=1067 data-nosnippet>1067</a>    feature = <span class="string">"python"</span>,
-<a href=#1068 id=1068 data-nosnippet>1068</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#1068 id=1068 data-nosnippet>1068</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#1069 id=1069 data-nosnippet>1069</a>)]
 <a href=#1070 id=1070 data-nosnippet>1070</a></span><span class="kw">pub enum </span>PositionSide {
 <a href=#1071 id=1071 data-nosnippet>1071</a>    <span class="doccomment">/// No position side is specified (only valid in the context of a filter for actions involving positions).
@@ -1100,7 +1100,7 @@
 <a href=#1100 id=1100 data-nosnippet>1100</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#1101 id=1101 data-nosnippet>1101</a>#[cfg_attr(
 <a href=#1102 id=1102 data-nosnippet>1102</a>    feature = <span class="string">"python"</span>,
-<a href=#1103 id=1103 data-nosnippet>1103</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#1103 id=1103 data-nosnippet>1103</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#1104 id=1104 data-nosnippet>1104</a>)]
 <a href=#1105 id=1105 data-nosnippet>1105</a></span><span class="kw">pub enum </span>PriceType {
 <a href=#1106 id=1106 data-nosnippet>1106</a>    <span class="doccomment">/// The best quoted price at which buyers are willing to buy a quantity of an instrument.
@@ -1139,7 +1139,7 @@
 <a href=#1139 id=1139 data-nosnippet>1139</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#1140 id=1140 data-nosnippet>1140</a>#[cfg_attr(
 <a href=#1141 id=1141 data-nosnippet>1141</a>    feature = <span class="string">"python"</span>,
-<a href=#1142 id=1142 data-nosnippet>1142</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#1142 id=1142 data-nosnippet>1142</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#1143 id=1143 data-nosnippet>1143</a>)]
 <a href=#1144 id=1144 data-nosnippet>1144</a>#[allow(non_camel_case_types)]
 <a href=#1145 id=1145 data-nosnippet>1145</a></span><span class="kw">pub enum </span>RecordFlag {
@@ -1186,7 +1186,7 @@
 <a href=#1186 id=1186 data-nosnippet>1186</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#1187 id=1187 data-nosnippet>1187</a>#[cfg_attr(
 <a href=#1188 id=1188 data-nosnippet>1188</a>    feature = <span class="string">"python"</span>,
-<a href=#1189 id=1189 data-nosnippet>1189</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#1189 id=1189 data-nosnippet>1189</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#1190 id=1190 data-nosnippet>1190</a>)]
 <a href=#1191 id=1191 data-nosnippet>1191</a></span><span class="kw">pub enum </span>TimeInForce {
 <a href=#1192 id=1192 data-nosnippet>1192</a>    <span class="doccomment">/// Good Till Cancel (GTC) - Remains active until canceled.
@@ -1226,7 +1226,7 @@
 <a href=#1226 id=1226 data-nosnippet>1226</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#1227 id=1227 data-nosnippet>1227</a>#[cfg_attr(
 <a href=#1228 id=1228 data-nosnippet>1228</a>    feature = <span class="string">"python"</span>,
-<a href=#1229 id=1229 data-nosnippet>1229</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#1229 id=1229 data-nosnippet>1229</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#1230 id=1230 data-nosnippet>1230</a>)]
 <a href=#1231 id=1231 data-nosnippet>1231</a></span><span class="kw">pub enum </span>TradingState {
 <a href=#1232 id=1232 data-nosnippet>1232</a>    <span class="doccomment">/// Normal trading operations.
@@ -1259,7 +1259,7 @@
 <a href=#1259 id=1259 data-nosnippet>1259</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#1260 id=1260 data-nosnippet>1260</a>#[cfg_attr(
 <a href=#1261 id=1261 data-nosnippet>1261</a>    feature = <span class="string">"python"</span>,
-<a href=#1262 id=1262 data-nosnippet>1262</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#1262 id=1262 data-nosnippet>1262</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#1263 id=1263 data-nosnippet>1263</a>)]
 <a href=#1264 id=1264 data-nosnippet>1264</a></span><span class="kw">pub enum </span>TrailingOffsetType {
 <a href=#1265 id=1265 data-nosnippet>1265</a>    <span class="doccomment">/// No trailing offset type is specified (invalid for trailing type orders).
@@ -1297,7 +1297,7 @@
 <a href=#1297 id=1297 data-nosnippet>1297</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#1298 id=1298 data-nosnippet>1298</a>#[cfg_attr(
 <a href=#1299 id=1299 data-nosnippet>1299</a>    feature = <span class="string">"python"</span>,
-<a href=#1300 id=1300 data-nosnippet>1300</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.model.enums"</span>)
+<a href=#1300 id=1300 data-nosnippet>1300</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.model.enums"</span>)
 <a href=#1301 id=1301 data-nosnippet>1301</a>)]
 <a href=#1302 id=1302 data-nosnippet>1302</a></span><span class="kw">pub enum </span>TriggerType {
 <a href=#1303 id=1303 data-nosnippet>1303</a>    <span class="doccomment">/// No trigger type is specified (invalid for orders with a trigger).

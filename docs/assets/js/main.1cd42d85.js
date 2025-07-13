@@ -26340,8 +26340,8 @@
         favicon: "img/shell.ico",
         url: "https://nautilustrader.io",
         baseUrl: "/docs/",
-        organizationName: "nautechsystems",
-        projectName: "nautilus_docs",
+        organizationName: "PoseiTrader",
+        projectName: "posei_docs",
         onBrokenLinks: "warn",
         onBrokenMarkdownLinks: "warn",
         i18n: {

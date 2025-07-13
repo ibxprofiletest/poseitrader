@@ -23,9 +23,9 @@ configurations, data types and constants for connecting to and interacting with
 Bybit’s API.</p>
 <p>For convenience, the most commonly used symbols are re-exported at the
 subpackage’s top level, so downstream code can simply import from
-<code>nautilus_trader.adapters.bybit</code>.</p>
+<code>posei_trader.adapters.bybit</code>.</p>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-bybitdataclientconfig"><em>class</em> BybitDataClientConfig<a href="#class-bybitdataclientconfig" class="hash-link" aria-label="Direct link to class-bybitdataclientconfig" title="Direct link to class-bybitdataclientconfig">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
 <p>Configuration for <code>BybitDataClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -36,7 +36,7 @@ BYBIT_TESTNET_API_KEY environment variables.</li>
 <li><strong>api_secret</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The Bybit API public key.
 If <code>None</code> then will source the BYBIT_API_SECRET or
 BYBIT_TESTNET_API_SECRET environment variables.</li>
-<li><strong>product_types</strong> (<em>list</em> <em>[</em><a href="#nautilus_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The Bybit product type for the client.
+<li><strong>product_types</strong> (<em>list</em> <em>[</em><a href="#posei_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The Bybit product type for the client.
 If not specified then will use all products.</li>
 <li><strong>demo</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If the client is connecting to the Bybit demo API.</li>
 <li><strong>testnet</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If the client is connecting to the Bybit testnet API.</li>
@@ -52,7 +52,7 @@ If True, then ts_event will be on the close of the bar.</li>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="bars_timestamp_on_close--bool">bars_timestamp_on_close <em>: bool</em><a href="#bars_timestamp_on_close--bool" class="hash-link" aria-label="Direct link to bars_timestamp_on_close--bool" title="Direct link to bars_timestamp_on_close--bool">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="base_url_http--str--none">base_url_http <em>: str | None</em><a href="#base_url_http--str--none" class="hash-link" aria-label="Direct link to base_url_http--str--none" title="Direct link to base_url_http--str--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="demo--bool">demo <em>: bool</em><a href="#demo--bool" class="hash-link" aria-label="Direct link to demo--bool" title="Direct link to demo--bool">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="product_types--listbybitproducttype--none">product_types <em>: list[<a href="#nautilus_trader.adapters.bybit.BybitProductType">BybitProductType</a>] | None</em><a href="#product_types--listbybitproducttype--none" class="hash-link" aria-label="Direct link to product_types--listbybitproducttype--none" title="Direct link to product_types--listbybitproducttype--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="product_types--listbybitproducttype--none">product_types <em>: list[<a href="#posei_trader.adapters.bybit.BybitProductType">BybitProductType</a>] | None</em><a href="#product_types--listbybitproducttype--none" class="hash-link" aria-label="Direct link to product_types--listbybitproducttype--none" title="Direct link to product_types--listbybitproducttype--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="recv_window_ms--positiveint">recv_window_ms <em>: PositiveInt</em><a href="#recv_window_ms--positiveint" class="hash-link" aria-label="Direct link to recv_window_ms--positiveint" title="Direct link to recv_window_ms--positiveint">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="testnet--bool">testnet <em>: bool</em><a href="#testnet--bool" class="hash-link" aria-label="Direct link to testnet--bool" title="Direct link to testnet--bool">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="update_instruments_interval_mins--positiveint--none">update_instruments_interval_mins <em>: PositiveInt | None</em><a href="#update_instruments_interval_mins--positiveint--none" class="hash-link" aria-label="Direct link to update_instruments_interval_mins--positiveint--none" title="Direct link to update_instruments_interval_mins--positiveint--none">​</a></h4>
@@ -75,7 +75,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig" title="Direct link to instrument_provider--instrumentproviderconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig" title="Direct link to instrument_provider--instrumentproviderconfig">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes">json() → bytes<a href="#json--bytes" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -107,7 +107,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig" class="hash-link" aria-label="Direct link to routing--routingconfig" title="Direct link to routing--routingconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig" class="hash-link" aria-label="Direct link to routing--routingconfig" title="Direct link to routing--routingconfig">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool">validate() → bool<a href="#validate--bool" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -115,7 +115,7 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-bybitexecclientconfig"><em>class</em> BybitExecClientConfig<a href="#class-bybitexecclientconfig" class="hash-link" aria-label="Direct link to class-bybitexecclientconfig" title="Direct link to class-bybitexecclientconfig">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveExecClientConfig"><code>LiveExecClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveExecClientConfig"><code>LiveExecClientConfig</code></a></p>
 <p>Configuration for <code>BybitExecutionClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -126,7 +126,7 @@ BYBIT_TESTNET_API_KEY environment variables.</li>
 <li><strong>api_secret</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The Bybit API public key.
 If <code>None</code> then will source the BYBIT_API_KEY or
 BYBIT_TESTNET_API_KEY environment variables.</li>
-<li><strong>product_types</strong> (<em>list</em> <em>[</em><a href="#nautilus_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The Bybit product type for the client.
+<li><strong>product_types</strong> (<em>list</em> <em>[</em><a href="#posei_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The Bybit product type for the client.
 If None then will default to ‘SPOT’, you also cannot mix ‘SPOT’ with
 any other product type for execution, and it will use a CASH account
 type, vs MARGIN for the other derivative products.</li>
@@ -147,8 +147,8 @@ Effective only when use_ws_trade_api is set to True.</li>
 <li><strong>ws_trade_timeout_secs</strong> (<em>PositiveFloat</em> <em>,</em> <em>default 5.0</em>) – The timeout for trade websocket messages.</li>
 <li><strong>ws_auth_timeout_secs</strong> (<em>PositiveFloat</em> <em>,</em> <em>default 5.0</em>) – The timeout for auth websocket messages.</li>
 <li><strong>futures_leverages</strong> (<em>dict</em> *[*<em>BybitSymbol</em> <em>,</em> <em>PositiveInt</em> <em>]</em> <em>,</em> <em>optional</em>) – The leverages for futures.</li>
-<li><strong>position_mode</strong> (<em>dict</em> *[*<em>BybitSymbol</em> <em>,</em> <a href="#nautilus_trader.adapters.bybit.common.enums.BybitPositionMode"><em>BybitPositionMode</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The position mode for USDT perpetual and Inverse futures.</li>
-<li><strong>margin_mode</strong> (<a href="#nautilus_trader.adapters.bybit.common.enums.BybitMarginMode"><em>BybitMarginMode</em></a> <em>,</em> <em>optional</em>) – Set Margin Mode.</li>
+<li><strong>position_mode</strong> (<em>dict</em> *[*<em>BybitSymbol</em> <em>,</em> <a href="#posei_trader.adapters.bybit.common.enums.BybitPositionMode"><em>BybitPositionMode</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The position mode for USDT perpetual and Inverse futures.</li>
+<li><strong>margin_mode</strong> (<a href="#posei_trader.adapters.bybit.common.enums.BybitMarginMode"><em>BybitMarginMode</em></a> <em>,</em> <em>optional</em>) – Set Margin Mode.</li>
 </ul>
 </li>
 </ul>
@@ -161,10 +161,10 @@ Effective only when use_ws_trade_api is set to True.</li>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="base_url_ws_trade--str--none">base_url_ws_trade <em>: str | None</em><a href="#base_url_ws_trade--str--none" class="hash-link" aria-label="Direct link to base_url_ws_trade--str--none" title="Direct link to base_url_ws_trade--str--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="demo--bool-1">demo <em>: bool</em><a href="#demo--bool-1" class="hash-link" aria-label="Direct link to demo--bool-1" title="Direct link to demo--bool-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="futures_leverages--dictbybitsymbol-positiveint--none">futures_leverages <em>: dict[BybitSymbol, PositiveInt] | None</em><a href="#futures_leverages--dictbybitsymbol-positiveint--none" class="hash-link" aria-label="Direct link to futures_leverages--dictbybitsymbol-positiveint--none" title="Direct link to futures_leverages--dictbybitsymbol-positiveint--none">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="margin_mode--bybitmarginmode--none">margin_mode <em>: <a href="#nautilus_trader.adapters.bybit.common.enums.BybitMarginMode">BybitMarginMode</a> | None</em><a href="#margin_mode--bybitmarginmode--none" class="hash-link" aria-label="Direct link to margin_mode--bybitmarginmode--none" title="Direct link to margin_mode--bybitmarginmode--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="margin_mode--bybitmarginmode--none">margin_mode <em>: <a href="#posei_trader.adapters.bybit.common.enums.BybitMarginMode">BybitMarginMode</a> | None</em><a href="#margin_mode--bybitmarginmode--none" class="hash-link" aria-label="Direct link to margin_mode--bybitmarginmode--none" title="Direct link to margin_mode--bybitmarginmode--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="max_retries--positiveint--none">max_retries <em>: PositiveInt | None</em><a href="#max_retries--positiveint--none" class="hash-link" aria-label="Direct link to max_retries--positiveint--none" title="Direct link to max_retries--positiveint--none">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="position_mode--dictbybitsymbol-bybitpositionmode--none">position_mode <em>: dict[BybitSymbol, <a href="#nautilus_trader.adapters.bybit.common.enums.BybitPositionMode">BybitPositionMode</a>] | None</em><a href="#position_mode--dictbybitsymbol-bybitpositionmode--none" class="hash-link" aria-label="Direct link to position_mode--dictbybitsymbol-bybitpositionmode--none" title="Direct link to position_mode--dictbybitsymbol-bybitpositionmode--none">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="product_types--listbybitproducttype--none-1">product_types <em>: list[<a href="#nautilus_trader.adapters.bybit.BybitProductType">BybitProductType</a>] | None</em><a href="#product_types--listbybitproducttype--none-1" class="hash-link" aria-label="Direct link to product_types--listbybitproducttype--none-1" title="Direct link to product_types--listbybitproducttype--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="position_mode--dictbybitsymbol-bybitpositionmode--none">position_mode <em>: dict[BybitSymbol, <a href="#posei_trader.adapters.bybit.common.enums.BybitPositionMode">BybitPositionMode</a>] | None</em><a href="#position_mode--dictbybitsymbol-bybitpositionmode--none" class="hash-link" aria-label="Direct link to position_mode--dictbybitsymbol-bybitpositionmode--none" title="Direct link to position_mode--dictbybitsymbol-bybitpositionmode--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="product_types--listbybitproducttype--none-1">product_types <em>: list[<a href="#posei_trader.adapters.bybit.BybitProductType">BybitProductType</a>] | None</em><a href="#product_types--listbybitproducttype--none-1" class="hash-link" aria-label="Direct link to product_types--listbybitproducttype--none-1" title="Direct link to product_types--listbybitproducttype--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="recv_window_ms--positiveint-1">recv_window_ms <em>: PositiveInt</em><a href="#recv_window_ms--positiveint-1" class="hash-link" aria-label="Direct link to recv_window_ms--positiveint-1" title="Direct link to recv_window_ms--positiveint-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="retry_delay_initial_ms--positiveint--none">retry_delay_initial_ms <em>: PositiveInt | None</em><a href="#retry_delay_initial_ms--positiveint--none" class="hash-link" aria-label="Direct link to retry_delay_initial_ms--positiveint--none" title="Direct link to retry_delay_initial_ms--positiveint--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="retry_delay_max_ms--positiveint--none">retry_delay_max_ms <em>: PositiveInt | None</em><a href="#retry_delay_max_ms--positiveint--none" class="hash-link" aria-label="Direct link to retry_delay_max_ms--positiveint--none" title="Direct link to retry_delay_max_ms--positiveint--none">​</a></h4>
@@ -193,7 +193,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-1">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-1" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-1" title="Direct link to instrument_provider--instrumentproviderconfig-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-1">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-1" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-1" title="Direct link to instrument_provider--instrumentproviderconfig-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes-1">json() → bytes<a href="#json--bytes-1" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -225,7 +225,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-1">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-1" class="hash-link" aria-label="Direct link to routing--routingconfig-1" title="Direct link to routing--routingconfig-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-1">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-1" class="hash-link" aria-label="Direct link to routing--routingconfig-1" title="Direct link to routing--routingconfig-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool-1">validate() → bool<a href="#validate--bool-1" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -233,35 +233,35 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-bybitinstrumentprovider"><em>class</em> BybitInstrumentProvider<a href="#class-bybitinstrumentprovider" class="hash-link" aria-label="Direct link to class-bybitinstrumentprovider" title="Direct link to class-bybitinstrumentprovider">​</a></h3>
-<p>Bases: <a href="../../common/index.htm#nautilus_trader.common.providers.InstrumentProvider"><code>InstrumentProvider</code></a></p>
+<p>Bases: <a href="../../common/index.htm#posei_trader.common.providers.InstrumentProvider"><code>InstrumentProvider</code></a></p>
 <p>Provides Nautilus instrument definitions from Bybit.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>client</strong> (<em>BybitHttpClient</em>) – The Bybit HTTP client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock instance.</li>
-<li><strong>product_types</strong> (<em>list</em> <em>[</em><a href="#nautilus_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>]</em>) – The product types to load.</li>
-<li><strong>config</strong> (<a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a> <em>,</em> <em>optional</em>) – The instrument provider configuration, by default None.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock instance.</li>
+<li><strong>product_types</strong> (<em>list</em> <em>[</em><a href="#posei_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>]</em>) – The product types to load.</li>
+<li><strong>config</strong> (<a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a> <em>,</em> <em>optional</em>) – The instrument provider configuration, by default None.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="addinstrument-instrument--none">add(instrument: <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>) → None<a href="#addinstrument-instrument--none" class="hash-link" aria-label="Direct link to addinstrument-instrument--none" title="Direct link to addinstrument-instrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="addinstrument-instrument--none">add(instrument: <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>) → None<a href="#addinstrument-instrument--none" class="hash-link" aria-label="Direct link to addinstrument-instrument--none" title="Direct link to addinstrument-instrument--none">​</a></h4>
 <p>Add the given instrument to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instrument</strong> (<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"><em>Instrument</em></a>) – The instrument to add.</li>
+<strong>instrument</strong> (<a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"><em>Instrument</em></a>) – The instrument to add.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_bulkinstruments-listinstrument--none">add_bulk(instruments: list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]) → None<a href="#add_bulkinstruments-listinstrument--none" class="hash-link" aria-label="Direct link to add_bulkinstruments-listinstrument--none" title="Direct link to add_bulkinstruments-listinstrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_bulkinstruments-listinstrument--none">add_bulk(instruments: list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]) → None<a href="#add_bulkinstruments-listinstrument--none" class="hash-link" aria-label="Direct link to add_bulkinstruments-listinstrument--none" title="Direct link to add_bulkinstruments-listinstrument--none">​</a></h4>
 <p>Add the given instruments bulk to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instruments</strong> (<em>list</em> <em>[</em><a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"><em>Instrument</em></a> <em>]</em>) – The instruments to add.</li>
+<strong>instruments</strong> (<em>list</em> <em>[</em><a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"><em>Instrument</em></a> <em>]</em>) – The instruments to add.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_currencycurrency-currency--none">add_currency(currency: <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a>) → None<a href="#add_currencycurrency-currency--none" class="hash-link" aria-label="Direct link to add_currencycurrency-currency--none" title="Direct link to add_currencycurrency-currency--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_currencycurrency-currency--none">add_currency(currency: <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a>) → None<a href="#add_currencycurrency-currency--none" class="hash-link" aria-label="Direct link to add_currencycurrency-currency--none" title="Direct link to add_currencycurrency-currency--none">​</a></h4>
 <p>Add the given currency to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>currency</strong> (<a href="../../model/index.htm#nautilus_trader.model.Currency"><em>Currency</em></a>) – The currency to add.</li>
+<strong>currency</strong> (<a href="../../model/index.htm#posei_trader.model.Currency"><em>Currency</em></a>) – The currency to add.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="property-count--int"><em>property</em> count <em>: int</em><a href="#property-count--int" class="hash-link" aria-label="Direct link to property-count--int" title="Direct link to property-count--int">​</a></h4>
 <p>Return the count of instruments held by the provider.</p>
@@ -269,13 +269,13 @@ bool</li>
 <li><strong>Return type:</strong>
 int</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencies--dictstr-currency">currencies() → dict[str, <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a>]<a href="#currencies--dictstr-currency" class="hash-link" aria-label="Direct link to currencies--dictstr-currency" title="Direct link to currencies--dictstr-currency">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencies--dictstr-currency">currencies() → dict[str, <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a>]<a href="#currencies--dictstr-currency" class="hash-link" aria-label="Direct link to currencies--dictstr-currency" title="Direct link to currencies--dictstr-currency">​</a></h4>
 <p>Return all currencies held by the instrument provider.</p>
 <ul>
 <li><strong>Return type:</strong>
-dict[str, <a href="../../model/index.htm#nautilus_trader.model.Currency">Currency</a>]</li>
+dict[str, <a href="../../model/index.htm#posei_trader.model.Currency">Currency</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencycode-str--currency--none">currency(code: str) → <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a> | None<a href="#currencycode-str--currency--none" class="hash-link" aria-label="Direct link to currencycode-str--currency--none" title="Direct link to currencycode-str--currency--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencycode-str--currency--none">currency(code: str) → <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a> | None<a href="#currencycode-str--currency--none" class="hash-link" aria-label="Direct link to currencycode-str--currency--none" title="Direct link to currencycode-str--currency--none">​</a></h4>
 <p>Return the currency with the given code (if found).</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -285,20 +285,20 @@ Currency or <code>None</code></li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If code is not a valid string.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="findinstrument_id-instrumentid--instrument--none">find(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>) → <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a> | None<a href="#findinstrument_id-instrumentid--instrument--none" class="hash-link" aria-label="Direct link to findinstrument_id-instrumentid--instrument--none" title="Direct link to findinstrument_id-instrumentid--instrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="findinstrument_id-instrumentid--instrument--none">find(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>) → <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a> | None<a href="#findinstrument_id-instrumentid--instrument--none" class="hash-link" aria-label="Direct link to findinstrument_id-instrumentid--instrument--none" title="Direct link to findinstrument_id-instrumentid--instrument--none">​</a></h4>
 <p>Return the instrument for the given instrument ID (if found).</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The ID for the instrument</li>
+<strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The ID for the instrument</li>
 <li><strong>Return type:</strong>
 Instrument or <code>None</code></li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_all--dictinstrumentid-instrument">get_all() → dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#get_all--dictinstrumentid-instrument" class="hash-link" aria-label="Direct link to get_all--dictinstrumentid-instrument" title="Direct link to get_all--dictinstrumentid-instrument">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_all--dictinstrumentid-instrument">get_all() → dict[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#get_all--dictinstrumentid-instrument" class="hash-link" aria-label="Direct link to get_all--dictinstrumentid-instrument" title="Direct link to get_all--dictinstrumentid-instrument">​</a></h4>
 <p>Return all loaded instruments as a map keyed by instrument ID.</p>
 <p>If no instruments loaded, will return an empty dict.</p>
 <ul>
 <li><strong>Return type:</strong>
-dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument">Instrument</a>]</li>
+dict[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument">Instrument</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-initializereload-bool--false--none"><em>async</em> initialize(reload: bool = False) → None<a href="#async-initializereload-bool--false--none" class="hash-link" aria-label="Direct link to async-initializereload-bool--false--none" title="Direct link to async-initializereload-bool--false--none">​</a></h4>
 <p>Initialize the instrument provider.</p>
@@ -307,19 +307,19 @@ dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifier
 <strong>reload</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If True, then will always reload instruments.
 If False, then will immediately return if already loaded.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="list_all--listinstrument">list_all() → list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#list_all--listinstrument" class="hash-link" aria-label="Direct link to list_all--listinstrument" title="Direct link to list_all--listinstrument">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="list_all--listinstrument">list_all() → list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#list_all--listinstrument" class="hash-link" aria-label="Direct link to list_all--listinstrument" title="Direct link to list_all--listinstrument">​</a></h4>
 <p>Return all loaded instruments.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument">Instrument</a>]</li>
+list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument">Instrument</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loadinstrument_id-instrumentid-filters-dict--none--none--none">load(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#loadinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loadinstrument_id-instrumentid-filters-dict--none--none--none">load(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#loadinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instrument for the given ID into the provider, optionally applying the
 given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
@@ -334,37 +334,37 @@ filters.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_all_asyncfilters-dict--none--none--none"><em>async</em> load_all_async(filters: dict | None = None) → None<a href="#async-load_all_asyncfilters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_all_asyncfilters-dict--none--none--none" title="Direct link to async-load_all_asyncfilters-dict--none--none--none">​</a></h4>
 <p>Load the latest instruments into the provider asynchronously, optionally
 applying the given filters.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none"><em>async</em> load_async(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none"><em>async</em> load_async(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instrument for the given ID into the provider asynchronously,
 optionally applying the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If instrument_id.venue is not equal to self.venue.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">load_ids(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">load_ids(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instruments for the given IDs into the provider, optionally applying
 the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none"><em>async</em> load_ids_async(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none"><em>async</em> load_ids_async(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instruments for the given IDs into the provider, optionally applying
 the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
@@ -374,52 +374,52 @@ the given filters.</p>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-bybitlivedataclientfactory"><em>class</em> BybitLiveDataClientFactory<a href="#class-bybitlivedataclientfactory" class="hash-link" aria-label="Direct link to class-bybitlivedataclientfactory" title="Direct link to class-bybitlivedataclientfactory">​</a></h3>
 <p>Bases: <code>LiveDataClientFactory</code></p>
 <p>Provides a Bybit live data client factory.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient"><em>static</em> create(loop: asyncio.AbstractEventLoop, name: str, config: <a href="#nautilus_trader.adapters.bybit.BybitDataClientConfig">BybitDataClientConfig</a>, msgbus: <a href="../../common/index.htm#nautilus_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#nautilus_trader.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>) → <a href="#nautilus_trader.adapters.bybit.data.BybitDataClient">BybitDataClient</a><a href="#static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient" class="hash-link" aria-label="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient" title="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient"><em>static</em> create(loop: asyncio.AbstractEventLoop, name: str, config: <a href="#posei_trader.adapters.bybit.BybitDataClientConfig">BybitDataClientConfig</a>, msgbus: <a href="../../common/index.htm#posei_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#posei_trader.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>) → <a href="#posei_trader.adapters.bybit.data.BybitDataClient">BybitDataClient</a><a href="#static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient" class="hash-link" aria-label="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient" title="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient">​</a></h4>
 <p>Create a new Bybit data client.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>name</strong> (<em>str</em>) – The custom client ID.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.bybit.BybitDataClientConfig"><em>BybitDataClientConfig</em></a>) – The client configuration.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.bybit.BybitDataClientConfig"><em>BybitDataClientConfig</em></a>) – The client configuration.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.bybit.data.BybitDataClient">BybitDataClient</a></li>
+<a href="#posei_trader.adapters.bybit.data.BybitDataClient">BybitDataClient</a></li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-bybitliveexecclientfactory"><em>class</em> BybitLiveExecClientFactory<a href="#class-bybitliveexecclientfactory" class="hash-link" aria-label="Direct link to class-bybitliveexecclientfactory" title="Direct link to class-bybitliveexecclientfactory">​</a></h3>
 <p>Bases: <code>LiveExecClientFactory</code></p>
 <p>Provides a Bybit live execution client factory.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient"><em>static</em> create(loop: asyncio.AbstractEventLoop, name: str, config: <a href="#nautilus_trader.adapters.bybit.BybitExecClientConfig">BybitExecClientConfig</a>, msgbus: <a href="../../common/index.htm#nautilus_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#nautilus_trader.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>) → <a href="#nautilus_trader.adapters.bybit.execution.BybitExecutionClient">BybitExecutionClient</a><a href="#static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient" class="hash-link" aria-label="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient" title="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient"><em>static</em> create(loop: asyncio.AbstractEventLoop, name: str, config: <a href="#posei_trader.adapters.bybit.BybitExecClientConfig">BybitExecClientConfig</a>, msgbus: <a href="../../common/index.htm#posei_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#posei_trader.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>) → <a href="#posei_trader.adapters.bybit.execution.BybitExecutionClient">BybitExecutionClient</a><a href="#static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient" class="hash-link" aria-label="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient" title="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient">​</a></h4>
 <p>Create a new Bybit execution client.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>name</strong> (<em>str</em>) – The custom client ID.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.bybit.BybitExecClientConfig"><em>BybitExecClientConfig</em></a>) – The client configuration.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.bybit.BybitExecClientConfig"><em>BybitExecClientConfig</em></a>) – The client configuration.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.bybit.execution.BybitExecutionClient">BybitExecutionClient</a></li>
+<a href="#posei_trader.adapters.bybit.execution.BybitExecutionClient">BybitExecutionClient</a></li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-bybitorderbookdeltadataloader"><em>class</em> BybitOrderBookDeltaDataLoader<a href="#class-bybitorderbookdeltadataloader" class="hash-link" aria-label="Direct link to class-bybitorderbookdeltadataloader" title="Direct link to class-bybitorderbookdeltadataloader">​</a></h3>
 <p>Bases: <code>object</code></p>
 <p>Provides a means of loading Bybit order book data.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-loadfile_path-pathlikestr--str-nrows-int--none--none-product_type-bybitproducttype--bybitproducttypelinear--pddataframe"><em>classmethod</em> load(file_path: PathLike[str] | str, nrows: int | None = None, product_type: <a href="#nautilus_trader.adapters.bybit.BybitProductType">BybitProductType</a> = BybitProductType.LINEAR) → pd.DataFrame<a href="#classmethod-loadfile_path-pathlikestr--str-nrows-int--none--none-product_type-bybitproducttype--bybitproducttypelinear--pddataframe" class="hash-link" aria-label="Direct link to classmethod-loadfile_path-pathlikestr--str-nrows-int--none--none-product_type-bybitproducttype--bybitproducttypelinear--pddataframe" title="Direct link to classmethod-loadfile_path-pathlikestr--str-nrows-int--none--none-product_type-bybitproducttype--bybitproducttypelinear--pddataframe">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-loadfile_path-pathlikestr--str-nrows-int--none--none-product_type-bybitproducttype--bybitproducttypelinear--pddataframe"><em>classmethod</em> load(file_path: PathLike[str] | str, nrows: int | None = None, product_type: <a href="#posei_trader.adapters.bybit.BybitProductType">BybitProductType</a> = BybitProductType.LINEAR) → pd.DataFrame<a href="#classmethod-loadfile_path-pathlikestr--str-nrows-int--none--none-product_type-bybitproducttype--bybitproducttypelinear--pddataframe" class="hash-link" aria-label="Direct link to classmethod-loadfile_path-pathlikestr--str-nrows-int--none--none-product_type-bybitproducttype--bybitproducttypelinear--pddataframe" title="Direct link to classmethod-loadfile_path-pathlikestr--str-nrows-int--none--none-product_type-bybitproducttype--bybitproducttypelinear--pddataframe">​</a></h4>
 <p>Return the deltas pandas.DataFrame loaded from the given Zip file_path.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>file_path</strong> (<em>str</em> <em>,</em> <em>path object</em> <em>or</em> <em>file-like object</em>) – The path to the Zip file.</li>
 <li><strong>nrows</strong> (<em>int</em> <em>,</em> <em>optional</em>) – The maximum number of rows to load.</li>
-<li><strong>product_type</strong> (<a href="#nautilus_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>,</em> <em>optional</em>) – The product type to load.</li>
+<li><strong>product_type</strong> (<a href="#posei_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>,</em> <em>optional</em>) – The product type to load.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
@@ -439,7 +439,7 @@ pd.DataFrame</li>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="inverse--inverse">INVERSE <em>= &#x27;inverse&#x27;</em><a href="#inverse--inverse" class="hash-link" aria-label="Direct link to inverse--inverse" title="Direct link to inverse--inverse">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="option--option">OPTION <em>= &#x27;option&#x27;</em><a href="#option--option" class="hash-link" aria-label="Direct link to option--option" title="Direct link to option--option">​</a></h4>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-bybittickerdata"><em>class</em> BybitTickerData<a href="#class-bybittickerdata" class="hash-link" aria-label="Direct link to class-bybittickerdata" title="Direct link to class-bybittickerdata">​</a></h3>
-<p>Bases: <a href="../../core/index.htm#nautilus_trader.core.Data"><code>Data</code></a></p>
+<p>Bases: <a href="../../core/index.htm#posei_trader.core.Data"><code>Data</code></a></p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-fully_qualified_namecls--str"><em>classmethod</em> fully_qualified_name(cls) → str<a href="#classmethod-fully_qualified_namecls--str" class="hash-link" aria-label="Direct link to classmethod-fully_qualified_namecls--str" title="Direct link to classmethod-fully_qualified_namecls--str">​</a></h4>
 <p>Return the fully qualified name for the Data class.</p>
 <ul>
@@ -487,13 +487,13 @@ Data.ts_init</li>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="lowprice24h--str">lowPrice24h <em>: str</em><a href="#lowprice24h--str" class="hash-link" aria-label="Direct link to lowprice24h--str" title="Direct link to lowprice24h--str">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="turnover24h--str">turnover24h <em>: str</em><a href="#turnover24h--str" class="hash-link" aria-label="Direct link to turnover24h--str" title="Direct link to turnover24h--str">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="volume24h--str">volume24h <em>: str</em><a href="#volume24h--str" class="hash-link" aria-label="Direct link to volume24h--str" title="Direct link to volume24h--str">​</a></h4>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient">get_bybit_http_client(clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>, key: str | None = None, secret: str | None = None, base_url: str | None = None, is_demo: bool = False, is_testnet: bool = False, recv_window_ms: int = 5000) → BybitHttpClient<a href="#get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient" class="hash-link" aria-label="Direct link to get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient" title="Direct link to get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient">get_bybit_http_client(clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>, key: str | None = None, secret: str | None = None, base_url: str | None = None, is_demo: bool = False, is_testnet: bool = False, recv_window_ms: int = 5000) → BybitHttpClient<a href="#get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient" class="hash-link" aria-label="Direct link to get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient" title="Direct link to get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient">​</a></h3>
 <p>Cache and return a Bybit HTTP client with the given key and secret.</p>
 <p>If a cached client with matching parameters already exists, the cached client will be returned.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
 <li><strong>key</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The API key for the client.</li>
 <li><strong>secret</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The API secret for the client.</li>
 <li><strong>base_url</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The base URL for the API endpoints.</li>
@@ -505,25 +505,25 @@ Data.ts_init</li>
 <li><strong>Return type:</strong>
 BybitHttpClient</li>
 </ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider">get_bybit_instrument_provider(client: BybitHttpClient, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>, product_types: frozenset[<a href="#nautilus_trader.adapters.bybit.BybitProductType">BybitProductType</a>], config: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a>) → <a href="#nautilus_trader.adapters.bybit.BybitInstrumentProvider">BybitInstrumentProvider</a><a href="#get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider" class="hash-link" aria-label="Direct link to get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider" title="Direct link to get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider">get_bybit_instrument_provider(client: BybitHttpClient, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>, product_types: frozenset[<a href="#posei_trader.adapters.bybit.BybitProductType">BybitProductType</a>], config: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a>) → <a href="#posei_trader.adapters.bybit.BybitInstrumentProvider">BybitInstrumentProvider</a><a href="#get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider" class="hash-link" aria-label="Direct link to get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider" title="Direct link to get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider">​</a></h3>
 <p>Cache and return a Bybit instrument provider.</p>
 <p>If a cached provider already exists, then that cached provider will be returned.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>client</strong> (<em>BybitHttpClient</em>) – The client for the instrument provider.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
-<li><strong>product_types</strong> (<em>list</em> <em>[</em><a href="#nautilus_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>]</em>) – The product types to load.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
+<li><strong>product_types</strong> (<em>list</em> <em>[</em><a href="#posei_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>]</em>) – The product types to load.</li>
 <li><strong>is_testnet</strong> (<em>bool</em>) – If the provider is for the Spot testnet.</li>
-<li><strong>config</strong> (<a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the instrument provider.</li>
+<li><strong>config</strong> (<a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the instrument provider.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.bybit.BybitInstrumentProvider">BybitInstrumentProvider</a></li>
+<a href="#posei_trader.adapters.bybit.BybitInstrumentProvider">BybitInstrumentProvider</a></li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="config">Config<a href="#config" class="hash-link" aria-label="Direct link to Config" title="Direct link to Config">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-bybitdataclientconfig-1"><em>class</em> BybitDataClientConfig<a href="#class-bybitdataclientconfig-1" class="hash-link" aria-label="Direct link to class-bybitdataclientconfig-1" title="Direct link to class-bybitdataclientconfig-1">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
 <p>Configuration for <code>BybitDataClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -534,7 +534,7 @@ BYBIT_TESTNET_API_KEY environment variables.</li>
 <li><strong>api_secret</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The Bybit API public key.
 If <code>None</code> then will source the BYBIT_API_SECRET or
 BYBIT_TESTNET_API_SECRET environment variables.</li>
-<li><strong>product_types</strong> (<em>list</em> <em>[</em><a href="#nautilus_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The Bybit product type for the client.
+<li><strong>product_types</strong> (<em>list</em> <em>[</em><a href="#posei_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The Bybit product type for the client.
 If not specified then will use all products.</li>
 <li><strong>demo</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If the client is connecting to the Bybit demo API.</li>
 <li><strong>testnet</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If the client is connecting to the Bybit testnet API.</li>
@@ -547,7 +547,7 @@ If True, then ts_event will be on the close of the bar.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="api_key--str--none-2">api_key <em>: str | None</em><a href="#api_key--str--none-2" class="hash-link" aria-label="Direct link to api_key--str--none-2" title="Direct link to api_key--str--none-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="api_secret--str--none-2">api_secret <em>: str | None</em><a href="#api_secret--str--none-2" class="hash-link" aria-label="Direct link to api_secret--str--none-2" title="Direct link to api_secret--str--none-2">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="product_types--listbybitproducttype--none-2">product_types <em>: list[<a href="#nautilus_trader.adapters.bybit.BybitProductType">BybitProductType</a>] | None</em><a href="#product_types--listbybitproducttype--none-2" class="hash-link" aria-label="Direct link to product_types--listbybitproducttype--none-2" title="Direct link to product_types--listbybitproducttype--none-2">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="product_types--listbybitproducttype--none-2">product_types <em>: list[<a href="#posei_trader.adapters.bybit.BybitProductType">BybitProductType</a>] | None</em><a href="#product_types--listbybitproducttype--none-2" class="hash-link" aria-label="Direct link to product_types--listbybitproducttype--none-2" title="Direct link to product_types--listbybitproducttype--none-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="base_url_http--str--none-2">base_url_http <em>: str | None</em><a href="#base_url_http--str--none-2" class="hash-link" aria-label="Direct link to base_url_http--str--none-2" title="Direct link to base_url_http--str--none-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="demo--bool-2">demo <em>: bool</em><a href="#demo--bool-2" class="hash-link" aria-label="Direct link to demo--bool-2" title="Direct link to demo--bool-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="testnet--bool-2">testnet <em>: bool</em><a href="#testnet--bool-2" class="hash-link" aria-label="Direct link to testnet--bool-2" title="Direct link to testnet--bool-2">​</a></h4>
@@ -573,7 +573,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-2">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-2" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-2" title="Direct link to instrument_provider--instrumentproviderconfig-2">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-2">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-2" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-2" title="Direct link to instrument_provider--instrumentproviderconfig-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes-2">json() → bytes<a href="#json--bytes-2" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -605,7 +605,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-2">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-2" class="hash-link" aria-label="Direct link to routing--routingconfig-2" title="Direct link to routing--routingconfig-2">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-2">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-2" class="hash-link" aria-label="Direct link to routing--routingconfig-2" title="Direct link to routing--routingconfig-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool-2">validate() → bool<a href="#validate--bool-2" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -613,7 +613,7 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-bybitexecclientconfig-1"><em>class</em> BybitExecClientConfig<a href="#class-bybitexecclientconfig-1" class="hash-link" aria-label="Direct link to class-bybitexecclientconfig-1" title="Direct link to class-bybitexecclientconfig-1">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveExecClientConfig"><code>LiveExecClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveExecClientConfig"><code>LiveExecClientConfig</code></a></p>
 <p>Configuration for <code>BybitExecutionClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -624,7 +624,7 @@ BYBIT_TESTNET_API_KEY environment variables.</li>
 <li><strong>api_secret</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The Bybit API public key.
 If <code>None</code> then will source the BYBIT_API_KEY or
 BYBIT_TESTNET_API_KEY environment variables.</li>
-<li><strong>product_types</strong> (<em>list</em> <em>[</em><a href="#nautilus_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The Bybit product type for the client.
+<li><strong>product_types</strong> (<em>list</em> <em>[</em><a href="#posei_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The Bybit product type for the client.
 If None then will default to ‘SPOT’, you also cannot mix ‘SPOT’ with
 any other product type for execution, and it will use a CASH account
 type, vs MARGIN for the other derivative products.</li>
@@ -645,8 +645,8 @@ Effective only when use_ws_trade_api is set to True.</li>
 <li><strong>ws_trade_timeout_secs</strong> (<em>PositiveFloat</em> <em>,</em> <em>default 5.0</em>) – The timeout for trade websocket messages.</li>
 <li><strong>ws_auth_timeout_secs</strong> (<em>PositiveFloat</em> <em>,</em> <em>default 5.0</em>) – The timeout for auth websocket messages.</li>
 <li><strong>futures_leverages</strong> (<em>dict</em> *[*<em>BybitSymbol</em> <em>,</em> <em>PositiveInt</em> <em>]</em> <em>,</em> <em>optional</em>) – The leverages for futures.</li>
-<li><strong>position_mode</strong> (<em>dict</em> *[*<em>BybitSymbol</em> <em>,</em> <a href="#nautilus_trader.adapters.bybit.common.enums.BybitPositionMode"><em>BybitPositionMode</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The position mode for USDT perpetual and Inverse futures.</li>
-<li><strong>margin_mode</strong> (<a href="#nautilus_trader.adapters.bybit.common.enums.BybitMarginMode"><em>BybitMarginMode</em></a> <em>,</em> <em>optional</em>) – Set Margin Mode.</li>
+<li><strong>position_mode</strong> (<em>dict</em> *[*<em>BybitSymbol</em> <em>,</em> <a href="#posei_trader.adapters.bybit.common.enums.BybitPositionMode"><em>BybitPositionMode</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The position mode for USDT perpetual and Inverse futures.</li>
+<li><strong>margin_mode</strong> (<a href="#posei_trader.adapters.bybit.common.enums.BybitMarginMode"><em>BybitMarginMode</em></a> <em>,</em> <em>optional</em>) – Set Margin Mode.</li>
 </ul>
 </li>
 </ul>
@@ -654,7 +654,7 @@ Effective only when use_ws_trade_api is set to True.</li>
 <p>A short retry_delay with frequent retries may result in account bans.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="api_key--str--none-3">api_key <em>: str | None</em><a href="#api_key--str--none-3" class="hash-link" aria-label="Direct link to api_key--str--none-3" title="Direct link to api_key--str--none-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="api_secret--str--none-3">api_secret <em>: str | None</em><a href="#api_secret--str--none-3" class="hash-link" aria-label="Direct link to api_secret--str--none-3" title="Direct link to api_secret--str--none-3">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="product_types--listbybitproducttype--none-3">product_types <em>: list[<a href="#nautilus_trader.adapters.bybit.BybitProductType">BybitProductType</a>] | None</em><a href="#product_types--listbybitproducttype--none-3" class="hash-link" aria-label="Direct link to product_types--listbybitproducttype--none-3" title="Direct link to product_types--listbybitproducttype--none-3">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="product_types--listbybitproducttype--none-3">product_types <em>: list[<a href="#posei_trader.adapters.bybit.BybitProductType">BybitProductType</a>] | None</em><a href="#product_types--listbybitproducttype--none-3" class="hash-link" aria-label="Direct link to product_types--listbybitproducttype--none-3" title="Direct link to product_types--listbybitproducttype--none-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="base_url_http--str--none-3">base_url_http <em>: str | None</em><a href="#base_url_http--str--none-3" class="hash-link" aria-label="Direct link to base_url_http--str--none-3" title="Direct link to base_url_http--str--none-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="base_url_ws_private--str--none-1">base_url_ws_private <em>: str | None</em><a href="#base_url_ws_private--str--none-1" class="hash-link" aria-label="Direct link to base_url_ws_private--str--none-1" title="Direct link to base_url_ws_private--str--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="base_url_ws_trade--str--none-1">base_url_ws_trade <em>: str | None</em><a href="#base_url_ws_trade--str--none-1" class="hash-link" aria-label="Direct link to base_url_ws_trade--str--none-1" title="Direct link to base_url_ws_trade--str--none-1">​</a></h4>
@@ -671,8 +671,8 @@ Effective only when use_ws_trade_api is set to True.</li>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="ws_trade_timeout_secs--positivefloat--none-1">ws_trade_timeout_secs <em>: PositiveFloat | None</em><a href="#ws_trade_timeout_secs--positivefloat--none-1" class="hash-link" aria-label="Direct link to ws_trade_timeout_secs--positivefloat--none-1" title="Direct link to ws_trade_timeout_secs--positivefloat--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="ws_auth_timeout_secs--positivefloat--none-1">ws_auth_timeout_secs <em>: PositiveFloat | None</em><a href="#ws_auth_timeout_secs--positivefloat--none-1" class="hash-link" aria-label="Direct link to ws_auth_timeout_secs--positivefloat--none-1" title="Direct link to ws_auth_timeout_secs--positivefloat--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="futures_leverages--dictbybitsymbol-positiveint--none-1">futures_leverages <em>: dict[BybitSymbol, PositiveInt] | None</em><a href="#futures_leverages--dictbybitsymbol-positiveint--none-1" class="hash-link" aria-label="Direct link to futures_leverages--dictbybitsymbol-positiveint--none-1" title="Direct link to futures_leverages--dictbybitsymbol-positiveint--none-1">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="position_mode--dictbybitsymbol-bybitpositionmode--none-1">position_mode <em>: dict[BybitSymbol, <a href="#nautilus_trader.adapters.bybit.common.enums.BybitPositionMode">BybitPositionMode</a>] | None</em><a href="#position_mode--dictbybitsymbol-bybitpositionmode--none-1" class="hash-link" aria-label="Direct link to position_mode--dictbybitsymbol-bybitpositionmode--none-1" title="Direct link to position_mode--dictbybitsymbol-bybitpositionmode--none-1">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="margin_mode--bybitmarginmode--none-1">margin_mode <em>: <a href="#nautilus_trader.adapters.bybit.common.enums.BybitMarginMode">BybitMarginMode</a> | None</em><a href="#margin_mode--bybitmarginmode--none-1" class="hash-link" aria-label="Direct link to margin_mode--bybitmarginmode--none-1" title="Direct link to margin_mode--bybitmarginmode--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="position_mode--dictbybitsymbol-bybitpositionmode--none-1">position_mode <em>: dict[BybitSymbol, <a href="#posei_trader.adapters.bybit.common.enums.BybitPositionMode">BybitPositionMode</a>] | None</em><a href="#position_mode--dictbybitsymbol-bybitpositionmode--none-1" class="hash-link" aria-label="Direct link to position_mode--dictbybitsymbol-bybitpositionmode--none-1" title="Direct link to position_mode--dictbybitsymbol-bybitpositionmode--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="margin_mode--bybitmarginmode--none-1">margin_mode <em>: <a href="#posei_trader.adapters.bybit.common.enums.BybitMarginMode">BybitMarginMode</a> | None</em><a href="#margin_mode--bybitmarginmode--none-1" class="hash-link" aria-label="Direct link to margin_mode--bybitmarginmode--none-1" title="Direct link to margin_mode--bybitmarginmode--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="dict--dictstr-any-3">dict() → dict[str, Any]<a href="#dict--dictstr-any-3" class="hash-link" aria-label="Direct link to dict() → dict[str, Any]" title="Direct link to dict() → dict[str, Any]">​</a></h4>
 <p>Return a dictionary representation of the configuration.</p>
 <ul>
@@ -691,7 +691,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-3">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-3" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-3" title="Direct link to instrument_provider--instrumentproviderconfig-3">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-3">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-3" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-3" title="Direct link to instrument_provider--instrumentproviderconfig-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes-3">json() → bytes<a href="#json--bytes-3" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -723,7 +723,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-3">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-3" class="hash-link" aria-label="Direct link to routing--routingconfig-3" title="Direct link to routing--routingconfig-3">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-3">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-3" class="hash-link" aria-label="Direct link to routing--routingconfig-3" title="Direct link to routing--routingconfig-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool-3">validate() → bool<a href="#validate--bool-3" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -731,13 +731,13 @@ Any</li>
 bool</li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="factories">Factories<a href="#factories" class="hash-link" aria-label="Direct link to Factories" title="Direct link to Factories">​</a></h2>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient-1">get_bybit_http_client(clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>, key: str | None = None, secret: str | None = None, base_url: str | None = None, is_demo: bool = False, is_testnet: bool = False, recv_window_ms: int = 5000) → BybitHttpClient<a href="#get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient-1" class="hash-link" aria-label="Direct link to get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient-1" title="Direct link to get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient-1">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient-1">get_bybit_http_client(clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>, key: str | None = None, secret: str | None = None, base_url: str | None = None, is_demo: bool = False, is_testnet: bool = False, recv_window_ms: int = 5000) → BybitHttpClient<a href="#get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient-1" class="hash-link" aria-label="Direct link to get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient-1" title="Direct link to get_bybit_http_clientclock-liveclock-key-str--none--none-secret-str--none--none-base_url-str--none--none-is_demo-bool--false-is_testnet-bool--false-recv_window_ms-int--5000--bybithttpclient-1">​</a></h3>
 <p>Cache and return a Bybit HTTP client with the given key and secret.</p>
 <p>If a cached client with matching parameters already exists, the cached client will be returned.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
 <li><strong>key</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The API key for the client.</li>
 <li><strong>secret</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The API secret for the client.</li>
 <li><strong>base_url</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The base URL for the API endpoints.</li>
@@ -749,59 +749,59 @@ bool</li>
 <li><strong>Return type:</strong>
 BybitHttpClient</li>
 </ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider-1">get_bybit_instrument_provider(client: BybitHttpClient, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>, product_types: frozenset[<a href="#nautilus_trader.adapters.bybit.BybitProductType">BybitProductType</a>], config: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a>) → <a href="#nautilus_trader.adapters.bybit.BybitInstrumentProvider">BybitInstrumentProvider</a><a href="#get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider-1" class="hash-link" aria-label="Direct link to get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider-1" title="Direct link to get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider-1">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider-1">get_bybit_instrument_provider(client: BybitHttpClient, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>, product_types: frozenset[<a href="#posei_trader.adapters.bybit.BybitProductType">BybitProductType</a>], config: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a>) → <a href="#posei_trader.adapters.bybit.BybitInstrumentProvider">BybitInstrumentProvider</a><a href="#get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider-1" class="hash-link" aria-label="Direct link to get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider-1" title="Direct link to get_bybit_instrument_providerclient-bybithttpclient-clock-liveclock-product_types-frozensetbybitproducttype-config-instrumentproviderconfig--bybitinstrumentprovider-1">​</a></h3>
 <p>Cache and return a Bybit instrument provider.</p>
 <p>If a cached provider already exists, then that cached provider will be returned.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>client</strong> (<em>BybitHttpClient</em>) – The client for the instrument provider.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
-<li><strong>product_types</strong> (<em>list</em> <em>[</em><a href="#nautilus_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>]</em>) – The product types to load.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
+<li><strong>product_types</strong> (<em>list</em> <em>[</em><a href="#posei_trader.adapters.bybit.BybitProductType"><em>BybitProductType</em></a> <em>]</em>) – The product types to load.</li>
 <li><strong>is_testnet</strong> (<em>bool</em>) – If the provider is for the Spot testnet.</li>
-<li><strong>config</strong> (<a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the instrument provider.</li>
+<li><strong>config</strong> (<a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the instrument provider.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.bybit.BybitInstrumentProvider">BybitInstrumentProvider</a></li>
+<a href="#posei_trader.adapters.bybit.BybitInstrumentProvider">BybitInstrumentProvider</a></li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-bybitlivedataclientfactory-1"><em>class</em> BybitLiveDataClientFactory<a href="#class-bybitlivedataclientfactory-1" class="hash-link" aria-label="Direct link to class-bybitlivedataclientfactory-1" title="Direct link to class-bybitlivedataclientfactory-1">​</a></h3>
 <p>Bases: <code>LiveDataClientFactory</code></p>
 <p>Provides a Bybit live data client factory.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient-1"><em>static</em> create(loop: asyncio.AbstractEventLoop, name: str, config: <a href="#nautilus_trader.adapters.bybit.BybitDataClientConfig">BybitDataClientConfig</a>, msgbus: <a href="../../common/index.htm#nautilus_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#nautilus_trader.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>) → <a href="#nautilus_trader.adapters.bybit.data.BybitDataClient">BybitDataClient</a><a href="#static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient-1" class="hash-link" aria-label="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient-1" title="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient-1"><em>static</em> create(loop: asyncio.AbstractEventLoop, name: str, config: <a href="#posei_trader.adapters.bybit.BybitDataClientConfig">BybitDataClientConfig</a>, msgbus: <a href="../../common/index.htm#posei_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#posei_trader.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>) → <a href="#posei_trader.adapters.bybit.data.BybitDataClient">BybitDataClient</a><a href="#static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient-1" class="hash-link" aria-label="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient-1" title="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitdataclient-1">​</a></h4>
 <p>Create a new Bybit data client.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>name</strong> (<em>str</em>) – The custom client ID.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.bybit.BybitDataClientConfig"><em>BybitDataClientConfig</em></a>) – The client configuration.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.bybit.BybitDataClientConfig"><em>BybitDataClientConfig</em></a>) – The client configuration.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.bybit.data.BybitDataClient">BybitDataClient</a></li>
+<a href="#posei_trader.adapters.bybit.data.BybitDataClient">BybitDataClient</a></li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-bybitliveexecclientfactory-1"><em>class</em> BybitLiveExecClientFactory<a href="#class-bybitliveexecclientfactory-1" class="hash-link" aria-label="Direct link to class-bybitliveexecclientfactory-1" title="Direct link to class-bybitliveexecclientfactory-1">​</a></h3>
 <p>Bases: <code>LiveExecClientFactory</code></p>
 <p>Provides a Bybit live execution client factory.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient-1"><em>static</em> create(loop: asyncio.AbstractEventLoop, name: str, config: <a href="#nautilus_trader.adapters.bybit.BybitExecClientConfig">BybitExecClientConfig</a>, msgbus: <a href="../../common/index.htm#nautilus_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#nautilus_trader.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>) → <a href="#nautilus_trader.adapters.bybit.execution.BybitExecutionClient">BybitExecutionClient</a><a href="#static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient-1" class="hash-link" aria-label="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient-1" title="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient-1"><em>static</em> create(loop: asyncio.AbstractEventLoop, name: str, config: <a href="#posei_trader.adapters.bybit.BybitExecClientConfig">BybitExecClientConfig</a>, msgbus: <a href="../../common/index.htm#posei_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#posei_trader.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>) → <a href="#posei_trader.adapters.bybit.execution.BybitExecutionClient">BybitExecutionClient</a><a href="#static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient-1" class="hash-link" aria-label="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient-1" title="Direct link to static-createloop-asyncioabstracteventloop-name-str-config-bybitexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--bybitexecutionclient-1">​</a></h4>
 <p>Create a new Bybit execution client.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>name</strong> (<em>str</em>) – The custom client ID.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.bybit.BybitExecClientConfig"><em>BybitExecClientConfig</em></a>) – The client configuration.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.bybit.BybitExecClientConfig"><em>BybitExecClientConfig</em></a>) – The client configuration.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.bybit.execution.BybitExecutionClient">BybitExecutionClient</a></li>
+<a href="#posei_trader.adapters.bybit.execution.BybitExecutionClient">BybitExecutionClient</a></li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="enums">Enums<a href="#enums" class="hash-link" aria-label="Direct link to Enums" title="Direct link to Enums">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="raise_errorerror">raise_error(error)<a href="#raise_errorerror" class="hash-link" aria-label="Direct link to raise_error(error)" title="Direct link to raise_error(error)">​</a></h3>

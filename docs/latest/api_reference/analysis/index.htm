@@ -725,7 +725,7 @@
                             </p>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.analyzer"
+                                id="module-posei_trader.analysis.analyzer"
                               ></a>
                             </p>
                             <h3
@@ -752,7 +752,7 @@
                             >
                               register_statistic(statistic:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 >PortfolioStatistic</a
                               >) → None<a
                                 href="#register_statisticstatistic-portfoliostatistic--none"
@@ -769,7 +769,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>statistic</strong> (<a
-                                  href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                  href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                   ><em>PortfolioStatistic</em></a
                                 >) – The statistic to register.
                               </li>
@@ -780,7 +780,7 @@
                             >
                               deregister_statistic(statistic:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 >PortfolioStatistic</a
                               >) → None<a
                                 href="#deregister_statisticstatistic-portfoliostatistic--none"
@@ -828,7 +828,7 @@
                               <em>property</em> currencies
                               <em
                                 >: list[<a
-                                  href="../model/objects/index.htm#nautilus_trader.model.objects.Currency"
+                                  href="../model/objects/index.htm#posei_trader.model.objects.Currency"
                                   >Currency</a
                                 >]</em
                               ><a
@@ -843,7 +843,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../model/index.htm#nautilus_trader.model.Currency"
+                                  href="../model/index.htm#posei_trader.model.Currency"
                                   >Currency</a
                                 >]
                               </li>
@@ -854,7 +854,7 @@
                             >
                               statistic(name: str) →
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 >PortfolioStatistic</a
                               >
                               | None<a
@@ -897,7 +897,7 @@
                             >
                               calculate_statistics(account: Account, positions:
                               list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → None<a
                                 href="#calculate_statisticsaccount-account-positions-listposition--none"
@@ -922,7 +922,7 @@
                                     <strong>positions</strong> (<em>list</em>
                                     <em>[</em
                                     ><a
-                                      href="../model/index.htm#nautilus_trader.model.Position"
+                                      href="../model/index.htm#posei_trader.model.Position"
                                       ><em>Position</em></a
                                     >
                                     <em>]</em>) – The positions for the
@@ -936,7 +936,7 @@
                               id="add_positionspositions-listposition--none"
                             >
                               add_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → None<a
                                 href="#add_positionspositions-listposition--none"
@@ -953,7 +953,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions for analysis.
@@ -965,11 +965,11 @@
                             >
                               add_trade(position_id:
                               <a
-                                href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.PositionId"
+                                href="../model/identifiers/index.htm#posei_trader.model.identifiers.PositionId"
                                 >PositionId</a
                               >, realized_pnl:
                               <a
-                                href="../model/objects/index.htm#nautilus_trader.model.objects.Money"
+                                href="../model/objects/index.htm#posei_trader.model.objects.Money"
                                 >Money</a
                               >) → None<a
                                 href="#add_tradeposition_id-positionid-realized_pnl-money--none"
@@ -986,13 +986,13 @@
                                 <ul>
                                   <li>
                                     <strong>position_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.PositionId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.PositionId"
                                       ><em>PositionId</em></a
                                     >) – The position ID for the trade.
                                   </li>
                                   <li>
                                     <strong>realized_pnl</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Money"
+                                      href="../model/index.htm#posei_trader.model.Money"
                                       ><em>Money</em></a
                                     >) – The realized PnL for the trade.
                                   </li>
@@ -1035,7 +1035,7 @@
                             >
                               realized_pnls(currency:
                               <a
-                                href="../model/objects/index.htm#nautilus_trader.model.objects.Currency"
+                                href="../model/objects/index.htm#posei_trader.model.objects.Currency"
                                 >Currency</a
                               >
                               | None = None) → Series | None<a
@@ -1055,7 +1055,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>currency</strong> (<a
-                                  href="../model/index.htm#nautilus_trader.model.Currency"
+                                  href="../model/index.htm#posei_trader.model.Currency"
                                   ><em>Currency</em></a
                                 >
                                 <em>,</em> <em>optional</em>) – The currency for
@@ -1078,12 +1078,12 @@
                             >
                               total_pnl(currency:
                               <a
-                                href="../model/objects/index.htm#nautilus_trader.model.objects.Currency"
+                                href="../model/objects/index.htm#posei_trader.model.objects.Currency"
                                 >Currency</a
                               >
                               | None = None, unrealized_pnl:
                               <a
-                                href="../model/objects/index.htm#nautilus_trader.model.objects.Money"
+                                href="../model/objects/index.htm#posei_trader.model.objects.Money"
                                 >Money</a
                               >
                               | None = None) → float<a
@@ -1105,7 +1105,7 @@
                                 <ul>
                                   <li>
                                     <strong>currency</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Currency"
+                                      href="../model/index.htm#posei_trader.model.Currency"
                                       ><em>Currency</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The currency
@@ -1113,7 +1113,7 @@
                                   </li>
                                   <li>
                                     <strong>unrealized_pnl</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Money"
+                                      href="../model/index.htm#posei_trader.model.Money"
                                       ><em>Money</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The
@@ -1149,12 +1149,12 @@
                             >
                               total_pnl_percentage(currency:
                               <a
-                                href="../model/objects/index.htm#nautilus_trader.model.objects.Currency"
+                                href="../model/objects/index.htm#posei_trader.model.objects.Currency"
                                 >Currency</a
                               >
                               | None = None, unrealized_pnl:
                               <a
-                                href="../model/objects/index.htm#nautilus_trader.model.objects.Money"
+                                href="../model/objects/index.htm#posei_trader.model.objects.Money"
                                 >Money</a
                               >
                               | None = None) → float<a
@@ -1179,7 +1179,7 @@
                                 <ul>
                                   <li>
                                     <strong>currency</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Currency"
+                                      href="../model/index.htm#posei_trader.model.Currency"
                                       ><em>Currency</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The currency
@@ -1187,7 +1187,7 @@
                                   </li>
                                   <li>
                                     <strong>unrealized_pnl</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Money"
+                                      href="../model/index.htm#posei_trader.model.Money"
                                       ><em>Money</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The
@@ -1223,12 +1223,12 @@
                             >
                               get_performance_stats_pnls(currency:
                               <a
-                                href="../model/objects/index.htm#nautilus_trader.model.objects.Currency"
+                                href="../model/objects/index.htm#posei_trader.model.objects.Currency"
                                 >Currency</a
                               >
                               | None = None, unrealized_pnl:
                               <a
-                                href="../model/objects/index.htm#nautilus_trader.model.objects.Money"
+                                href="../model/objects/index.htm#posei_trader.model.objects.Money"
                                 >Money</a
                               >
                               | None = None) → dict[str, float]<a
@@ -1251,13 +1251,13 @@
                                 <ul>
                                   <li>
                                     <strong>currency</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Currency"
+                                      href="../model/index.htm#posei_trader.model.Currency"
                                       ><em>Currency</em></a
                                     >) – The currency for the performance.
                                   </li>
                                   <li>
                                     <strong>unrealized_pnl</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Money"
+                                      href="../model/index.htm#posei_trader.model.Money"
                                       ><em>Money</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The
@@ -1313,12 +1313,12 @@
                             >
                               get_stats_pnls_formatted(currency:
                               <a
-                                href="../model/objects/index.htm#nautilus_trader.model.objects.Currency"
+                                href="../model/objects/index.htm#posei_trader.model.objects.Currency"
                                 >Currency</a
                               >
                               | None = None, unrealized_pnl:
                               <a
-                                href="../model/objects/index.htm#nautilus_trader.model.objects.Money"
+                                href="../model/objects/index.htm#posei_trader.model.objects.Money"
                                 >Money</a
                               >
                               | None = None) → list[str]<a
@@ -1340,13 +1340,13 @@
                                 <ul>
                                   <li>
                                     <strong>currency</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Currency"
+                                      href="../model/index.htm#posei_trader.model.Currency"
                                       ><em>Currency</em></a
                                     >) – The currency for the performance.
                                   </li>
                                   <li>
                                     <strong>unrealized_pnl</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Money"
+                                      href="../model/index.htm#posei_trader.model.Money"
                                       ><em>Money</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The
@@ -1398,7 +1398,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.reporter"
+                                id="module-posei_trader.analysis.reporter"
                               ></a>
                             </p>
                             <h3
@@ -1421,7 +1421,7 @@
                             >
                               <em>static</em> generate_orders_report(orders:
                               list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → DataFrame<a
                                 href="#static-generate_orders_reportorders-listorder--dataframe"
@@ -1437,7 +1437,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The orders for the report.
@@ -1452,7 +1452,7 @@
                             >
                               <em>static</em>
                               generate_order_fills_report(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → DataFrame<a
                                 href="#static-generate_order_fills_reportorders-listorder--dataframe"
@@ -1469,7 +1469,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The orders for the report.
@@ -1484,7 +1484,7 @@
                             >
                               <em>static</em> generate_fills_report(orders:
                               list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → DataFrame<a
                                 href="#static-generate_fills_reportorders-listorder--dataframe"
@@ -1504,7 +1504,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The orders for the report.
@@ -1519,7 +1519,7 @@
                             >
                               <em>static</em>
                               generate_positions_report(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → DataFrame<a
                                 href="#static-generate_positions_reportpositions-listposition--dataframe"
@@ -1536,7 +1536,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions for the report.
@@ -1574,7 +1574,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistic"
+                                id="module-posei_trader.analysis.statistic"
                               ></a>
                             </p>
                             <h3
@@ -1701,7 +1701,7 @@
                               id="calculate_from_ordersorders-listorder--any--none"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none"
@@ -1720,7 +1720,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -1740,7 +1740,7 @@
                               id="calculate_from_positionspositions-listposition--any--none"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none"
@@ -1760,7 +1760,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -1777,7 +1777,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.expectancy"
+                                id="module-posei_trader.analysis.statistics.expectancy"
                               ></a>
                             </p>
                             <h3
@@ -1795,7 +1795,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -1841,7 +1841,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-1"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-1"
@@ -1860,7 +1860,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -1880,7 +1880,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-1"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-1"
@@ -1900,7 +1900,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -1986,7 +1986,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.long_ratio"
+                                id="module-posei_trader.analysis.statistics.long_ratio"
                               ></a>
                             </p>
                             <h3
@@ -2004,7 +2004,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -2024,7 +2024,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-2"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-2"
@@ -2044,7 +2044,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -2064,7 +2064,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-2"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-2"
@@ -2083,7 +2083,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -2202,7 +2202,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.loser_avg"
+                                id="module-posei_trader.analysis.statistics.loser_avg"
                               ></a>
                             </p>
                             <h3
@@ -2220,7 +2220,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -2266,7 +2266,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-3"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-3"
@@ -2285,7 +2285,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -2305,7 +2305,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-3"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-3"
@@ -2325,7 +2325,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -2411,7 +2411,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.loser_max"
+                                id="module-posei_trader.analysis.statistics.loser_max"
                               ></a>
                             </p>
                             <h3
@@ -2429,7 +2429,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -2475,7 +2475,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-4"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-4"
@@ -2494,7 +2494,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -2514,7 +2514,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-4"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-4"
@@ -2534,7 +2534,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -2620,7 +2620,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.loser_min"
+                                id="module-posei_trader.analysis.statistics.loser_min"
                               ></a>
                             </p>
                             <h3
@@ -2638,7 +2638,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -2684,7 +2684,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-5"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-5"
@@ -2703,7 +2703,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -2723,7 +2723,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-5"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-5"
@@ -2743,7 +2743,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -2829,7 +2829,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.profit_factor"
+                                id="module-posei_trader.analysis.statistics.profit_factor"
                               ></a>
                             </p>
                             <h3
@@ -2847,7 +2847,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -2892,7 +2892,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-6"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-6"
@@ -2911,7 +2911,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -2931,7 +2931,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-6"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-6"
@@ -2951,7 +2951,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -3038,7 +3038,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.returns_avg"
+                                id="module-posei_trader.analysis.statistics.returns_avg"
                               ></a>
                             </p>
                             <h3
@@ -3056,7 +3056,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -3115,7 +3115,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-7"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-7"
@@ -3134,7 +3134,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -3154,7 +3154,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-7"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-7"
@@ -3174,7 +3174,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -3244,7 +3244,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.returns_avg_loss"
+                                id="module-posei_trader.analysis.statistics.returns_avg_loss"
                               ></a>
                             </p>
                             <h3
@@ -3262,7 +3262,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -3321,7 +3321,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-8"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-8"
@@ -3340,7 +3340,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -3360,7 +3360,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-8"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-8"
@@ -3380,7 +3380,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -3450,7 +3450,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.returns_avg_win"
+                                id="module-posei_trader.analysis.statistics.returns_avg_win"
                               ></a>
                             </p>
                             <h3
@@ -3468,7 +3468,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -3527,7 +3527,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-9"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-9"
@@ -3546,7 +3546,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -3566,7 +3566,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-9"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-9"
@@ -3586,7 +3586,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -3656,7 +3656,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.returns_volatility"
+                                id="module-posei_trader.analysis.statistics.returns_volatility"
                               ></a>
                             </p>
                             <h3
@@ -3674,7 +3674,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -3744,7 +3744,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-10"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-10"
@@ -3763,7 +3763,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -3783,7 +3783,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-10"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-10"
@@ -3803,7 +3803,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -3873,7 +3873,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.risk_return_ratio"
+                                id="module-posei_trader.analysis.statistics.risk_return_ratio"
                               ></a>
                             </p>
                             <h3
@@ -3891,7 +3891,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -3933,7 +3933,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-11"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-11"
@@ -3952,7 +3952,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -3972,7 +3972,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-11"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-11"
@@ -3992,7 +3992,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -4079,7 +4079,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.sharpe_ratio"
+                                id="module-posei_trader.analysis.statistics.sharpe_ratio"
                               ></a>
                             </p>
                             <h3
@@ -4097,7 +4097,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -4167,7 +4167,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-12"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-12"
@@ -4186,7 +4186,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -4206,7 +4206,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-12"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-12"
@@ -4226,7 +4226,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -4296,7 +4296,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.sortino_ratio"
+                                id="module-posei_trader.analysis.statistics.sortino_ratio"
                               ></a>
                             </p>
                             <h3
@@ -4314,7 +4314,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -4387,7 +4387,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-13"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-13"
@@ -4406,7 +4406,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -4426,7 +4426,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-13"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-13"
@@ -4446,7 +4446,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -4516,7 +4516,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.win_rate"
+                                id="module-posei_trader.analysis.statistics.win_rate"
                               ></a>
                             </p>
                             <h3
@@ -4534,7 +4534,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -4580,7 +4580,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-14"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-14"
@@ -4599,7 +4599,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -4619,7 +4619,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-14"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-14"
@@ -4639,7 +4639,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -4725,7 +4725,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.winner_avg"
+                                id="module-posei_trader.analysis.statistics.winner_avg"
                               ></a>
                             </p>
                             <h3
@@ -4743,7 +4743,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -4789,7 +4789,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-15"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-15"
@@ -4808,7 +4808,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -4828,7 +4828,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-15"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-15"
@@ -4848,7 +4848,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -4934,7 +4934,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.winner_max"
+                                id="module-posei_trader.analysis.statistics.winner_max"
                               ></a>
                             </p>
                             <h3
@@ -4952,7 +4952,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -4998,7 +4998,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-16"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-16"
@@ -5017,7 +5017,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -5037,7 +5037,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-16"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-16"
@@ -5057,7 +5057,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -5143,7 +5143,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.analysis.statistics.winner_min"
+                                id="module-posei_trader.analysis.statistics.winner_min"
                               ></a>
                             </p>
                             <h3
@@ -5161,7 +5161,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.analysis.statistic.PortfolioStatistic"
+                                href="#posei_trader.analysis.statistic.PortfolioStatistic"
                                 ><code>PortfolioStatistic</code></a
                               >
                             </p>
@@ -5207,7 +5207,7 @@
                               id="calculate_from_ordersorders-listorder--any--none-17"
                             >
                               calculate_from_orders(orders: list[<a
-                                href="../model/orders/index.htm#nautilus_trader.model.orders.base.Order"
+                                href="../model/orders/index.htm#posei_trader.model.orders.base.Order"
                                 >Order</a
                               >]) → Any | None<a
                                 href="#calculate_from_ordersorders-listorder--any--none-17"
@@ -5226,7 +5226,7 @@
                                 <strong>Parameters:</strong>
                                 <strong>orders</strong> (<em>list</em> <em>[</em
                                 ><a
-                                  href="../model/orders/index.htm#nautilus_trader.model.orders.Order"
+                                  href="../model/orders/index.htm#posei_trader.model.orders.Order"
                                   ><em>Order</em></a
                                 >
                                 <em>]</em>) – The positions to use for the
@@ -5246,7 +5246,7 @@
                               id="calculate_from_positionspositions-listposition--any--none-17"
                             >
                               calculate_from_positions(positions: list[<a
-                                href="../model/position/index.htm#nautilus_trader.model.position.Position"
+                                href="../model/position/index.htm#posei_trader.model.position.Position"
                                 >Position</a
                               >]) → Any | None<a
                                 href="#calculate_from_positionspositions-listposition--any--none-17"
@@ -5266,7 +5266,7 @@
                                 <strong>positions</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../model/index.htm#nautilus_trader.model.Position"
+                                  href="../model/index.htm#posei_trader.model.Position"
                                   ><em>Position</em></a
                                 >
                                 <em>]</em>) – The positions to use for the

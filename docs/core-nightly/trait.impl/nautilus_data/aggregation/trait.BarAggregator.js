@@ -1,5 +1,5 @@
 (function() {
-    var implementors = Object.fromEntries([["nautilus_data",[]]]);
+    var implementors = Object.fromEntries([["posei_trader",[]]]);
     if (window.register_implementors) {
         window.register_implementors(implementors);
     } else {

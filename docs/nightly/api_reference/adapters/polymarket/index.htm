@@ -22,14 +22,14 @@
 factories, constants, and credential helpers for connecting to and interacting with
 the Polymarket Central Limit Order Book (CLOB) API.</p>
 <p>For convenience, the most commonly used symbols are re-exported at the subpackage’s
-top level, so downstream code can simply import from <code>nautilus_trader.adapters.polymarket</code>.</p>
+top level, so downstream code can simply import from <code>posei_trader.adapters.polymarket</code>.</p>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-polymarketdataclientconfig"><em>class</em> PolymarketDataClientConfig<a href="#class-polymarketdataclientconfig" class="hash-link" aria-label="Direct link to class-polymarketdataclientconfig" title="Direct link to class-polymarketdataclientconfig">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
 <p>Configuration for <code>PolymarketDataClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>venue</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue"><em>Venue</em></a> <em>,</em> <em>default POLYMARKET_VENUE</em>) – The venue for the client.</li>
+<li><strong>venue</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue"><em>Venue</em></a> <em>,</em> <em>default POLYMARKET_VENUE</em>) – The venue for the client.</li>
 <li><strong>private_key</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The private key for the wallet on the <strong>Polygon</strong> network.
 If <code>None</code> then will source the POLYMARKET_PK environment variable.</li>
 <li><strong>signature_type</strong> (<em>int</em> <em>,</em> <em>default 0</em> *(*<em>EOA</em> <em>)</em>) – The Polymarket signature type.</li>
@@ -61,7 +61,7 @@ reducing snapshot size. This takes ~1 millisecond, so is not recommended for lat
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="private_key--str--none">private_key <em>: str | None</em><a href="#private_key--str--none" class="hash-link" aria-label="Direct link to private_key--str--none" title="Direct link to private_key--str--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="signature_type--int">signature_type <em>: int</em><a href="#signature_type--int" class="hash-link" aria-label="Direct link to signature_type--int" title="Direct link to signature_type--int">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="update_instruments_interval_mins--annotatedint-msgspecmetagt0--none">update_instruments_interval_mins <em>: Annotated[int, msgspec.Meta(gt=0)] | None</em><a href="#update_instruments_interval_mins--annotatedint-msgspecmetagt0--none" class="hash-link" aria-label="Direct link to update_instruments_interval_mins--annotatedint-msgspecmetagt0--none" title="Direct link to update_instruments_interval_mins--annotatedint-msgspecmetagt0--none">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="venue--venue">venue <em>: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue">Venue</a></em><a href="#venue--venue" class="hash-link" aria-label="Direct link to venue--venue" title="Direct link to venue--venue">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="venue--venue">venue <em>: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue">Venue</a></em><a href="#venue--venue" class="hash-link" aria-label="Direct link to venue--venue" title="Direct link to venue--venue">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="ws_connection_delay_secs--annotatedfloat-msgspecmetagt00">ws_connection_delay_secs <em>: Annotated[float, msgspec.Meta(gt=0.0)]</em><a href="#ws_connection_delay_secs--annotatedfloat-msgspecmetagt00" class="hash-link" aria-label="Direct link to ws_connection_delay_secs--annotatedfloat-msgspecmetagt00" title="Direct link to ws_connection_delay_secs--annotatedfloat-msgspecmetagt00">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="ws_connection_initial_delay_secs--annotatedfloat-msgspecmetagt00">ws_connection_initial_delay_secs <em>: Annotated[float, msgspec.Meta(gt=0.0)]</em><a href="#ws_connection_initial_delay_secs--annotatedfloat-msgspecmetagt00" class="hash-link" aria-label="Direct link to ws_connection_initial_delay_secs--annotatedfloat-msgspecmetagt00" title="Direct link to ws_connection_initial_delay_secs--annotatedfloat-msgspecmetagt00">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="dict--dictstr-any">dict() → dict[str, Any]<a href="#dict--dictstr-any" class="hash-link" aria-label="Direct link to dict() → dict[str, Any]" title="Direct link to dict() → dict[str, Any]">​</a></h4>
@@ -83,7 +83,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig" title="Direct link to instrument_provider--instrumentproviderconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig" title="Direct link to instrument_provider--instrumentproviderconfig">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes">json() → bytes<a href="#json--bytes" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -115,7 +115,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig" class="hash-link" aria-label="Direct link to routing--routingconfig" title="Direct link to routing--routingconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig" class="hash-link" aria-label="Direct link to routing--routingconfig" title="Direct link to routing--routingconfig">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool">validate() → bool<a href="#validate--bool" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -123,12 +123,12 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-polymarketexecclientconfig"><em>class</em> PolymarketExecClientConfig<a href="#class-polymarketexecclientconfig" class="hash-link" aria-label="Direct link to class-polymarketexecclientconfig" title="Direct link to class-polymarketexecclientconfig">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveExecClientConfig"><code>LiveExecClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveExecClientConfig"><code>LiveExecClientConfig</code></a></p>
 <p>Configuration for <code>PolymarketExecutionClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>venue</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue"><em>Venue</em></a> <em>,</em> <em>default POLYMARKET_VENUE</em>) – The venue for the client.</li>
+<li><strong>venue</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue"><em>Venue</em></a> <em>,</em> <em>default POLYMARKET_VENUE</em>) – The venue for the client.</li>
 <li><strong>private_key</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The private key for the wallet on the <strong>Polygon</strong> network.
 If <code>None</code> then will source the POLYMARKET_PK environment variable.</li>
 <li><strong>signature_type</strong> (<em>int</em> <em>,</em> <em>default 0</em> *(*<em>EOA</em> <em>)</em>) – The Polymarket signature type.</li>
@@ -166,7 +166,7 @@ Note: there will be a performance penalty parsing the JSON without an efficient 
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="retry_delay_initial_ms--annotatedint-msgspecmetagt0--none">retry_delay_initial_ms <em>: Annotated[int, msgspec.Meta(gt=0)] | None</em><a href="#retry_delay_initial_ms--annotatedint-msgspecmetagt0--none" class="hash-link" aria-label="Direct link to retry_delay_initial_ms--annotatedint-msgspecmetagt0--none" title="Direct link to retry_delay_initial_ms--annotatedint-msgspecmetagt0--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="retry_delay_max_ms--annotatedint-msgspecmetagt0--none">retry_delay_max_ms <em>: Annotated[int, msgspec.Meta(gt=0)] | None</em><a href="#retry_delay_max_ms--annotatedint-msgspecmetagt0--none" class="hash-link" aria-label="Direct link to retry_delay_max_ms--annotatedint-msgspecmetagt0--none" title="Direct link to retry_delay_max_ms--annotatedint-msgspecmetagt0--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="signature_type--int-1">signature_type <em>: int</em><a href="#signature_type--int-1" class="hash-link" aria-label="Direct link to signature_type--int-1" title="Direct link to signature_type--int-1">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="venue--venue-1">venue <em>: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue">Venue</a></em><a href="#venue--venue-1" class="hash-link" aria-label="Direct link to venue--venue-1" title="Direct link to venue--venue-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="venue--venue-1">venue <em>: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue">Venue</a></em><a href="#venue--venue-1" class="hash-link" aria-label="Direct link to venue--venue-1" title="Direct link to venue--venue-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="dict--dictstr-any-1">dict() → dict[str, Any]<a href="#dict--dictstr-any-1" class="hash-link" aria-label="Direct link to dict() → dict[str, Any]" title="Direct link to dict() → dict[str, Any]">​</a></h4>
 <p>Return a dictionary representation of the configuration.</p>
 <ul>
@@ -185,7 +185,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-1">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-1" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-1" title="Direct link to instrument_provider--instrumentproviderconfig-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-1">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-1" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-1" title="Direct link to instrument_provider--instrumentproviderconfig-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes-1">json() → bytes<a href="#json--bytes-1" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -217,7 +217,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-1">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-1" class="hash-link" aria-label="Direct link to routing--routingconfig-1" title="Direct link to routing--routingconfig-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-1">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-1" class="hash-link" aria-label="Direct link to routing--routingconfig-1" title="Direct link to routing--routingconfig-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool-1">validate() → bool<a href="#validate--bool-1" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -225,34 +225,34 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-polymarketinstrumentprovider"><em>class</em> PolymarketInstrumentProvider<a href="#class-polymarketinstrumentprovider" class="hash-link" aria-label="Direct link to class-polymarketinstrumentprovider" title="Direct link to class-polymarketinstrumentprovider">​</a></h3>
-<p>Bases: <a href="../../common/index.htm#nautilus_trader.common.providers.InstrumentProvider"><code>InstrumentProvider</code></a></p>
+<p>Bases: <a href="../../common/index.htm#posei_trader.common.providers.InstrumentProvider"><code>InstrumentProvider</code></a></p>
 <p>Provides Nautilus instrument definitions from Polymarket.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>client</strong> (<em>ClobClient</em>) – The Polymarket CLOB HTTP client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock instance.</li>
-<li><strong>config</strong> (<a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a> <em>,</em> <em>optional</em>) – The instrument provider configuration, by default None.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock instance.</li>
+<li><strong>config</strong> (<a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a> <em>,</em> <em>optional</em>) – The instrument provider configuration, by default None.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="addinstrument-instrument--none">add(instrument: <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>) → None<a href="#addinstrument-instrument--none" class="hash-link" aria-label="Direct link to addinstrument-instrument--none" title="Direct link to addinstrument-instrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="addinstrument-instrument--none">add(instrument: <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>) → None<a href="#addinstrument-instrument--none" class="hash-link" aria-label="Direct link to addinstrument-instrument--none" title="Direct link to addinstrument-instrument--none">​</a></h4>
 <p>Add the given instrument to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instrument</strong> (<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"><em>Instrument</em></a>) – The instrument to add.</li>
+<strong>instrument</strong> (<a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"><em>Instrument</em></a>) – The instrument to add.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_bulkinstruments-listinstrument--none">add_bulk(instruments: list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]) → None<a href="#add_bulkinstruments-listinstrument--none" class="hash-link" aria-label="Direct link to add_bulkinstruments-listinstrument--none" title="Direct link to add_bulkinstruments-listinstrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_bulkinstruments-listinstrument--none">add_bulk(instruments: list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]) → None<a href="#add_bulkinstruments-listinstrument--none" class="hash-link" aria-label="Direct link to add_bulkinstruments-listinstrument--none" title="Direct link to add_bulkinstruments-listinstrument--none">​</a></h4>
 <p>Add the given instruments bulk to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instruments</strong> (<em>list</em> <em>[</em><a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"><em>Instrument</em></a> <em>]</em>) – The instruments to add.</li>
+<strong>instruments</strong> (<em>list</em> <em>[</em><a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"><em>Instrument</em></a> <em>]</em>) – The instruments to add.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_currencycurrency-currency--none">add_currency(currency: <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a>) → None<a href="#add_currencycurrency-currency--none" class="hash-link" aria-label="Direct link to add_currencycurrency-currency--none" title="Direct link to add_currencycurrency-currency--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_currencycurrency-currency--none">add_currency(currency: <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a>) → None<a href="#add_currencycurrency-currency--none" class="hash-link" aria-label="Direct link to add_currencycurrency-currency--none" title="Direct link to add_currencycurrency-currency--none">​</a></h4>
 <p>Add the given currency to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>currency</strong> (<a href="../../model/index.htm#nautilus_trader.model.Currency"><em>Currency</em></a>) – The currency to add.</li>
+<strong>currency</strong> (<a href="../../model/index.htm#posei_trader.model.Currency"><em>Currency</em></a>) – The currency to add.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="property-count--int"><em>property</em> count <em>: int</em><a href="#property-count--int" class="hash-link" aria-label="Direct link to property-count--int" title="Direct link to property-count--int">​</a></h4>
 <p>Return the count of instruments held by the provider.</p>
@@ -260,13 +260,13 @@ bool</li>
 <li><strong>Return type:</strong>
 int</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencies--dictstr-currency">currencies() → dict[str, <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a>]<a href="#currencies--dictstr-currency" class="hash-link" aria-label="Direct link to currencies--dictstr-currency" title="Direct link to currencies--dictstr-currency">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencies--dictstr-currency">currencies() → dict[str, <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a>]<a href="#currencies--dictstr-currency" class="hash-link" aria-label="Direct link to currencies--dictstr-currency" title="Direct link to currencies--dictstr-currency">​</a></h4>
 <p>Return all currencies held by the instrument provider.</p>
 <ul>
 <li><strong>Return type:</strong>
-dict[str, <a href="../../model/index.htm#nautilus_trader.model.Currency">Currency</a>]</li>
+dict[str, <a href="../../model/index.htm#posei_trader.model.Currency">Currency</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencycode-str--currency--none">currency(code: str) → <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a> | None<a href="#currencycode-str--currency--none" class="hash-link" aria-label="Direct link to currencycode-str--currency--none" title="Direct link to currencycode-str--currency--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencycode-str--currency--none">currency(code: str) → <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a> | None<a href="#currencycode-str--currency--none" class="hash-link" aria-label="Direct link to currencycode-str--currency--none" title="Direct link to currencycode-str--currency--none">​</a></h4>
 <p>Return the currency with the given code (if found).</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -276,20 +276,20 @@ Currency or <code>None</code></li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If code is not a valid string.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="findinstrument_id-instrumentid--instrument--none">find(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>) → <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a> | None<a href="#findinstrument_id-instrumentid--instrument--none" class="hash-link" aria-label="Direct link to findinstrument_id-instrumentid--instrument--none" title="Direct link to findinstrument_id-instrumentid--instrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="findinstrument_id-instrumentid--instrument--none">find(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>) → <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a> | None<a href="#findinstrument_id-instrumentid--instrument--none" class="hash-link" aria-label="Direct link to findinstrument_id-instrumentid--instrument--none" title="Direct link to findinstrument_id-instrumentid--instrument--none">​</a></h4>
 <p>Return the instrument for the given instrument ID (if found).</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The ID for the instrument</li>
+<strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The ID for the instrument</li>
 <li><strong>Return type:</strong>
 Instrument or <code>None</code></li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_all--dictinstrumentid-instrument">get_all() → dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#get_all--dictinstrumentid-instrument" class="hash-link" aria-label="Direct link to get_all--dictinstrumentid-instrument" title="Direct link to get_all--dictinstrumentid-instrument">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_all--dictinstrumentid-instrument">get_all() → dict[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#get_all--dictinstrumentid-instrument" class="hash-link" aria-label="Direct link to get_all--dictinstrumentid-instrument" title="Direct link to get_all--dictinstrumentid-instrument">​</a></h4>
 <p>Return all loaded instruments as a map keyed by instrument ID.</p>
 <p>If no instruments loaded, will return an empty dict.</p>
 <ul>
 <li><strong>Return type:</strong>
-dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument">Instrument</a>]</li>
+dict[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument">Instrument</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-initializereload-bool--false--none"><em>async</em> initialize(reload: bool = False) → None<a href="#async-initializereload-bool--false--none" class="hash-link" aria-label="Direct link to async-initializereload-bool--false--none" title="Direct link to async-initializereload-bool--false--none">​</a></h4>
 <p>Initialize the instrument provider.</p>
@@ -298,19 +298,19 @@ dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifier
 <strong>reload</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If True, then will always reload instruments.
 If False, then will immediately return if already loaded.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="list_all--listinstrument">list_all() → list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#list_all--listinstrument" class="hash-link" aria-label="Direct link to list_all--listinstrument" title="Direct link to list_all--listinstrument">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="list_all--listinstrument">list_all() → list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#list_all--listinstrument" class="hash-link" aria-label="Direct link to list_all--listinstrument" title="Direct link to list_all--listinstrument">​</a></h4>
 <p>Return all loaded instruments.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument">Instrument</a>]</li>
+list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument">Instrument</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loadinstrument_id-instrumentid-filters-dict--none--none--none">load(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#loadinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loadinstrument_id-instrumentid-filters-dict--none--none--none">load(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#loadinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instrument for the given ID into the provider, optionally applying the
 given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
@@ -325,37 +325,37 @@ filters.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_all_asyncfilters-dict--none--none--none"><em>async</em> load_all_async(filters: dict | None = None) → None<a href="#async-load_all_asyncfilters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_all_asyncfilters-dict--none--none--none" title="Direct link to async-load_all_asyncfilters-dict--none--none--none">​</a></h4>
 <p>Load the latest instruments into the provider asynchronously, optionally
 applying the given filters.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none"><em>async</em> load_async(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none"><em>async</em> load_async(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instrument for the given ID into the provider asynchronously,
 optionally applying the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If instrument_id.venue is not equal to self.venue.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">load_ids(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">load_ids(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instruments for the given IDs into the provider, optionally applying
 the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none"><em>async</em> load_ids_async(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none"><em>async</em> load_ids_async(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instruments for the given IDs into the provider, optionally applying
 the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
@@ -365,40 +365,40 @@ the given filters.</p>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-polymarketlivedataclientfactory"><em>class</em> PolymarketLiveDataClientFactory<a href="#class-polymarketlivedataclientfactory" class="hash-link" aria-label="Direct link to class-polymarketlivedataclientfactory" title="Direct link to class-polymarketlivedataclientfactory">​</a></h3>
 <p>Bases: <code>LiveDataClientFactory</code></p>
 <p>Provides a Polymarket live data client factory.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#nautilus_trader.adapters.polymarket.config.PolymarketDataClientConfig">PolymarketDataClientConfig</a>, msgbus: <a href="../../common/index.htm#nautilus_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#nautilus_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>) → <a href="#nautilus_trader.adapters.polymarket.data.PolymarketDataClient">PolymarketDataClient</a><a href="#static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient" title="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#posei_trader.adapters.polymarket.config.PolymarketDataClientConfig">PolymarketDataClientConfig</a>, msgbus: <a href="../../common/index.htm#posei_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#posei_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>) → <a href="#posei_trader.adapters.polymarket.data.PolymarketDataClient">PolymarketDataClient</a><a href="#static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient" title="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient">​</a></h4>
 <p>Create a new Polymarket data client.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>name</strong> (<em>str</em>) – The custom client ID.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.polymarket.PolymarketDataClientConfig"><em>PolymarketDataClientConfig</em></a>) – The client configuration.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.polymarket.PolymarketDataClientConfig"><em>PolymarketDataClientConfig</em></a>) – The client configuration.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.polymarket.data.PolymarketDataClient">PolymarketDataClient</a></li>
+<a href="#posei_trader.adapters.polymarket.data.PolymarketDataClient">PolymarketDataClient</a></li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-polymarketliveexecclientfactory"><em>class</em> PolymarketLiveExecClientFactory<a href="#class-polymarketliveexecclientfactory" class="hash-link" aria-label="Direct link to class-polymarketliveexecclientfactory" title="Direct link to class-polymarketliveexecclientfactory">​</a></h3>
 <p>Bases: <code>LiveExecClientFactory</code></p>
 <p>Provides a Polymarket live execution client factory.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#nautilus_trader.adapters.polymarket.config.PolymarketExecClientConfig">PolymarketExecClientConfig</a>, msgbus: <a href="../../common/index.htm#nautilus_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#nautilus_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>) → <a href="#nautilus_trader.adapters.polymarket.execution.PolymarketExecutionClient">PolymarketExecutionClient</a><a href="#static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient" title="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#posei_trader.adapters.polymarket.config.PolymarketExecClientConfig">PolymarketExecClientConfig</a>, msgbus: <a href="../../common/index.htm#posei_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#posei_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>) → <a href="#posei_trader.adapters.polymarket.execution.PolymarketExecutionClient">PolymarketExecutionClient</a><a href="#static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient" title="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient">​</a></h4>
 <p>Create a new Polymarket execution client.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>name</strong> (<em>str</em>) – The custom client ID.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.polymarket.PolymarketExecClientConfig"><em>PolymarketExecClientConfig</em></a>) – The client configuration.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.polymarket.PolymarketExecClientConfig"><em>PolymarketExecClientConfig</em></a>) – The client configuration.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.polymarket.execution.PolymarketExecutionClient">PolymarketExecutionClient</a></li>
+<a href="#posei_trader.adapters.polymarket.execution.PolymarketExecutionClient">PolymarketExecutionClient</a></li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_polymarket_http_clientapi_key-str--none--none-api_secret-str--none--none-passphrase-str--none--none-base_url-str--none--none-chain_id-int--137-signature_type-int--0-private_key-str--none--none-funder-str--none--none--clobclient">get_polymarket_http_client(api_key: str | None = None, api_secret: str | None = None, passphrase: str | None = None, base_url: str | None = None, chain_id: int = 137, signature_type: int = 0, private_key: str | None = None, funder: str | None = None) → ClobClient<a href="#get_polymarket_http_clientapi_key-str--none--none-api_secret-str--none--none-passphrase-str--none--none-base_url-str--none--none-chain_id-int--137-signature_type-int--0-private_key-str--none--none-funder-str--none--none--clobclient" class="hash-link" aria-label="Direct link to get_polymarket_http_client(api_key: str | None = None, api_secret: str | None = None, passphrase: str | None = None, base_url: str | None = None, chain_id: int = 137, signature_type: int = 0, private_key: str | None = None, funder: str | None = None) → ClobClient" title="Direct link to get_polymarket_http_client(api_key: str | None = None, api_secret: str | None = None, passphrase: str | None = None, base_url: str | None = None, chain_id: int = 137, signature_type: int = 0, private_key: str | None = None, funder: str | None = None) → ClobClient">​</a></h3>
 <p>Cache and return a Polymarket CLOB client.</p>
@@ -419,29 +419,29 @@ the given filters.</p>
 <li><strong>Return type:</strong>
 ClobClient</li>
 </ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_polymarket_instrument_idcondition_id-str-token_id-str--int--instrumentid">get_polymarket_instrument_id(condition_id: str, token_id: str | int) → <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a><a href="#get_polymarket_instrument_idcondition_id-str-token_id-str--int--instrumentid" class="hash-link" aria-label="Direct link to get_polymarket_instrument_idcondition_id-str-token_id-str--int--instrumentid" title="Direct link to get_polymarket_instrument_idcondition_id-str-token_id-str--int--instrumentid">​</a></h3>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider">get_polymarket_instrument_provider(client: ClobClient, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>, config: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a>) → <a href="#nautilus_trader.adapters.polymarket.providers.PolymarketInstrumentProvider">PolymarketInstrumentProvider</a><a href="#get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider" class="hash-link" aria-label="Direct link to get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider" title="Direct link to get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_polymarket_instrument_idcondition_id-str-token_id-str--int--instrumentid">get_polymarket_instrument_id(condition_id: str, token_id: str | int) → <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a><a href="#get_polymarket_instrument_idcondition_id-str-token_id-str--int--instrumentid" class="hash-link" aria-label="Direct link to get_polymarket_instrument_idcondition_id-str-token_id-str--int--instrumentid" title="Direct link to get_polymarket_instrument_idcondition_id-str-token_id-str--int--instrumentid">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider">get_polymarket_instrument_provider(client: ClobClient, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>, config: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a>) → <a href="#posei_trader.adapters.polymarket.providers.PolymarketInstrumentProvider">PolymarketInstrumentProvider</a><a href="#get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider" class="hash-link" aria-label="Direct link to get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider" title="Direct link to get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider">​</a></h3>
 <p>Cache and return a Polymarket instrument provider.</p>
 <p>If a cached provider already exists, then that provider will be returned.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>client</strong> (<em>py_clob_client.client.ClobClient</em>) – The client for the instrument provider.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
-<li><strong>config</strong> (<a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the instrument provider.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
+<li><strong>config</strong> (<a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the instrument provider.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.polymarket.PolymarketInstrumentProvider">PolymarketInstrumentProvider</a></li>
+<a href="#posei_trader.adapters.polymarket.PolymarketInstrumentProvider">PolymarketInstrumentProvider</a></li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="config">Config<a href="#config" class="hash-link" aria-label="Direct link to Config" title="Direct link to Config">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-polymarketdataclientconfig-1"><em>class</em> PolymarketDataClientConfig<a href="#class-polymarketdataclientconfig-1" class="hash-link" aria-label="Direct link to class-polymarketdataclientconfig-1" title="Direct link to class-polymarketdataclientconfig-1">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
 <p>Configuration for <code>PolymarketDataClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>venue</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue"><em>Venue</em></a> <em>,</em> <em>default POLYMARKET_VENUE</em>) – The venue for the client.</li>
+<li><strong>venue</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue"><em>Venue</em></a> <em>,</em> <em>default POLYMARKET_VENUE</em>) – The venue for the client.</li>
 <li><strong>private_key</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The private key for the wallet on the <strong>Polygon</strong> network.
 If <code>None</code> then will source the POLYMARKET_PK environment variable.</li>
 <li><strong>signature_type</strong> (<em>int</em> <em>,</em> <em>default 0</em> *(*<em>EOA</em> <em>)</em>) – The Polymarket signature type.</li>
@@ -463,7 +463,7 @@ reducing snapshot size. This takes ~1 millisecond, so is not recommended for lat
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="venue--venue-2">venue <em>: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue">Venue</a></em><a href="#venue--venue-2" class="hash-link" aria-label="Direct link to venue--venue-2" title="Direct link to venue--venue-2">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="venue--venue-2">venue <em>: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue">Venue</a></em><a href="#venue--venue-2" class="hash-link" aria-label="Direct link to venue--venue-2" title="Direct link to venue--venue-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="private_key--str--none-2">private_key <em>: str | None</em><a href="#private_key--str--none-2" class="hash-link" aria-label="Direct link to private_key--str--none-2" title="Direct link to private_key--str--none-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="signature_type--int-2">signature_type <em>: int</em><a href="#signature_type--int-2" class="hash-link" aria-label="Direct link to signature_type--int-2" title="Direct link to signature_type--int-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="funder--str--none-2">funder <em>: str | None</em><a href="#funder--str--none-2" class="hash-link" aria-label="Direct link to funder--str--none-2" title="Direct link to funder--str--none-2">​</a></h4>
@@ -495,7 +495,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-2">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-2" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-2" title="Direct link to instrument_provider--instrumentproviderconfig-2">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-2">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-2" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-2" title="Direct link to instrument_provider--instrumentproviderconfig-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes-2">json() → bytes<a href="#json--bytes-2" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -527,7 +527,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-2">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-2" class="hash-link" aria-label="Direct link to routing--routingconfig-2" title="Direct link to routing--routingconfig-2">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-2">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-2" class="hash-link" aria-label="Direct link to routing--routingconfig-2" title="Direct link to routing--routingconfig-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool-2">validate() → bool<a href="#validate--bool-2" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -535,12 +535,12 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-polymarketexecclientconfig-1"><em>class</em> PolymarketExecClientConfig<a href="#class-polymarketexecclientconfig-1" class="hash-link" aria-label="Direct link to class-polymarketexecclientconfig-1" title="Direct link to class-polymarketexecclientconfig-1">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveExecClientConfig"><code>LiveExecClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveExecClientConfig"><code>LiveExecClientConfig</code></a></p>
 <p>Configuration for <code>PolymarketExecutionClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>venue</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue"><em>Venue</em></a> <em>,</em> <em>default POLYMARKET_VENUE</em>) – The venue for the client.</li>
+<li><strong>venue</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue"><em>Venue</em></a> <em>,</em> <em>default POLYMARKET_VENUE</em>) – The venue for the client.</li>
 <li><strong>private_key</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The private key for the wallet on the <strong>Polygon</strong> network.
 If <code>None</code> then will source the POLYMARKET_PK environment variable.</li>
 <li><strong>signature_type</strong> (<em>int</em> <em>,</em> <em>default 0</em> *(*<em>EOA</em> <em>)</em>) – The Polymarket signature type.</li>
@@ -565,7 +565,7 @@ Note: there will be a performance penalty parsing the JSON without an efficient 
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="venue--venue-3">venue <em>: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue">Venue</a></em><a href="#venue--venue-3" class="hash-link" aria-label="Direct link to venue--venue-3" title="Direct link to venue--venue-3">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="venue--venue-3">venue <em>: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue">Venue</a></em><a href="#venue--venue-3" class="hash-link" aria-label="Direct link to venue--venue-3" title="Direct link to venue--venue-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="private_key--str--none-3">private_key <em>: str | None</em><a href="#private_key--str--none-3" class="hash-link" aria-label="Direct link to private_key--str--none-3" title="Direct link to private_key--str--none-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="signature_type--int-3">signature_type <em>: int</em><a href="#signature_type--int-3" class="hash-link" aria-label="Direct link to signature_type--int-3" title="Direct link to signature_type--int-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="funder--str--none-3">funder <em>: str | None</em><a href="#funder--str--none-3" class="hash-link" aria-label="Direct link to funder--str--none-3" title="Direct link to funder--str--none-3">​</a></h4>
@@ -597,7 +597,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-3">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-3" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-3" title="Direct link to instrument_provider--instrumentproviderconfig-3">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-3">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-3" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-3" title="Direct link to instrument_provider--instrumentproviderconfig-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes-3">json() → bytes<a href="#json--bytes-3" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -629,7 +629,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-3">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-3" class="hash-link" aria-label="Direct link to routing--routingconfig-3" title="Direct link to routing--routingconfig-3">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-3">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-3" class="hash-link" aria-label="Direct link to routing--routingconfig-3" title="Direct link to routing--routingconfig-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool-3">validate() → bool<a href="#validate--bool-3" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -656,57 +656,57 @@ bool</li>
 <li><strong>Return type:</strong>
 ClobClient</li>
 </ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider-1">get_polymarket_instrument_provider(client: ClobClient, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>, config: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a>) → <a href="#nautilus_trader.adapters.polymarket.providers.PolymarketInstrumentProvider">PolymarketInstrumentProvider</a><a href="#get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider-1" class="hash-link" aria-label="Direct link to get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider-1" title="Direct link to get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider-1">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider-1">get_polymarket_instrument_provider(client: ClobClient, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>, config: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a>) → <a href="#posei_trader.adapters.polymarket.providers.PolymarketInstrumentProvider">PolymarketInstrumentProvider</a><a href="#get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider-1" class="hash-link" aria-label="Direct link to get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider-1" title="Direct link to get_polymarket_instrument_providerclient-clobclient-clock-liveclock-config-instrumentproviderconfig--polymarketinstrumentprovider-1">​</a></h3>
 <p>Cache and return a Polymarket instrument provider.</p>
 <p>If a cached provider already exists, then that provider will be returned.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>client</strong> (<em>py_clob_client.client.ClobClient</em>) – The client for the instrument provider.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
-<li><strong>config</strong> (<a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the instrument provider.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
+<li><strong>config</strong> (<a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the instrument provider.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.polymarket.PolymarketInstrumentProvider">PolymarketInstrumentProvider</a></li>
+<a href="#posei_trader.adapters.polymarket.PolymarketInstrumentProvider">PolymarketInstrumentProvider</a></li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-polymarketlivedataclientfactory-1"><em>class</em> PolymarketLiveDataClientFactory<a href="#class-polymarketlivedataclientfactory-1" class="hash-link" aria-label="Direct link to class-polymarketlivedataclientfactory-1" title="Direct link to class-polymarketlivedataclientfactory-1">​</a></h3>
 <p>Bases: <code>LiveDataClientFactory</code></p>
 <p>Provides a Polymarket live data client factory.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient-1"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#nautilus_trader.adapters.polymarket.config.PolymarketDataClientConfig">PolymarketDataClientConfig</a>, msgbus: <a href="../../common/index.htm#nautilus_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#nautilus_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>) → <a href="#nautilus_trader.adapters.polymarket.data.PolymarketDataClient">PolymarketDataClient</a><a href="#static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient-1" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient-1" title="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient-1"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#posei_trader.adapters.polymarket.config.PolymarketDataClientConfig">PolymarketDataClientConfig</a>, msgbus: <a href="../../common/index.htm#posei_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#posei_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>) → <a href="#posei_trader.adapters.polymarket.data.PolymarketDataClient">PolymarketDataClient</a><a href="#static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient-1" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient-1" title="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketdataclient-1">​</a></h4>
 <p>Create a new Polymarket data client.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>name</strong> (<em>str</em>) – The custom client ID.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.polymarket.PolymarketDataClientConfig"><em>PolymarketDataClientConfig</em></a>) – The client configuration.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.polymarket.PolymarketDataClientConfig"><em>PolymarketDataClientConfig</em></a>) – The client configuration.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.polymarket.data.PolymarketDataClient">PolymarketDataClient</a></li>
+<a href="#posei_trader.adapters.polymarket.data.PolymarketDataClient">PolymarketDataClient</a></li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-polymarketliveexecclientfactory-1"><em>class</em> PolymarketLiveExecClientFactory<a href="#class-polymarketliveexecclientfactory-1" class="hash-link" aria-label="Direct link to class-polymarketliveexecclientfactory-1" title="Direct link to class-polymarketliveexecclientfactory-1">​</a></h3>
 <p>Bases: <code>LiveExecClientFactory</code></p>
 <p>Provides a Polymarket live execution client factory.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient-1"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#nautilus_trader.adapters.polymarket.config.PolymarketExecClientConfig">PolymarketExecClientConfig</a>, msgbus: <a href="../../common/index.htm#nautilus_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#nautilus_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>) → <a href="#nautilus_trader.adapters.polymarket.execution.PolymarketExecutionClient">PolymarketExecutionClient</a><a href="#static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient-1" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient-1" title="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient-1"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#posei_trader.adapters.polymarket.config.PolymarketExecClientConfig">PolymarketExecClientConfig</a>, msgbus: <a href="../../common/index.htm#posei_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#posei_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>) → <a href="#posei_trader.adapters.polymarket.execution.PolymarketExecutionClient">PolymarketExecutionClient</a><a href="#static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient-1" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient-1" title="Direct link to static-createloop-abstracteventloop-name-str-config-polymarketexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--polymarketexecutionclient-1">​</a></h4>
 <p>Create a new Polymarket execution client.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>name</strong> (<em>str</em>) – The custom client ID.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.polymarket.PolymarketExecClientConfig"><em>PolymarketExecClientConfig</em></a>) – The client configuration.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.polymarket.PolymarketExecClientConfig"><em>PolymarketExecClientConfig</em></a>) – The client configuration.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.polymarket.execution.PolymarketExecutionClient">PolymarketExecutionClient</a></li>
+<a href="#posei_trader.adapters.polymarket.execution.PolymarketExecutionClient">PolymarketExecutionClient</a></li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="enums">Enums<a href="#enums" class="hash-link" aria-label="Direct link to Enums" title="Direct link to Enums">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-polymarketsignaturetype"><em>class</em> PolymarketSignatureType<a href="#class-polymarketsignaturetype" class="hash-link" aria-label="Direct link to class-polymarketsignaturetype" title="Direct link to class-polymarketsignaturetype">​</a></h3>
@@ -752,63 +752,63 @@ ClobClient</li>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="failed--failed">FAILED <em>= &#x27;FAILED&#x27;</em><a href="#failed--failed" class="hash-link" aria-label="Direct link to failed--failed" title="Direct link to failed--failed">​</a></h4>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="providers">Providers<a href="#providers" class="hash-link" aria-label="Direct link to Providers" title="Direct link to Providers">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-polymarketinstrumentprovider-1"><em>class</em> PolymarketInstrumentProvider<a href="#class-polymarketinstrumentprovider-1" class="hash-link" aria-label="Direct link to class-polymarketinstrumentprovider-1" title="Direct link to class-polymarketinstrumentprovider-1">​</a></h3>
-<p>Bases: <a href="../../common/index.htm#nautilus_trader.common.providers.InstrumentProvider"><code>InstrumentProvider</code></a></p>
+<p>Bases: <a href="../../common/index.htm#posei_trader.common.providers.InstrumentProvider"><code>InstrumentProvider</code></a></p>
 <p>Provides Nautilus instrument definitions from Polymarket.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>client</strong> (<em>ClobClient</em>) – The Polymarket CLOB HTTP client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock instance.</li>
-<li><strong>config</strong> (<a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a> <em>,</em> <em>optional</em>) – The instrument provider configuration, by default None.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock instance.</li>
+<li><strong>config</strong> (<a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a> <em>,</em> <em>optional</em>) – The instrument provider configuration, by default None.</li>
 </ul>
 </li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_all_asyncfilters-dict--none--none--none-1"><em>async</em> load_all_async(filters: dict | None = None) → None<a href="#async-load_all_asyncfilters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to async-load_all_asyncfilters-dict--none--none--none-1" title="Direct link to async-load_all_asyncfilters-dict--none--none--none-1">​</a></h4>
 <p>Load the latest instruments into the provider asynchronously, optionally
 applying the given filters.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1"><em>async</em> load_ids_async(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1" title="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1"><em>async</em> load_ids_async(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1" title="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1">​</a></h4>
 <p>Load the instruments for the given IDs into the provider, optionally applying
 the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If any instrument_id.venue is not equal to self.venue.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1"><em>async</em> load_async(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1" title="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1"><em>async</em> load_async(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1" title="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1">​</a></h4>
 <p>Load the instrument for the given ID into the provider asynchronously,
 optionally applying the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If instrument_id.venue is not equal to self.venue.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="addinstrument-instrument--none-1">add(instrument: <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>) → None<a href="#addinstrument-instrument--none-1" class="hash-link" aria-label="Direct link to addinstrument-instrument--none-1" title="Direct link to addinstrument-instrument--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="addinstrument-instrument--none-1">add(instrument: <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>) → None<a href="#addinstrument-instrument--none-1" class="hash-link" aria-label="Direct link to addinstrument-instrument--none-1" title="Direct link to addinstrument-instrument--none-1">​</a></h4>
 <p>Add the given instrument to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instrument</strong> (<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"><em>Instrument</em></a>) – The instrument to add.</li>
+<strong>instrument</strong> (<a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"><em>Instrument</em></a>) – The instrument to add.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_bulkinstruments-listinstrument--none-1">add_bulk(instruments: list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]) → None<a href="#add_bulkinstruments-listinstrument--none-1" class="hash-link" aria-label="Direct link to add_bulkinstruments-listinstrument--none-1" title="Direct link to add_bulkinstruments-listinstrument--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_bulkinstruments-listinstrument--none-1">add_bulk(instruments: list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]) → None<a href="#add_bulkinstruments-listinstrument--none-1" class="hash-link" aria-label="Direct link to add_bulkinstruments-listinstrument--none-1" title="Direct link to add_bulkinstruments-listinstrument--none-1">​</a></h4>
 <p>Add the given instruments bulk to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instruments</strong> (<em>list</em> <em>[</em><a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"><em>Instrument</em></a> <em>]</em>) – The instruments to add.</li>
+<strong>instruments</strong> (<em>list</em> <em>[</em><a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"><em>Instrument</em></a> <em>]</em>) – The instruments to add.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_currencycurrency-currency--none-1">add_currency(currency: <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a>) → None<a href="#add_currencycurrency-currency--none-1" class="hash-link" aria-label="Direct link to add_currencycurrency-currency--none-1" title="Direct link to add_currencycurrency-currency--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_currencycurrency-currency--none-1">add_currency(currency: <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a>) → None<a href="#add_currencycurrency-currency--none-1" class="hash-link" aria-label="Direct link to add_currencycurrency-currency--none-1" title="Direct link to add_currencycurrency-currency--none-1">​</a></h4>
 <p>Add the given currency to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>currency</strong> (<a href="../../model/index.htm#nautilus_trader.model.Currency"><em>Currency</em></a>) – The currency to add.</li>
+<strong>currency</strong> (<a href="../../model/index.htm#posei_trader.model.Currency"><em>Currency</em></a>) – The currency to add.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="property-count--int-1"><em>property</em> count <em>: int</em><a href="#property-count--int-1" class="hash-link" aria-label="Direct link to property-count--int-1" title="Direct link to property-count--int-1">​</a></h4>
 <p>Return the count of instruments held by the provider.</p>
@@ -816,13 +816,13 @@ optionally applying the given filters.</p>
 <li><strong>Return type:</strong>
 int</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencies--dictstr-currency-1">currencies() → dict[str, <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a>]<a href="#currencies--dictstr-currency-1" class="hash-link" aria-label="Direct link to currencies--dictstr-currency-1" title="Direct link to currencies--dictstr-currency-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencies--dictstr-currency-1">currencies() → dict[str, <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a>]<a href="#currencies--dictstr-currency-1" class="hash-link" aria-label="Direct link to currencies--dictstr-currency-1" title="Direct link to currencies--dictstr-currency-1">​</a></h4>
 <p>Return all currencies held by the instrument provider.</p>
 <ul>
 <li><strong>Return type:</strong>
-dict[str, <a href="../../model/index.htm#nautilus_trader.model.Currency">Currency</a>]</li>
+dict[str, <a href="../../model/index.htm#posei_trader.model.Currency">Currency</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencycode-str--currency--none-1">currency(code: str) → <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a> | None<a href="#currencycode-str--currency--none-1" class="hash-link" aria-label="Direct link to currencycode-str--currency--none-1" title="Direct link to currencycode-str--currency--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencycode-str--currency--none-1">currency(code: str) → <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a> | None<a href="#currencycode-str--currency--none-1" class="hash-link" aria-label="Direct link to currencycode-str--currency--none-1" title="Direct link to currencycode-str--currency--none-1">​</a></h4>
 <p>Return the currency with the given code (if found).</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -832,20 +832,20 @@ Currency or <code>None</code></li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If code is not a valid string.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="findinstrument_id-instrumentid--instrument--none-1">find(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>) → <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a> | None<a href="#findinstrument_id-instrumentid--instrument--none-1" class="hash-link" aria-label="Direct link to findinstrument_id-instrumentid--instrument--none-1" title="Direct link to findinstrument_id-instrumentid--instrument--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="findinstrument_id-instrumentid--instrument--none-1">find(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>) → <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a> | None<a href="#findinstrument_id-instrumentid--instrument--none-1" class="hash-link" aria-label="Direct link to findinstrument_id-instrumentid--instrument--none-1" title="Direct link to findinstrument_id-instrumentid--instrument--none-1">​</a></h4>
 <p>Return the instrument for the given instrument ID (if found).</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The ID for the instrument</li>
+<strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The ID for the instrument</li>
 <li><strong>Return type:</strong>
 Instrument or <code>None</code></li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_all--dictinstrumentid-instrument-1">get_all() → dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#get_all--dictinstrumentid-instrument-1" class="hash-link" aria-label="Direct link to get_all--dictinstrumentid-instrument-1" title="Direct link to get_all--dictinstrumentid-instrument-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_all--dictinstrumentid-instrument-1">get_all() → dict[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#get_all--dictinstrumentid-instrument-1" class="hash-link" aria-label="Direct link to get_all--dictinstrumentid-instrument-1" title="Direct link to get_all--dictinstrumentid-instrument-1">​</a></h4>
 <p>Return all loaded instruments as a map keyed by instrument ID.</p>
 <p>If no instruments loaded, will return an empty dict.</p>
 <ul>
 <li><strong>Return type:</strong>
-dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument">Instrument</a>]</li>
+dict[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument">Instrument</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-initializereload-bool--false--none-1"><em>async</em> initialize(reload: bool = False) → None<a href="#async-initializereload-bool--false--none-1" class="hash-link" aria-label="Direct link to async-initializereload-bool--false--none-1" title="Direct link to async-initializereload-bool--false--none-1">​</a></h4>
 <p>Initialize the instrument provider.</p>
@@ -854,19 +854,19 @@ dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifier
 <strong>reload</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If True, then will always reload instruments.
 If False, then will immediately return if already loaded.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="list_all--listinstrument-1">list_all() → list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#list_all--listinstrument-1" class="hash-link" aria-label="Direct link to list_all--listinstrument-1" title="Direct link to list_all--listinstrument-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="list_all--listinstrument-1">list_all() → list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#list_all--listinstrument-1" class="hash-link" aria-label="Direct link to list_all--listinstrument-1" title="Direct link to list_all--listinstrument-1">​</a></h4>
 <p>Return all loaded instruments.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument">Instrument</a>]</li>
+list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument">Instrument</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loadinstrument_id-instrumentid-filters-dict--none--none--none-1">load(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#loadinstrument_id-instrumentid-filters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none-1" title="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loadinstrument_id-instrumentid-filters-dict--none--none--none-1">load(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#loadinstrument_id-instrumentid-filters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none-1" title="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none-1">​</a></h4>
 <p>Load the instrument for the given ID into the provider, optionally applying the
 given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>

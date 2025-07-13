@@ -23,9 +23,9 @@ configurations, data types and constants for connecting to and interacting with
 Betfairs’s API.</p>
 <p>For convenience, the most commonly used symbols are re-exported at the
 subpackage’s top level, so downstream code can simply import from
-<code>nautilus_trader.adapters.betfair</code>.</p>
+<code>posei_trader.adapters.betfair</code>.</p>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairdataclientconfig"><em>class</em> BetfairDataClientConfig<a href="#class-betfairdataclientconfig" class="hash-link" aria-label="Direct link to class-betfairdataclientconfig" title="Direct link to class-betfairdataclientconfig">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
 <p>Configuration for <code>BetfairDataClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -35,7 +35,7 @@ subpackage’s top level, so downstream code can simply import from
 <li><strong>password</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The Betfair account password.</li>
 <li><strong>app_key</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The Betfair application key.</li>
 <li><strong>cert_dir</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The local directory that contains the Betfair certificates.</li>
-<li><strong>instrument_config</strong> (<a href="#nautilus_trader.adapters.betfair.BetfairInstrumentProviderConfig"><em>BetfairInstrumentProviderConfig</em></a> <em>,</em> <em>None</em>) – The Betfair instrument provider config.</li>
+<li><strong>instrument_config</strong> (<a href="#posei_trader.adapters.betfair.BetfairInstrumentProviderConfig"><em>BetfairInstrumentProviderConfig</em></a> <em>,</em> <em>None</em>) – The Betfair instrument provider config.</li>
 <li><strong>subscription_delay_secs</strong> (<em>PositiveInt</em> <em>,</em> <em>default 3</em>) – The delay (seconds) before sending the <em>initial</em> subscription message.</li>
 <li><strong>keep_alive_secs</strong> (<em>PositiveInt</em> <em>,</em> <em>default 36_000</em> *(*<em>10 hours</em> <em>)</em>) – The keep alive interval (seconds) for the HTTP client.</li>
 <li><strong>stream_conflate_ms</strong> (<em>PositiveInt</em> <em>,</em> <em>optional</em>) – The Betfair data stream conflation setting. Default of None means no explicit value is
@@ -48,7 +48,7 @@ stream_conflate_ms=0 is explicitly set to guarantee no conflation.</li>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="account_currency--str">account_currency <em>: str</em><a href="#account_currency--str" class="hash-link" aria-label="Direct link to account_currency--str" title="Direct link to account_currency--str">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="app_key--str--none">app_key <em>: str | None</em><a href="#app_key--str--none" class="hash-link" aria-label="Direct link to app_key--str--none" title="Direct link to app_key--str--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="certs_dir--str--none">certs_dir <em>: str | None</em><a href="#certs_dir--str--none" class="hash-link" aria-label="Direct link to certs_dir--str--none" title="Direct link to certs_dir--str--none">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_config--betfairinstrumentproviderconfig--none">instrument_config <em>: <a href="#nautilus_trader.adapters.betfair.providers.BetfairInstrumentProviderConfig">BetfairInstrumentProviderConfig</a> | None</em><a href="#instrument_config--betfairinstrumentproviderconfig--none" class="hash-link" aria-label="Direct link to instrument_config--betfairinstrumentproviderconfig--none" title="Direct link to instrument_config--betfairinstrumentproviderconfig--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_config--betfairinstrumentproviderconfig--none">instrument_config <em>: <a href="#posei_trader.adapters.betfair.providers.BetfairInstrumentProviderConfig">BetfairInstrumentProviderConfig</a> | None</em><a href="#instrument_config--betfairinstrumentproviderconfig--none" class="hash-link" aria-label="Direct link to instrument_config--betfairinstrumentproviderconfig--none" title="Direct link to instrument_config--betfairinstrumentproviderconfig--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="keep_alive_secs--annotatedint-msgspecmetagt0">keep_alive_secs <em>: Annotated[int, msgspec.Meta(gt=0)]</em><a href="#keep_alive_secs--annotatedint-msgspecmetagt0" class="hash-link" aria-label="Direct link to keep_alive_secs--annotatedint-msgspecmetagt0" title="Direct link to keep_alive_secs--annotatedint-msgspecmetagt0">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="password--str--none">password <em>: str | None</em><a href="#password--str--none" class="hash-link" aria-label="Direct link to password--str--none" title="Direct link to password--str--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="stream_conflate_ms--annotatedint-msgspecmetagt0--none">stream_conflate_ms <em>: Annotated[int, msgspec.Meta(gt=0)] | None</em><a href="#stream_conflate_ms--annotatedint-msgspecmetagt0--none" class="hash-link" aria-label="Direct link to stream_conflate_ms--annotatedint-msgspecmetagt0--none" title="Direct link to stream_conflate_ms--annotatedint-msgspecmetagt0--none">​</a></h4>
@@ -73,7 +73,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig" title="Direct link to instrument_provider--instrumentproviderconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig" title="Direct link to instrument_provider--instrumentproviderconfig">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes">json() → bytes<a href="#json--bytes" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -105,7 +105,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig" class="hash-link" aria-label="Direct link to routing--routingconfig" title="Direct link to routing--routingconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig" class="hash-link" aria-label="Direct link to routing--routingconfig" title="Direct link to routing--routingconfig">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool">validate() → bool<a href="#validate--bool" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -113,7 +113,7 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairexecclientconfig"><em>class</em> BetfairExecClientConfig<a href="#class-betfairexecclientconfig" class="hash-link" aria-label="Direct link to class-betfairexecclientconfig" title="Direct link to class-betfairexecclientconfig">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveExecClientConfig"><code>LiveExecClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveExecClientConfig"><code>LiveExecClientConfig</code></a></p>
 <p>Configuration for <code>BetfairExecClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -123,7 +123,7 @@ bool</li>
 <li><strong>password</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The Betfair account password.</li>
 <li><strong>app_key</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The Betfair application key.</li>
 <li><strong>certs_dir</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The local directory that contains the Betfair certificates.</li>
-<li><strong>instrument_config</strong> (<a href="#nautilus_trader.adapters.betfair.BetfairInstrumentProviderConfig"><em>BetfairInstrumentProviderConfig</em></a> <em>,</em> <em>None</em>) – The Betfair instrument provider config.</li>
+<li><strong>instrument_config</strong> (<a href="#posei_trader.adapters.betfair.BetfairInstrumentProviderConfig"><em>BetfairInstrumentProviderConfig</em></a> <em>,</em> <em>None</em>) – The Betfair instrument provider config.</li>
 <li><strong>calculate_account_state</strong> (<em>bool</em> <em>,</em> <em>default True</em>) – If the Betfair account state should be calculated from events.</li>
 <li><strong>request_account_state_secs</strong> (<em>NonNegativeInt</em> <em>,</em> <em>default 300</em> *(*<em>5 minutes</em> <em>)</em>) – The request interval (seconds) for account state checks.
 If zero, then will not request account state from Betfair.</li>
@@ -140,7 +140,7 @@ share the same Betfair account across different markets.</li>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="calculate_account_state--bool">calculate_account_state <em>: bool</em><a href="#calculate_account_state--bool" class="hash-link" aria-label="Direct link to calculate_account_state--bool" title="Direct link to calculate_account_state--bool">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="certs_dir--str--none-1">certs_dir <em>: str | None</em><a href="#certs_dir--str--none-1" class="hash-link" aria-label="Direct link to certs_dir--str--none-1" title="Direct link to certs_dir--str--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="ignore_external_orders--bool">ignore_external_orders <em>: bool</em><a href="#ignore_external_orders--bool" class="hash-link" aria-label="Direct link to ignore_external_orders--bool" title="Direct link to ignore_external_orders--bool">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_config--betfairinstrumentproviderconfig--none-1">instrument_config <em>: <a href="#nautilus_trader.adapters.betfair.providers.BetfairInstrumentProviderConfig">BetfairInstrumentProviderConfig</a> | None</em><a href="#instrument_config--betfairinstrumentproviderconfig--none-1" class="hash-link" aria-label="Direct link to instrument_config--betfairinstrumentproviderconfig--none-1" title="Direct link to instrument_config--betfairinstrumentproviderconfig--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_config--betfairinstrumentproviderconfig--none-1">instrument_config <em>: <a href="#posei_trader.adapters.betfair.providers.BetfairInstrumentProviderConfig">BetfairInstrumentProviderConfig</a> | None</em><a href="#instrument_config--betfairinstrumentproviderconfig--none-1" class="hash-link" aria-label="Direct link to instrument_config--betfairinstrumentproviderconfig--none-1" title="Direct link to instrument_config--betfairinstrumentproviderconfig--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="password--str--none-1">password <em>: str | None</em><a href="#password--str--none-1" class="hash-link" aria-label="Direct link to password--str--none-1" title="Direct link to password--str--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="reconcile_market_ids_only--bool">reconcile_market_ids_only <em>: bool</em><a href="#reconcile_market_ids_only--bool" class="hash-link" aria-label="Direct link to reconcile_market_ids_only--bool" title="Direct link to reconcile_market_ids_only--bool">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="request_account_state_secs--annotatedint-msgspecmetage0">request_account_state_secs <em>: Annotated[int, msgspec.Meta(ge=0)]</em><a href="#request_account_state_secs--annotatedint-msgspecmetage0" class="hash-link" aria-label="Direct link to request_account_state_secs--annotatedint-msgspecmetage0" title="Direct link to request_account_state_secs--annotatedint-msgspecmetage0">​</a></h4>
@@ -163,7 +163,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-1">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-1" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-1" title="Direct link to instrument_provider--instrumentproviderconfig-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-1">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-1" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-1" title="Direct link to instrument_provider--instrumentproviderconfig-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes-1">json() → bytes<a href="#json--bytes-1" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -195,7 +195,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-1">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-1" class="hash-link" aria-label="Direct link to routing--routingconfig-1" title="Direct link to routing--routingconfig-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-1">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-1" class="hash-link" aria-label="Direct link to routing--routingconfig-1" title="Direct link to routing--routingconfig-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool-1">validate() → bool<a href="#validate--bool-1" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -203,33 +203,33 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairinstrumentprovider"><em>class</em> BetfairInstrumentProvider<a href="#class-betfairinstrumentprovider" class="hash-link" aria-label="Direct link to class-betfairinstrumentprovider" title="Direct link to class-betfairinstrumentprovider">​</a></h3>
-<p>Bases: <a href="../../common/index.htm#nautilus_trader.common.providers.InstrumentProvider"><code>InstrumentProvider</code></a></p>
+<p>Bases: <a href="../../common/index.htm#posei_trader.common.providers.InstrumentProvider"><code>InstrumentProvider</code></a></p>
 <p>Provides a means of loading BettingInstruments from the Betfair APIClient.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>client</strong> (<a href="#nautilus_trader.adapters.betfair.client.BetfairHttpClient"><em>BetfairHttpClient</em></a>) – The Betfair HTTP client for the provider.</li>
-<li><strong>config</strong> (<a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the provider.</li>
+<li><strong>client</strong> (<a href="#posei_trader.adapters.betfair.client.BetfairHttpClient"><em>BetfairHttpClient</em></a>) – The Betfair HTTP client for the provider.</li>
+<li><strong>config</strong> (<a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the provider.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="addinstrument-instrument--none">add(instrument: <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>) → None<a href="#addinstrument-instrument--none" class="hash-link" aria-label="Direct link to addinstrument-instrument--none" title="Direct link to addinstrument-instrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="addinstrument-instrument--none">add(instrument: <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>) → None<a href="#addinstrument-instrument--none" class="hash-link" aria-label="Direct link to addinstrument-instrument--none" title="Direct link to addinstrument-instrument--none">​</a></h4>
 <p>Add the given instrument to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instrument</strong> (<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"><em>Instrument</em></a>) – The instrument to add.</li>
+<strong>instrument</strong> (<a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"><em>Instrument</em></a>) – The instrument to add.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_bulkinstruments-listinstrument--none">add_bulk(instruments: list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]) → None<a href="#add_bulkinstruments-listinstrument--none" class="hash-link" aria-label="Direct link to add_bulkinstruments-listinstrument--none" title="Direct link to add_bulkinstruments-listinstrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_bulkinstruments-listinstrument--none">add_bulk(instruments: list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]) → None<a href="#add_bulkinstruments-listinstrument--none" class="hash-link" aria-label="Direct link to add_bulkinstruments-listinstrument--none" title="Direct link to add_bulkinstruments-listinstrument--none">​</a></h4>
 <p>Add the given instruments bulk to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instruments</strong> (<em>list</em> <em>[</em><a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"><em>Instrument</em></a> <em>]</em>) – The instruments to add.</li>
+<strong>instruments</strong> (<em>list</em> <em>[</em><a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"><em>Instrument</em></a> <em>]</em>) – The instruments to add.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_currencycurrency-currency--none">add_currency(currency: <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a>) → None<a href="#add_currencycurrency-currency--none" class="hash-link" aria-label="Direct link to add_currencycurrency-currency--none" title="Direct link to add_currencycurrency-currency--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_currencycurrency-currency--none">add_currency(currency: <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a>) → None<a href="#add_currencycurrency-currency--none" class="hash-link" aria-label="Direct link to add_currencycurrency-currency--none" title="Direct link to add_currencycurrency-currency--none">​</a></h4>
 <p>Add the given currency to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>currency</strong> (<a href="../../model/index.htm#nautilus_trader.model.Currency"><em>Currency</em></a>) – The currency to add.</li>
+<strong>currency</strong> (<a href="../../model/index.htm#posei_trader.model.Currency"><em>Currency</em></a>) – The currency to add.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="property-count--int"><em>property</em> count <em>: int</em><a href="#property-count--int" class="hash-link" aria-label="Direct link to property-count--int" title="Direct link to property-count--int">​</a></h4>
 <p>Return the count of instruments held by the provider.</p>
@@ -237,13 +237,13 @@ bool</li>
 <li><strong>Return type:</strong>
 int</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencies--dictstr-currency">currencies() → dict[str, <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a>]<a href="#currencies--dictstr-currency" class="hash-link" aria-label="Direct link to currencies--dictstr-currency" title="Direct link to currencies--dictstr-currency">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencies--dictstr-currency">currencies() → dict[str, <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a>]<a href="#currencies--dictstr-currency" class="hash-link" aria-label="Direct link to currencies--dictstr-currency" title="Direct link to currencies--dictstr-currency">​</a></h4>
 <p>Return all currencies held by the instrument provider.</p>
 <ul>
 <li><strong>Return type:</strong>
-dict[str, <a href="../../model/index.htm#nautilus_trader.model.Currency">Currency</a>]</li>
+dict[str, <a href="../../model/index.htm#posei_trader.model.Currency">Currency</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencycode-str--currency--none">currency(code: str) → <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a> | None<a href="#currencycode-str--currency--none" class="hash-link" aria-label="Direct link to currencycode-str--currency--none" title="Direct link to currencycode-str--currency--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencycode-str--currency--none">currency(code: str) → <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a> | None<a href="#currencycode-str--currency--none" class="hash-link" aria-label="Direct link to currencycode-str--currency--none" title="Direct link to currencycode-str--currency--none">​</a></h4>
 <p>Return the currency with the given code (if found).</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -253,21 +253,21 @@ Currency or <code>None</code></li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If code is not a valid string.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="findinstrument_id-instrumentid--instrument--none">find(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>) → <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a> | None<a href="#findinstrument_id-instrumentid--instrument--none" class="hash-link" aria-label="Direct link to findinstrument_id-instrumentid--instrument--none" title="Direct link to findinstrument_id-instrumentid--instrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="findinstrument_id-instrumentid--instrument--none">find(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>) → <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a> | None<a href="#findinstrument_id-instrumentid--instrument--none" class="hash-link" aria-label="Direct link to findinstrument_id-instrumentid--instrument--none" title="Direct link to findinstrument_id-instrumentid--instrument--none">​</a></h4>
 <p>Return the instrument for the given instrument ID (if found).</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The ID for the instrument</li>
+<strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The ID for the instrument</li>
 <li><strong>Return type:</strong>
 Instrument or <code>None</code></li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-get_account_currency--str"><em>async</em> get_account_currency() → str<a href="#async-get_account_currency--str" class="hash-link" aria-label="Direct link to async-get_account_currency--str" title="Direct link to async-get_account_currency--str">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_all--dictinstrumentid-instrument">get_all() → dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#get_all--dictinstrumentid-instrument" class="hash-link" aria-label="Direct link to get_all--dictinstrumentid-instrument" title="Direct link to get_all--dictinstrumentid-instrument">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_all--dictinstrumentid-instrument">get_all() → dict[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#get_all--dictinstrumentid-instrument" class="hash-link" aria-label="Direct link to get_all--dictinstrumentid-instrument" title="Direct link to get_all--dictinstrumentid-instrument">​</a></h4>
 <p>Return all loaded instruments as a map keyed by instrument ID.</p>
 <p>If no instruments loaded, will return an empty dict.</p>
 <ul>
 <li><strong>Return type:</strong>
-dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument">Instrument</a>]</li>
+dict[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument">Instrument</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-initializereload-bool--false--none"><em>async</em> initialize(reload: bool = False) → None<a href="#async-initializereload-bool--false--none" class="hash-link" aria-label="Direct link to async-initializereload-bool--false--none" title="Direct link to async-initializereload-bool--false--none">​</a></h4>
 <p>Initialize the instrument provider.</p>
@@ -276,19 +276,19 @@ dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifier
 <strong>reload</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If True, then will always reload instruments.
 If False, then will immediately return if already loaded.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="list_all--listinstrument">list_all() → list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#list_all--listinstrument" class="hash-link" aria-label="Direct link to list_all--listinstrument" title="Direct link to list_all--listinstrument">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="list_all--listinstrument">list_all() → list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#list_all--listinstrument" class="hash-link" aria-label="Direct link to list_all--listinstrument" title="Direct link to list_all--listinstrument">​</a></h4>
 <p>Return all loaded instruments.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument">Instrument</a>]</li>
+list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument">Instrument</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loadinstrument_id-instrumentid-filters-dict--none--none--none">load(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#loadinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loadinstrument_id-instrumentid-filters-dict--none--none--none">load(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#loadinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instrument for the given ID into the provider, optionally applying the
 given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
@@ -303,37 +303,37 @@ filters.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_all_asyncfilters-dict--none--none"><em>async</em> load_all_async(filters: dict | None = None)<a href="#async-load_all_asyncfilters-dict--none--none" class="hash-link" aria-label="Direct link to async-load_all_asyncfilters-dict--none--none" title="Direct link to async-load_all_asyncfilters-dict--none--none">​</a></h4>
 <p>Load the latest instruments into the provider asynchronously, optionally
 applying the given filters.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_asyncinstrument_id-instrumentid-filters-dict--none--none"><em>async</em> load_async(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None)<a href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none" class="hash-link" aria-label="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none" title="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_asyncinstrument_id-instrumentid-filters-dict--none--none"><em>async</em> load_async(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None)<a href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none" class="hash-link" aria-label="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none" title="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none">​</a></h4>
 <p>Load the instrument for the given ID into the provider asynchronously,
 optionally applying the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If instrument_id.venue is not equal to self.venue.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">load_ids(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">load_ids(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instruments for the given IDs into the provider, optionally applying
 the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none"><em>async</em> load_ids_async(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none"><em>async</em> load_ids_async(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instruments for the given IDs into the provider, optionally applying
 the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
@@ -341,7 +341,7 @@ the given filters.</p>
 <strong>ValueError</strong> – If any instrument_id.venue is not equal to self.venue.</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairinstrumentproviderconfig"><em>class</em> BetfairInstrumentProviderConfig<a href="#class-betfairinstrumentproviderconfig" class="hash-link" aria-label="Direct link to class-betfairinstrumentproviderconfig" title="Direct link to class-betfairinstrumentproviderconfig">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><code>InstrumentProviderConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><code>InstrumentProviderConfig</code></a></p>
 <p>Configuration for <code>BetfairInstrumentProvider</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -408,7 +408,7 @@ dict[str, Any]</li>
 dict[str, Any]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_all--bool">load_all <em>: bool</em><a href="#load_all--bool" class="hash-link" aria-label="Direct link to load_all--bool" title="Direct link to load_all--bool">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_ids--frozensetinstrumentid--none">load_ids <em>: frozenset[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>] | None</em><a href="#load_ids--frozensetinstrumentid--none" class="hash-link" aria-label="Direct link to load_ids--frozensetinstrumentid--none" title="Direct link to load_ids--frozensetinstrumentid--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_ids--frozensetinstrumentid--none">load_ids <em>: frozenset[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>] | None</em><a href="#load_ids--frozensetinstrumentid--none" class="hash-link" aria-label="Direct link to load_ids--frozensetinstrumentid--none" title="Direct link to load_ids--frozensetinstrumentid--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="log_warnings--bool">log_warnings <em>: bool</em><a href="#log_warnings--bool" class="hash-link" aria-label="Direct link to log_warnings--bool" title="Direct link to log_warnings--bool">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-parseraw-bytes--str--any-2"><em>classmethod</em> parse(raw: bytes | str) → Any<a href="#classmethod-parseraw-bytes--str--any-2" class="hash-link" aria-label="Direct link to classmethod-parseraw-bytes--str--any-2" title="Direct link to classmethod-parseraw-bytes--str--any-2">​</a></h4>
 <p>Return a decoded object of the given cls.</p>
@@ -431,7 +431,7 @@ bool</li>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairlivedataclientfactory"><em>class</em> BetfairLiveDataClientFactory<a href="#class-betfairlivedataclientfactory" class="hash-link" aria-label="Direct link to class-betfairlivedataclientfactory" title="Direct link to class-betfairlivedataclientfactory">​</a></h3>
 <p>Bases: <code>LiveDataClientFactory</code></p>
 <p>Provides a Betfair live data client factory.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-betfairdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#nautilus_trader.adapters.betfair.config.BetfairDataClientConfig">BetfairDataClientConfig</a>, msgbus: <a href="../../common/index.htm#nautilus_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#nautilus_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>)<a href="#static-createloop-abstracteventloop-name-str-config-betfairdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-betfairdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock" title="Direct link to static-createloop-abstracteventloop-name-str-config-betfairdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-betfairdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#posei_trader.adapters.betfair.config.BetfairDataClientConfig">BetfairDataClientConfig</a>, msgbus: <a href="../../common/index.htm#posei_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#posei_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>)<a href="#static-createloop-abstracteventloop-name-str-config-betfairdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-betfairdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock" title="Direct link to static-createloop-abstracteventloop-name-str-config-betfairdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock">​</a></h4>
 <p>Create a new Betfair data client.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -439,18 +439,18 @@ bool</li>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>name</strong> (<em>str</em>) – The custom client ID.</li>
 <li><strong>config</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em>) – The configuration dictionary.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.betfair.data.BetfairDataClient">BetfairDataClient</a></li>
+<a href="#posei_trader.adapters.betfair.data.BetfairDataClient">BetfairDataClient</a></li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairliveexecclientfactory"><em>class</em> BetfairLiveExecClientFactory<a href="#class-betfairliveexecclientfactory" class="hash-link" aria-label="Direct link to class-betfairliveexecclientfactory" title="Direct link to class-betfairliveexecclientfactory">​</a></h3>
 <p>Bases: <code>LiveExecClientFactory</code></p>
 <p>Provides data and execution clients for Betfair.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-betfairexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#nautilus_trader.adapters.betfair.config.BetfairExecClientConfig">BetfairExecClientConfig</a>, msgbus: <a href="../../common/index.htm#nautilus_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#nautilus_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>)<a href="#static-createloop-abstracteventloop-name-str-config-betfairexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-betfairexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock" title="Direct link to static-createloop-abstracteventloop-name-str-config-betfairexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-betfairexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#posei_trader.adapters.betfair.config.BetfairExecClientConfig">BetfairExecClientConfig</a>, msgbus: <a href="../../common/index.htm#posei_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#posei_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>)<a href="#static-createloop-abstracteventloop-name-str-config-betfairexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-betfairexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock" title="Direct link to static-createloop-abstracteventloop-name-str-config-betfairexecclientconfig-msgbus-messagebus-cache-cache-clock-liveclock">​</a></h4>
 <p>Create a new Betfair execution client.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -458,19 +458,19 @@ bool</li>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>name</strong> (<em>str</em>) – The custom client ID.</li>
 <li><strong>config</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em>) – The configuration for the client.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.betfair.execution.BetfairExecutionClient">BetfairExecutionClient</a></li>
+<a href="#posei_trader.adapters.betfair.execution.BetfairExecutionClient">BetfairExecutionClient</a></li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairparser"><em>class</em> BetfairParser<a href="#class-betfairparser" class="hash-link" aria-label="Direct link to class-betfairparser" title="Direct link to class-betfairparser">​</a></h3>
 <p>Bases: <code>object</code></p>
 <p>Stateful parser that keeps market definition.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="parsemcm-mcm-ts_init-int--none--none-min_notional-money--none--none--listinstrumentstatus--instrumentclose--orderbookdeltas--tradetick--betfairticker--bsporderbookdelta--betfairstartingprice">parse(mcm: MCM, ts_init: int | None = None, min_notional: <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Money">Money</a> | None = None) → list[<a href="../../model/data/index.htm#nautilus_trader.model.data.InstrumentStatus">InstrumentStatus</a> | <a href="../../model/data/index.htm#nautilus_trader.model.data.InstrumentClose">InstrumentClose</a> | <a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDeltas">OrderBookDeltas</a> | <a href="../../model/data/index.htm#nautilus_trader.model.data.TradeTick">TradeTick</a> | <a href="#nautilus_trader.adapters.betfair.data_types.BetfairTicker">BetfairTicker</a> | <a href="#nautilus_trader.adapters.betfair.data_types.BSPOrderBookDelta">BSPOrderBookDelta</a> | <a href="#nautilus_trader.adapters.betfair.data_types.BetfairStartingPrice">BetfairStartingPrice</a>]<a href="#parsemcm-mcm-ts_init-int--none--none-min_notional-money--none--none--listinstrumentstatus--instrumentclose--orderbookdeltas--tradetick--betfairticker--bsporderbookdelta--betfairstartingprice" class="hash-link" aria-label="Direct link to parsemcm-mcm-ts_init-int--none--none-min_notional-money--none--none--listinstrumentstatus--instrumentclose--orderbookdeltas--tradetick--betfairticker--bsporderbookdelta--betfairstartingprice" title="Direct link to parsemcm-mcm-ts_init-int--none--none-min_notional-money--none--none--listinstrumentstatus--instrumentclose--orderbookdeltas--tradetick--betfairticker--bsporderbookdelta--betfairstartingprice">​</a></h4>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient">get_cached_betfair_client(username: str | None = None, password: str | None = None, app_key: str | None = None) → <a href="#nautilus_trader.adapters.betfair.client.BetfairHttpClient">BetfairHttpClient</a><a href="#get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient" class="hash-link" aria-label="Direct link to get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient" title="Direct link to get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient">​</a></h3>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="parsemcm-mcm-ts_init-int--none--none-min_notional-money--none--none--listinstrumentstatus--instrumentclose--orderbookdeltas--tradetick--betfairticker--bsporderbookdelta--betfairstartingprice">parse(mcm: MCM, ts_init: int | None = None, min_notional: <a href="../../model/objects/index.htm#posei_trader.model.objects.Money">Money</a> | None = None) → list[<a href="../../model/data/index.htm#posei_trader.model.data.InstrumentStatus">InstrumentStatus</a> | <a href="../../model/data/index.htm#posei_trader.model.data.InstrumentClose">InstrumentClose</a> | <a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDeltas">OrderBookDeltas</a> | <a href="../../model/data/index.htm#posei_trader.model.data.TradeTick">TradeTick</a> | <a href="#posei_trader.adapters.betfair.data_types.BetfairTicker">BetfairTicker</a> | <a href="#posei_trader.adapters.betfair.data_types.BSPOrderBookDelta">BSPOrderBookDelta</a> | <a href="#posei_trader.adapters.betfair.data_types.BetfairStartingPrice">BetfairStartingPrice</a>]<a href="#parsemcm-mcm-ts_init-int--none--none-min_notional-money--none--none--listinstrumentstatus--instrumentclose--orderbookdeltas--tradetick--betfairticker--bsporderbookdelta--betfairstartingprice" class="hash-link" aria-label="Direct link to parsemcm-mcm-ts_init-int--none--none-min_notional-money--none--none--listinstrumentstatus--instrumentclose--orderbookdeltas--tradetick--betfairticker--bsporderbookdelta--betfairstartingprice" title="Direct link to parsemcm-mcm-ts_init-int--none--none-min_notional-money--none--none--listinstrumentstatus--instrumentclose--orderbookdeltas--tradetick--betfairticker--bsporderbookdelta--betfairstartingprice">​</a></h4>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient">get_cached_betfair_client(username: str | None = None, password: str | None = None, app_key: str | None = None) → <a href="#posei_trader.adapters.betfair.client.BetfairHttpClient">BetfairHttpClient</a><a href="#get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient" class="hash-link" aria-label="Direct link to get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient" title="Direct link to get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient">​</a></h3>
 <p>Cache and return a Betfair HTTP client with the given credentials.</p>
 <p>If a cached client with matching credentials already exists, then that
 cached client will be returned.</p>
@@ -486,20 +486,20 @@ If None then will source from the BETFAIR_APP_KEY env var.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.betfair.client.BetfairHttpClient">BetfairHttpClient</a></li>
+<a href="#posei_trader.adapters.betfair.client.BetfairHttpClient">BetfairHttpClient</a></li>
 </ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_cached_betfair_instrument_providerclient-betfairhttpclient-config-betfairinstrumentproviderconfig--betfairinstrumentprovider">get_cached_betfair_instrument_provider(client: <a href="#nautilus_trader.adapters.betfair.client.BetfairHttpClient">BetfairHttpClient</a>, config: <a href="#nautilus_trader.adapters.betfair.providers.BetfairInstrumentProviderConfig">BetfairInstrumentProviderConfig</a>) → <a href="#nautilus_trader.adapters.betfair.providers.BetfairInstrumentProvider">BetfairInstrumentProvider</a><a href="#get_cached_betfair_instrument_providerclient-betfairhttpclient-config-betfairinstrumentproviderconfig--betfairinstrumentprovider" class="hash-link" aria-label="Direct link to get_cached_betfair_instrument_providerclient-betfairhttpclient-config-betfairinstrumentproviderconfig--betfairinstrumentprovider" title="Direct link to get_cached_betfair_instrument_providerclient-betfairhttpclient-config-betfairinstrumentproviderconfig--betfairinstrumentprovider">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_cached_betfair_instrument_providerclient-betfairhttpclient-config-betfairinstrumentproviderconfig--betfairinstrumentprovider">get_cached_betfair_instrument_provider(client: <a href="#posei_trader.adapters.betfair.client.BetfairHttpClient">BetfairHttpClient</a>, config: <a href="#posei_trader.adapters.betfair.providers.BetfairInstrumentProviderConfig">BetfairInstrumentProviderConfig</a>) → <a href="#posei_trader.adapters.betfair.providers.BetfairInstrumentProvider">BetfairInstrumentProvider</a><a href="#get_cached_betfair_instrument_providerclient-betfairhttpclient-config-betfairinstrumentproviderconfig--betfairinstrumentprovider" class="hash-link" aria-label="Direct link to get_cached_betfair_instrument_providerclient-betfairhttpclient-config-betfairinstrumentproviderconfig--betfairinstrumentprovider" title="Direct link to get_cached_betfair_instrument_providerclient-betfairhttpclient-config-betfairinstrumentproviderconfig--betfairinstrumentprovider">​</a></h3>
 <p>Cache and return a BetfairInstrumentProvider.</p>
 <p>If a cached provider already exists, then that cached provider will be returned.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>client</strong> (<em>BinanceHttpClient</em>) – The client for the instrument provider.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.betfair.BetfairInstrumentProviderConfig"><em>BetfairInstrumentProviderConfig</em></a>) – The config for the instrument provider.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.betfair.BetfairInstrumentProviderConfig"><em>BetfairInstrumentProviderConfig</em></a>) – The config for the instrument provider.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.betfair.BetfairInstrumentProvider">BetfairInstrumentProvider</a></li>
+<a href="#posei_trader.adapters.betfair.BetfairInstrumentProvider">BetfairInstrumentProvider</a></li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="client">Client<a href="#client" class="hash-link" aria-label="Direct link to Client" title="Direct link to Client">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairhttpclient"><em>class</em> BetfairHttpClient<a href="#class-betfairhttpclient" class="hash-link" aria-label="Direct link to class-betfairhttpclient" title="Direct link to class-betfairhttpclient">​</a></h3>
@@ -533,7 +533,7 @@ If None then will source from the BETFAIR_APP_KEY env var.</li>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-to_betfairorder_side-orderside--side"><em>static</em> to_betfair(order_side: OrderSide) → Side<a href="#static-to_betfairorder_side-orderside--side" class="hash-link" aria-label="Direct link to static-to_betfairorder_side-orderside--side" title="Direct link to static-to_betfairorder_side-orderside--side">​</a></h4>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="config">Config<a href="#config" class="hash-link" aria-label="Direct link to Config" title="Direct link to Config">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairdataclientconfig-1"><em>class</em> BetfairDataClientConfig<a href="#class-betfairdataclientconfig-1" class="hash-link" aria-label="Direct link to class-betfairdataclientconfig-1" title="Direct link to class-betfairdataclientconfig-1">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
 <p>Configuration for <code>BetfairDataClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -543,7 +543,7 @@ If None then will source from the BETFAIR_APP_KEY env var.</li>
 <li><strong>password</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The Betfair account password.</li>
 <li><strong>app_key</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The Betfair application key.</li>
 <li><strong>cert_dir</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The local directory that contains the Betfair certificates.</li>
-<li><strong>instrument_config</strong> (<a href="#nautilus_trader.adapters.betfair.BetfairInstrumentProviderConfig"><em>BetfairInstrumentProviderConfig</em></a> <em>,</em> <em>None</em>) – The Betfair instrument provider config.</li>
+<li><strong>instrument_config</strong> (<a href="#posei_trader.adapters.betfair.BetfairInstrumentProviderConfig"><em>BetfairInstrumentProviderConfig</em></a> <em>,</em> <em>None</em>) – The Betfair instrument provider config.</li>
 <li><strong>subscription_delay_secs</strong> (<em>PositiveInt</em> <em>,</em> <em>default 3</em>) – The delay (seconds) before sending the <em>initial</em> subscription message.</li>
 <li><strong>keep_alive_secs</strong> (<em>PositiveInt</em> <em>,</em> <em>default 36_000</em> *(*<em>10 hours</em> <em>)</em>) – The keep alive interval (seconds) for the HTTP client.</li>
 <li><strong>stream_conflate_ms</strong> (<em>PositiveInt</em> <em>,</em> <em>optional</em>) – The Betfair data stream conflation setting. Default of None means no explicit value is
@@ -558,7 +558,7 @@ stream_conflate_ms=0 is explicitly set to guarantee no conflation.</li>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="password--str--none-2">password <em>: str | None</em><a href="#password--str--none-2" class="hash-link" aria-label="Direct link to password--str--none-2" title="Direct link to password--str--none-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="app_key--str--none-2">app_key <em>: str | None</em><a href="#app_key--str--none-2" class="hash-link" aria-label="Direct link to app_key--str--none-2" title="Direct link to app_key--str--none-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="certs_dir--str--none-2">certs_dir <em>: str | None</em><a href="#certs_dir--str--none-2" class="hash-link" aria-label="Direct link to certs_dir--str--none-2" title="Direct link to certs_dir--str--none-2">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_config--betfairinstrumentproviderconfig--none-2">instrument_config <em>: <a href="#nautilus_trader.adapters.betfair.providers.BetfairInstrumentProviderConfig">BetfairInstrumentProviderConfig</a> | None</em><a href="#instrument_config--betfairinstrumentproviderconfig--none-2" class="hash-link" aria-label="Direct link to instrument_config--betfairinstrumentproviderconfig--none-2" title="Direct link to instrument_config--betfairinstrumentproviderconfig--none-2">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_config--betfairinstrumentproviderconfig--none-2">instrument_config <em>: <a href="#posei_trader.adapters.betfair.providers.BetfairInstrumentProviderConfig">BetfairInstrumentProviderConfig</a> | None</em><a href="#instrument_config--betfairinstrumentproviderconfig--none-2" class="hash-link" aria-label="Direct link to instrument_config--betfairinstrumentproviderconfig--none-2" title="Direct link to instrument_config--betfairinstrumentproviderconfig--none-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscription_delay_secs--annotatedint-msgspecmetagt0--none-1">subscription_delay_secs <em>: Annotated[int, msgspec.Meta(gt=0)] | None</em><a href="#subscription_delay_secs--annotatedint-msgspecmetagt0--none-1" class="hash-link" aria-label="Direct link to subscription_delay_secs--annotatedint-msgspecmetagt0--none-1" title="Direct link to subscription_delay_secs--annotatedint-msgspecmetagt0--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="keep_alive_secs--annotatedint-msgspecmetagt0-1">keep_alive_secs <em>: Annotated[int, msgspec.Meta(gt=0)]</em><a href="#keep_alive_secs--annotatedint-msgspecmetagt0-1" class="hash-link" aria-label="Direct link to keep_alive_secs--annotatedint-msgspecmetagt0-1" title="Direct link to keep_alive_secs--annotatedint-msgspecmetagt0-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="stream_conflate_ms--annotatedint-msgspecmetagt0--none-1">stream_conflate_ms <em>: Annotated[int, msgspec.Meta(gt=0)] | None</em><a href="#stream_conflate_ms--annotatedint-msgspecmetagt0--none-1" class="hash-link" aria-label="Direct link to stream_conflate_ms--annotatedint-msgspecmetagt0--none-1" title="Direct link to stream_conflate_ms--annotatedint-msgspecmetagt0--none-1">​</a></h4>
@@ -581,7 +581,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-2">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-2" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-2" title="Direct link to instrument_provider--instrumentproviderconfig-2">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-2">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-2" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-2" title="Direct link to instrument_provider--instrumentproviderconfig-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes-3">json() → bytes<a href="#json--bytes-3" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -613,7 +613,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-2">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-2" class="hash-link" aria-label="Direct link to routing--routingconfig-2" title="Direct link to routing--routingconfig-2">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-2">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-2" class="hash-link" aria-label="Direct link to routing--routingconfig-2" title="Direct link to routing--routingconfig-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool-3">validate() → bool<a href="#validate--bool-3" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -621,7 +621,7 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairexecclientconfig-1"><em>class</em> BetfairExecClientConfig<a href="#class-betfairexecclientconfig-1" class="hash-link" aria-label="Direct link to class-betfairexecclientconfig-1" title="Direct link to class-betfairexecclientconfig-1">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveExecClientConfig"><code>LiveExecClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveExecClientConfig"><code>LiveExecClientConfig</code></a></p>
 <p>Configuration for <code>BetfairExecClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -631,7 +631,7 @@ bool</li>
 <li><strong>password</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The Betfair account password.</li>
 <li><strong>app_key</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The Betfair application key.</li>
 <li><strong>certs_dir</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The local directory that contains the Betfair certificates.</li>
-<li><strong>instrument_config</strong> (<a href="#nautilus_trader.adapters.betfair.BetfairInstrumentProviderConfig"><em>BetfairInstrumentProviderConfig</em></a> <em>,</em> <em>None</em>) – The Betfair instrument provider config.</li>
+<li><strong>instrument_config</strong> (<a href="#posei_trader.adapters.betfair.BetfairInstrumentProviderConfig"><em>BetfairInstrumentProviderConfig</em></a> <em>,</em> <em>None</em>) – The Betfair instrument provider config.</li>
 <li><strong>calculate_account_state</strong> (<em>bool</em> <em>,</em> <em>default True</em>) – If the Betfair account state should be calculated from events.</li>
 <li><strong>request_account_state_secs</strong> (<em>NonNegativeInt</em> <em>,</em> <em>default 300</em> *(*<em>5 minutes</em> <em>)</em>) – The request interval (seconds) for account state checks.
 If zero, then will not request account state from Betfair.</li>
@@ -648,7 +648,7 @@ share the same Betfair account across different markets.</li>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="password--str--none-3">password <em>: str | None</em><a href="#password--str--none-3" class="hash-link" aria-label="Direct link to password--str--none-3" title="Direct link to password--str--none-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="app_key--str--none-3">app_key <em>: str | None</em><a href="#app_key--str--none-3" class="hash-link" aria-label="Direct link to app_key--str--none-3" title="Direct link to app_key--str--none-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="certs_dir--str--none-3">certs_dir <em>: str | None</em><a href="#certs_dir--str--none-3" class="hash-link" aria-label="Direct link to certs_dir--str--none-3" title="Direct link to certs_dir--str--none-3">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_config--betfairinstrumentproviderconfig--none-3">instrument_config <em>: <a href="#nautilus_trader.adapters.betfair.providers.BetfairInstrumentProviderConfig">BetfairInstrumentProviderConfig</a> | None</em><a href="#instrument_config--betfairinstrumentproviderconfig--none-3" class="hash-link" aria-label="Direct link to instrument_config--betfairinstrumentproviderconfig--none-3" title="Direct link to instrument_config--betfairinstrumentproviderconfig--none-3">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_config--betfairinstrumentproviderconfig--none-3">instrument_config <em>: <a href="#posei_trader.adapters.betfair.providers.BetfairInstrumentProviderConfig">BetfairInstrumentProviderConfig</a> | None</em><a href="#instrument_config--betfairinstrumentproviderconfig--none-3" class="hash-link" aria-label="Direct link to instrument_config--betfairinstrumentproviderconfig--none-3" title="Direct link to instrument_config--betfairinstrumentproviderconfig--none-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="calculate_account_state--bool-1">calculate_account_state <em>: bool</em><a href="#calculate_account_state--bool-1" class="hash-link" aria-label="Direct link to calculate_account_state--bool-1" title="Direct link to calculate_account_state--bool-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="request_account_state_secs--annotatedint-msgspecmetage0-1">request_account_state_secs <em>: Annotated[int, msgspec.Meta(ge=0)]</em><a href="#request_account_state_secs--annotatedint-msgspecmetage0-1" class="hash-link" aria-label="Direct link to request_account_state_secs--annotatedint-msgspecmetage0-1" title="Direct link to request_account_state_secs--annotatedint-msgspecmetage0-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="reconcile_market_ids_only--bool-1">reconcile_market_ids_only <em>: bool</em><a href="#reconcile_market_ids_only--bool-1" class="hash-link" aria-label="Direct link to reconcile_market_ids_only--bool-1" title="Direct link to reconcile_market_ids_only--bool-1">​</a></h4>
@@ -671,7 +671,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-3">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-3" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-3" title="Direct link to instrument_provider--instrumentproviderconfig-3">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-3">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-3" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-3" title="Direct link to instrument_provider--instrumentproviderconfig-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes-4">json() → bytes<a href="#json--bytes-4" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -703,7 +703,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-3">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-3" class="hash-link" aria-label="Direct link to routing--routingconfig-3" title="Direct link to routing--routingconfig-3">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-3">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-3" class="hash-link" aria-label="Direct link to routing--routingconfig-3" title="Direct link to routing--routingconfig-3">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool-4">validate() → bool<a href="#validate--bool-4" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -712,33 +712,33 @@ bool</li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="data">Data<a href="#data" class="hash-link" aria-label="Direct link to Data" title="Direct link to Data">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairdataclient"><em>class</em> BetfairDataClient<a href="#class-betfairdataclient" class="hash-link" aria-label="Direct link to class-betfairdataclient" title="Direct link to class-betfairdataclient">​</a></h3>
-<p>Bases: <a href="../../live/index.htm#nautilus_trader.live.data_client.LiveMarketDataClient"><code>LiveMarketDataClient</code></a></p>
+<p>Bases: <a href="../../live/index.htm#posei_trader.live.data_client.LiveMarketDataClient"><code>LiveMarketDataClient</code></a></p>
 <p>Provides a data client for the Betfair API.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>client</strong> (<em>BetfairClient</em>) – The Betfair HttpClient</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
-<li><strong>instrument_provider</strong> (<a href="#nautilus_trader.adapters.betfair.BetfairInstrumentProvider"><em>BetfairInstrumentProvider</em></a> <em>,</em> <em>optional</em>) – The instrument provider.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.betfair.BetfairDataClientConfig"><em>BetfairDataClientConfig</em></a>) – The configuration for the client.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
+<li><strong>instrument_provider</strong> (<a href="#posei_trader.adapters.betfair.BetfairInstrumentProvider"><em>BetfairInstrumentProvider</em></a> <em>,</em> <em>optional</em>) – The instrument provider.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.betfair.BetfairDataClientConfig"><em>BetfairDataClientConfig</em></a>) – The configuration for the client.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="property-instrument_provider--betfairinstrumentprovider"><em>property</em> instrument_provider <em>: <a href="#nautilus_trader.adapters.betfair.providers.BetfairInstrumentProvider">BetfairInstrumentProvider</a></em><a href="#property-instrument_provider--betfairinstrumentprovider" class="hash-link" aria-label="Direct link to property-instrument_provider--betfairinstrumentprovider" title="Direct link to property-instrument_provider--betfairinstrumentprovider">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="property-instrument_provider--betfairinstrumentprovider"><em>property</em> instrument_provider <em>: <a href="#posei_trader.adapters.betfair.providers.BetfairInstrumentProvider">BetfairInstrumentProvider</a></em><a href="#property-instrument_provider--betfairinstrumentprovider" class="hash-link" aria-label="Direct link to property-instrument_provider--betfairinstrumentprovider" title="Direct link to property-instrument_provider--betfairinstrumentprovider">​</a></h4>
 <p>Return the instrument provider for the client.</p>
 <ul>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.betfair.BetfairInstrumentProvider">BetfairInstrumentProvider</a></li>
+<a href="#posei_trader.adapters.betfair.BetfairInstrumentProvider">BetfairInstrumentProvider</a></li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-stream_subscribe"><em>async</em> stream_subscribe()<a href="#async-stream_subscribe" class="hash-link" aria-label="Direct link to async-stream_subscribe" title="Direct link to async-stream_subscribe">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="on_market_updateraw-bytes--none">on_market_update(raw: bytes) → None<a href="#on_market_updateraw-bytes--none" class="hash-link" aria-label="Direct link to on_market_update(raw: bytes) → None" title="Direct link to on_market_update(raw: bytes) → None">​</a></h4>
 <p>Handle an update from the data stream socket.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="connect--none">connect() → None<a href="#connect--none" class="hash-link" aria-label="Direct link to connect() → None" title="Direct link to connect() → None">​</a></h4>
 <p>Connect the client.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-nautilus_tradercorerustcommonlogcolor--logcolornormal-0--task--none">create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~nautilus_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task | None<a href="#create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-nautilus_tradercorerustcommonlogcolor--logcolornormal-0--task--none" class="hash-link" aria-label="Direct link to create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~nautilus_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task | None" title="Direct link to create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~nautilus_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task | None">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-posei_tradercorerustcommonlogcolor--logcolornormal-0--task--none">create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~posei_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task | None<a href="#create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-posei_tradercorerustcommonlogcolor--logcolornormal-0--task--none" class="hash-link" aria-label="Direct link to create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~posei_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task | None" title="Direct link to create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~posei_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task | None">​</a></h4>
 <p>Run the given coroutine with error handling and optional callback actions when
 done.</p>
 <ul>
@@ -858,43 +858,43 @@ Component.is_stopped</li>
 <p>Request data for the given data type.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>request</strong> (<a href="../../data/index.htm#nautilus_trader.data.messages.RequestData"><em>RequestData</em></a>) – The message for the data request.</li>
+<strong>request</strong> (<a href="../../data/index.htm#posei_trader.data.messages.RequestData"><em>RequestData</em></a>) – The message for the data request.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="request_barsself-requestbars-request--void">request_bars(self, RequestBars request) → void<a href="#request_barsself-requestbars-request--void" class="hash-link" aria-label="Direct link to request_bars(self, RequestBars request) → void" title="Direct link to request_bars(self, RequestBars request) → void">​</a></h4>
 <p>Request historical Bar data. To load historical data from a catalog, you can pass a list[DataCatalogConfig] to the TradingNodeConfig or the BacktestEngineConfig.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>request</strong> (<a href="../../data/index.htm#nautilus_trader.data.messages.RequestBars"><em>RequestBars</em></a>) – The message for the data request.</li>
+<strong>request</strong> (<a href="../../data/index.htm#posei_trader.data.messages.RequestBars"><em>RequestBars</em></a>) – The message for the data request.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="request_instrumentself-requestinstrument-request--void">request_instrument(self, RequestInstrument request) → void<a href="#request_instrumentself-requestinstrument-request--void" class="hash-link" aria-label="Direct link to request_instrument(self, RequestInstrument request) → void" title="Direct link to request_instrument(self, RequestInstrument request) → void">​</a></h4>
 <p>Request Instrument data for the given instrument ID.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>request</strong> (<a href="../../data/index.htm#nautilus_trader.data.messages.RequestInstrument"><em>RequestInstrument</em></a>) – The message for the data request.</li>
+<strong>request</strong> (<a href="../../data/index.htm#posei_trader.data.messages.RequestInstrument"><em>RequestInstrument</em></a>) – The message for the data request.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="request_instrumentsself-requestinstruments-request--void">request_instruments(self, RequestInstruments request) → void<a href="#request_instrumentsself-requestinstruments-request--void" class="hash-link" aria-label="Direct link to request_instruments(self, RequestInstruments request) → void" title="Direct link to request_instruments(self, RequestInstruments request) → void">​</a></h4>
 <p>Request all Instrument data for the given venue.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>request</strong> (<a href="../../data/index.htm#nautilus_trader.data.messages.RequestInstruments"><em>RequestInstruments</em></a>) – The message for the data request.</li>
+<strong>request</strong> (<a href="../../data/index.htm#posei_trader.data.messages.RequestInstruments"><em>RequestInstruments</em></a>) – The message for the data request.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="request_order_book_snapshotself-requestorderbooksnapshot-request--void">request_order_book_snapshot(self, RequestOrderBookSnapshot request) → void<a href="#request_order_book_snapshotself-requestorderbooksnapshot-request--void" class="hash-link" aria-label="Direct link to request_order_book_snapshot(self, RequestOrderBookSnapshot request) → void" title="Direct link to request_order_book_snapshot(self, RequestOrderBookSnapshot request) → void">​</a></h4>
 <p>Request order book snapshot data.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>request</strong> (<a href="../../data/index.htm#nautilus_trader.data.messages.RequestOrderBookSnapshot"><em>RequestOrderBookSnapshot</em></a>) – The message for the data request.</li>
+<strong>request</strong> (<a href="../../data/index.htm#posei_trader.data.messages.RequestOrderBookSnapshot"><em>RequestOrderBookSnapshot</em></a>) – The message for the data request.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="request_quote_ticksself-requestquoteticks-request--void">request_quote_ticks(self, RequestQuoteTicks request) → void<a href="#request_quote_ticksself-requestquoteticks-request--void" class="hash-link" aria-label="Direct link to request_quote_ticks(self, RequestQuoteTicks request) → void" title="Direct link to request_quote_ticks(self, RequestQuoteTicks request) → void">​</a></h4>
 <p>Request historical QuoteTick data.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>request</strong> (<a href="../../data/index.htm#nautilus_trader.data.messages.RequestQuoteTicks"><em>RequestQuoteTicks</em></a>) – The message for the data request.</li>
+<strong>request</strong> (<a href="../../data/index.htm#posei_trader.data.messages.RequestQuoteTicks"><em>RequestQuoteTicks</em></a>) – The message for the data request.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="request_trade_ticksself-requesttradeticks-request--void">request_trade_ticks(self, RequestTradeTicks request) → void<a href="#request_trade_ticksself-requesttradeticks-request--void" class="hash-link" aria-label="Direct link to request_trade_ticks(self, RequestTradeTicks request) → void" title="Direct link to request_trade_ticks(self, RequestTradeTicks request) → void">​</a></h4>
 <p>Request historical TradeTick data.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>request</strong> (<a href="../../data/index.htm#nautilus_trader.data.messages.RequestTradeTicks"><em>RequestTradeTicks</em></a>) – The message for the data request.</li>
+<strong>request</strong> (<a href="../../data/index.htm#posei_trader.data.messages.RequestTradeTicks"><em>RequestTradeTicks</em></a>) – The message for the data request.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="resetself--void">reset(self) → void<a href="#resetself--void" class="hash-link" aria-label="Direct link to reset(self) → void" title="Direct link to reset(self) → void">​</a></h4>
 <p>Reset the component.</p>
@@ -961,7 +961,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>data_type</strong> (<a href="../../model/data/index.htm#nautilus_trader.model.data.DataType"><em>DataType</em></a>) – The data type for the subscription.</li>
+<li><strong>data_type</strong> (<a href="../../model/data/index.htm#posei_trader.model.data.DataType"><em>DataType</em></a>) – The data type for the subscription.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -971,7 +971,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>bar_type</strong> (<a href="../../model/data/index.htm#nautilus_trader.model.data.BarType"><em>BarType</em></a>) – The bar type to subscribe to.</li>
+<li><strong>bar_type</strong> (<a href="../../model/data/index.htm#posei_trader.model.data.BarType"><em>BarType</em></a>) – The bar type to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -981,7 +981,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -997,7 +997,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1007,7 +1007,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1023,7 +1023,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1033,7 +1033,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to subscribe to.</li>
 <li><strong>book_type</strong> (BookType {<code>L1_MBP</code>, <code>L2_MBP</code>, <code>L3_MBO</code>}) – The order book type.</li>
 <li><strong>depth</strong> (<em>int</em> <em>,</em> <em>optional</em> <em>,</em> <em>default None</em>) – The maximum depth for the subscription.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
@@ -1045,7 +1045,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to subscribe to.</li>
 <li><strong>book_type</strong> (BookType {<code>L1_MBP</code>, <code>L2_MBP</code>, <code>L3_MBO</code>}) – The order book level.</li>
 <li><strong>depth</strong> (<em>int</em> <em>,</em> <em>optional</em>) – The maximum depth for the order book. A depth of 0 is maximum depth.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
@@ -1057,7 +1057,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1067,7 +1067,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1076,67 +1076,67 @@ then the component state will not change, and an error will be logged.</p>
 <p>Return the bar types subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/data/index.htm#nautilus_trader.model.data.BarType">BarType</a>]</li>
+list[<a href="../../model/data/index.htm#posei_trader.model.data.BarType">BarType</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_custom_dataself--list">subscribed_custom_data(self) → list<a href="#subscribed_custom_dataself--list" class="hash-link" aria-label="Direct link to subscribed_custom_data(self) → list" title="Direct link to subscribed_custom_data(self) → list">​</a></h4>
 <p>Return the custom data types subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/data/index.htm#nautilus_trader.model.data.DataType">DataType</a>]</li>
+list[<a href="../../model/data/index.htm#posei_trader.model.data.DataType">DataType</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_index_pricesself--list">subscribed_index_prices(self) → list<a href="#subscribed_index_pricesself--list" class="hash-link" aria-label="Direct link to subscribed_index_prices(self) → list" title="Direct link to subscribed_index_prices(self) → list">​</a></h4>
 <p>Return the index price update instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_instrument_closeself--list">subscribed_instrument_close(self) → list<a href="#subscribed_instrument_closeself--list" class="hash-link" aria-label="Direct link to subscribed_instrument_close(self) → list" title="Direct link to subscribed_instrument_close(self) → list">​</a></h4>
 <p>Return the instrument closes subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_instrument_statusself--list">subscribed_instrument_status(self) → list<a href="#subscribed_instrument_statusself--list" class="hash-link" aria-label="Direct link to subscribed_instrument_status(self) → list" title="Direct link to subscribed_instrument_status(self) → list">​</a></h4>
 <p>Return the status update instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_instrumentsself--list">subscribed_instruments(self) → list<a href="#subscribed_instrumentsself--list" class="hash-link" aria-label="Direct link to subscribed_instruments(self) → list" title="Direct link to subscribed_instruments(self) → list">​</a></h4>
 <p>Return the instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_mark_pricesself--list">subscribed_mark_prices(self) → list<a href="#subscribed_mark_pricesself--list" class="hash-link" aria-label="Direct link to subscribed_mark_prices(self) → list" title="Direct link to subscribed_mark_prices(self) → list">​</a></h4>
 <p>Return the mark price update instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_order_book_deltasself--list">subscribed_order_book_deltas(self) → list<a href="#subscribed_order_book_deltasself--list" class="hash-link" aria-label="Direct link to subscribed_order_book_deltas(self) → list" title="Direct link to subscribed_order_book_deltas(self) → list">​</a></h4>
 <p>Return the order book delta instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_order_book_snapshotsself--list">subscribed_order_book_snapshots(self) → list<a href="#subscribed_order_book_snapshotsself--list" class="hash-link" aria-label="Direct link to subscribed_order_book_snapshots(self) → list" title="Direct link to subscribed_order_book_snapshots(self) → list">​</a></h4>
 <p>Return the order book snapshot instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_quote_ticksself--list">subscribed_quote_ticks(self) → list<a href="#subscribed_quote_ticksself--list" class="hash-link" aria-label="Direct link to subscribed_quote_ticks(self) → list" title="Direct link to subscribed_quote_ticks(self) → list">​</a></h4>
 <p>Return the quote tick instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_trade_ticksself--list">subscribed_trade_ticks(self) → list<a href="#subscribed_trade_ticksself--list" class="hash-link" aria-label="Direct link to subscribed_trade_ticks(self) → list" title="Direct link to subscribed_trade_ticks(self) → list">​</a></h4>
 <p>Return the trade tick instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="trader_id">trader_id<a href="#trader_id" class="hash-link" aria-label="Direct link to trader_id" title="Direct link to trader_id">​</a></h4>
 <p>The trader ID associated with the component.</p>
@@ -1155,7 +1155,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>data_type</strong> (<a href="../../model/data/index.htm#nautilus_trader.model.data.DataType"><em>DataType</em></a>) – The data type for the subscription.</li>
+<li><strong>data_type</strong> (<a href="../../model/data/index.htm#posei_trader.model.data.DataType"><em>DataType</em></a>) – The data type for the subscription.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1165,7 +1165,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>bar_type</strong> (<a href="../../model/data/index.htm#nautilus_trader.model.data.BarType"><em>BarType</em></a>) – The bar type to unsubscribe from.</li>
+<li><strong>bar_type</strong> (<a href="../../model/data/index.htm#posei_trader.model.data.BarType"><em>BarType</em></a>) – The bar type to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1175,7 +1175,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1185,7 +1185,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to unsubscribe from.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1195,7 +1195,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to unsubscribe from.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1205,7 +1205,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument status updates to unsubscribe from.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument status updates to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1221,7 +1221,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1231,7 +1231,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to unsubscribe from.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1241,7 +1241,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to unsubscribe from.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1251,7 +1251,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to unsubscribe from.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1261,7 +1261,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to unsubscribe from.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1281,9 +1281,9 @@ Venue or <code>None</code></li>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="running--2">RUNNING <em>= 2</em><a href="#running--2" class="hash-link" aria-label="Direct link to running--2" title="Direct link to running--2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed--3">SUBSCRIBED <em>= 3</em><a href="#subscribed--3" class="hash-link" aria-label="Direct link to subscribed--3" title="Direct link to subscribed--3">​</a></h4>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-bsporderbookdelta"><em>class</em> BSPOrderBookDelta<a href="#class-bsporderbookdelta" class="hash-link" aria-label="Direct link to class-bsporderbookdelta" title="Direct link to class-bsporderbookdelta">​</a></h3>
-<p>Bases: <a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta"><code>OrderBookDelta</code></a></p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_batchbatch-recordbatch--listbsporderbookdelta"><em>static</em> from_batch(batch: RecordBatch) → list[<a href="#nautilus_trader.adapters.betfair.data_types.BSPOrderBookDelta">BSPOrderBookDelta</a>]<a href="#static-from_batchbatch-recordbatch--listbsporderbookdelta" class="hash-link" aria-label="Direct link to static-from_batchbatch-recordbatch--listbsporderbookdelta" title="Direct link to static-from_batchbatch-recordbatch--listbsporderbookdelta">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-to_batchobj-bsporderbookdelta--recordbatch"><em>static</em> to_batch(obj: <a href="#nautilus_trader.adapters.betfair.data_types.BSPOrderBookDelta">BSPOrderBookDelta</a>) → RecordBatch<a href="#static-to_batchobj-bsporderbookdelta--recordbatch" class="hash-link" aria-label="Direct link to static-to_batchobj-bsporderbookdelta--recordbatch" title="Direct link to static-to_batchobj-bsporderbookdelta--recordbatch">​</a></h4>
+<p>Bases: <a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta"><code>OrderBookDelta</code></a></p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_batchbatch-recordbatch--listbsporderbookdelta"><em>static</em> from_batch(batch: RecordBatch) → list[<a href="#posei_trader.adapters.betfair.data_types.BSPOrderBookDelta">BSPOrderBookDelta</a>]<a href="#static-from_batchbatch-recordbatch--listbsporderbookdelta" class="hash-link" aria-label="Direct link to static-from_batchbatch-recordbatch--listbsporderbookdelta" title="Direct link to static-from_batchbatch-recordbatch--listbsporderbookdelta">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-to_batchobj-bsporderbookdelta--recordbatch"><em>static</em> to_batch(obj: <a href="#posei_trader.adapters.betfair.data_types.BSPOrderBookDelta">BSPOrderBookDelta</a>) → RecordBatch<a href="#static-to_batchobj-bsporderbookdelta--recordbatch" class="hash-link" aria-label="Direct link to static-to_batchobj-bsporderbookdelta--recordbatch" title="Direct link to static-to_batchobj-bsporderbookdelta--recordbatch">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-schema--schema"><em>classmethod</em> schema() → Schema<a href="#classmethod-schema--schema" class="hash-link" aria-label="Direct link to classmethod-schema--schema" title="Direct link to classmethod-schema--schema">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="action">action<a href="#action" class="hash-link" aria-label="Direct link to action" title="Direct link to action">​</a></h4>
 <p>BookAction</p>
@@ -1299,7 +1299,7 @@ OrderBookDelta.action</li>
 <p>Return an order book delta which acts as an initial <code>CLEAR</code>.</p>
 <ul>
 <li><strong>Return type:</strong>
-<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta">OrderBookDelta</a></li>
+<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta">OrderBookDelta</a></li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="flags">flags<a href="#flags" class="hash-link" aria-label="Direct link to flags" title="Direct link to flags">​</a></h4>
 <p>uint8_t</p>
@@ -1310,36 +1310,36 @@ uint8_t</li>
 <li><strong>Type:</strong>
 OrderBookDelta.flags</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_dictdict-values--orderbookdelta"><em>static</em> from_dict(dict values) → <a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta">OrderBookDelta</a><a href="#static-from_dictdict-values--orderbookdelta" class="hash-link" aria-label="Direct link to static-from_dictdict-values--orderbookdelta" title="Direct link to static-from_dictdict-values--orderbookdelta">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_dictdict-values--orderbookdelta"><em>static</em> from_dict(dict values) → <a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta">OrderBookDelta</a><a href="#static-from_dictdict-values--orderbookdelta" class="hash-link" aria-label="Direct link to static-from_dictdict-values--orderbookdelta" title="Direct link to static-from_dictdict-values--orderbookdelta">​</a></h4>
 <p>Return an order book delta from the given dict values.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <strong>values</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>object</em> <em>]</em>) – The values for initialization.</li>
 <li><strong>Return type:</strong>
-<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta">OrderBookDelta</a></li>
+<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta">OrderBookDelta</a></li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_pyo3pyo3_delta--orderbookdelta"><em>static</em> from_pyo3(pyo3_delta) → <a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta">OrderBookDelta</a><a href="#static-from_pyo3pyo3_delta--orderbookdelta" class="hash-link" aria-label="Direct link to static-from_pyo3pyo3_delta--orderbookdelta" title="Direct link to static-from_pyo3pyo3_delta--orderbookdelta">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_pyo3pyo3_delta--orderbookdelta"><em>static</em> from_pyo3(pyo3_delta) → <a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta">OrderBookDelta</a><a href="#static-from_pyo3pyo3_delta--orderbookdelta" class="hash-link" aria-label="Direct link to static-from_pyo3pyo3_delta--orderbookdelta" title="Direct link to static-from_pyo3pyo3_delta--orderbookdelta">​</a></h4>
 <p>Return a legacy Cython order book delta converted from the given pyo3 Rust object.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <strong>pyo3_delta</strong> (<em>nautilus_pyo3.OrderBookDelta</em>) – The pyo3 Rust order book delta to convert from.</li>
 <li><strong>Return type:</strong>
-<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta">OrderBookDelta</a></li>
+<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta">OrderBookDelta</a></li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_pyo3_listlist-pyo3_deltas--listorderbookdelta"><em>static</em> from_pyo3_list(list pyo3_deltas) → list[<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta">OrderBookDelta</a>]<a href="#static-from_pyo3_listlist-pyo3_deltas--listorderbookdelta" class="hash-link" aria-label="Direct link to static-from_pyo3_listlist-pyo3_deltas--listorderbookdelta" title="Direct link to static-from_pyo3_listlist-pyo3_deltas--listorderbookdelta">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_pyo3_listlist-pyo3_deltas--listorderbookdelta"><em>static</em> from_pyo3_list(list pyo3_deltas) → list[<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta">OrderBookDelta</a>]<a href="#static-from_pyo3_listlist-pyo3_deltas--listorderbookdelta" class="hash-link" aria-label="Direct link to static-from_pyo3_listlist-pyo3_deltas--listorderbookdelta" title="Direct link to static-from_pyo3_listlist-pyo3_deltas--listorderbookdelta">​</a></h4>
 <p>Return legacy Cython order book deltas converted from the given pyo3 Rust objects.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <strong>pyo3_deltas</strong> (<em>list</em> *[*<em>nautilus_pyo3.OrderBookDelta</em> <em>]</em>) – The pyo3 Rust order book deltas to convert from.</li>
 <li><strong>Return type:</strong>
-list[<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta">OrderBookDelta</a>]</li>
+list[<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta">OrderBookDelta</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_rawinstrumentid-instrument_id-bookaction-action-orderside-side-priceraw-price_raw-uint8_t-price_prec-quantityraw-size_raw-uint8_t-size_prec-uint64_t-order_id-uint8_t-flags-uint64_t-sequence-uint64_t-ts_event-uint64_t-ts_init--orderbookdelta"><em>static</em> from_raw(InstrumentId instrument_id, BookAction action, OrderSide side, PriceRaw price_raw, uint8_t price_prec, QuantityRaw size_raw, uint8_t size_prec, uint64_t order_id, uint8_t flags, uint64_t sequence, uint64_t ts_event, uint64_t ts_init) → <a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta">OrderBookDelta</a><a href="#static-from_rawinstrumentid-instrument_id-bookaction-action-orderside-side-priceraw-price_raw-uint8_t-price_prec-quantityraw-size_raw-uint8_t-size_prec-uint64_t-order_id-uint8_t-flags-uint64_t-sequence-uint64_t-ts_event-uint64_t-ts_init--orderbookdelta" class="hash-link" aria-label="Direct link to static-from_rawinstrumentid-instrument_id-bookaction-action-orderside-side-priceraw-price_raw-uint8_t-price_prec-quantityraw-size_raw-uint8_t-size_prec-uint64_t-order_id-uint8_t-flags-uint64_t-sequence-uint64_t-ts_event-uint64_t-ts_init--orderbookdelta" title="Direct link to static-from_rawinstrumentid-instrument_id-bookaction-action-orderside-side-priceraw-price_raw-uint8_t-price_prec-quantityraw-size_raw-uint8_t-size_prec-uint64_t-order_id-uint8_t-flags-uint64_t-sequence-uint64_t-ts_event-uint64_t-ts_init--orderbookdelta">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_rawinstrumentid-instrument_id-bookaction-action-orderside-side-priceraw-price_raw-uint8_t-price_prec-quantityraw-size_raw-uint8_t-size_prec-uint64_t-order_id-uint8_t-flags-uint64_t-sequence-uint64_t-ts_event-uint64_t-ts_init--orderbookdelta"><em>static</em> from_raw(InstrumentId instrument_id, BookAction action, OrderSide side, PriceRaw price_raw, uint8_t price_prec, QuantityRaw size_raw, uint8_t size_prec, uint64_t order_id, uint8_t flags, uint64_t sequence, uint64_t ts_event, uint64_t ts_init) → <a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta">OrderBookDelta</a><a href="#static-from_rawinstrumentid-instrument_id-bookaction-action-orderside-side-priceraw-price_raw-uint8_t-price_prec-quantityraw-size_raw-uint8_t-size_prec-uint64_t-order_id-uint8_t-flags-uint64_t-sequence-uint64_t-ts_event-uint64_t-ts_init--orderbookdelta" class="hash-link" aria-label="Direct link to static-from_rawinstrumentid-instrument_id-bookaction-action-orderside-side-priceraw-price_raw-uint8_t-price_prec-quantityraw-size_raw-uint8_t-size_prec-uint64_t-order_id-uint8_t-flags-uint64_t-sequence-uint64_t-ts_event-uint64_t-ts_init--orderbookdelta" title="Direct link to static-from_rawinstrumentid-instrument_id-bookaction-action-orderside-side-priceraw-price_raw-uint8_t-price_prec-quantityraw-size_raw-uint8_t-size_prec-uint64_t-order_id-uint8_t-flags-uint64_t-sequence-uint64_t-ts_event-uint64_t-ts_init--orderbookdelta">​</a></h4>
 <p>Return an order book delta from the given raw values.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The trade instrument ID.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The trade instrument ID.</li>
 <li><strong>action</strong> (BookAction {<code>ADD</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>CLEAR</code>}) – The order book delta action.</li>
 <li><strong>side</strong> (OrderSide {<code>BUY</code>, <code>SELL</code>}) – The order side.</li>
 <li><strong>price_raw</strong> (<em>int</em>) – The order raw price (as a scaled fixed-point integer).</li>
@@ -1356,7 +1356,7 @@ If no sequence number provided in the source data then use a value of zero.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta">OrderBookDelta</a></li>
+<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta">OrderBookDelta</a></li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-fully_qualified_namecls--str-1"><em>classmethod</em> fully_qualified_name(cls) → str<a href="#classmethod-fully_qualified_namecls--str-1" class="hash-link" aria-label="Direct link to classmethod-fully_qualified_namecls--str-1" title="Direct link to classmethod-fully_qualified_namecls--str-1">​</a></h4>
 <p>Return the fully qualified name for the Data class.</p>
@@ -1369,7 +1369,7 @@ str</li>
 <p>Return the deltas book instrument ID.</p>
 <ul>
 <li><strong>Return type:</strong>
-<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a></li>
+<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a></li>
 <li><strong>Type:</strong>
 OrderBookDelta.instrument_id</li>
 </ul>
@@ -1422,13 +1422,13 @@ bool</li>
 <li><strong>Type:</strong>
 OrderBookDelta.is_update</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-list_from_capsulecapsule--listorderbookdelta"><em>static</em> list_from_capsule(capsule) → list[<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta">OrderBookDelta</a>]<a href="#static-list_from_capsulecapsule--listorderbookdelta" class="hash-link" aria-label="Direct link to static-list_from_capsulecapsule--listorderbookdelta" title="Direct link to static-list_from_capsulecapsule--listorderbookdelta">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-list_from_capsulecapsule--listorderbookdelta"><em>static</em> list_from_capsule(capsule) → list[<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta">OrderBookDelta</a>]<a href="#static-list_from_capsulecapsule--listorderbookdelta" class="hash-link" aria-label="Direct link to static-list_from_capsulecapsule--listorderbookdelta" title="Direct link to static-list_from_capsulecapsule--listorderbookdelta">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="order">order<a href="#order" class="hash-link" aria-label="Direct link to order" title="Direct link to order">​</a></h4>
 <p>BookOrder | None</p>
 <p>Return the deltas book order for the action.</p>
 <ul>
 <li><strong>Return type:</strong>
-<a href="../../model/data/index.htm#nautilus_trader.model.data.BookOrder">BookOrder</a></li>
+<a href="../../model/data/index.htm#posei_trader.model.data.BookOrder">BookOrder</a></li>
 <li><strong>Type:</strong>
 OrderBookDelta.order</li>
 </ul>
@@ -1451,7 +1451,7 @@ dict[str, object]</li>
 <p>Return pyo3 Rust order book deltas converted from the given legacy Cython objects.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>pyo3_deltas</strong> (<em>list</em> <em>[</em><a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta"><em>OrderBookDelta</em></a> <em>]</em>) – The pyo3 Rust order book deltas to convert from.</li>
+<strong>pyo3_deltas</strong> (<em>list</em> <em>[</em><a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta"><em>OrderBookDelta</em></a> <em>]</em>) – The pyo3 Rust order book deltas to convert from.</li>
 <li><strong>Return type:</strong>
 list[nautilus_pyo3.OrderBookDelta]</li>
 </ul>
@@ -1474,7 +1474,7 @@ int</li>
 OrderBookDelta.ts_init</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairticker"><em>class</em> BetfairTicker<a href="#class-betfairticker" class="hash-link" aria-label="Direct link to class-betfairticker" title="Direct link to class-betfairticker">​</a></h3>
-<p>Bases: <a href="../../core/index.htm#nautilus_trader.core.Data"><code>Data</code></a></p>
+<p>Bases: <a href="../../core/index.htm#posei_trader.core.Data"><code>Data</code></a></p>
 <p>Represents a Betfair ticker.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="property-ts_event--int"><em>property</em> ts_event <em>: int</em><a href="#property-ts_event--int" class="hash-link" aria-label="Direct link to property-ts_event--int" title="Direct link to property-ts_event--int">​</a></h4>
 <p>UNIX timestamp (nanoseconds) when the data event occurred.</p>
@@ -1490,7 +1490,7 @@ int</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-schema"><em>classmethod</em> schema()<a href="#classmethod-schema" class="hash-link" aria-label="Direct link to classmethod-schema" title="Direct link to classmethod-schema">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-from_dictvalues-dict"><em>classmethod</em> from_dict(values: dict)<a href="#classmethod-from_dictvalues-dict" class="hash-link" aria-label="Direct link to classmethod-from_dictvalues-dict" title="Direct link to classmethod-from_dictvalues-dict">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-to_dictobj-betfairticker"><em>static</em> to_dict(obj: <a href="#nautilus_trader.adapters.betfair.data_types.BetfairTicker">BetfairTicker</a>)<a href="#static-to_dictobj-betfairticker" class="hash-link" aria-label="Direct link to static-to_dictobj-betfairticker" title="Direct link to static-to_dictobj-betfairticker">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-to_dictobj-betfairticker"><em>static</em> to_dict(obj: <a href="#posei_trader.adapters.betfair.data_types.BetfairTicker">BetfairTicker</a>)<a href="#static-to_dictobj-betfairticker" class="hash-link" aria-label="Direct link to static-to_dictobj-betfairticker" title="Direct link to static-to_dictobj-betfairticker">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-fully_qualified_namecls--str-2"><em>classmethod</em> fully_qualified_name(cls) → str<a href="#classmethod-fully_qualified_namecls--str-2" class="hash-link" aria-label="Direct link to classmethod-fully_qualified_namecls--str-2" title="Direct link to classmethod-fully_qualified_namecls--str-2">​</a></h4>
 <p>Return the fully qualified name for the Data class.</p>
 <ul>
@@ -1511,7 +1511,7 @@ True if the class name matches the signal type or the specific signal name, othe
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairstartingprice"><em>class</em> BetfairStartingPrice<a href="#class-betfairstartingprice" class="hash-link" aria-label="Direct link to class-betfairstartingprice" title="Direct link to class-betfairstartingprice">​</a></h3>
-<p>Bases: <a href="../../core/index.htm#nautilus_trader.core.Data"><code>Data</code></a></p>
+<p>Bases: <a href="../../core/index.htm#posei_trader.core.Data"><code>Data</code></a></p>
 <p>Represents the realized Betfair Starting Price.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="property-ts_event--int-1"><em>property</em> ts_event <em>: int</em><a href="#property-ts_event--int-1" class="hash-link" aria-label="Direct link to property-ts_event--int-1" title="Direct link to property-ts_event--int-1">​</a></h4>
 <p>UNIX timestamp (nanoseconds) when the data event occurred.</p>
@@ -1548,13 +1548,13 @@ True if the class name matches the signal type or the specific signal name, othe
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairsequencecompleted"><em>class</em> BetfairSequenceCompleted<a href="#class-betfairsequencecompleted" class="hash-link" aria-label="Direct link to class-betfairsequencecompleted" title="Direct link to class-betfairsequencecompleted">​</a></h3>
-<p>Bases: <a href="../../core/index.htm#nautilus_trader.core.Data"><code>Data</code></a></p>
+<p>Bases: <a href="../../core/index.htm#posei_trader.core.Data"><code>Data</code></a></p>
 <p>BetfairSequenceCompleted()</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="fields_init--none">fields_init() → None<a href="#fields_init--none" class="hash-link" aria-label="Direct link to fields_init() → None" title="Direct link to fields_init() → None">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="fields_repr">fields_repr()<a href="#fields_repr" class="hash-link" aria-label="Direct link to fields_repr()" title="Direct link to fields_repr()">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-from_arrowtable-table--betfairsequencecompleted"><em>classmethod</em> from_arrow(table: Table) → <a href="#nautilus_trader.adapters.betfair.data_types.BetfairSequenceCompleted">BetfairSequenceCompleted</a><a href="#classmethod-from_arrowtable-table--betfairsequencecompleted" class="hash-link" aria-label="Direct link to classmethod-from_arrowtable-table--betfairsequencecompleted" title="Direct link to classmethod-from_arrowtable-table--betfairsequencecompleted">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-from_bytesdata-bytes--betfairsequencecompleted"><em>classmethod</em> from_bytes(data: bytes) → <a href="#nautilus_trader.adapters.betfair.data_types.BetfairSequenceCompleted">BetfairSequenceCompleted</a><a href="#classmethod-from_bytesdata-bytes--betfairsequencecompleted" class="hash-link" aria-label="Direct link to classmethod-from_bytesdata-bytes--betfairsequencecompleted" title="Direct link to classmethod-from_bytesdata-bytes--betfairsequencecompleted">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-from_dictdata-dictstr-any--betfairsequencecompleted"><em>classmethod</em> from_dict(data: dict[str, Any]) → <a href="#nautilus_trader.adapters.betfair.data_types.BetfairSequenceCompleted">BetfairSequenceCompleted</a><a href="#classmethod-from_dictdata-dictstr-any--betfairsequencecompleted" class="hash-link" aria-label="Direct link to classmethod-from_dictdata-dictstr-any--betfairsequencecompleted" title="Direct link to classmethod-from_dictdata-dictstr-any--betfairsequencecompleted">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-from_arrowtable-table--betfairsequencecompleted"><em>classmethod</em> from_arrow(table: Table) → <a href="#posei_trader.adapters.betfair.data_types.BetfairSequenceCompleted">BetfairSequenceCompleted</a><a href="#classmethod-from_arrowtable-table--betfairsequencecompleted" class="hash-link" aria-label="Direct link to classmethod-from_arrowtable-table--betfairsequencecompleted" title="Direct link to classmethod-from_arrowtable-table--betfairsequencecompleted">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-from_bytesdata-bytes--betfairsequencecompleted"><em>classmethod</em> from_bytes(data: bytes) → <a href="#posei_trader.adapters.betfair.data_types.BetfairSequenceCompleted">BetfairSequenceCompleted</a><a href="#classmethod-from_bytesdata-bytes--betfairsequencecompleted" class="hash-link" aria-label="Direct link to classmethod-from_bytesdata-bytes--betfairsequencecompleted" title="Direct link to classmethod-from_bytesdata-bytes--betfairsequencecompleted">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-from_dictdata-dictstr-any--betfairsequencecompleted"><em>classmethod</em> from_dict(data: dict[str, Any]) → <a href="#posei_trader.adapters.betfair.data_types.BetfairSequenceCompleted">BetfairSequenceCompleted</a><a href="#classmethod-from_dictdata-dictstr-any--betfairsequencecompleted" class="hash-link" aria-label="Direct link to classmethod-from_dictdata-dictstr-any--betfairsequencecompleted" title="Direct link to classmethod-from_dictdata-dictstr-any--betfairsequencecompleted">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-fully_qualified_namecls--str-4"><em>classmethod</em> fully_qualified_name(cls) → str<a href="#classmethod-fully_qualified_namecls--str-4" class="hash-link" aria-label="Direct link to classmethod-fully_qualified_namecls--str-4" title="Direct link to classmethod-fully_qualified_namecls--str-4">​</a></h4>
 <p>Return the fully qualified name for the Data class.</p>
 <ul>
@@ -1597,76 +1597,76 @@ Data.ts_init</li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="execution">Execution<a href="#execution" class="hash-link" aria-label="Direct link to Execution" title="Direct link to Execution">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-betfairexecutionclient"><em>class</em> BetfairExecutionClient<a href="#class-betfairexecutionclient" class="hash-link" aria-label="Direct link to class-betfairexecutionclient" title="Direct link to class-betfairexecutionclient">​</a></h3>
-<p>Bases: <a href="../../live/index.htm#nautilus_trader.live.execution_client.LiveExecutionClient"><code>LiveExecutionClient</code></a></p>
+<p>Bases: <a href="../../live/index.htm#posei_trader.live.execution_client.LiveExecutionClient"><code>LiveExecutionClient</code></a></p>
 <p>Provides an execution client for Betfair.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
-<li><strong>client</strong> (<a href="#nautilus_trader.adapters.betfair.client.BetfairHttpClient"><em>BetfairHttpClient</em></a>) – The Betfair HttpClient.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
-<li><strong>instrument_provider</strong> (<a href="#nautilus_trader.adapters.betfair.BetfairInstrumentProvider"><em>BetfairInstrumentProvider</em></a>) – The instrument provider.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.betfair.BetfairExecClientConfig"><em>BetfairExecClientConfig</em></a>) – The configuration for the client.</li>
+<li><strong>client</strong> (<a href="#posei_trader.adapters.betfair.client.BetfairHttpClient"><em>BetfairHttpClient</em></a>) – The Betfair HttpClient.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
+<li><strong>instrument_provider</strong> (<a href="#posei_trader.adapters.betfair.BetfairInstrumentProvider"><em>BetfairInstrumentProvider</em></a>) – The instrument provider.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.betfair.BetfairExecClientConfig"><em>BetfairExecClientConfig</em></a>) – The configuration for the client.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="property-instrument_provider--betfairinstrumentprovider-1"><em>property</em> instrument_provider <em>: <a href="#nautilus_trader.adapters.betfair.providers.BetfairInstrumentProvider">BetfairInstrumentProvider</a></em><a href="#property-instrument_provider--betfairinstrumentprovider-1" class="hash-link" aria-label="Direct link to property-instrument_provider--betfairinstrumentprovider-1" title="Direct link to property-instrument_provider--betfairinstrumentprovider-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="property-instrument_provider--betfairinstrumentprovider-1"><em>property</em> instrument_provider <em>: <a href="#posei_trader.adapters.betfair.providers.BetfairInstrumentProvider">BetfairInstrumentProvider</a></em><a href="#property-instrument_provider--betfairinstrumentprovider-1" class="hash-link" aria-label="Direct link to property-instrument_provider--betfairinstrumentprovider-1" title="Direct link to property-instrument_provider--betfairinstrumentprovider-1">​</a></h4>
 <p>Return the instrument provider for the client.</p>
 <ul>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.betfair.BetfairInstrumentProvider">BetfairInstrumentProvider</a></li>
+<a href="#posei_trader.adapters.betfair.BetfairInstrumentProvider">BetfairInstrumentProvider</a></li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-on_api_exceptionerror-betfairerror--none"><em>async</em> on_api_exception(error: BetfairError) → None<a href="#async-on_api_exceptionerror-betfairerror--none" class="hash-link" aria-label="Direct link to async-on_api_exceptionerror-betfairerror--none" title="Direct link to async-on_api_exceptionerror-betfairerror--none">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-request_account_state--accountstate"><em>async</em> request_account_state() → <a href="../../model/events/index.htm#nautilus_trader.model.events.account.AccountState">AccountState</a><a href="#async-request_account_state--accountstate" class="hash-link" aria-label="Direct link to async-request_account_state--accountstate" title="Direct link to async-request_account_state--accountstate">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-generate_order_status_reportcommand-generateorderstatusreport--orderstatusreport--none"><em>async</em> generate_order_status_report(command: <a href="../../execution/index.htm#nautilus_trader.execution.messages.GenerateOrderStatusReport">GenerateOrderStatusReport</a>) → <a href="../../execution/index.htm#nautilus_trader.execution.reports.OrderStatusReport">OrderStatusReport</a> | None<a href="#async-generate_order_status_reportcommand-generateorderstatusreport--orderstatusreport--none" class="hash-link" aria-label="Direct link to async-generate_order_status_reportcommand-generateorderstatusreport--orderstatusreport--none" title="Direct link to async-generate_order_status_reportcommand-generateorderstatusreport--orderstatusreport--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-request_account_state--accountstate"><em>async</em> request_account_state() → <a href="../../model/events/index.htm#posei_trader.model.events.account.AccountState">AccountState</a><a href="#async-request_account_state--accountstate" class="hash-link" aria-label="Direct link to async-request_account_state--accountstate" title="Direct link to async-request_account_state--accountstate">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-generate_order_status_reportcommand-generateorderstatusreport--orderstatusreport--none"><em>async</em> generate_order_status_report(command: <a href="../../execution/index.htm#posei_trader.execution.messages.GenerateOrderStatusReport">GenerateOrderStatusReport</a>) → <a href="../../execution/index.htm#posei_trader.execution.reports.OrderStatusReport">OrderStatusReport</a> | None<a href="#async-generate_order_status_reportcommand-generateorderstatusreport--orderstatusreport--none" class="hash-link" aria-label="Direct link to async-generate_order_status_reportcommand-generateorderstatusreport--orderstatusreport--none" title="Direct link to async-generate_order_status_reportcommand-generateorderstatusreport--orderstatusreport--none">​</a></h4>
 <p>Generate an OrderStatusReport for the given order identifier parameter(s).</p>
 <p>If the order is not found, or an error occurs, then logs and returns <code>None</code>.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>command</strong> (<a href="../../execution/index.htm#nautilus_trader.execution.messages.GenerateOrderStatusReport"><em>GenerateOrderStatusReport</em></a>) – The command to generate the report.</li>
+<strong>command</strong> (<a href="../../execution/index.htm#posei_trader.execution.messages.GenerateOrderStatusReport"><em>GenerateOrderStatusReport</em></a>) – The command to generate the report.</li>
 <li><strong>Return type:</strong>
 OrderStatusReport or <code>None</code></li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If both the client_order_id and venue_order_id are <code>None</code>.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-generate_order_status_reportscommand-generateorderstatusreports--listorderstatusreport"><em>async</em> generate_order_status_reports(command: <a href="../../execution/index.htm#nautilus_trader.execution.messages.GenerateOrderStatusReports">GenerateOrderStatusReports</a>) → list[<a href="../../execution/index.htm#nautilus_trader.execution.reports.OrderStatusReport">OrderStatusReport</a>]<a href="#async-generate_order_status_reportscommand-generateorderstatusreports--listorderstatusreport" class="hash-link" aria-label="Direct link to async-generate_order_status_reportscommand-generateorderstatusreports--listorderstatusreport" title="Direct link to async-generate_order_status_reportscommand-generateorderstatusreports--listorderstatusreport">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-generate_order_status_reportscommand-generateorderstatusreports--listorderstatusreport"><em>async</em> generate_order_status_reports(command: <a href="../../execution/index.htm#posei_trader.execution.messages.GenerateOrderStatusReports">GenerateOrderStatusReports</a>) → list[<a href="../../execution/index.htm#posei_trader.execution.reports.OrderStatusReport">OrderStatusReport</a>]<a href="#async-generate_order_status_reportscommand-generateorderstatusreports--listorderstatusreport" class="hash-link" aria-label="Direct link to async-generate_order_status_reportscommand-generateorderstatusreports--listorderstatusreport" title="Direct link to async-generate_order_status_reportscommand-generateorderstatusreports--listorderstatusreport">​</a></h4>
 <p>Generate a list of</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#9CDCFE;--prism-background-color:#1E1E1E"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#9CDCFE;background-color:#1E1E1E"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">`</span><br></span></code></pre></div></div>
 <p>OrderStatusReport`s with optional query filters.</p>
 <p>The returned list may be empty if no orders match the given parameters.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>command</strong> (<a href="../../execution/index.htm#nautilus_trader.execution.messages.GenerateOrderStatusReports"><em>GenerateOrderStatusReports</em></a>) – The command for generating the reports.</li>
+<strong>command</strong> (<a href="../../execution/index.htm#posei_trader.execution.messages.GenerateOrderStatusReports"><em>GenerateOrderStatusReports</em></a>) – The command for generating the reports.</li>
 <li><strong>Return type:</strong>
-list[<a href="../../execution/index.htm#nautilus_trader.execution.reports.OrderStatusReport">OrderStatusReport</a>]</li>
+list[<a href="../../execution/index.htm#posei_trader.execution.reports.OrderStatusReport">OrderStatusReport</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-generate_fill_reportscommand-generatefillreports--listfillreport"><em>async</em> generate_fill_reports(command: <a href="../../execution/index.htm#nautilus_trader.execution.messages.GenerateFillReports">GenerateFillReports</a>) → list[<a href="../../execution/index.htm#nautilus_trader.execution.reports.FillReport">FillReport</a>]<a href="#async-generate_fill_reportscommand-generatefillreports--listfillreport" class="hash-link" aria-label="Direct link to async-generate_fill_reportscommand-generatefillreports--listfillreport" title="Direct link to async-generate_fill_reportscommand-generatefillreports--listfillreport">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-generate_fill_reportscommand-generatefillreports--listfillreport"><em>async</em> generate_fill_reports(command: <a href="../../execution/index.htm#posei_trader.execution.messages.GenerateFillReports">GenerateFillReports</a>) → list[<a href="../../execution/index.htm#posei_trader.execution.reports.FillReport">FillReport</a>]<a href="#async-generate_fill_reportscommand-generatefillreports--listfillreport" class="hash-link" aria-label="Direct link to async-generate_fill_reportscommand-generatefillreports--listfillreport" title="Direct link to async-generate_fill_reportscommand-generatefillreports--listfillreport">​</a></h4>
 <p>Generate a list of</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#9CDCFE;--prism-background-color:#1E1E1E"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#9CDCFE;background-color:#1E1E1E"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">`</span><br></span></code></pre></div></div>
 <p>FillReport`s with optional query filters.</p>
 <p>The returned list may be empty if no trades match the given parameters.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>command</strong> (<a href="../../execution/index.htm#nautilus_trader.execution.messages.GenerateFillReports"><em>GenerateFillReports</em></a>) – The command for generating the reports.</li>
+<strong>command</strong> (<a href="../../execution/index.htm#posei_trader.execution.messages.GenerateFillReports"><em>GenerateFillReports</em></a>) – The command for generating the reports.</li>
 <li><strong>Return type:</strong>
-list[<a href="../../execution/index.htm#nautilus_trader.execution.reports.FillReport">FillReport</a>]</li>
+list[<a href="../../execution/index.htm#posei_trader.execution.reports.FillReport">FillReport</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-generate_position_status_reportscommand-generatepositionstatusreports--listpositionstatusreport"><em>async</em> generate_position_status_reports(command: <a href="../../execution/index.htm#nautilus_trader.execution.messages.GeneratePositionStatusReports">GeneratePositionStatusReports</a>) → list[<a href="../../execution/index.htm#nautilus_trader.execution.reports.PositionStatusReport">PositionStatusReport</a>]<a href="#async-generate_position_status_reportscommand-generatepositionstatusreports--listpositionstatusreport" class="hash-link" aria-label="Direct link to async-generate_position_status_reportscommand-generatepositionstatusreports--listpositionstatusreport" title="Direct link to async-generate_position_status_reportscommand-generatepositionstatusreports--listpositionstatusreport">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-generate_position_status_reportscommand-generatepositionstatusreports--listpositionstatusreport"><em>async</em> generate_position_status_reports(command: <a href="../../execution/index.htm#posei_trader.execution.messages.GeneratePositionStatusReports">GeneratePositionStatusReports</a>) → list[<a href="../../execution/index.htm#posei_trader.execution.reports.PositionStatusReport">PositionStatusReport</a>]<a href="#async-generate_position_status_reportscommand-generatepositionstatusreports--listpositionstatusreport" class="hash-link" aria-label="Direct link to async-generate_position_status_reportscommand-generatepositionstatusreports--listpositionstatusreport" title="Direct link to async-generate_position_status_reportscommand-generatepositionstatusreports--listpositionstatusreport">​</a></h4>
 <p>Generate a list of</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#9CDCFE;--prism-background-color:#1E1E1E"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#9CDCFE;background-color:#1E1E1E"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">`</span><br></span></code></pre></div></div>
 <p>PositionStatusReport`s with optional query filters.</p>
 <p>The returned list may be empty if no positions match the given parameters.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>command</strong> (<a href="../../execution/index.htm#nautilus_trader.execution.messages.GeneratePositionStatusReports"><em>GeneratePositionStatusReports</em></a>) – The command for generating the position status reports.</li>
+<strong>command</strong> (<a href="../../execution/index.htm#posei_trader.execution.messages.GeneratePositionStatusReports"><em>GeneratePositionStatusReports</em></a>) – The command for generating the position status reports.</li>
 <li><strong>Return type:</strong>
-list[<a href="../../execution/index.htm#nautilus_trader.execution.reports.PositionStatusReport">PositionStatusReport</a>]</li>
+list[<a href="../../execution/index.htm#posei_trader.execution.reports.PositionStatusReport">PositionStatusReport</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-check_account_currency--none"><em>async</em> check_account_currency() → None<a href="#async-check_account_currency--none" class="hash-link" aria-label="Direct link to async-check_account_currency--none" title="Direct link to async-check_account_currency--none">​</a></h4>
 <p>Check account currency against BetfairHttpClient.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="client--betfairhttpclient">client() → <a href="#nautilus_trader.adapters.betfair.client.BetfairHttpClient">BetfairHttpClient</a><a href="#client--betfairhttpclient" class="hash-link" aria-label="Direct link to client--betfairhttpclient" title="Direct link to client--betfairhttpclient">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="client--betfairhttpclient">client() → <a href="#posei_trader.adapters.betfair.client.BetfairHttpClient">BetfairHttpClient</a><a href="#client--betfairhttpclient" class="hash-link" aria-label="Direct link to client--betfairhttpclient" title="Direct link to client--betfairhttpclient">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="handle_order_stream_updateraw-bytes--none">handle_order_stream_update(raw: bytes) → None<a href="#handle_order_stream_updateraw-bytes--none" class="hash-link" aria-label="Direct link to handle_order_stream_update(raw: bytes) → None" title="Direct link to handle_order_stream_update(raw: bytes) → None">​</a></h4>
 <p>Handle an update from the order stream socket.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="check_cache_against_order_imageorder_change_message-ocm--none">check_cache_against_order_image(order_change_message: OCM) → None<a href="#check_cache_against_order_imageorder_change_message-ocm--none" class="hash-link" aria-label="Direct link to check_cache_against_order_image(order_change_message: OCM) → None" title="Direct link to check_cache_against_order_image(order_change_message: OCM) → None">​</a></h4>
@@ -1692,23 +1692,23 @@ Currency or <code>None</code></li>
 <p>Batch cancel orders for the instrument ID contained in the given command.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>command</strong> (<a href="../../execution/index.htm#nautilus_trader.execution.messages.BatchCancelOrders"><em>BatchCancelOrders</em></a>) – The command to execute.</li>
+<strong>command</strong> (<a href="../../execution/index.htm#posei_trader.execution.messages.BatchCancelOrders"><em>BatchCancelOrders</em></a>) – The command to execute.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="cancel_all_ordersself-cancelallorders-command--void">cancel_all_orders(self, CancelAllOrders command) → void<a href="#cancel_all_ordersself-cancelallorders-command--void" class="hash-link" aria-label="Direct link to cancel_all_orders(self, CancelAllOrders command) → void" title="Direct link to cancel_all_orders(self, CancelAllOrders command) → void">​</a></h4>
 <p>Cancel all orders for the instrument ID contained in the given command.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>command</strong> (<a href="../../execution/index.htm#nautilus_trader.execution.messages.CancelAllOrders"><em>CancelAllOrders</em></a>) – The command to execute.</li>
+<strong>command</strong> (<a href="../../execution/index.htm#posei_trader.execution.messages.CancelAllOrders"><em>CancelAllOrders</em></a>) – The command to execute.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="cancel_orderself-cancelorder-command--void">cancel_order(self, CancelOrder command) → void<a href="#cancel_orderself-cancelorder-command--void" class="hash-link" aria-label="Direct link to cancel_order(self, CancelOrder command) → void" title="Direct link to cancel_order(self, CancelOrder command) → void">​</a></h4>
 <p>Cancel the order with the client order ID contained in the given command.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>command</strong> (<a href="../../execution/index.htm#nautilus_trader.execution.messages.CancelOrder"><em>CancelOrder</em></a>) – The command to execute.</li>
+<strong>command</strong> (<a href="../../execution/index.htm#posei_trader.execution.messages.CancelOrder"><em>CancelOrder</em></a>) – The command to execute.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="connect--none-1">connect() → None<a href="#connect--none-1" class="hash-link" aria-label="Direct link to connect() → None" title="Direct link to connect() → None">​</a></h4>
 <p>Connect the client.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-nautilus_tradercorerustcommonlogcolor--logcolornormal-0--task">create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~nautilus_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task<a href="#create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-nautilus_tradercorerustcommonlogcolor--logcolornormal-0--task" class="hash-link" aria-label="Direct link to create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~nautilus_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task" title="Direct link to create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~nautilus_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-posei_tradercorerustcommonlogcolor--logcolornormal-0--task">create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~posei_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task<a href="#create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-posei_tradercorerustcommonlogcolor--logcolornormal-0--task" class="hash-link" aria-label="Direct link to create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~posei_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task" title="Direct link to create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~posei_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task">​</a></h4>
 <p>Run the given coroutine with error handling and optional callback actions when
 done.</p>
 <ul>
@@ -1763,15 +1763,15 @@ str</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>balances</strong> (<em>list</em> <em>[</em><a href="../../model/index.htm#nautilus_trader.model.AccountBalance"><em>AccountBalance</em></a> <em>]</em>) – The account balances.</li>
-<li><strong>margins</strong> (<em>list</em> <em>[</em><a href="../../model/index.htm#nautilus_trader.model.MarginBalance"><em>MarginBalance</em></a> <em>]</em>) – The margin balances.</li>
+<li><strong>balances</strong> (<em>list</em> <em>[</em><a href="../../model/index.htm#posei_trader.model.AccountBalance"><em>AccountBalance</em></a> <em>]</em>) – The account balances.</li>
+<li><strong>margins</strong> (<em>list</em> <em>[</em><a href="../../model/index.htm#posei_trader.model.MarginBalance"><em>MarginBalance</em></a> <em>]</em>) – The margin balances.</li>
 <li><strong>reported</strong> (<em>bool</em>) – If the balances are reported directly from the exchange.</li>
 <li><strong>ts_event</strong> (<em>uint64_t</em>) – UNIX timestamp (nanoseconds) when the account state event occurred.</li>
 <li><strong>info</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>object</em> <em>]</em>) – The additional implementation specific account information.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-generate_mass_statuslookback_mins-int--none--none--executionmassstatus--none"><em>async</em> generate_mass_status(lookback_mins: int | None = None) → <a href="../../execution/index.htm#nautilus_trader.execution.reports.ExecutionMassStatus">ExecutionMassStatus</a> | None<a href="#async-generate_mass_statuslookback_mins-int--none--none--executionmassstatus--none" class="hash-link" aria-label="Direct link to async-generate_mass_statuslookback_mins-int--none--none--executionmassstatus--none" title="Direct link to async-generate_mass_statuslookback_mins-int--none--none--executionmassstatus--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-generate_mass_statuslookback_mins-int--none--none--executionmassstatus--none"><em>async</em> generate_mass_status(lookback_mins: int | None = None) → <a href="../../execution/index.htm#posei_trader.execution.reports.ExecutionMassStatus">ExecutionMassStatus</a> | None<a href="#async-generate_mass_statuslookback_mins-int--none--none--executionmassstatus--none" class="hash-link" aria-label="Direct link to async-generate_mass_statuslookback_mins-int--none--none--executionmassstatus--none" title="Direct link to async-generate_mass_statuslookback_mins-int--none--none--executionmassstatus--none">​</a></h4>
 <p>Generate an ExecutionMassStatus report.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -1784,10 +1784,10 @@ ExecutionMassStatus or <code>None</code></li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
-<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
-<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
+<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
+<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
+<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
 <li><strong>ts_event</strong> (<em>uint64_t</em>) – UNIX timestamp (nanoseconds) when the order accepted event occurred.</li>
 </ul>
 </li>
@@ -1797,10 +1797,10 @@ ExecutionMassStatus or <code>None</code></li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
-<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
-<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
+<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
+<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
+<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
 <li><strong>reason</strong> (<em>str</em>) – The order cancel rejected reason.</li>
 <li><strong>ts_event</strong> (<em>uint64_t</em>) – UNIX timestamp (nanoseconds) when the order cancel rejected event occurred.</li>
 </ul>
@@ -1811,10 +1811,10 @@ ExecutionMassStatus or <code>None</code></li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
-<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
-<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
+<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
+<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
+<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
 <li><strong>ts_event</strong> (<em>uint64_t</em>) – UNIX timestamp (nanoseconds) when order canceled event occurred.</li>
 </ul>
 </li>
@@ -1824,10 +1824,10 @@ ExecutionMassStatus or <code>None</code></li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
-<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
-<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
+<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
+<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
+<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
 <li><strong>ts_event</strong> (<em>uint64_t</em>) – UNIX timestamp (nanoseconds) when the order expired event occurred.</li>
 </ul>
 </li>
@@ -1837,21 +1837,21 @@ ExecutionMassStatus or <code>None</code></li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
-<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
-<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
-<li><strong>trade_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.TradeId"><em>TradeId</em></a>) – The trade ID.</li>
+<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
+<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
+<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
+<li><strong>trade_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.TradeId"><em>TradeId</em></a>) – The trade ID.</li>
 <li><strong>venue_position_id</strong> (PositionId or <code>None</code>) – The venue position ID associated with the order. If the trading
 venue has assigned a position ID / ticket then pass that here,
 otherwise pass <code>None</code> and the execution engine OMS will handle
 position ID resolution.</li>
 <li><strong>order_side</strong> (OrderSide {<code>BUY</code>, <code>SELL</code>}) – The execution order side.</li>
 <li><strong>order_type</strong> (<em>OrderType</em>) – The execution order type.</li>
-<li><strong>last_qty</strong> (<a href="../../model/index.htm#nautilus_trader.model.Quantity"><em>Quantity</em></a>) – The fill quantity for this execution.</li>
-<li><strong>last_px</strong> (<a href="../../model/index.htm#nautilus_trader.model.Price"><em>Price</em></a>) – The fill price for this execution (not average price).</li>
-<li><strong>quote_currency</strong> (<a href="../../model/index.htm#nautilus_trader.model.Currency"><em>Currency</em></a>) – The currency of the price.</li>
-<li><strong>commission</strong> (<a href="../../model/index.htm#nautilus_trader.model.Money"><em>Money</em></a>) – The fill commission.</li>
+<li><strong>last_qty</strong> (<a href="../../model/index.htm#posei_trader.model.Quantity"><em>Quantity</em></a>) – The fill quantity for this execution.</li>
+<li><strong>last_px</strong> (<a href="../../model/index.htm#posei_trader.model.Price"><em>Price</em></a>) – The fill price for this execution (not average price).</li>
+<li><strong>quote_currency</strong> (<a href="../../model/index.htm#posei_trader.model.Currency"><em>Currency</em></a>) – The currency of the price.</li>
+<li><strong>commission</strong> (<a href="../../model/index.htm#posei_trader.model.Money"><em>Money</em></a>) – The fill commission.</li>
 <li><strong>liquidity_side</strong> (LiquiditySide {<code>NO_LIQUIDITY_SIDE</code>, <code>MAKER</code>, <code>TAKER</code>}) – The execution liquidity side.</li>
 <li><strong>ts_event</strong> (<em>uint64_t</em>) – UNIX timestamp (nanoseconds) when the order filled event occurred.</li>
 <li><strong>info</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>object</em> <em>]</em> <em>,</em> <em>optional</em>) – The additional fill information.</li>
@@ -1863,10 +1863,10 @@ position ID resolution.</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
-<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
-<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
+<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
+<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
+<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
 <li><strong>reason</strong> (<em>str</em>) – The order update rejected reason.</li>
 <li><strong>ts_event</strong> (<em>uint64_t</em>) – UNIX timestamp (nanoseconds) when the order update rejection event occurred.</li>
 </ul>
@@ -1877,9 +1877,9 @@ position ID resolution.</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
-<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
+<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
+<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
 <li><strong>reason</strong> (<em>datetime</em>) – The order rejected reason.</li>
 <li><strong>ts_event</strong> (<em>uint64_t</em>) – UNIX timestamp (nanoseconds) when the order rejected event occurred.</li>
 </ul>
@@ -1890,9 +1890,9 @@ position ID resolution.</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
-<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
+<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
+<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
 <li><strong>ts_event</strong> (<em>uint64_t</em>) – UNIX timestamp (nanoseconds) when the order submitted event occurred.</li>
 </ul>
 </li>
@@ -1902,10 +1902,10 @@ position ID resolution.</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
-<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
-<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
+<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
+<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
+<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
 <li><strong>ts_event</strong> (<em>uint64_t</em>) – UNIX timestamp (nanoseconds) when the order triggered event occurred.</li>
 </ul>
 </li>
@@ -1915,12 +1915,12 @@ position ID resolution.</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
-<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
-<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
-<li><strong>quantity</strong> (<a href="../../model/index.htm#nautilus_trader.model.Quantity"><em>Quantity</em></a>) – The orders current quantity.</li>
-<li><strong>price</strong> (<a href="../../model/index.htm#nautilus_trader.model.Price"><em>Price</em></a>) – The orders current price.</li>
+<li><strong>strategy_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.StrategyId"><em>StrategyId</em></a>) – The strategy ID associated with the event.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID.</li>
+<li><strong>client_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.ClientOrderId"><em>ClientOrderId</em></a>) – The client order ID.</li>
+<li><strong>venue_order_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.VenueOrderId"><em>VenueOrderId</em></a>) – The venue order ID (assigned by the venue).</li>
+<li><strong>quantity</strong> (<a href="../../model/index.htm#posei_trader.model.Quantity"><em>Quantity</em></a>) – The orders current quantity.</li>
+<li><strong>price</strong> (<a href="../../model/index.htm#posei_trader.model.Price"><em>Price</em></a>) – The orders current price.</li>
 <li><strong>trigger_price</strong> (Price or <code>None</code>) – The orders current trigger price.</li>
 <li><strong>ts_event</strong> (<em>uint64_t</em>) – UNIX timestamp (nanoseconds) when the order update event occurred.</li>
 <li><strong>venue_order_id_modified</strong> (<em>bool</em>) – If the ID was modified for this event.</li>
@@ -2003,7 +2003,7 @@ Component.is_stopped</li>
 <p>Modify the order with parameters contained in the command.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>command</strong> (<a href="../../execution/index.htm#nautilus_trader.execution.messages.ModifyOrder"><em>ModifyOrder</em></a>) – The command to execute.</li>
+<strong>command</strong> (<a href="../../execution/index.htm#posei_trader.execution.messages.ModifyOrder"><em>ModifyOrder</em></a>) – The command to execute.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="oms_type">oms_type<a href="#oms_type" class="hash-link" aria-label="Direct link to oms_type" title="Direct link to oms_type">​</a></h4>
 <p>The venues order management system type.</p>
@@ -2016,7 +2016,7 @@ OmsType</li>
 OrderStatusReport.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>command</strong> (<a href="../../execution/index.htm#nautilus_trader.execution.messages.QueryOrder"><em>QueryOrder</em></a>) – The command to execute.</li>
+<strong>command</strong> (<a href="../../execution/index.htm#posei_trader.execution.messages.QueryOrder"><em>QueryOrder</em></a>) – The command to execute.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="resetself--void-1">reset(self) → void<a href="#resetself--void-1" class="hash-link" aria-label="Direct link to reset(self) → void" title="Direct link to reset(self) → void">​</a></h4>
 <p>Reset the component.</p>
@@ -2082,13 +2082,13 @@ then the component state will not change, and an error will be logged.</p>
 <p>Submit the order contained in the given command for execution.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>command</strong> (<a href="../../execution/index.htm#nautilus_trader.execution.messages.SubmitOrder"><em>SubmitOrder</em></a>) – The command to execute.</li>
+<strong>command</strong> (<a href="../../execution/index.htm#posei_trader.execution.messages.SubmitOrder"><em>SubmitOrder</em></a>) – The command to execute.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="submit_order_listself-submitorderlist-command--void">submit_order_list(self, SubmitOrderList command) → void<a href="#submit_order_listself-submitorderlist-command--void" class="hash-link" aria-label="Direct link to submit_order_list(self, SubmitOrderList command) → void" title="Direct link to submit_order_list(self, SubmitOrderList command) → void">​</a></h4>
 <p>Submit the order list contained in the given command for execution.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>command</strong> (<a href="../../execution/index.htm#nautilus_trader.execution.messages.SubmitOrderList"><em>SubmitOrderList</em></a>) – The command to execute.</li>
+<strong>command</strong> (<a href="../../execution/index.htm#posei_trader.execution.messages.SubmitOrderList"><em>SubmitOrderList</em></a>) – The command to execute.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="trader_id-1">trader_id<a href="#trader_id-1" class="hash-link" aria-label="Direct link to trader_id" title="Direct link to trader_id">​</a></h4>
 <p>The trader ID associated with the component.</p>
@@ -2109,7 +2109,7 @@ type</li>
 Venue or <code>None</code></li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="factories">Factories<a href="#factories" class="hash-link" aria-label="Direct link to Factories" title="Direct link to Factories">​</a></h2>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient-1">get_cached_betfair_client(username: str | None = None, password: str | None = None, app_key: str | None = None) → <a href="#nautilus_trader.adapters.betfair.client.BetfairHttpClient">BetfairHttpClient</a><a href="#get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient-1" class="hash-link" aria-label="Direct link to get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient-1" title="Direct link to get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient-1">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient-1">get_cached_betfair_client(username: str | None = None, password: str | None = None, app_key: str | None = None) → <a href="#posei_trader.adapters.betfair.client.BetfairHttpClient">BetfairHttpClient</a><a href="#get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient-1" class="hash-link" aria-label="Direct link to get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient-1" title="Direct link to get_cached_betfair_clientusername-str--none--none-password-str--none--none-app_key-str--none--none--betfairhttpclient-1">​</a></h3>
 <p>Cache and return a Betfair HTTP client with the given credentials.</p>
 <p>If a cached client with matching credentials already exists, then that
 cached client will be returned.</p>

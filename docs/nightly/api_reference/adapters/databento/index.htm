@@ -24,9 +24,9 @@ interacting with the Databento API, and decoding Databento Binary
 Encoding (DBN) format data.</p>
 <p>For convenience, the most commonly used symbols are re-exported at the
 subpackage’s top level, so downstream code can simply import from
-<code>nautilus_trader.adapters.databento</code>.</p>
+<code>posei_trader.adapters.databento</code>.</p>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-databentodataclientconfig"><em>class</em> DatabentoDataClientConfig<a href="#class-databentodataclientconfig" class="hash-link" aria-label="Direct link to class-databentodataclientconfig" title="Direct link to class-databentodataclientconfig">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
 <p>Configuration for <code>DatabentoDataClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -46,7 +46,7 @@ When False, both ts_event and ts_init are set to the bar open time.</li>
 <li><strong>parent_symbols</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>set</em> *[*<em>str</em> <em>]</em> <em>]</em> <em>,</em> <em>optional</em>) – The Databento parent symbols to subscribe to instrument definitions for on start.
 This is a map of Databento dataset keys -&gt; to a sequence of the parent symbols,
 e.g. {‘GLBX.MDP3’, [‘ES.FUT’, ‘ES.OPT’]} (for all E-mini S&amp;P 500 futures and options products).</li>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The instrument IDs to request instrument definitions for on start.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The instrument IDs to request instrument definitions for on start.</li>
 <li><strong>venue_dataset_map</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>str</em> <em>]</em> <em>,</em> <em>optional</em>) – A dictionary to override the default dataset used for a venue.</li>
 </ul>
 </li>
@@ -54,7 +54,7 @@ e.g. {‘GLBX.MDP3’, [‘ES.FUT’, ‘ES.OPT’]} (for all E-mini S&amp;P 500
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="api_key--str--none">api_key <em>: str | None</em><a href="#api_key--str--none" class="hash-link" aria-label="Direct link to api_key--str--none" title="Direct link to api_key--str--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="bars_timestamp_on_close--bool">bars_timestamp_on_close <em>: bool</em><a href="#bars_timestamp_on_close--bool" class="hash-link" aria-label="Direct link to bars_timestamp_on_close--bool" title="Direct link to bars_timestamp_on_close--bool">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="http_gateway--str--none">http_gateway <em>: str | None</em><a href="#http_gateway--str--none" class="hash-link" aria-label="Direct link to http_gateway--str--none" title="Direct link to http_gateway--str--none">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_ids--listinstrumentid--none">instrument_ids <em>: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>] | None</em><a href="#instrument_ids--listinstrumentid--none" class="hash-link" aria-label="Direct link to instrument_ids--listinstrumentid--none" title="Direct link to instrument_ids--listinstrumentid--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_ids--listinstrumentid--none">instrument_ids <em>: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>] | None</em><a href="#instrument_ids--listinstrumentid--none" class="hash-link" aria-label="Direct link to instrument_ids--listinstrumentid--none" title="Direct link to instrument_ids--listinstrumentid--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="live_gateway--str--none">live_gateway <em>: str | None</em><a href="#live_gateway--str--none" class="hash-link" aria-label="Direct link to live_gateway--str--none" title="Direct link to live_gateway--str--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="mbo_subscriptions_delay--float--none">mbo_subscriptions_delay <em>: float | None</em><a href="#mbo_subscriptions_delay--float--none" class="hash-link" aria-label="Direct link to mbo_subscriptions_delay--float--none" title="Direct link to mbo_subscriptions_delay--float--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="parent_symbols--dictstr-setstr--none">parent_symbols <em>: dict[str, set[str]] | None</em><a href="#parent_symbols--dictstr-setstr--none" class="hash-link" aria-label="Direct link to parent_symbols--dictstr-setstr--none" title="Direct link to parent_symbols--dictstr-setstr--none">​</a></h4>
@@ -80,7 +80,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig" title="Direct link to instrument_provider--instrumentproviderconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig" title="Direct link to instrument_provider--instrumentproviderconfig">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes">json() → bytes<a href="#json--bytes" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -112,7 +112,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig" class="hash-link" aria-label="Direct link to routing--routingconfig" title="Direct link to routing--routingconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig" class="hash-link" aria-label="Direct link to routing--routingconfig" title="Direct link to routing--routingconfig">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool">validate() → bool<a href="#validate--bool" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -140,13 +140,13 @@ bool</li>
 <li>STATISTICS -&gt; DatabentoStatistics</li>
 <li>STATUS -&gt; InstrumentStatus</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata">from_dbn_file(path: PathLike[str] | str, instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a> | None = None, price_precision: int | None = None, as_legacy_cython: bool = True, include_trades: bool = False, use_exchange_as_venue: bool = False, bars_timestamp_on_close: bool = True) → list[<a href="../../core/index.htm#nautilus_trader.core.Data">Data</a>]<a href="#from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata" class="hash-link" aria-label="Direct link to from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata" title="Direct link to from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata">from_dbn_file(path: PathLike[str] | str, instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a> | None = None, price_precision: int | None = None, as_legacy_cython: bool = True, include_trades: bool = False, use_exchange_as_venue: bool = False, bars_timestamp_on_close: bool = True) → list[<a href="../../core/index.htm#posei_trader.core.Data">Data</a>]<a href="#from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata" class="hash-link" aria-label="Direct link to from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata" title="Direct link to from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata">​</a></h4>
 <p>Return a list of data objects decoded from the DBN file at the given path.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>path</strong> (<em>PathLike</em> *[*<em>str</em> <em>]</em>  <em>|</em> <em>str</em>) – The path for the DBN data file.</li>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>,</em> <em>optional</em>) – The Posei instrument ID for the data. This parameter optimizes performance by
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>,</em> <em>optional</em>) – The Posei instrument ID for the data. This parameter optimizes performance by
 overriding the symbology of all records with the specified Posei identifier.
 Use this only if the instrument ID is definitively known (e.g., all records in the file
 are guaranteed to be for the same instrument).</li>
@@ -165,7 +165,7 @@ when applicable (your code will have to handle these two types in the returned l
 </ul>
 </li>
 <li><strong>Return type:</strong>
-list[<a href="../../core/index.htm#nautilus_trader.core.Data">Data</a>] | list[pyo3.DatabentoImbalance] | list[pyo3.DatabentoStatistics]</li>
+list[<a href="../../core/index.htm#posei_trader.core.Data">Data</a>] | list[pyo3.DatabentoImbalance] | list[pyo3.DatabentoStatistics]</li>
 <li><strong>Raises:</strong>
 <ul>
 <li><strong>ValueError</strong> – If there is an error during decoding.</li>
@@ -174,11 +174,11 @@ list[<a href="../../core/index.htm#nautilus_trader.core.Data">Data</a>] | list[p
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_dataset_for_venuevenue-venue--str">get_dataset_for_venue(venue: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue">Venue</a>) → str<a href="#get_dataset_for_venuevenue-venue--str" class="hash-link" aria-label="Direct link to get_dataset_for_venuevenue-venue--str" title="Direct link to get_dataset_for_venuevenue-venue--str">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_dataset_for_venuevenue-venue--str">get_dataset_for_venue(venue: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue">Venue</a>) → str<a href="#get_dataset_for_venuevenue-venue--str" class="hash-link" aria-label="Direct link to get_dataset_for_venuevenue-venue--str" title="Direct link to get_dataset_for_venuevenue-venue--str">​</a></h4>
 <p>Return a dataset for the given venue.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>venue</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue"><em>Venue</em></a>) – The venue for the given dataset.</li>
+<strong>venue</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue"><em>Venue</em></a>) – The venue for the given dataset.</li>
 <li><strong>Return type:</strong>
 str</li>
 <li><strong>Raises:</strong>
@@ -217,38 +217,38 @@ excluding publisher_id and instrument_id.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="ts_init">ts_init<a href="#ts_init" class="hash-link" aria-label="Direct link to ts_init" title="Direct link to ts_init">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="ts_recv">ts_recv<a href="#ts_recv" class="hash-link" aria-label="Direct link to ts_recv" title="Direct link to ts_recv">​</a></h4>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-databentoinstrumentprovider"><em>class</em> DatabentoInstrumentProvider<a href="#class-databentoinstrumentprovider" class="hash-link" aria-label="Direct link to class-databentoinstrumentprovider" title="Direct link to class-databentoinstrumentprovider">​</a></h3>
-<p>Bases: <a href="../../common/index.htm#nautilus_trader.common.providers.InstrumentProvider"><code>InstrumentProvider</code></a></p>
+<p>Bases: <a href="../../common/index.htm#posei_trader.common.providers.InstrumentProvider"><code>InstrumentProvider</code></a></p>
 <p>Provides a means of loading Instrument objects from Databento.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>http_client</strong> (<em>nautilus_pyo3.DatabentoHistoricalClient</em>) – The Databento historical HTTP client for the provider.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the provider.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the provider.</li>
 <li><strong>live_api_key</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The specific API secret key for Databento live clients.
 If not provided then will use the historical HTTP client API key.</li>
 <li><strong>live_gateway</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The live gateway override for Databento live clients.</li>
-<li><strong>loader</strong> (<a href="#nautilus_trader.adapters.databento.DatabentoDataLoader"><em>DatabentoDataLoader</em></a> <em>,</em> <em>optional</em>) – The loader for the provider.</li>
-<li><strong>config</strong> (<a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a> <em>,</em> <em>optional</em>) – The configuration for the provider.</li>
+<li><strong>loader</strong> (<a href="#posei_trader.adapters.databento.DatabentoDataLoader"><em>DatabentoDataLoader</em></a> <em>,</em> <em>optional</em>) – The loader for the provider.</li>
+<li><strong>config</strong> (<a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a> <em>,</em> <em>optional</em>) – The configuration for the provider.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="addinstrument-instrument--none">add(instrument: <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>) → None<a href="#addinstrument-instrument--none" class="hash-link" aria-label="Direct link to addinstrument-instrument--none" title="Direct link to addinstrument-instrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="addinstrument-instrument--none">add(instrument: <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>) → None<a href="#addinstrument-instrument--none" class="hash-link" aria-label="Direct link to addinstrument-instrument--none" title="Direct link to addinstrument-instrument--none">​</a></h4>
 <p>Add the given instrument to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instrument</strong> (<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"><em>Instrument</em></a>) – The instrument to add.</li>
+<strong>instrument</strong> (<a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"><em>Instrument</em></a>) – The instrument to add.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_bulkinstruments-listinstrument--none">add_bulk(instruments: list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]) → None<a href="#add_bulkinstruments-listinstrument--none" class="hash-link" aria-label="Direct link to add_bulkinstruments-listinstrument--none" title="Direct link to add_bulkinstruments-listinstrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_bulkinstruments-listinstrument--none">add_bulk(instruments: list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]) → None<a href="#add_bulkinstruments-listinstrument--none" class="hash-link" aria-label="Direct link to add_bulkinstruments-listinstrument--none" title="Direct link to add_bulkinstruments-listinstrument--none">​</a></h4>
 <p>Add the given instruments bulk to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instruments</strong> (<em>list</em> <em>[</em><a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"><em>Instrument</em></a> <em>]</em>) – The instruments to add.</li>
+<strong>instruments</strong> (<em>list</em> <em>[</em><a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"><em>Instrument</em></a> <em>]</em>) – The instruments to add.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_currencycurrency-currency--none">add_currency(currency: <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a>) → None<a href="#add_currencycurrency-currency--none" class="hash-link" aria-label="Direct link to add_currencycurrency-currency--none" title="Direct link to add_currencycurrency-currency--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_currencycurrency-currency--none">add_currency(currency: <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a>) → None<a href="#add_currencycurrency-currency--none" class="hash-link" aria-label="Direct link to add_currencycurrency-currency--none" title="Direct link to add_currencycurrency-currency--none">​</a></h4>
 <p>Add the given currency to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>currency</strong> (<a href="../../model/index.htm#nautilus_trader.model.Currency"><em>Currency</em></a>) – The currency to add.</li>
+<strong>currency</strong> (<a href="../../model/index.htm#posei_trader.model.Currency"><em>Currency</em></a>) – The currency to add.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="property-count--int"><em>property</em> count <em>: int</em><a href="#property-count--int" class="hash-link" aria-label="Direct link to property-count--int" title="Direct link to property-count--int">​</a></h4>
 <p>Return the count of instruments held by the provider.</p>
@@ -256,13 +256,13 @@ If not provided then will use the historical HTTP client API key.</li>
 <li><strong>Return type:</strong>
 int</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencies--dictstr-currency">currencies() → dict[str, <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a>]<a href="#currencies--dictstr-currency" class="hash-link" aria-label="Direct link to currencies--dictstr-currency" title="Direct link to currencies--dictstr-currency">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencies--dictstr-currency">currencies() → dict[str, <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a>]<a href="#currencies--dictstr-currency" class="hash-link" aria-label="Direct link to currencies--dictstr-currency" title="Direct link to currencies--dictstr-currency">​</a></h4>
 <p>Return all currencies held by the instrument provider.</p>
 <ul>
 <li><strong>Return type:</strong>
-dict[str, <a href="../../model/index.htm#nautilus_trader.model.Currency">Currency</a>]</li>
+dict[str, <a href="../../model/index.htm#posei_trader.model.Currency">Currency</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencycode-str--currency--none">currency(code: str) → <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a> | None<a href="#currencycode-str--currency--none" class="hash-link" aria-label="Direct link to currencycode-str--currency--none" title="Direct link to currencycode-str--currency--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencycode-str--currency--none">currency(code: str) → <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a> | None<a href="#currencycode-str--currency--none" class="hash-link" aria-label="Direct link to currencycode-str--currency--none" title="Direct link to currencycode-str--currency--none">​</a></h4>
 <p>Return the currency with the given code (if found).</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -272,28 +272,28 @@ Currency or <code>None</code></li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If code is not a valid string.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="findinstrument_id-instrumentid--instrument--none">find(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>) → <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a> | None<a href="#findinstrument_id-instrumentid--instrument--none" class="hash-link" aria-label="Direct link to findinstrument_id-instrumentid--instrument--none" title="Direct link to findinstrument_id-instrumentid--instrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="findinstrument_id-instrumentid--instrument--none">find(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>) → <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a> | None<a href="#findinstrument_id-instrumentid--instrument--none" class="hash-link" aria-label="Direct link to findinstrument_id-instrumentid--instrument--none" title="Direct link to findinstrument_id-instrumentid--instrument--none">​</a></h4>
 <p>Return the instrument for the given instrument ID (if found).</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The ID for the instrument</li>
+<strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The ID for the instrument</li>
 <li><strong>Return type:</strong>
 Instrument or <code>None</code></li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_all--dictinstrumentid-instrument">get_all() → dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#get_all--dictinstrumentid-instrument" class="hash-link" aria-label="Direct link to get_all--dictinstrumentid-instrument" title="Direct link to get_all--dictinstrumentid-instrument">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_all--dictinstrumentid-instrument">get_all() → dict[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#get_all--dictinstrumentid-instrument" class="hash-link" aria-label="Direct link to get_all--dictinstrumentid-instrument" title="Direct link to get_all--dictinstrumentid-instrument">​</a></h4>
 <p>Return all loaded instruments as a map keyed by instrument ID.</p>
 <p>If no instruments loaded, will return an empty dict.</p>
 <ul>
 <li><strong>Return type:</strong>
-dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument">Instrument</a>]</li>
+dict[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument">Instrument</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument"><em>async</em> get_range(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], start: Timestamp | date | str | int, end: Timestamp | date | str | int | None = None, filters: dict | None = None) → list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument" class="hash-link" aria-label="Direct link to async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument" title="Direct link to async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument"><em>async</em> get_range(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], start: Timestamp | date | str | int, end: Timestamp | date | str | int | None = None, filters: dict | None = None) → list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument" class="hash-link" aria-label="Direct link to async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument" title="Direct link to async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument">​</a></h4>
 <p>Request a time series of instrument definitions for the given instrument IDs by
 making a /timeseries.get_range(…) request from Databento.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs for the request.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs for the request.</li>
 <li><strong>start</strong> (<em>pd.Timestamp</em> <em>or</em> <em>date</em> <em>or</em> <em>str</em> <em>or</em> <em>int</em>) – The start datetime of the request time range (inclusive).
 Assumes UTC as timezone unless passed a tz-aware object.
 If an integer is passed, then this represents nanoseconds since the UNIX epoch.</li>
@@ -315,19 +315,19 @@ Defaults to the same value as start.</li>
 <strong>reload</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If True, then will always reload instruments.
 If False, then will immediately return if already loaded.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="list_all--listinstrument">list_all() → list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#list_all--listinstrument" class="hash-link" aria-label="Direct link to list_all--listinstrument" title="Direct link to list_all--listinstrument">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="list_all--listinstrument">list_all() → list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#list_all--listinstrument" class="hash-link" aria-label="Direct link to list_all--listinstrument" title="Direct link to list_all--listinstrument">​</a></h4>
 <p>Return all loaded instruments.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument">Instrument</a>]</li>
+list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument">Instrument</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loadinstrument_id-instrumentid-filters-dict--none--none--none">load(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#loadinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loadinstrument_id-instrumentid-filters-dict--none--none--none">load(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#loadinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instrument for the given ID into the provider, optionally applying the
 given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
@@ -342,7 +342,7 @@ filters.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_all_asyncfilters-dict--none--none--none"><em>async</em> load_all_async(filters: dict | None = None) → None<a href="#async-load_all_asyncfilters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_all_asyncfilters-dict--none--none--none" title="Direct link to async-load_all_asyncfilters-dict--none--none--none">​</a></h4>
 <p>Load the latest instruments into the provider asynchronously, optionally
 applying the given filters.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none"><em>async</em> load_async(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none"><em>async</em> load_async(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the latest instrument definition for the given instrument ID into the
 provider by requesting the latest instrument definition message from Databento.</p>
 <p>The Databento dataset will be determined from either the filters, or the venue for the
@@ -350,25 +350,25 @@ instrument ID.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
 <li><strong>filters</strong> (<em>dict</em> <em>,</em> <em>optional</em>) – The optional filters for the instrument definition request.</li>
 </ul>
 </li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="warning-1">WARNING<a href="#warning-1" class="hash-link" aria-label="Direct link to WARNING" title="Direct link to WARNING">​</a></h4>
 <p>Calling this method will incur a cost to your Databento account in USD.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">load_ids(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">load_ids(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instruments for the given IDs into the provider, optionally applying
 the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none"><em>async</em> load_ids_async(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none"><em>async</em> load_ids_async(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the latest instrument definitions for the given instrument IDs into the
 provider by requesting the latest instrument definition messages from Databento.</p>
 <p>You must only request instrument definitions from one dataset at a time.
@@ -377,7 +377,7 @@ instrument IDs.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
 <li><strong>filters</strong> (<em>dict</em> <em>,</em> <em>optional</em>) – The optional filters for the instrument definition request.</li>
 </ul>
 </li>
@@ -389,21 +389,21 @@ instrument IDs.</p>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-databentolivedataclientfactory"><em>class</em> DatabentoLiveDataClientFactory<a href="#class-databentolivedataclientfactory" class="hash-link" aria-label="Direct link to class-databentolivedataclientfactory" title="Direct link to class-databentolivedataclientfactory">​</a></h3>
 <p>Bases: <code>LiveDataClientFactory</code></p>
 <p>Provides a Binance live data client factory.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#nautilus_trader.adapters.databento.config.DatabentoDataClientConfig">DatabentoDataClientConfig</a>, msgbus: <a href="../../common/index.htm#nautilus_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#nautilus_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>) → <a href="#nautilus_trader.adapters.databento.data.DatabentoDataClient">DatabentoDataClient</a><a href="#static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient" title="Direct link to static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#posei_trader.adapters.databento.config.DatabentoDataClientConfig">DatabentoDataClientConfig</a>, msgbus: <a href="../../common/index.htm#posei_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#posei_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>) → <a href="#posei_trader.adapters.databento.data.DatabentoDataClient">DatabentoDataClient</a><a href="#static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient" title="Direct link to static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient">​</a></h4>
 <p>Create a new Databento data client.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>name</strong> (<em>str</em>) – The custom client name.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.databento.DatabentoDataClientConfig"><em>DatabentoDataClientConfig</em></a>) – The client configuration.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.databento.DatabentoDataClientConfig"><em>DatabentoDataClientConfig</em></a>) – The client configuration.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.databento.data.DatabentoDataClient">DatabentoDataClient</a></li>
+<a href="#posei_trader.adapters.databento.data.DatabentoDataClient">DatabentoDataClient</a></li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-databentostatistics"><em>class</em> DatabentoStatistics<a href="#class-databentostatistics" class="hash-link" aria-label="Direct link to class-databentostatistics" title="Direct link to class-databentostatistics">​</a></h3>
 <p>Bases: <code>object</code></p>
@@ -441,28 +441,28 @@ excluding publisher_id and instrument_id.</p>
 <li><strong>Return type:</strong>
 nautilus_pyo3.DatabentoHistoricalClient</li>
 </ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider">get_cached_databento_instrument_provider(http_client: DatabentoHistoricalClient, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>, live_api_key: str | None = None, live_gateway: str | None = None, loader: <a href="#nautilus_trader.adapters.databento.loaders.DatabentoDataLoader">DatabentoDataLoader</a> | None = None, config: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a> | None = None, use_exchange_as_venue=True) → <a href="#nautilus_trader.adapters.databento.providers.DatabentoInstrumentProvider">DatabentoInstrumentProvider</a><a href="#get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider" class="hash-link" aria-label="Direct link to get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider" title="Direct link to get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider">get_cached_databento_instrument_provider(http_client: DatabentoHistoricalClient, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>, live_api_key: str | None = None, live_gateway: str | None = None, loader: <a href="#posei_trader.adapters.databento.loaders.DatabentoDataLoader">DatabentoDataLoader</a> | None = None, config: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a> | None = None, use_exchange_as_venue=True) → <a href="#posei_trader.adapters.databento.providers.DatabentoInstrumentProvider">DatabentoInstrumentProvider</a><a href="#get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider" class="hash-link" aria-label="Direct link to get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider" title="Direct link to get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider">​</a></h3>
 <p>Cache and return a Databento instrument provider.</p>
 <p>If a cached provider already exists, then that provider will be returned.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>http_client</strong> (<em>nautilus_pyo3.DatabentoHistoricalClient</em>) – The client for the instrument provider.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
 <li><strong>live_api_key</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The specific API secret key for Databento live clients.
 If not provided then will use the historical HTTP client API key.</li>
 <li><strong>live_gateway</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The live gateway override for Databento live clients.</li>
-<li><strong>loader</strong> (<a href="#nautilus_trader.adapters.databento.DatabentoDataLoader"><em>DatabentoDataLoader</em></a> <em>,</em> <em>optional</em>) – The loader for the provider.</li>
-<li><strong>config</strong> (<a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the instrument provider.</li>
+<li><strong>loader</strong> (<a href="#posei_trader.adapters.databento.DatabentoDataLoader"><em>DatabentoDataLoader</em></a> <em>,</em> <em>optional</em>) – The loader for the provider.</li>
+<li><strong>config</strong> (<a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the instrument provider.</li>
 <li><strong>use_exchange_as_venue</strong> (<em>bool</em> <em>,</em> <em>default True</em>) – If the exchange field will be used as the venue for instrument IDs.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.databento.DatabentoInstrumentProvider">DatabentoInstrumentProvider</a></li>
+<a href="#posei_trader.adapters.databento.DatabentoInstrumentProvider">DatabentoInstrumentProvider</a></li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="config">Config<a href="#config" class="hash-link" aria-label="Direct link to Config" title="Direct link to Config">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-databentodataclientconfig-1"><em>class</em> DatabentoDataClientConfig<a href="#class-databentodataclientconfig-1" class="hash-link" aria-label="Direct link to class-databentodataclientconfig-1" title="Direct link to class-databentodataclientconfig-1">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
 <p>Configuration for <code>DatabentoDataClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -482,7 +482,7 @@ When False, both ts_event and ts_init are set to the bar open time.</li>
 <li><strong>parent_symbols</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>set</em> *[*<em>str</em> <em>]</em> <em>]</em> <em>,</em> <em>optional</em>) – The Databento parent symbols to subscribe to instrument definitions for on start.
 This is a map of Databento dataset keys -&gt; to a sequence of the parent symbols,
 e.g. {‘GLBX.MDP3’, [‘ES.FUT’, ‘ES.OPT’]} (for all E-mini S&amp;P 500 futures and options products).</li>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The instrument IDs to request instrument definitions for on start.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The instrument IDs to request instrument definitions for on start.</li>
 <li><strong>venue_dataset_map</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>str</em> <em>]</em> <em>,</em> <em>optional</em>) – A dictionary to override the default dataset used for a venue.</li>
 </ul>
 </li>
@@ -494,7 +494,7 @@ e.g. {‘GLBX.MDP3’, [‘ES.FUT’, ‘ES.OPT’]} (for all E-mini S&amp;P 500
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="timeout_initial_load--float--none-1">timeout_initial_load <em>: float | None</em><a href="#timeout_initial_load--float--none-1" class="hash-link" aria-label="Direct link to timeout_initial_load--float--none-1" title="Direct link to timeout_initial_load--float--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="mbo_subscriptions_delay--float--none-1">mbo_subscriptions_delay <em>: float | None</em><a href="#mbo_subscriptions_delay--float--none-1" class="hash-link" aria-label="Direct link to mbo_subscriptions_delay--float--none-1" title="Direct link to mbo_subscriptions_delay--float--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="bars_timestamp_on_close--bool-1">bars_timestamp_on_close <em>: bool</em><a href="#bars_timestamp_on_close--bool-1" class="hash-link" aria-label="Direct link to bars_timestamp_on_close--bool-1" title="Direct link to bars_timestamp_on_close--bool-1">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_ids--listinstrumentid--none-1">instrument_ids <em>: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>] | None</em><a href="#instrument_ids--listinstrumentid--none-1" class="hash-link" aria-label="Direct link to instrument_ids--listinstrumentid--none-1" title="Direct link to instrument_ids--listinstrumentid--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_ids--listinstrumentid--none-1">instrument_ids <em>: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>] | None</em><a href="#instrument_ids--listinstrumentid--none-1" class="hash-link" aria-label="Direct link to instrument_ids--listinstrumentid--none-1" title="Direct link to instrument_ids--listinstrumentid--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="parent_symbols--dictstr-setstr--none-1">parent_symbols <em>: dict[str, set[str]] | None</em><a href="#parent_symbols--dictstr-setstr--none-1" class="hash-link" aria-label="Direct link to parent_symbols--dictstr-setstr--none-1" title="Direct link to parent_symbols--dictstr-setstr--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="venue_dataset_map--dictstr-str--none-1">venue_dataset_map <em>: dict[str, str] | None</em><a href="#venue_dataset_map--dictstr-str--none-1" class="hash-link" aria-label="Direct link to venue_dataset_map--dictstr-str--none-1" title="Direct link to venue_dataset_map--dictstr-str--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="dict--dictstr-any-1">dict() → dict[str, Any]<a href="#dict--dictstr-any-1" class="hash-link" aria-label="Direct link to dict() → dict[str, Any]" title="Direct link to dict() → dict[str, Any]">​</a></h4>
@@ -516,7 +516,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-1">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-1" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-1" title="Direct link to instrument_provider--instrumentproviderconfig-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig-1">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig-1" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig-1" title="Direct link to instrument_provider--instrumentproviderconfig-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes-1">json() → bytes<a href="#json--bytes-1" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -548,7 +548,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-1">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-1" class="hash-link" aria-label="Direct link to routing--routingconfig-1" title="Direct link to routing--routingconfig-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig-1">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig-1" class="hash-link" aria-label="Direct link to routing--routingconfig-1" title="Direct link to routing--routingconfig-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool-1">validate() → bool<a href="#validate--bool-1" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -570,43 +570,43 @@ bool</li>
 <li><strong>Return type:</strong>
 nautilus_pyo3.DatabentoHistoricalClient</li>
 </ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider-1">get_cached_databento_instrument_provider(http_client: DatabentoHistoricalClient, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>, live_api_key: str | None = None, live_gateway: str | None = None, loader: <a href="#nautilus_trader.adapters.databento.loaders.DatabentoDataLoader">DatabentoDataLoader</a> | None = None, config: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a> | None = None, use_exchange_as_venue=True) → <a href="#nautilus_trader.adapters.databento.providers.DatabentoInstrumentProvider">DatabentoInstrumentProvider</a><a href="#get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider-1" class="hash-link" aria-label="Direct link to get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider-1" title="Direct link to get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider-1">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider-1">get_cached_databento_instrument_provider(http_client: DatabentoHistoricalClient, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>, live_api_key: str | None = None, live_gateway: str | None = None, loader: <a href="#posei_trader.adapters.databento.loaders.DatabentoDataLoader">DatabentoDataLoader</a> | None = None, config: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a> | None = None, use_exchange_as_venue=True) → <a href="#posei_trader.adapters.databento.providers.DatabentoInstrumentProvider">DatabentoInstrumentProvider</a><a href="#get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider-1" class="hash-link" aria-label="Direct link to get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider-1" title="Direct link to get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider-1">​</a></h3>
 <p>Cache and return a Databento instrument provider.</p>
 <p>If a cached provider already exists, then that provider will be returned.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>http_client</strong> (<em>nautilus_pyo3.DatabentoHistoricalClient</em>) – The client for the instrument provider.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
 <li><strong>live_api_key</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The specific API secret key for Databento live clients.
 If not provided then will use the historical HTTP client API key.</li>
 <li><strong>live_gateway</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The live gateway override for Databento live clients.</li>
-<li><strong>loader</strong> (<a href="#nautilus_trader.adapters.databento.DatabentoDataLoader"><em>DatabentoDataLoader</em></a> <em>,</em> <em>optional</em>) – The loader for the provider.</li>
-<li><strong>config</strong> (<a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the instrument provider.</li>
+<li><strong>loader</strong> (<a href="#posei_trader.adapters.databento.DatabentoDataLoader"><em>DatabentoDataLoader</em></a> <em>,</em> <em>optional</em>) – The loader for the provider.</li>
+<li><strong>config</strong> (<a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the instrument provider.</li>
 <li><strong>use_exchange_as_venue</strong> (<em>bool</em> <em>,</em> <em>default True</em>) – If the exchange field will be used as the venue for instrument IDs.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.databento.DatabentoInstrumentProvider">DatabentoInstrumentProvider</a></li>
+<a href="#posei_trader.adapters.databento.DatabentoInstrumentProvider">DatabentoInstrumentProvider</a></li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-databentolivedataclientfactory-1"><em>class</em> DatabentoLiveDataClientFactory<a href="#class-databentolivedataclientfactory-1" class="hash-link" aria-label="Direct link to class-databentolivedataclientfactory-1" title="Direct link to class-databentolivedataclientfactory-1">​</a></h3>
 <p>Bases: <code>LiveDataClientFactory</code></p>
 <p>Provides a Binance live data client factory.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient-1"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#nautilus_trader.adapters.databento.config.DatabentoDataClientConfig">DatabentoDataClientConfig</a>, msgbus: <a href="../../common/index.htm#nautilus_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#nautilus_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>) → <a href="#nautilus_trader.adapters.databento.data.DatabentoDataClient">DatabentoDataClient</a><a href="#static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient-1" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient-1" title="Direct link to static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient-1"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#posei_trader.adapters.databento.config.DatabentoDataClientConfig">DatabentoDataClientConfig</a>, msgbus: <a href="../../common/index.htm#posei_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#posei_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>) → <a href="#posei_trader.adapters.databento.data.DatabentoDataClient">DatabentoDataClient</a><a href="#static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient-1" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient-1" title="Direct link to static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient-1">​</a></h4>
 <p>Create a new Databento data client.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>name</strong> (<em>str</em>) – The custom client name.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.databento.DatabentoDataClientConfig"><em>DatabentoDataClientConfig</em></a>) – The client configuration.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.databento.DatabentoDataClientConfig"><em>DatabentoDataClientConfig</em></a>) – The client configuration.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.databento.data.DatabentoDataClient">DatabentoDataClient</a></li>
+<a href="#posei_trader.adapters.databento.data.DatabentoDataClient">DatabentoDataClient</a></li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="enums">Enums<a href="#enums" class="hash-link" aria-label="Direct link to Enums" title="Direct link to Enums">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-databentoschema"><em>class</em> DatabentoSchema<a href="#class-databentoschema" class="hash-link" aria-label="Direct link to class-databentoschema" title="Direct link to class-databentoschema">​</a></h3>
@@ -705,23 +705,23 @@ excluding publisher_id and instrument_id.</p>
 <li><strong>Return type:</strong>
 dict[int, DatabentoPublisher]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_dataset_for_venuevenue-venue--str-1">get_dataset_for_venue(venue: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue">Venue</a>) → str<a href="#get_dataset_for_venuevenue-venue--str-1" class="hash-link" aria-label="Direct link to get_dataset_for_venuevenue-venue--str-1" title="Direct link to get_dataset_for_venuevenue-venue--str-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_dataset_for_venuevenue-venue--str-1">get_dataset_for_venue(venue: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue">Venue</a>) → str<a href="#get_dataset_for_venuevenue-venue--str-1" class="hash-link" aria-label="Direct link to get_dataset_for_venuevenue-venue--str-1" title="Direct link to get_dataset_for_venuevenue-venue--str-1">​</a></h4>
 <p>Return a dataset for the given venue.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>venue</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue"><em>Venue</em></a>) – The venue for the given dataset.</li>
+<strong>venue</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue"><em>Venue</em></a>) – The venue for the given dataset.</li>
 <li><strong>Return type:</strong>
 str</li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If venue is not in the map of publishers.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata-1">from_dbn_file(path: PathLike[str] | str, instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a> | None = None, price_precision: int | None = None, as_legacy_cython: bool = True, include_trades: bool = False, use_exchange_as_venue: bool = False, bars_timestamp_on_close: bool = True) → list[<a href="../../core/index.htm#nautilus_trader.core.Data">Data</a>]<a href="#from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata-1" class="hash-link" aria-label="Direct link to from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata-1" title="Direct link to from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata-1">from_dbn_file(path: PathLike[str] | str, instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a> | None = None, price_precision: int | None = None, as_legacy_cython: bool = True, include_trades: bool = False, use_exchange_as_venue: bool = False, bars_timestamp_on_close: bool = True) → list[<a href="../../core/index.htm#posei_trader.core.Data">Data</a>]<a href="#from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata-1" class="hash-link" aria-label="Direct link to from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata-1" title="Direct link to from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata-1">​</a></h4>
 <p>Return a list of data objects decoded from the DBN file at the given path.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>path</strong> (<em>PathLike</em> *[*<em>str</em> <em>]</em>  <em>|</em> <em>str</em>) – The path for the DBN data file.</li>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>,</em> <em>optional</em>) – The Posei instrument ID for the data. This parameter optimizes performance by
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>,</em> <em>optional</em>) – The Posei instrument ID for the data. This parameter optimizes performance by
 overriding the symbology of all records with the specified Posei identifier.
 Use this only if the instrument ID is definitively known (e.g., all records in the file
 are guaranteed to be for the same instrument).</li>
@@ -740,7 +740,7 @@ when applicable (your code will have to handle these two types in the returned l
 </ul>
 </li>
 <li><strong>Return type:</strong>
-list[<a href="../../core/index.htm#nautilus_trader.core.Data">Data</a>] | list[pyo3.DatabentoImbalance] | list[pyo3.DatabentoStatistics]</li>
+list[<a href="../../core/index.htm#posei_trader.core.Data">Data</a>] | list[pyo3.DatabentoImbalance] | list[pyo3.DatabentoStatistics]</li>
 <li><strong>Raises:</strong>
 <ul>
 <li><strong>ValueError</strong> – If there is an error during decoding.</li>
@@ -751,25 +751,25 @@ list[<a href="../../core/index.htm#nautilus_trader.core.Data">Data</a>] | list[p
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="providers">Providers<a href="#providers" class="hash-link" aria-label="Direct link to Providers" title="Direct link to Providers">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-databentoinstrumentprovider-1"><em>class</em> DatabentoInstrumentProvider<a href="#class-databentoinstrumentprovider-1" class="hash-link" aria-label="Direct link to class-databentoinstrumentprovider-1" title="Direct link to class-databentoinstrumentprovider-1">​</a></h3>
-<p>Bases: <a href="../../common/index.htm#nautilus_trader.common.providers.InstrumentProvider"><code>InstrumentProvider</code></a></p>
+<p>Bases: <a href="../../common/index.htm#posei_trader.common.providers.InstrumentProvider"><code>InstrumentProvider</code></a></p>
 <p>Provides a means of loading Instrument objects from Databento.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>http_client</strong> (<em>nautilus_pyo3.DatabentoHistoricalClient</em>) – The Databento historical HTTP client for the provider.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the provider.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the provider.</li>
 <li><strong>live_api_key</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The specific API secret key for Databento live clients.
 If not provided then will use the historical HTTP client API key.</li>
 <li><strong>live_gateway</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The live gateway override for Databento live clients.</li>
-<li><strong>loader</strong> (<a href="#nautilus_trader.adapters.databento.DatabentoDataLoader"><em>DatabentoDataLoader</em></a> <em>,</em> <em>optional</em>) – The loader for the provider.</li>
-<li><strong>config</strong> (<a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a> <em>,</em> <em>optional</em>) – The configuration for the provider.</li>
+<li><strong>loader</strong> (<a href="#posei_trader.adapters.databento.DatabentoDataLoader"><em>DatabentoDataLoader</em></a> <em>,</em> <em>optional</em>) – The loader for the provider.</li>
+<li><strong>config</strong> (<a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a> <em>,</em> <em>optional</em>) – The configuration for the provider.</li>
 </ul>
 </li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_all_asyncfilters-dict--none--none--none-1"><em>async</em> load_all_async(filters: dict | None = None) → None<a href="#async-load_all_asyncfilters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to async-load_all_asyncfilters-dict--none--none--none-1" title="Direct link to async-load_all_asyncfilters-dict--none--none--none-1">​</a></h4>
 <p>Load the latest instruments into the provider asynchronously, optionally
 applying the given filters.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1"><em>async</em> load_ids_async(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1" title="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1"><em>async</em> load_ids_async(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1" title="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1">​</a></h4>
 <p>Load the latest instrument definitions for the given instrument IDs into the
 provider by requesting the latest instrument definition messages from Databento.</p>
 <p>You must only request instrument definitions from one dataset at a time.
@@ -778,7 +778,7 @@ instrument IDs.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
 <li><strong>filters</strong> (<em>dict</em> <em>,</em> <em>optional</em>) – The optional filters for the instrument definition request.</li>
 </ul>
 </li>
@@ -787,7 +787,7 @@ instrument IDs.</p>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="warning-3">WARNING<a href="#warning-3" class="hash-link" aria-label="Direct link to WARNING" title="Direct link to WARNING">​</a></h4>
 <p>Calling this method will incur a cost to your Databento account in USD.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1"><em>async</em> load_async(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1" title="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1"><em>async</em> load_async(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1" title="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1">​</a></h4>
 <p>Load the latest instrument definition for the given instrument ID into the
 provider by requesting the latest instrument definition message from Databento.</p>
 <p>The Databento dataset will be determined from either the filters, or the venue for the
@@ -795,20 +795,20 @@ instrument ID.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
 <li><strong>filters</strong> (<em>dict</em> <em>,</em> <em>optional</em>) – The optional filters for the instrument definition request.</li>
 </ul>
 </li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="warning-4">WARNING<a href="#warning-4" class="hash-link" aria-label="Direct link to WARNING" title="Direct link to WARNING">​</a></h4>
 <p>Calling this method will incur a cost to your Databento account in USD.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument-1"><em>async</em> get_range(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], start: Timestamp | date | str | int, end: Timestamp | date | str | int | None = None, filters: dict | None = None) → list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument-1" class="hash-link" aria-label="Direct link to async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument-1" title="Direct link to async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument-1"><em>async</em> get_range(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], start: Timestamp | date | str | int, end: Timestamp | date | str | int | None = None, filters: dict | None = None) → list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument-1" class="hash-link" aria-label="Direct link to async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument-1" title="Direct link to async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument-1">​</a></h4>
 <p>Request a time series of instrument definitions for the given instrument IDs by
 making a /timeseries.get_range(…) request from Databento.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs for the request.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs for the request.</li>
 <li><strong>start</strong> (<em>pd.Timestamp</em> <em>or</em> <em>date</em> <em>or</em> <em>str</em> <em>or</em> <em>int</em>) – The start datetime of the request time range (inclusive).
 Assumes UTC as timezone unless passed a tz-aware object.
 If an integer is passed, then this represents nanoseconds since the UNIX epoch.</li>
@@ -823,23 +823,23 @@ Defaults to the same value as start.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="warning-5">WARNING<a href="#warning-5" class="hash-link" aria-label="Direct link to WARNING" title="Direct link to WARNING">​</a></h4>
 <p>Calling this method will incur a cost to your Databento account in USD.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="addinstrument-instrument--none-1">add(instrument: <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>) → None<a href="#addinstrument-instrument--none-1" class="hash-link" aria-label="Direct link to addinstrument-instrument--none-1" title="Direct link to addinstrument-instrument--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="addinstrument-instrument--none-1">add(instrument: <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>) → None<a href="#addinstrument-instrument--none-1" class="hash-link" aria-label="Direct link to addinstrument-instrument--none-1" title="Direct link to addinstrument-instrument--none-1">​</a></h4>
 <p>Add the given instrument to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instrument</strong> (<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"><em>Instrument</em></a>) – The instrument to add.</li>
+<strong>instrument</strong> (<a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"><em>Instrument</em></a>) – The instrument to add.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_bulkinstruments-listinstrument--none-1">add_bulk(instruments: list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]) → None<a href="#add_bulkinstruments-listinstrument--none-1" class="hash-link" aria-label="Direct link to add_bulkinstruments-listinstrument--none-1" title="Direct link to add_bulkinstruments-listinstrument--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_bulkinstruments-listinstrument--none-1">add_bulk(instruments: list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]) → None<a href="#add_bulkinstruments-listinstrument--none-1" class="hash-link" aria-label="Direct link to add_bulkinstruments-listinstrument--none-1" title="Direct link to add_bulkinstruments-listinstrument--none-1">​</a></h4>
 <p>Add the given instruments bulk to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instruments</strong> (<em>list</em> <em>[</em><a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"><em>Instrument</em></a> <em>]</em>) – The instruments to add.</li>
+<strong>instruments</strong> (<em>list</em> <em>[</em><a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"><em>Instrument</em></a> <em>]</em>) – The instruments to add.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_currencycurrency-currency--none-1">add_currency(currency: <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a>) → None<a href="#add_currencycurrency-currency--none-1" class="hash-link" aria-label="Direct link to add_currencycurrency-currency--none-1" title="Direct link to add_currencycurrency-currency--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_currencycurrency-currency--none-1">add_currency(currency: <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a>) → None<a href="#add_currencycurrency-currency--none-1" class="hash-link" aria-label="Direct link to add_currencycurrency-currency--none-1" title="Direct link to add_currencycurrency-currency--none-1">​</a></h4>
 <p>Add the given currency to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>currency</strong> (<a href="../../model/index.htm#nautilus_trader.model.Currency"><em>Currency</em></a>) – The currency to add.</li>
+<strong>currency</strong> (<a href="../../model/index.htm#posei_trader.model.Currency"><em>Currency</em></a>) – The currency to add.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="property-count--int-1"><em>property</em> count <em>: int</em><a href="#property-count--int-1" class="hash-link" aria-label="Direct link to property-count--int-1" title="Direct link to property-count--int-1">​</a></h4>
 <p>Return the count of instruments held by the provider.</p>
@@ -847,13 +847,13 @@ Defaults to the same value as start.</li>
 <li><strong>Return type:</strong>
 int</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencies--dictstr-currency-1">currencies() → dict[str, <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a>]<a href="#currencies--dictstr-currency-1" class="hash-link" aria-label="Direct link to currencies--dictstr-currency-1" title="Direct link to currencies--dictstr-currency-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencies--dictstr-currency-1">currencies() → dict[str, <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a>]<a href="#currencies--dictstr-currency-1" class="hash-link" aria-label="Direct link to currencies--dictstr-currency-1" title="Direct link to currencies--dictstr-currency-1">​</a></h4>
 <p>Return all currencies held by the instrument provider.</p>
 <ul>
 <li><strong>Return type:</strong>
-dict[str, <a href="../../model/index.htm#nautilus_trader.model.Currency">Currency</a>]</li>
+dict[str, <a href="../../model/index.htm#posei_trader.model.Currency">Currency</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencycode-str--currency--none-1">currency(code: str) → <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a> | None<a href="#currencycode-str--currency--none-1" class="hash-link" aria-label="Direct link to currencycode-str--currency--none-1" title="Direct link to currencycode-str--currency--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencycode-str--currency--none-1">currency(code: str) → <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a> | None<a href="#currencycode-str--currency--none-1" class="hash-link" aria-label="Direct link to currencycode-str--currency--none-1" title="Direct link to currencycode-str--currency--none-1">​</a></h4>
 <p>Return the currency with the given code (if found).</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -863,20 +863,20 @@ Currency or <code>None</code></li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If code is not a valid string.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="findinstrument_id-instrumentid--instrument--none-1">find(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>) → <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a> | None<a href="#findinstrument_id-instrumentid--instrument--none-1" class="hash-link" aria-label="Direct link to findinstrument_id-instrumentid--instrument--none-1" title="Direct link to findinstrument_id-instrumentid--instrument--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="findinstrument_id-instrumentid--instrument--none-1">find(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>) → <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a> | None<a href="#findinstrument_id-instrumentid--instrument--none-1" class="hash-link" aria-label="Direct link to findinstrument_id-instrumentid--instrument--none-1" title="Direct link to findinstrument_id-instrumentid--instrument--none-1">​</a></h4>
 <p>Return the instrument for the given instrument ID (if found).</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The ID for the instrument</li>
+<strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The ID for the instrument</li>
 <li><strong>Return type:</strong>
 Instrument or <code>None</code></li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_all--dictinstrumentid-instrument-1">get_all() → dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#get_all--dictinstrumentid-instrument-1" class="hash-link" aria-label="Direct link to get_all--dictinstrumentid-instrument-1" title="Direct link to get_all--dictinstrumentid-instrument-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_all--dictinstrumentid-instrument-1">get_all() → dict[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#get_all--dictinstrumentid-instrument-1" class="hash-link" aria-label="Direct link to get_all--dictinstrumentid-instrument-1" title="Direct link to get_all--dictinstrumentid-instrument-1">​</a></h4>
 <p>Return all loaded instruments as a map keyed by instrument ID.</p>
 <p>If no instruments loaded, will return an empty dict.</p>
 <ul>
 <li><strong>Return type:</strong>
-dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument">Instrument</a>]</li>
+dict[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument">Instrument</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-initializereload-bool--false--none-1"><em>async</em> initialize(reload: bool = False) → None<a href="#async-initializereload-bool--false--none-1" class="hash-link" aria-label="Direct link to async-initializereload-bool--false--none-1" title="Direct link to async-initializereload-bool--false--none-1">​</a></h4>
 <p>Initialize the instrument provider.</p>
@@ -885,19 +885,19 @@ dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifier
 <strong>reload</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If True, then will always reload instruments.
 If False, then will immediately return if already loaded.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="list_all--listinstrument-1">list_all() → list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#list_all--listinstrument-1" class="hash-link" aria-label="Direct link to list_all--listinstrument-1" title="Direct link to list_all--listinstrument-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="list_all--listinstrument-1">list_all() → list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#list_all--listinstrument-1" class="hash-link" aria-label="Direct link to list_all--listinstrument-1" title="Direct link to list_all--listinstrument-1">​</a></h4>
 <p>Return all loaded instruments.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument">Instrument</a>]</li>
+list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument">Instrument</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loadinstrument_id-instrumentid-filters-dict--none--none--none-1">load(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#loadinstrument_id-instrumentid-filters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none-1" title="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loadinstrument_id-instrumentid-filters-dict--none--none--none-1">load(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#loadinstrument_id-instrumentid-filters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none-1" title="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none-1">​</a></h4>
 <p>Load the instrument for the given ID into the provider, optionally applying the
 given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
@@ -909,20 +909,20 @@ filters.</p>
 <li><strong>Parameters:</strong>
 <strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none-1">load_ids(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none-1" title="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none-1">load_ids(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none-1" class="hash-link" aria-label="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none-1" title="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none-1">​</a></h4>
 <p>Load the instruments for the given IDs into the provider, optionally applying
 the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="data">Data<a href="#data" class="hash-link" aria-label="Direct link to Data" title="Direct link to Data">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-databentodataclient"><em>class</em> DatabentoDataClient<a href="#class-databentodataclient" class="hash-link" aria-label="Direct link to class-databentodataclient" title="Direct link to class-databentodataclient">​</a></h3>
-<p>Bases: <a href="../../live/index.htm#nautilus_trader.live.data_client.LiveMarketDataClient"><code>LiveMarketDataClient</code></a></p>
+<p>Bases: <a href="../../live/index.htm#posei_trader.live.data_client.LiveMarketDataClient"><code>LiveMarketDataClient</code></a></p>
 <p>Provides a data client for the Databento API.</p>
 <p>Both Historical and Live APIs are leveraged to provide historical data
 for requests, and live data feeds based on subscriptions.</p>
@@ -931,12 +931,12 @@ for requests, and live data feeds based on subscriptions.</p>
 <ul>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>http_client</strong> (<em>nautilus_pyo3.DatabentoHistoricalClient</em>) – The Databento historical HTTP client.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
-<li><strong>instrument_provder</strong> (<a href="#nautilus_trader.adapters.databento.DatabentoInstrumentProvider"><em>DatabentoInstrumentProvider</em></a>) – The instrument provider for the client.</li>
-<li><strong>loader</strong> (<a href="#nautilus_trader.adapters.databento.DatabentoDataLoader"><em>DatabentoDataLoader</em></a> <em>,</em> <em>optional</em>) – The loader for the client.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.databento.DatabentoDataClientConfig"><em>DatabentoDataClientConfig</em></a> <em>,</em> <em>optional</em>) – The configuration for the client.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the client.</li>
+<li><strong>instrument_provder</strong> (<a href="#posei_trader.adapters.databento.DatabentoInstrumentProvider"><em>DatabentoInstrumentProvider</em></a>) – The instrument provider for the client.</li>
+<li><strong>loader</strong> (<a href="#posei_trader.adapters.databento.DatabentoDataLoader"><em>DatabentoDataLoader</em></a> <em>,</em> <em>optional</em>) – The loader for the client.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.databento.DatabentoDataClientConfig"><em>DatabentoDataClientConfig</em></a> <em>,</em> <em>optional</em>) – The configuration for the client.</li>
 <li><strong>name</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The custom client ID.</li>
 </ul>
 </li>
@@ -946,7 +946,7 @@ for requests, and live data feeds based on subscriptions.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to subscribe to.</li>
 <li><strong>book_type</strong> (BookType {<code>L1_MBP</code>, <code>L2_MBP</code>, <code>L3_MBO</code>}) – The order book type.</li>
 <li><strong>depth</strong> (<em>int</em> <em>,</em> <em>optional</em> <em>,</em> <em>default None</em>) – The maximum depth for the subscription.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
@@ -955,7 +955,7 @@ for requests, and live data feeds based on subscriptions.</p>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="connect--none">connect() → None<a href="#connect--none" class="hash-link" aria-label="Direct link to connect() → None" title="Direct link to connect() → None">​</a></h4>
 <p>Connect the client.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-nautilus_tradercorerustcommonlogcolor--logcolornormal-0--task--none">create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~nautilus_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task | None<a href="#create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-nautilus_tradercorerustcommonlogcolor--logcolornormal-0--task--none" class="hash-link" aria-label="Direct link to create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~nautilus_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task | None" title="Direct link to create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~nautilus_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task | None">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-posei_tradercorerustcommonlogcolor--logcolornormal-0--task--none">create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~posei_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task | None<a href="#create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-posei_tradercorerustcommonlogcolor--logcolornormal-0--task--none" class="hash-link" aria-label="Direct link to create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~posei_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task | None" title="Direct link to create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~posei_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task | None">​</a></h4>
 <p>Run the given coroutine with error handling and optional callback actions when
 done.</p>
 <ul>
@@ -1075,43 +1075,43 @@ Component.is_stopped</li>
 <p>Request data for the given data type.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>request</strong> (<a href="../../data/index.htm#nautilus_trader.data.messages.RequestData"><em>RequestData</em></a>) – The message for the data request.</li>
+<strong>request</strong> (<a href="../../data/index.htm#posei_trader.data.messages.RequestData"><em>RequestData</em></a>) – The message for the data request.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="request_barsself-requestbars-request--void">request_bars(self, RequestBars request) → void<a href="#request_barsself-requestbars-request--void" class="hash-link" aria-label="Direct link to request_bars(self, RequestBars request) → void" title="Direct link to request_bars(self, RequestBars request) → void">​</a></h4>
 <p>Request historical Bar data. To load historical data from a catalog, you can pass a list[DataCatalogConfig] to the TradingNodeConfig or the BacktestEngineConfig.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>request</strong> (<a href="../../data/index.htm#nautilus_trader.data.messages.RequestBars"><em>RequestBars</em></a>) – The message for the data request.</li>
+<strong>request</strong> (<a href="../../data/index.htm#posei_trader.data.messages.RequestBars"><em>RequestBars</em></a>) – The message for the data request.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="request_instrumentself-requestinstrument-request--void">request_instrument(self, RequestInstrument request) → void<a href="#request_instrumentself-requestinstrument-request--void" class="hash-link" aria-label="Direct link to request_instrument(self, RequestInstrument request) → void" title="Direct link to request_instrument(self, RequestInstrument request) → void">​</a></h4>
 <p>Request Instrument data for the given instrument ID.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>request</strong> (<a href="../../data/index.htm#nautilus_trader.data.messages.RequestInstrument"><em>RequestInstrument</em></a>) – The message for the data request.</li>
+<strong>request</strong> (<a href="../../data/index.htm#posei_trader.data.messages.RequestInstrument"><em>RequestInstrument</em></a>) – The message for the data request.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="request_instrumentsself-requestinstruments-request--void">request_instruments(self, RequestInstruments request) → void<a href="#request_instrumentsself-requestinstruments-request--void" class="hash-link" aria-label="Direct link to request_instruments(self, RequestInstruments request) → void" title="Direct link to request_instruments(self, RequestInstruments request) → void">​</a></h4>
 <p>Request all Instrument data for the given venue.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>request</strong> (<a href="../../data/index.htm#nautilus_trader.data.messages.RequestInstruments"><em>RequestInstruments</em></a>) – The message for the data request.</li>
+<strong>request</strong> (<a href="../../data/index.htm#posei_trader.data.messages.RequestInstruments"><em>RequestInstruments</em></a>) – The message for the data request.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="request_order_book_snapshotself-requestorderbooksnapshot-request--void">request_order_book_snapshot(self, RequestOrderBookSnapshot request) → void<a href="#request_order_book_snapshotself-requestorderbooksnapshot-request--void" class="hash-link" aria-label="Direct link to request_order_book_snapshot(self, RequestOrderBookSnapshot request) → void" title="Direct link to request_order_book_snapshot(self, RequestOrderBookSnapshot request) → void">​</a></h4>
 <p>Request order book snapshot data.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>request</strong> (<a href="../../data/index.htm#nautilus_trader.data.messages.RequestOrderBookSnapshot"><em>RequestOrderBookSnapshot</em></a>) – The message for the data request.</li>
+<strong>request</strong> (<a href="../../data/index.htm#posei_trader.data.messages.RequestOrderBookSnapshot"><em>RequestOrderBookSnapshot</em></a>) – The message for the data request.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="request_quote_ticksself-requestquoteticks-request--void">request_quote_ticks(self, RequestQuoteTicks request) → void<a href="#request_quote_ticksself-requestquoteticks-request--void" class="hash-link" aria-label="Direct link to request_quote_ticks(self, RequestQuoteTicks request) → void" title="Direct link to request_quote_ticks(self, RequestQuoteTicks request) → void">​</a></h4>
 <p>Request historical QuoteTick data.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>request</strong> (<a href="../../data/index.htm#nautilus_trader.data.messages.RequestQuoteTicks"><em>RequestQuoteTicks</em></a>) – The message for the data request.</li>
+<strong>request</strong> (<a href="../../data/index.htm#posei_trader.data.messages.RequestQuoteTicks"><em>RequestQuoteTicks</em></a>) – The message for the data request.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="request_trade_ticksself-requesttradeticks-request--void">request_trade_ticks(self, RequestTradeTicks request) → void<a href="#request_trade_ticksself-requesttradeticks-request--void" class="hash-link" aria-label="Direct link to request_trade_ticks(self, RequestTradeTicks request) → void" title="Direct link to request_trade_ticks(self, RequestTradeTicks request) → void">​</a></h4>
 <p>Request historical TradeTick data.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>request</strong> (<a href="../../data/index.htm#nautilus_trader.data.messages.RequestTradeTicks"><em>RequestTradeTicks</em></a>) – The message for the data request.</li>
+<strong>request</strong> (<a href="../../data/index.htm#posei_trader.data.messages.RequestTradeTicks"><em>RequestTradeTicks</em></a>) – The message for the data request.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="resetself--void">reset(self) → void<a href="#resetself--void" class="hash-link" aria-label="Direct link to reset(self) → void" title="Direct link to reset(self) → void">​</a></h4>
 <p>Reset the component.</p>
@@ -1178,7 +1178,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>data_type</strong> (<a href="../../model/data/index.htm#nautilus_trader.model.data.DataType"><em>DataType</em></a>) – The data type for the subscription.</li>
+<li><strong>data_type</strong> (<a href="../../model/data/index.htm#posei_trader.model.data.DataType"><em>DataType</em></a>) – The data type for the subscription.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1188,7 +1188,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>bar_type</strong> (<a href="../../model/data/index.htm#nautilus_trader.model.data.BarType"><em>BarType</em></a>) – The bar type to subscribe to.</li>
+<li><strong>bar_type</strong> (<a href="../../model/data/index.htm#posei_trader.model.data.BarType"><em>BarType</em></a>) – The bar type to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1198,7 +1198,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1214,7 +1214,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1224,7 +1224,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1240,7 +1240,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1250,7 +1250,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to subscribe to.</li>
 <li><strong>book_type</strong> (BookType {<code>L1_MBP</code>, <code>L2_MBP</code>, <code>L3_MBO</code>}) – The order book level.</li>
 <li><strong>depth</strong> (<em>int</em> <em>,</em> <em>optional</em>) – The maximum depth for the order book. A depth of 0 is maximum depth.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
@@ -1262,7 +1262,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1272,7 +1272,7 @@ then the component state will not change, and an error will be logged.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1281,67 +1281,67 @@ then the component state will not change, and an error will be logged.</p>
 <p>Return the bar types subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/data/index.htm#nautilus_trader.model.data.BarType">BarType</a>]</li>
+list[<a href="../../model/data/index.htm#posei_trader.model.data.BarType">BarType</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_custom_dataself--list">subscribed_custom_data(self) → list<a href="#subscribed_custom_dataself--list" class="hash-link" aria-label="Direct link to subscribed_custom_data(self) → list" title="Direct link to subscribed_custom_data(self) → list">​</a></h4>
 <p>Return the custom data types subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/data/index.htm#nautilus_trader.model.data.DataType">DataType</a>]</li>
+list[<a href="../../model/data/index.htm#posei_trader.model.data.DataType">DataType</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_index_pricesself--list">subscribed_index_prices(self) → list<a href="#subscribed_index_pricesself--list" class="hash-link" aria-label="Direct link to subscribed_index_prices(self) → list" title="Direct link to subscribed_index_prices(self) → list">​</a></h4>
 <p>Return the index price update instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_instrument_closeself--list">subscribed_instrument_close(self) → list<a href="#subscribed_instrument_closeself--list" class="hash-link" aria-label="Direct link to subscribed_instrument_close(self) → list" title="Direct link to subscribed_instrument_close(self) → list">​</a></h4>
 <p>Return the instrument closes subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_instrument_statusself--list">subscribed_instrument_status(self) → list<a href="#subscribed_instrument_statusself--list" class="hash-link" aria-label="Direct link to subscribed_instrument_status(self) → list" title="Direct link to subscribed_instrument_status(self) → list">​</a></h4>
 <p>Return the status update instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_instrumentsself--list">subscribed_instruments(self) → list<a href="#subscribed_instrumentsself--list" class="hash-link" aria-label="Direct link to subscribed_instruments(self) → list" title="Direct link to subscribed_instruments(self) → list">​</a></h4>
 <p>Return the instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_mark_pricesself--list">subscribed_mark_prices(self) → list<a href="#subscribed_mark_pricesself--list" class="hash-link" aria-label="Direct link to subscribed_mark_prices(self) → list" title="Direct link to subscribed_mark_prices(self) → list">​</a></h4>
 <p>Return the mark price update instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_order_book_deltasself--list">subscribed_order_book_deltas(self) → list<a href="#subscribed_order_book_deltasself--list" class="hash-link" aria-label="Direct link to subscribed_order_book_deltas(self) → list" title="Direct link to subscribed_order_book_deltas(self) → list">​</a></h4>
 <p>Return the order book delta instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_order_book_snapshotsself--list">subscribed_order_book_snapshots(self) → list<a href="#subscribed_order_book_snapshotsself--list" class="hash-link" aria-label="Direct link to subscribed_order_book_snapshots(self) → list" title="Direct link to subscribed_order_book_snapshots(self) → list">​</a></h4>
 <p>Return the order book snapshot instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_quote_ticksself--list">subscribed_quote_ticks(self) → list<a href="#subscribed_quote_ticksself--list" class="hash-link" aria-label="Direct link to subscribed_quote_ticks(self) → list" title="Direct link to subscribed_quote_ticks(self) → list">​</a></h4>
 <p>Return the quote tick instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="subscribed_trade_ticksself--list">subscribed_trade_ticks(self) → list<a href="#subscribed_trade_ticksself--list" class="hash-link" aria-label="Direct link to subscribed_trade_ticks(self) → list" title="Direct link to subscribed_trade_ticks(self) → list">​</a></h4>
 <p>Return the trade tick instruments subscribed to.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
+list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="trader_id">trader_id<a href="#trader_id" class="hash-link" aria-label="Direct link to trader_id" title="Direct link to trader_id">​</a></h4>
 <p>The trader ID associated with the component.</p>
@@ -1360,7 +1360,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>data_type</strong> (<a href="../../model/data/index.htm#nautilus_trader.model.data.DataType"><em>DataType</em></a>) – The data type for the subscription.</li>
+<li><strong>data_type</strong> (<a href="../../model/data/index.htm#posei_trader.model.data.DataType"><em>DataType</em></a>) – The data type for the subscription.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1370,7 +1370,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>bar_type</strong> (<a href="../../model/data/index.htm#nautilus_trader.model.data.BarType"><em>BarType</em></a>) – The bar type to unsubscribe from.</li>
+<li><strong>bar_type</strong> (<a href="../../model/data/index.htm#posei_trader.model.data.BarType"><em>BarType</em></a>) – The bar type to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1380,7 +1380,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1390,7 +1390,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to unsubscribe from.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1400,7 +1400,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to unsubscribe from.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1410,7 +1410,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument status updates to unsubscribe from.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument status updates to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1426,7 +1426,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument to subscribe to.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1436,7 +1436,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to unsubscribe from.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1446,7 +1446,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to unsubscribe from.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The order book instrument to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1456,7 +1456,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to unsubscribe from.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1466,7 +1466,7 @@ type</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to unsubscribe from.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The tick instrument to unsubscribe from.</li>
 <li><strong>params</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – Additional params for the subscription.</li>
 </ul>
 </li>
@@ -1476,6 +1476,6 @@ type</li>
 <ul>
 <li><strong>Returns:</strong>
 Venue or <code>None</code></li>
-</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="../coinbase_intx/index.htm"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Coinbase International</div></a><a class="pagination-nav__link pagination-nav__link--next" href="../dydx/index.htm"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">dYdX</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#class-databentodataclientconfig" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoDataClientConfig</a></li><li><a href="#class-databentodataloader" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoDataLoader</a></li><li><a href="#class-databentoimbalance" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoImbalance</a></li><li><a href="#class-databentoinstrumentprovider" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoInstrumentProvider</a></li><li><a href="#class-databentolivedataclientfactory" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoLiveDataClientFactory</a></li><li><a href="#class-databentostatistics" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoStatistics</a></li><li><a href="#get_cached_databento_http_clientkey-str--none--none-gateway-str--none--none-use_exchange_as_venue-bool--true--databentohistoricalclient" class="table-of-contents__link toc-highlight">get_cached_databento_http_client(key: str | None = None, gateway: str | None = None, use_exchange_as_venue: bool = True) → DatabentoHistoricalClient</a></li><li><a href="#get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider" class="table-of-contents__link toc-highlight">get_cached_databento_instrument_provider(http_client: DatabentoHistoricalClient, clock: LiveClock, live_api_key: str | None = None, live_gateway: str | None = None, loader: DatabentoDataLoader | None = None, config: InstrumentProviderConfig | None = None, use_exchange_as_venue=True) → DatabentoInstrumentProvider</a></li><li><a href="#config" class="table-of-contents__link toc-highlight">Config</a><ul><li><a href="#class-databentodataclientconfig-1" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoDataClientConfig</a></li></ul></li><li><a href="#factories" class="table-of-contents__link toc-highlight">Factories</a><ul><li><a href="#get_cached_databento_http_clientkey-str--none--none-gateway-str--none--none-use_exchange_as_venue-bool--true--databentohistoricalclient-1" class="table-of-contents__link toc-highlight">get_cached_databento_http_client(key: str | None = None, gateway: str | None = None, use_exchange_as_venue: bool = True) → DatabentoHistoricalClient</a></li><li><a href="#get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider-1" class="table-of-contents__link toc-highlight">get_cached_databento_instrument_provider(http_client: DatabentoHistoricalClient, clock: LiveClock, live_api_key: str | None = None, live_gateway: str | None = None, loader: DatabentoDataLoader | None = None, config: InstrumentProviderConfig | None = None, use_exchange_as_venue=True) → DatabentoInstrumentProvider</a></li><li><a href="#class-databentolivedataclientfactory-1" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoLiveDataClientFactory</a></li></ul></li><li><a href="#enums" class="table-of-contents__link toc-highlight">Enums</a><ul><li><a href="#class-databentoschema" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoSchema</a></li></ul></li><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#class-databentoimbalance-1" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoImbalance</a></li><li><a href="#class-databentostatistics-1" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoStatistics</a></li></ul></li><li><a href="#loaders" class="table-of-contents__link toc-highlight">Loaders</a><ul><li><a href="#class-databentodataloader-1" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoDataLoader</a></li></ul></li><li><a href="#providers" class="table-of-contents__link toc-highlight">Providers</a><ul><li><a href="#class-databentoinstrumentprovider-1" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoInstrumentProvider</a></li></ul></li><li><a href="#data" class="table-of-contents__link toc-highlight">Data</a><ul><li><a href="#class-databentodataclient" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoDataClient</a></li></ul></li></ul></div></div></div><div class="footer-wrapper MuiBox-root css-0"><div class="social-footer-box MuiBox-root css-0"><style data-emotion="css 17rjyz3">.css-17rjyz3{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(25, 118, 210, 0.4);padding:12px;margin-right:10px;}.css-17rjyz3:hover{text-decoration-color:inherit;}</style><style data-emotion="css jl1bw5">.css-jl1bw5{margin:0;font:inherit;color:#1976d2;-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(25, 118, 210, 0.4);padding:12px;margin-right:10px;}.css-jl1bw5:hover{text-decoration-color:inherit;}</style><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways github-footer css-jl1bw5" href="https://github.com/poseisysstems" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways discord-footer css-jl1bw5" href="" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways linkedin-footer css-jl1bw5" href="https://www.linkedin.com/company/nautechsystems/" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways x-footer css-jl1bw5" href="https://twitter.com/PoseiTrader" target="_blank"></a></div><div class="footer-copyright">© 2025 Posei Systems Pty Ltd. All rights reserved.</div></div></div></div></main></div></div></div></div>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="../coinbase_intx/index.htm"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Coinbase International</div></a><a class="pagination-nav__link pagination-nav__link--next" href="../dydx/index.htm"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">dYdX</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#class-databentodataclientconfig" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoDataClientConfig</a></li><li><a href="#class-databentodataloader" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoDataLoader</a></li><li><a href="#class-databentoimbalance" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoImbalance</a></li><li><a href="#class-databentoinstrumentprovider" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoInstrumentProvider</a></li><li><a href="#class-databentolivedataclientfactory" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoLiveDataClientFactory</a></li><li><a href="#class-databentostatistics" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoStatistics</a></li><li><a href="#get_cached_databento_http_clientkey-str--none--none-gateway-str--none--none-use_exchange_as_venue-bool--true--databentohistoricalclient" class="table-of-contents__link toc-highlight">get_cached_databento_http_client(key: str | None = None, gateway: str | None = None, use_exchange_as_venue: bool = True) → DatabentoHistoricalClient</a></li><li><a href="#get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider" class="table-of-contents__link toc-highlight">get_cached_databento_instrument_provider(http_client: DatabentoHistoricalClient, clock: LiveClock, live_api_key: str | None = None, live_gateway: str | None = None, loader: DatabentoDataLoader | None = None, config: InstrumentProviderConfig | None = None, use_exchange_as_venue=True) → DatabentoInstrumentProvider</a></li><li><a href="#config" class="table-of-contents__link toc-highlight">Config</a><ul><li><a href="#class-databentodataclientconfig-1" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoDataClientConfig</a></li></ul></li><li><a href="#factories" class="table-of-contents__link toc-highlight">Factories</a><ul><li><a href="#get_cached_databento_http_clientkey-str--none--none-gateway-str--none--none-use_exchange_as_venue-bool--true--databentohistoricalclient-1" class="table-of-contents__link toc-highlight">get_cached_databento_http_client(key: str | None = None, gateway: str | None = None, use_exchange_as_venue: bool = True) → DatabentoHistoricalClient</a></li><li><a href="#get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider-1" class="table-of-contents__link toc-highlight">get_cached_databento_instrument_provider(http_client: DatabentoHistoricalClient, clock: LiveClock, live_api_key: str | None = None, live_gateway: str | None = None, loader: DatabentoDataLoader | None = None, config: InstrumentProviderConfig | None = None, use_exchange_as_venue=True) → DatabentoInstrumentProvider</a></li><li><a href="#class-databentolivedataclientfactory-1" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoLiveDataClientFactory</a></li></ul></li><li><a href="#enums" class="table-of-contents__link toc-highlight">Enums</a><ul><li><a href="#class-databentoschema" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoSchema</a></li></ul></li><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#class-databentoimbalance-1" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoImbalance</a></li><li><a href="#class-databentostatistics-1" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoStatistics</a></li></ul></li><li><a href="#loaders" class="table-of-contents__link toc-highlight">Loaders</a><ul><li><a href="#class-databentodataloader-1" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoDataLoader</a></li></ul></li><li><a href="#providers" class="table-of-contents__link toc-highlight">Providers</a><ul><li><a href="#class-databentoinstrumentprovider-1" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoInstrumentProvider</a></li></ul></li><li><a href="#data" class="table-of-contents__link toc-highlight">Data</a><ul><li><a href="#class-databentodataclient" class="table-of-contents__link toc-highlight"><em>class</em> DatabentoDataClient</a></li></ul></li></ul></div></div></div><div class="footer-wrapper MuiBox-root css-0"><div class="social-footer-box MuiBox-root css-0"><style data-emotion="css 17rjyz3">.css-17rjyz3{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(25, 118, 210, 0.4);padding:12px;margin-right:10px;}.css-17rjyz3:hover{text-decoration-color:inherit;}</style><style data-emotion="css jl1bw5">.css-jl1bw5{margin:0;font:inherit;color:#1976d2;-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(25, 118, 210, 0.4);padding:12px;margin-right:10px;}.css-jl1bw5:hover{text-decoration-color:inherit;}</style><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways github-footer css-jl1bw5" href="https://github.com/poseisysstems" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways discord-footer css-jl1bw5" href="" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways linkedin-footer css-jl1bw5" href="https://www.linkedin.com/company/poseitrader/" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways x-footer css-jl1bw5" href="https://twitter.com/PoseiTrader" target="_blank"></a></div><div class="footer-copyright">© 2025 Posei Systems Pty Ltd. All rights reserved.</div></div></div></div></main></div></div></div></div>
 </body>
 </html>

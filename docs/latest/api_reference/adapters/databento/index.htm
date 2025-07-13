@@ -854,7 +854,7 @@
                             <p>
                               Bases:
                               <a
-                                href="../../config/index.htm#nautilus_trader.live.config.LiveDataClientConfig"
+                                href="../../config/index.htm#posei_trader.live.config.LiveDataClientConfig"
                                 ><code>LiveDataClientConfig</code></a
                               >
                             </p>
@@ -940,7 +940,7 @@
                                     >
                                     <em>[</em
                                     ><a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >
                                     <em>]</em> <em>,</em> <em>optional</em>) –
@@ -1005,7 +1005,7 @@
                               instrument_ids
                               <em
                                 >: list[<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   >InstrumentId</a
                                 >] | None</em
                               ><a
@@ -1177,7 +1177,7 @@
                               <em
                                 >:
                                 <a
-                                  href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"
+                                  href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"
                                   >InstrumentProviderConfig</a
                                 ></em
                               ><a
@@ -1286,7 +1286,7 @@
                               <em
                                 >:
                                 <a
-                                  href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig"
+                                  href="../../config/index.htm#posei_trader.live.config.RoutingConfig"
                                   >RoutingConfig</a
                                 ></em
                               ><a
@@ -1359,14 +1359,14 @@
                               from_dbn_file(path: PathLike[str] | str,
                               instrument_id:
                               <a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >
                               | None = None, price_precision: int | None = None,
                               as_legacy_cython: bool = True, include_trades:
                               bool = False, use_exchange_as_venue: bool = False,
                               bars_timestamp_on_close: bool = True) → list[<a
-                                href="../../core/index.htm#nautilus_trader.core.Data"
+                                href="../../core/index.htm#posei_trader.core.Data"
                                 >Data</a
                               >]<a
                                 href="#from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata"
@@ -1392,7 +1392,7 @@
                                   </li>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The Posei
@@ -1458,7 +1458,7 @@
                               </li>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../core/index.htm#nautilus_trader.core.Data"
+                                  href="../../core/index.htm#posei_trader.core.Data"
                                   >Data</a
                                 >] | list[pyo3.DatabentoImbalance] |
                                 list[pyo3.DatabentoStatistics]
@@ -1488,7 +1488,7 @@
                             >
                               get_dataset_for_venue(venue:
                               <a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue"
                                 >Venue</a
                               >) → str<a
                                 href="#get_dataset_for_venuevenue-venue--str"
@@ -1503,7 +1503,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>venue</strong> (<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue"
                                   ><em>Venue</em></a
                                 >) – The venue for the given dataset.
                               </li>
@@ -1758,7 +1758,7 @@
                             <p>
                               Bases:
                               <a
-                                href="../../common/index.htm#nautilus_trader.common.providers.InstrumentProvider"
+                                href="../../common/index.htm#posei_trader.common.providers.InstrumentProvider"
                                 ><code>InstrumentProvider</code></a
                               >
                             </p>
@@ -1778,7 +1778,7 @@
                                   </li>
                                   <li>
                                     <strong>clock</strong> (<a
-                                      href="../../common/index.htm#nautilus_trader.common.component.LiveClock"
+                                      href="../../common/index.htm#posei_trader.common.component.LiveClock"
                                       ><em>LiveClock</em></a
                                     >) – The clock for the provider.
                                   </li>
@@ -1796,7 +1796,7 @@
                                   </li>
                                   <li>
                                     <strong>loader</strong> (<a
-                                      href="#nautilus_trader.adapters.databento.DatabentoDataLoader"
+                                      href="#posei_trader.adapters.databento.DatabentoDataLoader"
                                       ><em>DatabentoDataLoader</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The loader
@@ -1804,7 +1804,7 @@
                                   </li>
                                   <li>
                                     <strong>config</strong> (<a
-                                      href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"
+                                      href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"
                                       ><em>InstrumentProviderConfig</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The
@@ -1819,7 +1819,7 @@
                             >
                               add(instrument:
                               <a
-                                href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument"
+                                href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument"
                                 >Instrument</a
                               >) → None<a
                                 href="#addinstrument-instrument--none"
@@ -1834,7 +1834,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>instrument</strong> (<a
-                                  href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"
+                                  href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"
                                   ><em>Instrument</em></a
                                 >) – The instrument to add.
                               </li>
@@ -1844,7 +1844,7 @@
                               id="add_bulkinstruments-listinstrument--none"
                             >
                               add_bulk(instruments: list[<a
-                                href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument"
+                                href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument"
                                 >Instrument</a
                               >]) → None<a
                                 href="#add_bulkinstruments-listinstrument--none"
@@ -1863,7 +1863,7 @@
                                 <strong>instruments</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"
+                                  href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"
                                   ><em>Instrument</em></a
                                 >
                                 <em>]</em>) – The instruments to add.
@@ -1875,7 +1875,7 @@
                             >
                               add_currency(currency:
                               <a
-                                href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency"
+                                href="../../model/objects/index.htm#posei_trader.model.objects.Currency"
                                 >Currency</a
                               >) → None<a
                                 href="#add_currencycurrency-currency--none"
@@ -1890,7 +1890,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>currency</strong> (<a
-                                  href="../../model/index.htm#nautilus_trader.model.Currency"
+                                  href="../../model/index.htm#posei_trader.model.Currency"
                                   ><em>Currency</em></a
                                 >) – The currency to add.
                               </li>
@@ -1921,7 +1921,7 @@
                             >
                               currencies() → dict[str,
                               <a
-                                href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency"
+                                href="../../model/objects/index.htm#posei_trader.model.objects.Currency"
                                 >Currency</a
                               >]<a
                                 href="#currencies--dictstr-currency"
@@ -1939,7 +1939,7 @@
                               <li>
                                 <strong>Return type:</strong> dict[str,
                                 <a
-                                  href="../../model/index.htm#nautilus_trader.model.Currency"
+                                  href="../../model/index.htm#posei_trader.model.Currency"
                                   >Currency</a
                                 >]
                               </li>
@@ -1950,7 +1950,7 @@
                             >
                               currency(code: str) →
                               <a
-                                href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency"
+                                href="../../model/objects/index.htm#posei_trader.model.objects.Currency"
                                 >Currency</a
                               >
                               | None<a
@@ -1987,11 +1987,11 @@
                             >
                               find(instrument_id:
                               <a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >) →
                               <a
-                                href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument"
+                                href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument"
                                 >Instrument</a
                               >
                               | None<a
@@ -2010,7 +2010,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>instrument_id</strong> (<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   ><em>InstrumentId</em></a
                                 >) – The ID for the instrument
                               </li>
@@ -2024,11 +2024,11 @@
                               id="get_all--dictinstrumentid-instrument"
                             >
                               get_all() → dict[<a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >,
                               <a
-                                href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument"
+                                href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument"
                                 >Instrument</a
                               >]<a
                                 href="#get_all--dictinstrumentid-instrument"
@@ -2049,11 +2049,11 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> dict[<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   >InstrumentId</a
                                 >,
                                 <a
-                                  href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"
+                                  href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"
                                   >Instrument</a
                                 >]
                               </li>
@@ -2063,12 +2063,12 @@
                               id="async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument"
                             >
                               <em>async</em> get_range(instrument_ids: list[<a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >], start: Timestamp | date | str | int, end:
                               Timestamp | date | str | int | None = None,
                               filters: dict | None = None) → list[<a
-                                href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument"
+                                href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument"
                                 >Instrument</a
                               >]<a
                                 href="#async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument"
@@ -2093,7 +2093,7 @@
                                     >
                                     <em>[</em
                                     ><a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >
                                     <em>]</em>) – The instrument IDs for the
@@ -2178,7 +2178,7 @@
                               id="list_all--listinstrument"
                             >
                               list_all() → list[<a
-                                href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument"
+                                href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument"
                                 >Instrument</a
                               >]<a
                                 href="#list_all--listinstrument"
@@ -2192,7 +2192,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"
+                                  href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"
                                   >Instrument</a
                                 >]
                               </li>
@@ -2203,7 +2203,7 @@
                             >
                               load(instrument_id:
                               <a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >, filters: dict | None = None) → None<a
                                 href="#loadinstrument_id-instrumentid-filters-dict--none--none--none"
@@ -2223,7 +2223,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The instrument ID to load.
                                   </li>
@@ -2292,7 +2292,7 @@
                             >
                               <em>async</em> load_async(instrument_id:
                               <a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >, filters: dict | None = None) → None<a
                                 href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none"
@@ -2319,7 +2319,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The instrument ID to load.
                                   </li>
@@ -2353,7 +2353,7 @@
                               id="load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none"
                             >
                               load_ids(instrument_ids: list[<a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >], filters: dict | None = None) → None<a
                                 href="#load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none"
@@ -2377,7 +2377,7 @@
                                     >
                                     <em>[</em
                                     ><a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >
                                     <em>]</em>) – The instrument IDs to load.
@@ -2402,7 +2402,7 @@
                             >
                               <em>async</em> load_ids_async(instrument_ids:
                               list[<a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >], filters: dict | None = None) → None<a
                                 href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none"
@@ -2434,7 +2434,7 @@
                                     >
                                     <em>[</em
                                     ><a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >
                                     <em>]</em>) – The instrument IDs to load.
@@ -2490,23 +2490,23 @@
                               <em>static</em> create(loop: AbstractEventLoop,
                               name: str, config:
                               <a
-                                href="#nautilus_trader.adapters.databento.config.DatabentoDataClientConfig"
+                                href="#posei_trader.adapters.databento.config.DatabentoDataClientConfig"
                                 >DatabentoDataClientConfig</a
                               >, msgbus:
                               <a
-                                href="../../common/index.htm#nautilus_trader.common.component.MessageBus"
+                                href="../../common/index.htm#posei_trader.common.component.MessageBus"
                                 >MessageBus</a
                               >, cache:
                               <a
-                                href="../../cache/index.htm#nautilus_trader.cache.cache.Cache"
+                                href="../../cache/index.htm#posei_trader.cache.cache.Cache"
                                 >Cache</a
                               >, clock:
                               <a
-                                href="../../common/index.htm#nautilus_trader.common.component.LiveClock"
+                                href="../../common/index.htm#posei_trader.common.component.LiveClock"
                                 >LiveClock</a
                               >) →
                               <a
-                                href="#nautilus_trader.adapters.databento.data.DatabentoDataClient"
+                                href="#posei_trader.adapters.databento.data.DatabentoDataClient"
                                 >DatabentoDataClient</a
                               ><a
                                 href="#static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient"
@@ -2532,25 +2532,25 @@
                                   </li>
                                   <li>
                                     <strong>config</strong> (<a
-                                      href="#nautilus_trader.adapters.databento.DatabentoDataClientConfig"
+                                      href="#posei_trader.adapters.databento.DatabentoDataClientConfig"
                                       ><em>DatabentoDataClientConfig</em></a
                                     >) – The client configuration.
                                   </li>
                                   <li>
                                     <strong>msgbus</strong> (<a
-                                      href="../../common/index.htm#nautilus_trader.common.component.MessageBus"
+                                      href="../../common/index.htm#posei_trader.common.component.MessageBus"
                                       ><em>MessageBus</em></a
                                     >) – The message bus for the client.
                                   </li>
                                   <li>
                                     <strong>cache</strong> (<a
-                                      href="../../cache/index.htm#nautilus_trader.cache.Cache"
+                                      href="../../cache/index.htm#posei_trader.cache.Cache"
                                       ><em>Cache</em></a
                                     >) – The cache for the client.
                                   </li>
                                   <li>
                                     <strong>clock</strong> (<a
-                                      href="../../common/index.htm#nautilus_trader.common.component.LiveClock"
+                                      href="../../common/index.htm#posei_trader.common.component.LiveClock"
                                       ><em>LiveClock</em></a
                                     >) – The clock for the client.
                                   </li>
@@ -2559,7 +2559,7 @@
                               <li>
                                 <strong>Return type:</strong>
                                 <a
-                                  href="#nautilus_trader.adapters.databento.data.DatabentoDataClient"
+                                  href="#posei_trader.adapters.databento.data.DatabentoDataClient"
                                   >DatabentoDataClient</a
                                 >
                               </li>
@@ -2829,22 +2829,22 @@
                               get_cached_databento_instrument_provider(http_client:
                               DatabentoHistoricalClient, clock:
                               <a
-                                href="../../common/index.htm#nautilus_trader.common.component.LiveClock"
+                                href="../../common/index.htm#posei_trader.common.component.LiveClock"
                                 >LiveClock</a
                               >, live_api_key: str | None = None, live_gateway:
                               str | None = None, loader:
                               <a
-                                href="#nautilus_trader.adapters.databento.loaders.DatabentoDataLoader"
+                                href="#posei_trader.adapters.databento.loaders.DatabentoDataLoader"
                                 >DatabentoDataLoader</a
                               >
                               | None = None, config:
                               <a
-                                href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"
+                                href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"
                                 >InstrumentProviderConfig</a
                               >
                               | None = None, use_exchange_as_venue=True) →
                               <a
-                                href="#nautilus_trader.adapters.databento.providers.DatabentoInstrumentProvider"
+                                href="#posei_trader.adapters.databento.providers.DatabentoInstrumentProvider"
                                 >DatabentoInstrumentProvider</a
                               ><a
                                 href="#get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider"
@@ -2872,7 +2872,7 @@
                                   </li>
                                   <li>
                                     <strong>clock</strong> (<a
-                                      href="../../common/index.htm#nautilus_trader.common.component.LiveClock"
+                                      href="../../common/index.htm#posei_trader.common.component.LiveClock"
                                       ><em>LiveClock</em></a
                                     >) – The clock for the instrument provider.
                                   </li>
@@ -2890,7 +2890,7 @@
                                   </li>
                                   <li>
                                     <strong>loader</strong> (<a
-                                      href="#nautilus_trader.adapters.databento.DatabentoDataLoader"
+                                      href="#posei_trader.adapters.databento.DatabentoDataLoader"
                                       ><em>DatabentoDataLoader</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The loader
@@ -2898,7 +2898,7 @@
                                   </li>
                                   <li>
                                     <strong>config</strong> (<a
-                                      href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"
+                                      href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"
                                       ><em>InstrumentProviderConfig</em></a
                                     >) – The configuration for the instrument
                                     provider.
@@ -2916,7 +2916,7 @@
                               <li>
                                 <strong>Return type:</strong>
                                 <a
-                                  href="#nautilus_trader.adapters.databento.DatabentoInstrumentProvider"
+                                  href="#posei_trader.adapters.databento.DatabentoInstrumentProvider"
                                   >DatabentoInstrumentProvider</a
                                 >
                               </li>
@@ -2948,7 +2948,7 @@
                             <p>
                               Bases:
                               <a
-                                href="../../config/index.htm#nautilus_trader.live.config.LiveDataClientConfig"
+                                href="../../config/index.htm#posei_trader.live.config.LiveDataClientConfig"
                                 ><code>LiveDataClientConfig</code></a
                               >
                             </p>
@@ -3034,7 +3034,7 @@
                                     >
                                     <em>[</em
                                     ><a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >
                                     <em>]</em> <em>,</em> <em>optional</em>) –
@@ -3151,7 +3151,7 @@
                               instrument_ids
                               <em
                                 >: list[<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   >InstrumentId</a
                                 >] | None</em
                               ><a
@@ -3271,7 +3271,7 @@
                               <em
                                 >:
                                 <a
-                                  href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"
+                                  href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"
                                   >InstrumentProviderConfig</a
                                 ></em
                               ><a
@@ -3380,7 +3380,7 @@
                               <em
                                 >:
                                 <a
-                                  href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig"
+                                  href="../../config/index.htm#posei_trader.live.config.RoutingConfig"
                                   >RoutingConfig</a
                                 ></em
                               ><a
@@ -3483,22 +3483,22 @@
                               get_cached_databento_instrument_provider(http_client:
                               DatabentoHistoricalClient, clock:
                               <a
-                                href="../../common/index.htm#nautilus_trader.common.component.LiveClock"
+                                href="../../common/index.htm#posei_trader.common.component.LiveClock"
                                 >LiveClock</a
                               >, live_api_key: str | None = None, live_gateway:
                               str | None = None, loader:
                               <a
-                                href="#nautilus_trader.adapters.databento.loaders.DatabentoDataLoader"
+                                href="#posei_trader.adapters.databento.loaders.DatabentoDataLoader"
                                 >DatabentoDataLoader</a
                               >
                               | None = None, config:
                               <a
-                                href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"
+                                href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"
                                 >InstrumentProviderConfig</a
                               >
                               | None = None, use_exchange_as_venue=True) →
                               <a
-                                href="#nautilus_trader.adapters.databento.providers.DatabentoInstrumentProvider"
+                                href="#posei_trader.adapters.databento.providers.DatabentoInstrumentProvider"
                                 >DatabentoInstrumentProvider</a
                               ><a
                                 href="#get_cached_databento_instrument_providerhttp_client-databentohistoricalclient-clock-liveclock-live_api_key-str--none--none-live_gateway-str--none--none-loader-databentodataloader--none--none-config-instrumentproviderconfig--none--none-use_exchange_as_venuetrue--databentoinstrumentprovider-1"
@@ -3526,7 +3526,7 @@
                                   </li>
                                   <li>
                                     <strong>clock</strong> (<a
-                                      href="../../common/index.htm#nautilus_trader.common.component.LiveClock"
+                                      href="../../common/index.htm#posei_trader.common.component.LiveClock"
                                       ><em>LiveClock</em></a
                                     >) – The clock for the instrument provider.
                                   </li>
@@ -3544,7 +3544,7 @@
                                   </li>
                                   <li>
                                     <strong>loader</strong> (<a
-                                      href="#nautilus_trader.adapters.databento.DatabentoDataLoader"
+                                      href="#posei_trader.adapters.databento.DatabentoDataLoader"
                                       ><em>DatabentoDataLoader</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The loader
@@ -3552,7 +3552,7 @@
                                   </li>
                                   <li>
                                     <strong>config</strong> (<a
-                                      href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"
+                                      href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"
                                       ><em>InstrumentProviderConfig</em></a
                                     >) – The configuration for the instrument
                                     provider.
@@ -3570,7 +3570,7 @@
                               <li>
                                 <strong>Return type:</strong>
                                 <a
-                                  href="#nautilus_trader.adapters.databento.DatabentoInstrumentProvider"
+                                  href="#posei_trader.adapters.databento.DatabentoInstrumentProvider"
                                   >DatabentoInstrumentProvider</a
                                 >
                               </li>
@@ -3596,23 +3596,23 @@
                               <em>static</em> create(loop: AbstractEventLoop,
                               name: str, config:
                               <a
-                                href="#nautilus_trader.adapters.databento.config.DatabentoDataClientConfig"
+                                href="#posei_trader.adapters.databento.config.DatabentoDataClientConfig"
                                 >DatabentoDataClientConfig</a
                               >, msgbus:
                               <a
-                                href="../../common/index.htm#nautilus_trader.common.component.MessageBus"
+                                href="../../common/index.htm#posei_trader.common.component.MessageBus"
                                 >MessageBus</a
                               >, cache:
                               <a
-                                href="../../cache/index.htm#nautilus_trader.cache.cache.Cache"
+                                href="../../cache/index.htm#posei_trader.cache.cache.Cache"
                                 >Cache</a
                               >, clock:
                               <a
-                                href="../../common/index.htm#nautilus_trader.common.component.LiveClock"
+                                href="../../common/index.htm#posei_trader.common.component.LiveClock"
                                 >LiveClock</a
                               >) →
                               <a
-                                href="#nautilus_trader.adapters.databento.data.DatabentoDataClient"
+                                href="#posei_trader.adapters.databento.data.DatabentoDataClient"
                                 >DatabentoDataClient</a
                               ><a
                                 href="#static-createloop-abstracteventloop-name-str-config-databentodataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--databentodataclient-1"
@@ -3638,25 +3638,25 @@
                                   </li>
                                   <li>
                                     <strong>config</strong> (<a
-                                      href="#nautilus_trader.adapters.databento.DatabentoDataClientConfig"
+                                      href="#posei_trader.adapters.databento.DatabentoDataClientConfig"
                                       ><em>DatabentoDataClientConfig</em></a
                                     >) – The client configuration.
                                   </li>
                                   <li>
                                     <strong>msgbus</strong> (<a
-                                      href="../../common/index.htm#nautilus_trader.common.component.MessageBus"
+                                      href="../../common/index.htm#posei_trader.common.component.MessageBus"
                                       ><em>MessageBus</em></a
                                     >) – The message bus for the client.
                                   </li>
                                   <li>
                                     <strong>cache</strong> (<a
-                                      href="../../cache/index.htm#nautilus_trader.cache.Cache"
+                                      href="../../cache/index.htm#posei_trader.cache.Cache"
                                       ><em>Cache</em></a
                                     >) – The cache for the client.
                                   </li>
                                   <li>
                                     <strong>clock</strong> (<a
-                                      href="../../common/index.htm#nautilus_trader.common.component.LiveClock"
+                                      href="../../common/index.htm#posei_trader.common.component.LiveClock"
                                       ><em>LiveClock</em></a
                                     >) – The clock for the client.
                                   </li>
@@ -3665,7 +3665,7 @@
                               <li>
                                 <strong>Return type:</strong>
                                 <a
-                                  href="#nautilus_trader.adapters.databento.data.DatabentoDataClient"
+                                  href="#posei_trader.adapters.databento.data.DatabentoDataClient"
                                   >DatabentoDataClient</a
                                 >
                               </li>
@@ -4403,7 +4403,7 @@
                             >
                               get_dataset_for_venue(venue:
                               <a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue"
                                 >Venue</a
                               >) → str<a
                                 href="#get_dataset_for_venuevenue-venue--str-1"
@@ -4418,7 +4418,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>venue</strong> (<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.Venue"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.Venue"
                                   ><em>Venue</em></a
                                 >) – The venue for the given dataset.
                               </li>
@@ -4436,14 +4436,14 @@
                               from_dbn_file(path: PathLike[str] | str,
                               instrument_id:
                               <a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >
                               | None = None, price_precision: int | None = None,
                               as_legacy_cython: bool = True, include_trades:
                               bool = False, use_exchange_as_venue: bool = False,
                               bars_timestamp_on_close: bool = True) → list[<a
-                                href="../../core/index.htm#nautilus_trader.core.Data"
+                                href="../../core/index.htm#posei_trader.core.Data"
                                 >Data</a
                               >]<a
                                 href="#from_dbn_filepath-pathlikestr--str-instrument_id-instrumentid--none--none-price_precision-int--none--none-as_legacy_cython-bool--true-include_trades-bool--false-use_exchange_as_venue-bool--false-bars_timestamp_on_close-bool--true--listdata-1"
@@ -4469,7 +4469,7 @@
                                   </li>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The Posei
@@ -4535,7 +4535,7 @@
                               </li>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../core/index.htm#nautilus_trader.core.Data"
+                                  href="../../core/index.htm#posei_trader.core.Data"
                                   >Data</a
                                 >] | list[pyo3.DatabentoImbalance] |
                                 list[pyo3.DatabentoStatistics]
@@ -4586,7 +4586,7 @@
                             <p>
                               Bases:
                               <a
-                                href="../../common/index.htm#nautilus_trader.common.providers.InstrumentProvider"
+                                href="../../common/index.htm#posei_trader.common.providers.InstrumentProvider"
                                 ><code>InstrumentProvider</code></a
                               >
                             </p>
@@ -4606,7 +4606,7 @@
                                   </li>
                                   <li>
                                     <strong>clock</strong> (<a
-                                      href="../../common/index.htm#nautilus_trader.common.component.LiveClock"
+                                      href="../../common/index.htm#posei_trader.common.component.LiveClock"
                                       ><em>LiveClock</em></a
                                     >) – The clock for the provider.
                                   </li>
@@ -4624,7 +4624,7 @@
                                   </li>
                                   <li>
                                     <strong>loader</strong> (<a
-                                      href="#nautilus_trader.adapters.databento.DatabentoDataLoader"
+                                      href="#posei_trader.adapters.databento.DatabentoDataLoader"
                                       ><em>DatabentoDataLoader</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The loader
@@ -4632,7 +4632,7 @@
                                   </li>
                                   <li>
                                     <strong>config</strong> (<a
-                                      href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"
+                                      href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"
                                       ><em>InstrumentProviderConfig</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The
@@ -4665,7 +4665,7 @@
                             >
                               <em>async</em> load_ids_async(instrument_ids:
                               list[<a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >], filters: dict | None = None) → None<a
                                 href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none-1"
@@ -4697,7 +4697,7 @@
                                     >
                                     <em>[</em
                                     ><a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >
                                     <em>]</em>) – The instrument IDs to load.
@@ -4738,7 +4738,7 @@
                             >
                               <em>async</em> load_async(instrument_id:
                               <a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >, filters: dict | None = None) → None<a
                                 href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none-1"
@@ -4765,7 +4765,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The instrument ID to load.
                                   </li>
@@ -4799,12 +4799,12 @@
                               id="async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument-1"
                             >
                               <em>async</em> get_range(instrument_ids: list[<a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >], start: Timestamp | date | str | int, end:
                               Timestamp | date | str | int | None = None,
                               filters: dict | None = None) → list[<a
-                                href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument"
+                                href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument"
                                 >Instrument</a
                               >]<a
                                 href="#async-get_rangeinstrument_ids-listinstrumentid-start-timestamp--date--str--int-end-timestamp--date--str--int--none--none-filters-dict--none--none--listinstrument-1"
@@ -4829,7 +4829,7 @@
                                     >
                                     <em>[</em
                                     ><a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >
                                     <em>]</em>) – The instrument IDs for the
@@ -4892,7 +4892,7 @@
                             >
                               add(instrument:
                               <a
-                                href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument"
+                                href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument"
                                 >Instrument</a
                               >) → None<a
                                 href="#addinstrument-instrument--none-1"
@@ -4907,7 +4907,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>instrument</strong> (<a
-                                  href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"
+                                  href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"
                                   ><em>Instrument</em></a
                                 >) – The instrument to add.
                               </li>
@@ -4917,7 +4917,7 @@
                               id="add_bulkinstruments-listinstrument--none-1"
                             >
                               add_bulk(instruments: list[<a
-                                href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument"
+                                href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument"
                                 >Instrument</a
                               >]) → None<a
                                 href="#add_bulkinstruments-listinstrument--none-1"
@@ -4936,7 +4936,7 @@
                                 <strong>instruments</strong> (<em>list</em>
                                 <em>[</em
                                 ><a
-                                  href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"
+                                  href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"
                                   ><em>Instrument</em></a
                                 >
                                 <em>]</em>) – The instruments to add.
@@ -4948,7 +4948,7 @@
                             >
                               add_currency(currency:
                               <a
-                                href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency"
+                                href="../../model/objects/index.htm#posei_trader.model.objects.Currency"
                                 >Currency</a
                               >) → None<a
                                 href="#add_currencycurrency-currency--none-1"
@@ -4963,7 +4963,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>currency</strong> (<a
-                                  href="../../model/index.htm#nautilus_trader.model.Currency"
+                                  href="../../model/index.htm#posei_trader.model.Currency"
                                   ><em>Currency</em></a
                                 >) – The currency to add.
                               </li>
@@ -4994,7 +4994,7 @@
                             >
                               currencies() → dict[str,
                               <a
-                                href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency"
+                                href="../../model/objects/index.htm#posei_trader.model.objects.Currency"
                                 >Currency</a
                               >]<a
                                 href="#currencies--dictstr-currency-1"
@@ -5012,7 +5012,7 @@
                               <li>
                                 <strong>Return type:</strong> dict[str,
                                 <a
-                                  href="../../model/index.htm#nautilus_trader.model.Currency"
+                                  href="../../model/index.htm#posei_trader.model.Currency"
                                   >Currency</a
                                 >]
                               </li>
@@ -5023,7 +5023,7 @@
                             >
                               currency(code: str) →
                               <a
-                                href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency"
+                                href="../../model/objects/index.htm#posei_trader.model.objects.Currency"
                                 >Currency</a
                               >
                               | None<a
@@ -5060,11 +5060,11 @@
                             >
                               find(instrument_id:
                               <a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >) →
                               <a
-                                href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument"
+                                href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument"
                                 >Instrument</a
                               >
                               | None<a
@@ -5083,7 +5083,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>instrument_id</strong> (<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   ><em>InstrumentId</em></a
                                 >) – The ID for the instrument
                               </li>
@@ -5097,11 +5097,11 @@
                               id="get_all--dictinstrumentid-instrument-1"
                             >
                               get_all() → dict[<a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >,
                               <a
-                                href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument"
+                                href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument"
                                 >Instrument</a
                               >]<a
                                 href="#get_all--dictinstrumentid-instrument-1"
@@ -5122,11 +5122,11 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> dict[<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   >InstrumentId</a
                                 >,
                                 <a
-                                  href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"
+                                  href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"
                                   >Instrument</a
                                 >]
                               </li>
@@ -5159,7 +5159,7 @@
                               id="list_all--listinstrument-1"
                             >
                               list_all() → list[<a
-                                href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument"
+                                href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument"
                                 >Instrument</a
                               >]<a
                                 href="#list_all--listinstrument-1"
@@ -5173,7 +5173,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"
+                                  href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"
                                   >Instrument</a
                                 >]
                               </li>
@@ -5184,7 +5184,7 @@
                             >
                               load(instrument_id:
                               <a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >, filters: dict | None = None) → None<a
                                 href="#loadinstrument_id-instrumentid-filters-dict--none--none--none-1"
@@ -5204,7 +5204,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The instrument ID to load.
                                   </li>
@@ -5254,7 +5254,7 @@
                               id="load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none-1"
                             >
                               load_ids(instrument_ids: list[<a
-                                href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                 >InstrumentId</a
                               >], filters: dict | None = None) → None<a
                                 href="#load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none-1"
@@ -5278,7 +5278,7 @@
                                     >
                                     <em>[</em
                                     ><a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >
                                     <em>]</em>) – The instrument IDs to load.
@@ -5324,7 +5324,7 @@
                             <p>
                               Bases:
                               <a
-                                href="../../live/index.htm#nautilus_trader.live.data_client.LiveMarketDataClient"
+                                href="../../live/index.htm#posei_trader.live.data_client.LiveMarketDataClient"
                                 ><code>LiveMarketDataClient</code></a
                               >
                             </p>
@@ -5350,31 +5350,31 @@
                                   </li>
                                   <li>
                                     <strong>msgbus</strong> (<a
-                                      href="../../common/index.htm#nautilus_trader.common.component.MessageBus"
+                                      href="../../common/index.htm#posei_trader.common.component.MessageBus"
                                       ><em>MessageBus</em></a
                                     >) – The message bus for the client.
                                   </li>
                                   <li>
                                     <strong>cache</strong> (<a
-                                      href="../../cache/index.htm#nautilus_trader.cache.Cache"
+                                      href="../../cache/index.htm#posei_trader.cache.Cache"
                                       ><em>Cache</em></a
                                     >) – The cache for the client.
                                   </li>
                                   <li>
                                     <strong>clock</strong> (<a
-                                      href="../../common/index.htm#nautilus_trader.common.component.LiveClock"
+                                      href="../../common/index.htm#posei_trader.common.component.LiveClock"
                                       ><em>LiveClock</em></a
                                     >) – The clock for the client.
                                   </li>
                                   <li>
                                     <strong>instrument_provder</strong> (<a
-                                      href="#nautilus_trader.adapters.databento.DatabentoInstrumentProvider"
+                                      href="#posei_trader.adapters.databento.DatabentoInstrumentProvider"
                                       ><em>DatabentoInstrumentProvider</em></a
                                     >) – The instrument provider for the client.
                                   </li>
                                   <li>
                                     <strong>loader</strong> (<a
-                                      href="#nautilus_trader.adapters.databento.DatabentoDataLoader"
+                                      href="#posei_trader.adapters.databento.DatabentoDataLoader"
                                       ><em>DatabentoDataLoader</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The loader
@@ -5382,7 +5382,7 @@
                                   </li>
                                   <li>
                                     <strong>config</strong> (<a
-                                      href="#nautilus_trader.adapters.databento.DatabentoDataClientConfig"
+                                      href="#posei_trader.adapters.databento.DatabentoDataClientConfig"
                                       ><em>DatabentoDataClientConfig</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The
@@ -5419,7 +5419,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The order book instrument to subscribe
                                     to.
@@ -5459,7 +5459,7 @@
                             <p>Connect the client.</p>
                             <h4
                               class="anchor anchorWithHideOnScrollNavbar_WYt5"
-                              id="create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-nautilus_tradercorerustcommonlogcolor--logcolornormal-0--task"
+                              id="create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-posei_tradercorerustcommonlogcolor--logcolornormal-0--task"
                             >
                               create_task(coro: ~collections.abc.Coroutine,
                               log_msg: str | None = None, actions:
@@ -5467,7 +5467,7 @@
                               success_msg: str | None = None, success_color:
                               ~posei_trader.core.rust.common.LogColor =
                               &lt;LogColor.NORMAL: 0&gt;) → Task<a
-                                href="#create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-nautilus_tradercorerustcommonlogcolor--logcolornormal-0--task"
+                                href="#create_taskcoro-collectionsabccoroutine-log_msg-str--none--none-actions-collectionsabccallable--none--none-success_msg-str--none--none-success_color-posei_tradercorerustcommonlogcolor--logcolornormal-0--task"
                                 class="hash-link"
                                 aria-label="Direct link to create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~posei_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task"
                                 title="Direct link to create_task(coro: ~collections.abc.Coroutine, log_msg: str | None = None, actions: ~collections.abc.Callable | None = None, success_msg: str | None = None, success_color: ~posei_trader.core.rust.common.LogColor = &lt;LogColor.NORMAL: 0&gt;) → Task"
@@ -5844,7 +5844,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>request</strong> (<a
-                                  href="../../data/index.htm#nautilus_trader.data.messages.RequestData"
+                                  href="../../data/index.htm#posei_trader.data.messages.RequestData"
                                   ><em>RequestData</em></a
                                 >) – The message for the data request.
                               </li>
@@ -5871,7 +5871,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>request</strong> (<a
-                                  href="../../data/index.htm#nautilus_trader.data.messages.RequestBars"
+                                  href="../../data/index.htm#posei_trader.data.messages.RequestBars"
                                   ><em>RequestBars</em></a
                                 >) – The message for the data request.
                               </li>
@@ -5897,7 +5897,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>request</strong> (<a
-                                  href="../../data/index.htm#nautilus_trader.data.messages.RequestInstrument"
+                                  href="../../data/index.htm#posei_trader.data.messages.RequestInstrument"
                                   ><em>RequestInstrument</em></a
                                 >) – The message for the data request.
                               </li>
@@ -5922,7 +5922,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>request</strong> (<a
-                                  href="../../data/index.htm#nautilus_trader.data.messages.RequestInstruments"
+                                  href="../../data/index.htm#posei_trader.data.messages.RequestInstruments"
                                   ><em>RequestInstruments</em></a
                                 >) – The message for the data request.
                               </li>
@@ -5945,7 +5945,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>request</strong> (<a
-                                  href="../../data/index.htm#nautilus_trader.data.messages.RequestOrderBookSnapshot"
+                                  href="../../data/index.htm#posei_trader.data.messages.RequestOrderBookSnapshot"
                                   ><em>RequestOrderBookSnapshot</em></a
                                 >) – The message for the data request.
                               </li>
@@ -5968,7 +5968,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>request</strong> (<a
-                                  href="../../data/index.htm#nautilus_trader.data.messages.RequestQuoteTicks"
+                                  href="../../data/index.htm#posei_trader.data.messages.RequestQuoteTicks"
                                   ><em>RequestQuoteTicks</em></a
                                 >) – The message for the data request.
                               </li>
@@ -5991,7 +5991,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>request</strong> (<a
-                                  href="../../data/index.htm#nautilus_trader.data.messages.RequestTradeTicks"
+                                  href="../../data/index.htm#posei_trader.data.messages.RequestTradeTicks"
                                   ><em>RequestTradeTicks</em></a
                                 >) – The message for the data request.
                               </li>
@@ -6251,7 +6251,7 @@
                                 <ul>
                                   <li>
                                     <strong>data_type</strong> (<a
-                                      href="../../model/data/index.htm#nautilus_trader.model.data.DataType"
+                                      href="../../model/data/index.htm#posei_trader.model.data.DataType"
                                       ><em>DataType</em></a
                                     >) – The data type for the subscription.
                                   </li>
@@ -6284,7 +6284,7 @@
                                 <ul>
                                   <li>
                                     <strong>bar_type</strong> (<a
-                                      href="../../model/data/index.htm#nautilus_trader.model.data.BarType"
+                                      href="../../model/data/index.htm#posei_trader.model.data.BarType"
                                       ><em>BarType</em></a
                                     >) – The bar type to subscribe to.
                                   </li>
@@ -6320,7 +6320,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The instrument to subscribe to.
                                   </li>
@@ -6384,7 +6384,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The tick instrument to subscribe to.
                                   </li>
@@ -6420,7 +6420,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The tick instrument to subscribe to.
                                   </li>
@@ -6481,7 +6481,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The instrument to subscribe to.
                                   </li>
@@ -6517,7 +6517,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The order book instrument to subscribe
                                     to.
@@ -6566,7 +6566,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The tick instrument to subscribe to.
                                   </li>
@@ -6602,7 +6602,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The tick instrument to subscribe to.
                                   </li>
@@ -6631,7 +6631,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../model/data/index.htm#nautilus_trader.model.data.BarType"
+                                  href="../../model/data/index.htm#posei_trader.model.data.BarType"
                                   >BarType</a
                                 >]
                               </li>
@@ -6652,7 +6652,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../model/data/index.htm#nautilus_trader.model.data.DataType"
+                                  href="../../model/data/index.htm#posei_trader.model.data.DataType"
                                   >DataType</a
                                 >]
                               </li>
@@ -6676,7 +6676,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   >InstrumentId</a
                                 >]
                               </li>
@@ -6697,7 +6697,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   >InstrumentId</a
                                 >]
                               </li>
@@ -6721,7 +6721,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   >InstrumentId</a
                                 >]
                               </li>
@@ -6742,7 +6742,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   >InstrumentId</a
                                 >]
                               </li>
@@ -6766,7 +6766,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   >InstrumentId</a
                                 >]
                               </li>
@@ -6790,7 +6790,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   >InstrumentId</a
                                 >]
                               </li>
@@ -6814,7 +6814,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   >InstrumentId</a
                                 >]
                               </li>
@@ -6837,7 +6837,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   >InstrumentId</a
                                 >]
                               </li>
@@ -6860,7 +6860,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   >InstrumentId</a
                                 >]
                               </li>
@@ -6919,7 +6919,7 @@
                                 <ul>
                                   <li>
                                     <strong>data_type</strong> (<a
-                                      href="../../model/data/index.htm#nautilus_trader.model.data.DataType"
+                                      href="../../model/data/index.htm#posei_trader.model.data.DataType"
                                       ><em>DataType</em></a
                                     >) – The data type for the subscription.
                                   </li>
@@ -6954,7 +6954,7 @@
                                 <ul>
                                   <li>
                                     <strong>bar_type</strong> (<a
-                                      href="../../model/data/index.htm#nautilus_trader.model.data.BarType"
+                                      href="../../model/data/index.htm#posei_trader.model.data.BarType"
                                       ><em>BarType</em></a
                                     >) – The bar type to unsubscribe from.
                                   </li>
@@ -6990,7 +6990,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The instrument to subscribe to.
                                   </li>
@@ -7026,7 +7026,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The instrument to unsubscribe from.
                                   </li>
@@ -7062,7 +7062,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The tick instrument to unsubscribe
                                     from.
@@ -7099,7 +7099,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The instrument status updates to
                                     unsubscribe from.
@@ -7161,7 +7161,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The instrument to subscribe to.
                                   </li>
@@ -7197,7 +7197,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The order book instrument to
                                     unsubscribe from.
@@ -7234,7 +7234,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The order book instrument to
                                     unsubscribe from.
@@ -7271,7 +7271,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The tick instrument to unsubscribe
                                     from.
@@ -7308,7 +7308,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The tick instrument to unsubscribe
                                     from.

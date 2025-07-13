@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `crates/common/src/enums.rs`."><title>enums.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-84e720fa.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="nautilus_common" data-themes="" data-resource-suffix="" data-rustdoc-version="1.90.0-nightly (28f1c8079 2025-06-24)" data-channel="nightly" data-search-js="search-92309212.js" data-settings-js="settings-5514c975.js" ><script src="../../static.files/storage-4e99c027.js"></script><script defer src="../../static.files/src-script-813739b1.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-340f468f.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-32bb7600.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1><div class="sub-heading">nautilus_common/</div>enums.rs</h1><rustdoc-toolbar></rustdoc-toolbar></div><div class="example-wrap digits-3"><pre class="rust"><code><a href=#1 id=1 data-nosnippet>1</a><span class="comment">// -------------------------------------------------------------------------------------------------
 <a href=#2 id=2 data-nosnippet>2</a>//  Copyright (C) 2015-2025 Posei Systems Pty Ltd. All rights reserved.
-<a href=#3 id=3 data-nosnippet>3</a>//  https://nautechsystems.io
+<a href=#3 id=3 data-nosnippet>3</a>//  https://poseitrader.io
 <a href=#4 id=4 data-nosnippet>4</a>//
 <a href=#5 id=5 data-nosnippet>5</a>//  Licensed under the GNU Lesser General Public License Version 3.0 (the "License");
 <a href=#6 id=6 data-nosnippet>6</a>//  You may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@
 <a href=#42 id=42 data-nosnippet>42</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#43 id=43 data-nosnippet>43</a>#[cfg_attr(
 <a href=#44 id=44 data-nosnippet>44</a>    feature = <span class="string">"python"</span>,
-<a href=#45 id=45 data-nosnippet>45</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.common.enums"</span>)
+<a href=#45 id=45 data-nosnippet>45</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.common.enums"</span>)
 <a href=#46 id=46 data-nosnippet>46</a>)]
 <a href=#47 id=47 data-nosnippet>47</a></span><span class="kw">pub enum </span>ComponentState {
 <a href=#48 id=48 data-nosnippet>48</a>    <span class="doccomment">/// When a component is instantiated, but not yet ready to fulfill its specification.
@@ -98,7 +98,7 @@
 <a href=#98 id=98 data-nosnippet>98</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#99 id=99 data-nosnippet>99</a>#[cfg_attr(
 <a href=#100 id=100 data-nosnippet>100</a>    feature = <span class="string">"python"</span>,
-<a href=#101 id=101 data-nosnippet>101</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.common.enums"</span>)
+<a href=#101 id=101 data-nosnippet>101</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.common.enums"</span>)
 <a href=#102 id=102 data-nosnippet>102</a>)]
 <a href=#103 id=103 data-nosnippet>103</a></span><span class="kw">pub enum </span>ComponentTrigger {
 <a href=#104 id=104 data-nosnippet>104</a>    <span class="doccomment">/// A trigger for the component to initialize.
@@ -155,7 +155,7 @@
 <a href=#155 id=155 data-nosnippet>155</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#156 id=156 data-nosnippet>156</a>#[cfg_attr(
 <a href=#157 id=157 data-nosnippet>157</a>    feature = <span class="string">"python"</span>,
-<a href=#158 id=158 data-nosnippet>158</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.common.enums"</span>)
+<a href=#158 id=158 data-nosnippet>158</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.common.enums"</span>)
 <a href=#159 id=159 data-nosnippet>159</a>)]
 <a href=#160 id=160 data-nosnippet>160</a></span><span class="kw">pub enum </span>Environment {
 <a href=#161 id=161 data-nosnippet>161</a>    Backtest,
@@ -185,7 +185,7 @@
 <a href=#185 id=185 data-nosnippet>185</a>#[serde(rename_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#186 id=186 data-nosnippet>186</a>#[cfg_attr(
 <a href=#187 id=187 data-nosnippet>187</a>    feature = <span class="string">"python"</span>,
-<a href=#188 id=188 data-nosnippet>188</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.common.enums"</span>)
+<a href=#188 id=188 data-nosnippet>188</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.common.enums"</span>)
 <a href=#189 id=189 data-nosnippet>189</a>)]
 <a href=#190 id=190 data-nosnippet>190</a></span><span class="kw">pub enum </span>LogLevel {
 <a href=#191 id=191 data-nosnippet>191</a>    <span class="doccomment">/// The **OFF** log level. A level lower than all other log levels (off).
@@ -236,7 +236,7 @@
 <a href=#236 id=236 data-nosnippet>236</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#237 id=237 data-nosnippet>237</a>#[cfg_attr(
 <a href=#238 id=238 data-nosnippet>238</a>    feature = <span class="string">"python"</span>,
-<a href=#239 id=239 data-nosnippet>239</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.common.enums"</span>)
+<a href=#239 id=239 data-nosnippet>239</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.common.enums"</span>)
 <a href=#240 id=240 data-nosnippet>240</a>)]
 <a href=#241 id=241 data-nosnippet>241</a></span><span class="kw">pub enum </span>LogColor {
 <a href=#242 id=242 data-nosnippet>242</a>    <span class="doccomment">/// The default/normal log color.
@@ -311,7 +311,7 @@
 <a href=#311 id=311 data-nosnippet>311</a>#[strum(serialize_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#312 id=312 data-nosnippet>312</a>#[cfg_attr(
 <a href=#313 id=313 data-nosnippet>313</a>    feature = <span class="string">"python"</span>,
-<a href=#314 id=314 data-nosnippet>314</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.common.enums"</span>)
+<a href=#314 id=314 data-nosnippet>314</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.common.enums"</span>)
 <a href=#315 id=315 data-nosnippet>315</a>)]
 <a href=#316 id=316 data-nosnippet>316</a></span><span class="kw">pub enum </span>LogFormat {
 <a href=#317 id=317 data-nosnippet>317</a>    <span class="doccomment">/// Header log format. This ANSI escape code is used for magenta text color,
@@ -355,7 +355,7 @@
 <a href=#355 id=355 data-nosnippet>355</a>#[serde(rename_all = <span class="string">"SCREAMING_SNAKE_CASE"</span>)]
 <a href=#356 id=356 data-nosnippet>356</a>#[cfg_attr(
 <a href=#357 id=357 data-nosnippet>357</a>    feature = <span class="string">"python"</span>,
-<a href=#358 id=358 data-nosnippet>358</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"nautilus_trader.core.nautilus_pyo3.common.enums"</span>)
+<a href=#358 id=358 data-nosnippet>358</a>    pyo3::pyclass(eq, eq_int, module = <span class="string">"posei_trader.core.nautilus_pyo3.common.enums"</span>)
 <a href=#359 id=359 data-nosnippet>359</a>)]
 <a href=#360 id=360 data-nosnippet>360</a></span><span class="kw">pub enum </span>SerializationEncoding {
 <a href=#361 id=361 data-nosnippet>361</a>    <span class="doccomment">/// The MessagePack encoding.

@@ -50,7 +50,7 @@ cannot be created from the path.</p>
 <span class="kw">use </span>nautilus_persistence::backend::catalog::ParquetDataCatalog;
 
 <span class="kw">let </span>catalog = ParquetDataCatalog::new(
-    PathBuf::from(<span class="string">"/tmp/nautilus_data"</span>),
+    PathBuf::from(<span class="string">"/tmp/posei_trader"</span>),
     <span class="prelude-val">None</span>,        <span class="comment">// no storage options
     </span><span class="prelude-val">Some</span>(<span class="number">1000</span>),  <span class="comment">// smaller batch size
     </span><span class="prelude-val">None</span>,        <span class="comment">// default compression
@@ -100,7 +100,7 @@ supported by the <code>object_store</code> crate.</p>
 
 <span class="comment">// Local filesystem
 </span><span class="kw">let </span>local_catalog = ParquetDataCatalog::from_uri(
-    <span class="string">"/tmp/nautilus_data"</span>,
+    <span class="string">"/tmp/posei_trader"</span>,
     <span class="prelude-val">None</span>, <span class="prelude-val">None</span>, <span class="prelude-val">None</span>, <span class="prelude-val">None
 </span>)<span class="question-mark">?</span>;
 

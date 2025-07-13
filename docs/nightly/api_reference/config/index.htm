@@ -24,7 +24,7 @@
 <div class="language-pycon codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#9CDCFE;--prism-background-color:#1E1E1E"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-pycon codeBlock_bY9V thin-scrollbar" style="color:#9CDCFE;background-color:#1E1E1E"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">&gt;&gt;&gt; parse_filters_expr(&quot;print(&#x27;hello&#x27;)&quot;)</span><br></span></code></pre></div></div>
 <div class="language-pycon codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#9CDCFE;--prism-background-color:#1E1E1E"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-pycon codeBlock_bY9V thin-scrollbar" style="color:#9CDCFE;background-color:#1E1E1E"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">&gt;&gt;&gt; parse_filters_expr(&quot;None&quot;)</span><br></span></code></pre></div></div>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-backtestvenueconfig"><em>class</em> BacktestVenueConfig<a href="#class-backtestvenueconfig" class="hash-link" aria-label="Direct link to class-backtestvenueconfig" title="Direct link to class-backtestvenueconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Represents a venue configuration for one specific backtest engine.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -33,8 +33,8 @@
 <li><strong>oms_type</strong> (<em>str</em>) – The order management system type for the exchange. If <code>HEDGING</code> will
 generate new position IDs.</li>
 <li><strong>account_type</strong> (<em>str</em>) – The account type for the exchange.</li>
-<li><strong>starting_balances</strong> (<em>list</em> <em>[</em><a href="../model/index.htm#nautilus_trader.model.Money"><em>Money</em></a> <em>|</em> <em>str</em> <em>]</em>) – The starting account balances (specify one for a single asset account).</li>
-<li><strong>base_currency</strong> (<a href="../model/index.htm#nautilus_trader.model.Currency"><em>Currency</em></a> <em>|</em> <em>str</em> <em>,</em> <em>optional</em>) – The account base currency for the exchange. Use <code>None</code> for multi-currency accounts.</li>
+<li><strong>starting_balances</strong> (<em>list</em> <em>[</em><a href="../model/index.htm#posei_trader.model.Money"><em>Money</em></a> <em>|</em> <em>str</em> <em>]</em>) – The starting account balances (specify one for a single asset account).</li>
+<li><strong>base_currency</strong> (<a href="../model/index.htm#posei_trader.model.Currency"><em>Currency</em></a> <em>|</em> <em>str</em> <em>,</em> <em>optional</em>) – The account base currency for the exchange. Use <code>None</code> for multi-currency accounts.</li>
 <li><strong>default_leverage</strong> (<em>float</em> <em>,</em> <em>optional</em>) – The account default leverage (for margin accounts).</li>
 <li><strong>leverages</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>float</em> <em>]</em> <em>,</em> <em>optional</em>) – The instrument specific leverage configuration (for margin accounts).</li>
 <li><strong>book_type</strong> (<em>str</em>) – The default order book type.</li>
@@ -58,10 +58,10 @@ If True, the processing order adapts with the heuristic:
 </ul>
 </li>
 <li><strong>trade_execution</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If trades should be processed by the matching engine(s) (and move the market).</li>
-<li><strong>modules</strong> (<em>list</em> <em>[</em><a href="#nautilus_trader.common.config.ImportableActorConfig"><em>ImportableActorConfig</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The simulation modules for the venue.</li>
-<li><strong>fill_model</strong> (<a href="#nautilus_trader.backtest.config.ImportableFillModelConfig"><em>ImportableFillModelConfig</em></a> <em>,</em> <em>optional</em>) – The fill model for the venue.</li>
-<li><strong>latency_model</strong> (<a href="#nautilus_trader.backtest.config.ImportableLatencyModelConfig"><em>ImportableLatencyModelConfig</em></a> <em>,</em> <em>optional</em>) – The latency model for the venue.</li>
-<li><strong>fee_model</strong> (<a href="#nautilus_trader.backtest.config.ImportableFeeModelConfig"><em>ImportableFeeModelConfig</em></a> <em>,</em> <em>optional</em>) – The fee model for the venue.</li>
+<li><strong>modules</strong> (<em>list</em> <em>[</em><a href="#posei_trader.common.config.ImportableActorConfig"><em>ImportableActorConfig</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The simulation modules for the venue.</li>
+<li><strong>fill_model</strong> (<a href="#posei_trader.backtest.config.ImportableFillModelConfig"><em>ImportableFillModelConfig</em></a> <em>,</em> <em>optional</em>) – The fill model for the venue.</li>
+<li><strong>latency_model</strong> (<a href="#posei_trader.backtest.config.ImportableLatencyModelConfig"><em>ImportableLatencyModelConfig</em></a> <em>,</em> <em>optional</em>) – The latency model for the venue.</li>
+<li><strong>fee_model</strong> (<a href="#posei_trader.backtest.config.ImportableFeeModelConfig"><em>ImportableFeeModelConfig</em></a> <em>,</em> <em>optional</em>) – The fee model for the venue.</li>
 </ul>
 </li>
 </ul>
@@ -84,10 +84,10 @@ If True, the processing order adapts with the heuristic:
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="bar_execution--bool">bar_execution <em>: bool</em><a href="#bar_execution--bool" class="hash-link" aria-label="Direct link to bar_execution--bool" title="Direct link to bar_execution--bool">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="bar_adaptive_high_low_ordering--bool">bar_adaptive_high_low_ordering <em>: bool</em><a href="#bar_adaptive_high_low_ordering--bool" class="hash-link" aria-label="Direct link to bar_adaptive_high_low_ordering--bool" title="Direct link to bar_adaptive_high_low_ordering--bool">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="trade_execution--bool">trade_execution <em>: bool</em><a href="#trade_execution--bool" class="hash-link" aria-label="Direct link to trade_execution--bool" title="Direct link to trade_execution--bool">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="modules--listimportableactorconfig--none">modules <em>: list[<a href="#nautilus_trader.common.config.ImportableActorConfig">ImportableActorConfig</a>] | None</em><a href="#modules--listimportableactorconfig--none" class="hash-link" aria-label="Direct link to modules--listimportableactorconfig--none" title="Direct link to modules--listimportableactorconfig--none">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="fill_model--importablefillmodelconfig--none">fill_model <em>: <a href="#nautilus_trader.backtest.config.ImportableFillModelConfig">ImportableFillModelConfig</a> | None</em><a href="#fill_model--importablefillmodelconfig--none" class="hash-link" aria-label="Direct link to fill_model--importablefillmodelconfig--none" title="Direct link to fill_model--importablefillmodelconfig--none">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="latency_model--importablelatencymodelconfig--none">latency_model <em>: <a href="#nautilus_trader.backtest.config.ImportableLatencyModelConfig">ImportableLatencyModelConfig</a> | None</em><a href="#latency_model--importablelatencymodelconfig--none" class="hash-link" aria-label="Direct link to latency_model--importablelatencymodelconfig--none" title="Direct link to latency_model--importablelatencymodelconfig--none">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="fee_model--importablefeemodelconfig--none">fee_model <em>: <a href="#nautilus_trader.backtest.config.ImportableFeeModelConfig">ImportableFeeModelConfig</a> | None</em><a href="#fee_model--importablefeemodelconfig--none" class="hash-link" aria-label="Direct link to fee_model--importablefeemodelconfig--none" title="Direct link to fee_model--importablefeemodelconfig--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="modules--listimportableactorconfig--none">modules <em>: list[<a href="#posei_trader.common.config.ImportableActorConfig">ImportableActorConfig</a>] | None</em><a href="#modules--listimportableactorconfig--none" class="hash-link" aria-label="Direct link to modules--listimportableactorconfig--none" title="Direct link to modules--listimportableactorconfig--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="fill_model--importablefillmodelconfig--none">fill_model <em>: <a href="#posei_trader.backtest.config.ImportableFillModelConfig">ImportableFillModelConfig</a> | None</em><a href="#fill_model--importablefillmodelconfig--none" class="hash-link" aria-label="Direct link to fill_model--importablefillmodelconfig--none" title="Direct link to fill_model--importablefillmodelconfig--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="latency_model--importablelatencymodelconfig--none">latency_model <em>: <a href="#posei_trader.backtest.config.ImportableLatencyModelConfig">ImportableLatencyModelConfig</a> | None</em><a href="#latency_model--importablelatencymodelconfig--none" class="hash-link" aria-label="Direct link to latency_model--importablelatencymodelconfig--none" title="Direct link to latency_model--importablelatencymodelconfig--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="fee_model--importablefeemodelconfig--none">fee_model <em>: <a href="#posei_trader.backtest.config.ImportableFeeModelConfig">ImportableFeeModelConfig</a> | None</em><a href="#fee_model--importablefeemodelconfig--none" class="hash-link" aria-label="Direct link to fee_model--importablefeemodelconfig--none" title="Direct link to fee_model--importablefeemodelconfig--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="dict--dictstr-any">dict() → dict[str, Any]<a href="#dict--dictstr-any" class="hash-link" aria-label="Direct link to dict() → dict[str, Any]" title="Direct link to dict() → dict[str, Any]">​</a></h4>
 <p>Return a dictionary representation of the configuration.</p>
 <ul>
@@ -144,7 +144,7 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-backtestdataconfig"><em>class</em> BacktestDataConfig<a href="#class-backtestdataconfig" class="hash-link" aria-label="Direct link to class-backtestdataconfig" title="Direct link to class-backtestdataconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Represents the data configuration for one specific backtest run.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -153,7 +153,7 @@ bool</li>
 <li><strong>data_cls</strong> (<em>str</em>) – The data type for the configuration.</li>
 <li><strong>catalog_fs_protocol</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The fsspec filesystem protocol for the catalog.</li>
 <li><strong>catalog_fs_storage_options</strong> (<em>dict</em> <em>,</em> <em>optional</em>) – The fsspec storage options.</li>
-<li><strong>instrument_id</strong> (<a href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>|</em> <em>str</em> <em>,</em> <em>optional</em>) – The instrument ID for the data configuration.</li>
+<li><strong>instrument_id</strong> (<a href="../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>|</em> <em>str</em> <em>,</em> <em>optional</em>) – The instrument ID for the data configuration.</li>
 <li><strong>start_time</strong> (<em>str</em> <em>or</em> <em>int</em> <em>,</em> <em>optional</em>) – The start time for the data configuration.
 Can be an ISO 8601 format datetime string, or UNIX nanoseconds integer.</li>
 <li><strong>end_time</strong> (<em>str</em> <em>or</em> <em>int</em> <em>,</em> <em>optional</em>) – The end time for the data configuration.
@@ -161,11 +161,11 @@ Can be an ISO 8601 format datetime string, or UNIX nanoseconds integer.</li>
 <li><strong>filter_expr</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The additional filter expressions for the data catalog query.</li>
 <li><strong>client_id</strong> (<em>str</em> <em>,</em> <em>optional</em>) – The client ID for the data configuration.</li>
 <li><strong>metadata</strong> (<em>dict</em> <em>or</em> <em>callable</em> <em>,</em> <em>optional</em>) – The metadata for the data catalog query.</li>
-<li><strong>bar_spec</strong> (<a href="../model/data/index.htm#nautilus_trader.model.data.BarSpecification"><em>BarSpecification</em></a> <em>|</em> <em>str</em> <em>,</em> <em>optional</em>) – The bar specification for the data catalog query.</li>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>|</em> <em>str</em> <em>]</em> <em>,</em> <em>optional</em>) – The instrument IDs for the data catalog query.
+<li><strong>bar_spec</strong> (<a href="../model/data/index.htm#posei_trader.model.data.BarSpecification"><em>BarSpecification</em></a> <em>|</em> <em>str</em> <em>,</em> <em>optional</em>) – The bar specification for the data catalog query.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>|</em> <em>str</em> <em>]</em> <em>,</em> <em>optional</em>) – The instrument IDs for the data catalog query.
 Can be used if instrument_id is not specified.
 If bar_spec is specified an equivalent list of bar_types will be constructed.</li>
-<li><strong>bar_types</strong> (<em>list</em> <em>[</em><a href="../model/data/index.htm#nautilus_trader.model.data.BarType"><em>BarType</em></a> <em>|</em> <em>str</em> <em>]</em> <em>,</em> <em>optional</em>) – The bar types for the data catalog query.
+<li><strong>bar_types</strong> (<em>list</em> <em>[</em><a href="../model/data/index.htm#posei_trader.model.data.BarType"><em>BarType</em></a> <em>|</em> <em>str</em> <em>]</em> <em>,</em> <em>optional</em>) – The bar types for the data catalog query.
 Can be used if instrument_id is not specified.</li>
 </ul>
 </li>
@@ -174,7 +174,7 @@ Can be used if instrument_id is not specified.</li>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="data_cls--str">data_cls <em>: str</em><a href="#data_cls--str" class="hash-link" aria-label="Direct link to data_cls--str" title="Direct link to data_cls--str">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="catalog_fs_protocol--str--none">catalog_fs_protocol <em>: str | None</em><a href="#catalog_fs_protocol--str--none" class="hash-link" aria-label="Direct link to catalog_fs_protocol--str--none" title="Direct link to catalog_fs_protocol--str--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="catalog_fs_storage_options--dict--none">catalog_fs_storage_options <em>: dict | None</em><a href="#catalog_fs_storage_options--dict--none" class="hash-link" aria-label="Direct link to catalog_fs_storage_options--dict--none" title="Direct link to catalog_fs_storage_options--dict--none">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_id--instrumentid--none">instrument_id <em>: <a href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a> | None</em><a href="#instrument_id--instrumentid--none" class="hash-link" aria-label="Direct link to instrument_id--instrumentid--none" title="Direct link to instrument_id--instrumentid--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_id--instrumentid--none">instrument_id <em>: <a href="../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a> | None</em><a href="#instrument_id--instrumentid--none" class="hash-link" aria-label="Direct link to instrument_id--instrumentid--none" title="Direct link to instrument_id--instrumentid--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="start_time--str--int--none">start_time <em>: str | int | None</em><a href="#start_time--str--int--none" class="hash-link" aria-label="Direct link to start_time--str--int--none" title="Direct link to start_time--str--int--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="end_time--str--int--none">end_time <em>: str | int | None</em><a href="#end_time--str--int--none" class="hash-link" aria-label="Direct link to end_time--str--int--none" title="Direct link to end_time--str--int--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="filter_expr--str--none">filter_expr <em>: str | None</em><a href="#filter_expr--str--none" class="hash-link" aria-label="Direct link to filter_expr--str--none" title="Direct link to filter_expr--str--none">​</a></h4>
@@ -265,23 +265,23 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-backtestengineconfig"><em>class</em> BacktestEngineConfig<a href="#class-backtestengineconfig" class="hash-link" aria-label="Direct link to class-backtestengineconfig" title="Direct link to class-backtestengineconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.system.config.PoseiKernelConfig"><code>PoseiKernelConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.system.config.PoseiKernelConfig"><code>PoseiKernelConfig</code></a></p>
 <p>Configuration for <code>BacktestEngine</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>trader_id</strong> (<a href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.TraderId"><em>TraderId</em></a>) – The trader ID for the node (must be a name and ID tag separated by a hyphen).</li>
+<li><strong>trader_id</strong> (<a href="../model/identifiers/index.htm#posei_trader.model.identifiers.TraderId"><em>TraderId</em></a>) – The trader ID for the node (must be a name and ID tag separated by a hyphen).</li>
 <li><strong>log_level</strong> (<em>str</em> <em>,</em> <em>default &quot;INFO&quot;</em>) – The stdout log level for the node.</li>
 <li><strong>loop_debug</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If the asyncio event loop should be in debug mode.</li>
-<li><strong>cache</strong> (<a href="#nautilus_trader.cache.config.CacheConfig"><em>CacheConfig</em></a> <em>,</em> <em>optional</em>) – The cache configuration.</li>
-<li><strong>data_engine</strong> (<a href="#nautilus_trader.data.config.DataEngineConfig"><em>DataEngineConfig</em></a> <em>,</em> <em>optional</em>) – The live data engine configuration.</li>
-<li><strong>risk_engine</strong> (<a href="#nautilus_trader.risk.config.RiskEngineConfig"><em>RiskEngineConfig</em></a> <em>,</em> <em>optional</em>) – The live risk engine configuration.</li>
-<li><strong>exec_engine</strong> (<a href="#nautilus_trader.execution.config.ExecEngineConfig"><em>ExecEngineConfig</em></a> <em>,</em> <em>optional</em>) – The live execution engine configuration.</li>
-<li><strong>streaming</strong> (<a href="#nautilus_trader.persistence.config.StreamingConfig"><em>StreamingConfig</em></a> <em>,</em> <em>optional</em>) – The configuration for streaming to feather files.</li>
-<li><strong>strategies</strong> (<em>list</em> <em>[</em><a href="#nautilus_trader.trading.config.ImportableStrategyConfig"><em>ImportableStrategyConfig</em></a> <em>]</em>) – The strategy configurations for the kernel.</li>
-<li><strong>actors</strong> (<em>list</em> <em>[</em><a href="#nautilus_trader.common.config.ImportableActorConfig"><em>ImportableActorConfig</em></a> <em>]</em>) – The actor configurations for the kernel.</li>
-<li><strong>exec_algorithms</strong> (<em>list</em> <em>[</em><a href="#nautilus_trader.execution.config.ImportableExecAlgorithmConfig"><em>ImportableExecAlgorithmConfig</em></a> <em>]</em>) – The execution algorithm configurations for the kernel.</li>
-<li><strong>controller</strong> (<a href="#nautilus_trader.trading.config.ImportableControllerConfig"><em>ImportableControllerConfig</em></a> <em>,</em> <em>optional</em>) – The trader controller for the kernel.</li>
+<li><strong>cache</strong> (<a href="#posei_trader.cache.config.CacheConfig"><em>CacheConfig</em></a> <em>,</em> <em>optional</em>) – The cache configuration.</li>
+<li><strong>data_engine</strong> (<a href="#posei_trader.data.config.DataEngineConfig"><em>DataEngineConfig</em></a> <em>,</em> <em>optional</em>) – The live data engine configuration.</li>
+<li><strong>risk_engine</strong> (<a href="#posei_trader.risk.config.RiskEngineConfig"><em>RiskEngineConfig</em></a> <em>,</em> <em>optional</em>) – The live risk engine configuration.</li>
+<li><strong>exec_engine</strong> (<a href="#posei_trader.execution.config.ExecEngineConfig"><em>ExecEngineConfig</em></a> <em>,</em> <em>optional</em>) – The live execution engine configuration.</li>
+<li><strong>streaming</strong> (<a href="#posei_trader.persistence.config.StreamingConfig"><em>StreamingConfig</em></a> <em>,</em> <em>optional</em>) – The configuration for streaming to feather files.</li>
+<li><strong>strategies</strong> (<em>list</em> <em>[</em><a href="#posei_trader.trading.config.ImportableStrategyConfig"><em>ImportableStrategyConfig</em></a> <em>]</em>) – The strategy configurations for the kernel.</li>
+<li><strong>actors</strong> (<em>list</em> <em>[</em><a href="#posei_trader.common.config.ImportableActorConfig"><em>ImportableActorConfig</em></a> <em>]</em>) – The actor configurations for the kernel.</li>
+<li><strong>exec_algorithms</strong> (<em>list</em> <em>[</em><a href="#posei_trader.execution.config.ImportableExecAlgorithmConfig"><em>ImportableExecAlgorithmConfig</em></a> <em>]</em>) – The execution algorithm configurations for the kernel.</li>
+<li><strong>controller</strong> (<a href="#posei_trader.trading.config.ImportableControllerConfig"><em>ImportableControllerConfig</em></a> <em>,</em> <em>optional</em>) – The trader controller for the kernel.</li>
 <li><strong>load_state</strong> (<em>bool</em> <em>,</em> <em>default True</em>) – If trading strategy state should be loaded from the database on start.</li>
 <li><strong>save_state</strong> (<em>bool</em> <em>,</em> <em>default True</em>) – If trading strategy state should be saved to the database on stop.</li>
 <li><strong>bypass_logging</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If logging should be bypassed.</li>
@@ -289,24 +289,24 @@ bool</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="environment--environment">environment <em>: <a href="../common/index.htm#nautilus_trader.common.Environment">Environment</a></em><a href="#environment--environment" class="hash-link" aria-label="Direct link to environment--environment" title="Direct link to environment--environment">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="trader_id--traderid">trader_id <em>: <a href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.TraderId">TraderId</a></em><a href="#trader_id--traderid" class="hash-link" aria-label="Direct link to trader_id--traderid" title="Direct link to trader_id--traderid">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="data_engine--dataengineconfig">data_engine <em>: <a href="#nautilus_trader.data.config.DataEngineConfig">DataEngineConfig</a></em><a href="#data_engine--dataengineconfig" class="hash-link" aria-label="Direct link to data_engine--dataengineconfig" title="Direct link to data_engine--dataengineconfig">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="risk_engine--riskengineconfig">risk_engine <em>: <a href="#nautilus_trader.risk.config.RiskEngineConfig">RiskEngineConfig</a></em><a href="#risk_engine--riskengineconfig" class="hash-link" aria-label="Direct link to risk_engine--riskengineconfig" title="Direct link to risk_engine--riskengineconfig">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="exec_engine--execengineconfig">exec_engine <em>: <a href="#nautilus_trader.execution.config.ExecEngineConfig">ExecEngineConfig</a></em><a href="#exec_engine--execengineconfig" class="hash-link" aria-label="Direct link to exec_engine--execengineconfig" title="Direct link to exec_engine--execengineconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="environment--environment">environment <em>: <a href="../common/index.htm#posei_trader.common.Environment">Environment</a></em><a href="#environment--environment" class="hash-link" aria-label="Direct link to environment--environment" title="Direct link to environment--environment">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="trader_id--traderid">trader_id <em>: <a href="../model/identifiers/index.htm#posei_trader.model.identifiers.TraderId">TraderId</a></em><a href="#trader_id--traderid" class="hash-link" aria-label="Direct link to trader_id--traderid" title="Direct link to trader_id--traderid">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="data_engine--dataengineconfig">data_engine <em>: <a href="#posei_trader.data.config.DataEngineConfig">DataEngineConfig</a></em><a href="#data_engine--dataengineconfig" class="hash-link" aria-label="Direct link to data_engine--dataengineconfig" title="Direct link to data_engine--dataengineconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="risk_engine--riskengineconfig">risk_engine <em>: <a href="#posei_trader.risk.config.RiskEngineConfig">RiskEngineConfig</a></em><a href="#risk_engine--riskengineconfig" class="hash-link" aria-label="Direct link to risk_engine--riskengineconfig" title="Direct link to risk_engine--riskengineconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="exec_engine--execengineconfig">exec_engine <em>: <a href="#posei_trader.execution.config.ExecEngineConfig">ExecEngineConfig</a></em><a href="#exec_engine--execengineconfig" class="hash-link" aria-label="Direct link to exec_engine--execengineconfig" title="Direct link to exec_engine--execengineconfig">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="run_analysis--bool">run_analysis <em>: bool</em><a href="#run_analysis--bool" class="hash-link" aria-label="Direct link to run_analysis--bool" title="Direct link to run_analysis--bool">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="actors--listimportableactorconfig">actors <em>: list[<a href="#nautilus_trader.common.config.ImportableActorConfig">ImportableActorConfig</a>]</em><a href="#actors--listimportableactorconfig" class="hash-link" aria-label="Direct link to actors--listimportableactorconfig" title="Direct link to actors--listimportableactorconfig">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="cache--cacheconfig--none">cache <em>: <a href="#nautilus_trader.cache.config.CacheConfig">CacheConfig</a> | None</em><a href="#cache--cacheconfig--none" class="hash-link" aria-label="Direct link to cache--cacheconfig--none" title="Direct link to cache--cacheconfig--none">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="catalogs--listdatacatalogconfig">catalogs <em>: list[<a href="#nautilus_trader.persistence.config.DataCatalogConfig">DataCatalogConfig</a>]</em><a href="#catalogs--listdatacatalogconfig" class="hash-link" aria-label="Direct link to catalogs--listdatacatalogconfig" title="Direct link to catalogs--listdatacatalogconfig">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="controller--importablecontrollerconfig--none">controller <em>: <a href="#nautilus_trader.trading.config.ImportableControllerConfig">ImportableControllerConfig</a> | None</em><a href="#controller--importablecontrollerconfig--none" class="hash-link" aria-label="Direct link to controller--importablecontrollerconfig--none" title="Direct link to controller--importablecontrollerconfig--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="actors--listimportableactorconfig">actors <em>: list[<a href="#posei_trader.common.config.ImportableActorConfig">ImportableActorConfig</a>]</em><a href="#actors--listimportableactorconfig" class="hash-link" aria-label="Direct link to actors--listimportableactorconfig" title="Direct link to actors--listimportableactorconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="cache--cacheconfig--none">cache <em>: <a href="#posei_trader.cache.config.CacheConfig">CacheConfig</a> | None</em><a href="#cache--cacheconfig--none" class="hash-link" aria-label="Direct link to cache--cacheconfig--none" title="Direct link to cache--cacheconfig--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="catalogs--listdatacatalogconfig">catalogs <em>: list[<a href="#posei_trader.persistence.config.DataCatalogConfig">DataCatalogConfig</a>]</em><a href="#catalogs--listdatacatalogconfig" class="hash-link" aria-label="Direct link to catalogs--listdatacatalogconfig" title="Direct link to catalogs--listdatacatalogconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="controller--importablecontrollerconfig--none">controller <em>: <a href="#posei_trader.trading.config.ImportableControllerConfig">ImportableControllerConfig</a> | None</em><a href="#controller--importablecontrollerconfig--none" class="hash-link" aria-label="Direct link to controller--importablecontrollerconfig--none" title="Direct link to controller--importablecontrollerconfig--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="dict--dictstr-any-2">dict() → dict[str, Any]<a href="#dict--dictstr-any-2" class="hash-link" aria-label="Direct link to dict() → dict[str, Any]" title="Direct link to dict() → dict[str, Any]">​</a></h4>
 <p>Return a dictionary representation of the configuration.</p>
 <ul>
 <li><strong>Return type:</strong>
 dict[str, Any]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="emulator--orderemulatorconfig--none">emulator <em>: <a href="#nautilus_trader.common.config.OrderEmulatorConfig">OrderEmulatorConfig</a> | None</em><a href="#emulator--orderemulatorconfig--none" class="hash-link" aria-label="Direct link to emulator--orderemulatorconfig--none" title="Direct link to emulator--orderemulatorconfig--none">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="exec_algorithms--listimportableexecalgorithmconfig">exec_algorithms <em>: list[<a href="#nautilus_trader.execution.config.ImportableExecAlgorithmConfig">ImportableExecAlgorithmConfig</a>]</em><a href="#exec_algorithms--listimportableexecalgorithmconfig" class="hash-link" aria-label="Direct link to exec_algorithms--listimportableexecalgorithmconfig" title="Direct link to exec_algorithms--listimportableexecalgorithmconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="emulator--orderemulatorconfig--none">emulator <em>: <a href="#posei_trader.common.config.OrderEmulatorConfig">OrderEmulatorConfig</a> | None</em><a href="#emulator--orderemulatorconfig--none" class="hash-link" aria-label="Direct link to emulator--orderemulatorconfig--none" title="Direct link to emulator--orderemulatorconfig--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="exec_algorithms--listimportableexecalgorithmconfig">exec_algorithms <em>: list[<a href="#posei_trader.execution.config.ImportableExecAlgorithmConfig">ImportableExecAlgorithmConfig</a>]</em><a href="#exec_algorithms--listimportableexecalgorithmconfig" class="hash-link" aria-label="Direct link to exec_algorithms--listimportableexecalgorithmconfig" title="Direct link to exec_algorithms--listimportableexecalgorithmconfig">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-fully_qualified_name--str-2"><em>classmethod</em> fully_qualified_name() → str<a href="#classmethod-fully_qualified_name--str-2" class="hash-link" aria-label="Direct link to classmethod-fully_qualified_name--str-2" title="Direct link to classmethod-fully_qualified_name--str-2">​</a></h4>
 <p>Return the fully qualified name for the PoseiConfig class.</p>
 <ul>
@@ -319,7 +319,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instance_id--uuid4--none">instance_id <em>: <a href="../core/index.htm#nautilus_trader.core.UUID4">UUID4</a> | None</em><a href="#instance_id--uuid4--none" class="hash-link" aria-label="Direct link to instance_id--uuid4--none" title="Direct link to instance_id--uuid4--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instance_id--uuid4--none">instance_id <em>: <a href="../core/index.htm#posei_trader.core.UUID4">UUID4</a> | None</em><a href="#instance_id--uuid4--none" class="hash-link" aria-label="Direct link to instance_id--uuid4--none" title="Direct link to instance_id--uuid4--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes-2">json() → bytes<a href="#json--bytes-2" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -340,9 +340,9 @@ dict[str, Any]</li>
 dict[str, Any]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_state--bool">load_state <em>: bool</em><a href="#load_state--bool" class="hash-link" aria-label="Direct link to load_state--bool" title="Direct link to load_state--bool">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="logging--loggingconfig--none">logging <em>: <a href="#nautilus_trader.common.config.LoggingConfig">LoggingConfig</a> | None</em><a href="#logging--loggingconfig--none" class="hash-link" aria-label="Direct link to logging--loggingconfig--none" title="Direct link to logging--loggingconfig--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="logging--loggingconfig--none">logging <em>: <a href="#posei_trader.common.config.LoggingConfig">LoggingConfig</a> | None</em><a href="#logging--loggingconfig--none" class="hash-link" aria-label="Direct link to logging--loggingconfig--none" title="Direct link to logging--loggingconfig--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loop_debug--bool">loop_debug <em>: bool</em><a href="#loop_debug--bool" class="hash-link" aria-label="Direct link to loop_debug--bool" title="Direct link to loop_debug--bool">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="message_bus--messagebusconfig--none">message_bus <em>: <a href="#nautilus_trader.common.config.MessageBusConfig">MessageBusConfig</a> | None</em><a href="#message_bus--messagebusconfig--none" class="hash-link" aria-label="Direct link to message_bus--messagebusconfig--none" title="Direct link to message_bus--messagebusconfig--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="message_bus--messagebusconfig--none">message_bus <em>: <a href="#posei_trader.common.config.MessageBusConfig">MessageBusConfig</a> | None</em><a href="#message_bus--messagebusconfig--none" class="hash-link" aria-label="Direct link to message_bus--messagebusconfig--none" title="Direct link to message_bus--messagebusconfig--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="classmethod-parseraw-bytes--str--any-2"><em>classmethod</em> parse(raw: bytes | str) → Any<a href="#classmethod-parseraw-bytes--str--any-2" class="hash-link" aria-label="Direct link to classmethod-parseraw-bytes--str--any-2" title="Direct link to classmethod-parseraw-bytes--str--any-2">​</a></h4>
 <p>Return a decoded object of the given cls.</p>
 <ul>
@@ -357,8 +357,8 @@ Any</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="portfolio--portfolioconfig--none">portfolio <em>: PortfolioConfig | None</em><a href="#portfolio--portfolioconfig--none" class="hash-link" aria-label="Direct link to portfolio--portfolioconfig--none" title="Direct link to portfolio--portfolioconfig--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="save_state--bool">save_state <em>: bool</em><a href="#save_state--bool" class="hash-link" aria-label="Direct link to save_state--bool" title="Direct link to save_state--bool">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="strategies--listimportablestrategyconfig">strategies <em>: list[<a href="#nautilus_trader.trading.config.ImportableStrategyConfig">ImportableStrategyConfig</a>]</em><a href="#strategies--listimportablestrategyconfig" class="hash-link" aria-label="Direct link to strategies--listimportablestrategyconfig" title="Direct link to strategies--listimportablestrategyconfig">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="streaming--streamingconfig--none">streaming <em>: <a href="#nautilus_trader.persistence.config.StreamingConfig">StreamingConfig</a> | None</em><a href="#streaming--streamingconfig--none" class="hash-link" aria-label="Direct link to streaming--streamingconfig--none" title="Direct link to streaming--streamingconfig--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="strategies--listimportablestrategyconfig">strategies <em>: list[<a href="#posei_trader.trading.config.ImportableStrategyConfig">ImportableStrategyConfig</a>]</em><a href="#strategies--listimportablestrategyconfig" class="hash-link" aria-label="Direct link to strategies--listimportablestrategyconfig" title="Direct link to strategies--listimportablestrategyconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="streaming--streamingconfig--none">streaming <em>: <a href="#posei_trader.persistence.config.StreamingConfig">StreamingConfig</a> | None</em><a href="#streaming--streamingconfig--none" class="hash-link" aria-label="Direct link to streaming--streamingconfig--none" title="Direct link to streaming--streamingconfig--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="timeout_connection--positivefloat">timeout_connection <em>: PositiveFloat</em><a href="#timeout_connection--positivefloat" class="hash-link" aria-label="Direct link to timeout_connection--positivefloat" title="Direct link to timeout_connection--positivefloat">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="timeout_disconnection--positivefloat">timeout_disconnection <em>: PositiveFloat</em><a href="#timeout_disconnection--positivefloat" class="hash-link" aria-label="Direct link to timeout_disconnection--positivefloat" title="Direct link to timeout_disconnection--positivefloat">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="timeout_portfolio--positivefloat">timeout_portfolio <em>: PositiveFloat</em><a href="#timeout_portfolio--positivefloat" class="hash-link" aria-label="Direct link to timeout_portfolio--positivefloat" title="Direct link to timeout_portfolio--positivefloat">​</a></h4>
@@ -372,16 +372,16 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-backtestrunconfig"><em>class</em> BacktestRunConfig<a href="#class-backtestrunconfig" class="hash-link" aria-label="Direct link to class-backtestrunconfig" title="Direct link to class-backtestrunconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Represents the configuration for one specific backtest run.</p>
 <p>This includes a backtest engine with its actors and strategies, with the
 external inputs of venues and data.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>venues</strong> (<em>list</em> <em>[</em><a href="#nautilus_trader.backtest.config.BacktestVenueConfig"><em>BacktestVenueConfig</em></a> <em>]</em>) – The venue configurations for the backtest run.</li>
-<li><strong>data</strong> (<em>list</em> <em>[</em><a href="#nautilus_trader.backtest.config.BacktestDataConfig"><em>BacktestDataConfig</em></a> <em>]</em>) – The data configurations for the backtest run.</li>
-<li><strong>engine</strong> (<a href="#nautilus_trader.backtest.config.BacktestEngineConfig"><em>BacktestEngineConfig</em></a>) – The backtest engine configuration (the core system kernel).</li>
+<li><strong>venues</strong> (<em>list</em> <em>[</em><a href="#posei_trader.backtest.config.BacktestVenueConfig"><em>BacktestVenueConfig</em></a> <em>]</em>) – The venue configurations for the backtest run.</li>
+<li><strong>data</strong> (<em>list</em> <em>[</em><a href="#posei_trader.backtest.config.BacktestDataConfig"><em>BacktestDataConfig</em></a> <em>]</em>) – The data configurations for the backtest run.</li>
+<li><strong>engine</strong> (<a href="#posei_trader.backtest.config.BacktestEngineConfig"><em>BacktestEngineConfig</em></a>) – The backtest engine configuration (the core system kernel).</li>
 <li><strong>chunk_size</strong> (<em>int</em> <em>,</em> <em>optional</em>) – The number of data points to process in each chunk during streaming mode.
 If None, the backtest will run without streaming, loading all data at once.</li>
 <li><strong>raise_exception</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If exceptions during an engine build or run should be raised to interrupt the nodes process.</li>
@@ -392,19 +392,19 @@ If False, then will <em>only</em> drop data.</li>
 If <code>None</code> engine runs from the start of the data.</li>
 <li><strong>end</strong> (<em>datetime</em> <em>or</em> <em>str</em> <em>or</em> <em>int</em> <em>,</em> <em>optional</em>) – The end datetime (UTC) for the backtest run.
 If <code>None</code> engine runs to the end of the data.</li>
-<li><strong>data_clients</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>type</em> <em>[</em><a href="#nautilus_trader.live.config.LiveDataClientConfig"><em>LiveDataClientConfig</em></a> <em>]</em> <em>]</em> <em>,</em> <em>optional</em>) – The data clients configuration for the backtest run.</li>
+<li><strong>data_clients</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>type</em> <em>[</em><a href="#posei_trader.live.config.LiveDataClientConfig"><em>LiveDataClientConfig</em></a> <em>]</em> <em>]</em> <em>,</em> <em>optional</em>) – The data clients configuration for the backtest run.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="venues--listbacktestvenueconfig">venues <em>: list[<a href="#nautilus_trader.backtest.config.BacktestVenueConfig">BacktestVenueConfig</a>]</em><a href="#venues--listbacktestvenueconfig" class="hash-link" aria-label="Direct link to venues--listbacktestvenueconfig" title="Direct link to venues--listbacktestvenueconfig">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="data--listbacktestdataconfig">data <em>: list[<a href="#nautilus_trader.backtest.config.BacktestDataConfig">BacktestDataConfig</a>]</em><a href="#data--listbacktestdataconfig" class="hash-link" aria-label="Direct link to data--listbacktestdataconfig" title="Direct link to data--listbacktestdataconfig">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="engine--backtestengineconfig--none">engine <em>: <a href="#nautilus_trader.backtest.config.BacktestEngineConfig">BacktestEngineConfig</a> | None</em><a href="#engine--backtestengineconfig--none" class="hash-link" aria-label="Direct link to engine--backtestengineconfig--none" title="Direct link to engine--backtestengineconfig--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="venues--listbacktestvenueconfig">venues <em>: list[<a href="#posei_trader.backtest.config.BacktestVenueConfig">BacktestVenueConfig</a>]</em><a href="#venues--listbacktestvenueconfig" class="hash-link" aria-label="Direct link to venues--listbacktestvenueconfig" title="Direct link to venues--listbacktestvenueconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="data--listbacktestdataconfig">data <em>: list[<a href="#posei_trader.backtest.config.BacktestDataConfig">BacktestDataConfig</a>]</em><a href="#data--listbacktestdataconfig" class="hash-link" aria-label="Direct link to data--listbacktestdataconfig" title="Direct link to data--listbacktestdataconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="engine--backtestengineconfig--none">engine <em>: <a href="#posei_trader.backtest.config.BacktestEngineConfig">BacktestEngineConfig</a> | None</em><a href="#engine--backtestengineconfig--none" class="hash-link" aria-label="Direct link to engine--backtestengineconfig--none" title="Direct link to engine--backtestengineconfig--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="chunk_size--int--none">chunk_size <em>: int | None</em><a href="#chunk_size--int--none" class="hash-link" aria-label="Direct link to chunk_size--int--none" title="Direct link to chunk_size--int--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="raise_exception--bool">raise_exception <em>: bool</em><a href="#raise_exception--bool" class="hash-link" aria-label="Direct link to raise_exception--bool" title="Direct link to raise_exception--bool">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="dispose_on_completion--bool">dispose_on_completion <em>: bool</em><a href="#dispose_on_completion--bool" class="hash-link" aria-label="Direct link to dispose_on_completion--bool" title="Direct link to dispose_on_completion--bool">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="start--str--int--none">start <em>: str | int | None</em><a href="#start--str--int--none" class="hash-link" aria-label="Direct link to start--str--int--none" title="Direct link to start--str--int--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="end--str--int--none">end <em>: str | int | None</em><a href="#end--str--int--none" class="hash-link" aria-label="Direct link to end--str--int--none" title="Direct link to end--str--int--none">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="data_clients--dictstr-typelivedataclientconfig--none">data_clients <em>: dict[str, type[<a href="#nautilus_trader.live.config.LiveDataClientConfig">LiveDataClientConfig</a>]] | None</em><a href="#data_clients--dictstr-typelivedataclientconfig--none" class="hash-link" aria-label="Direct link to data_clients--dictstr-typelivedataclientconfig--none" title="Direct link to data_clients--dictstr-typelivedataclientconfig--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="data_clients--dictstr-typelivedataclientconfig--none">data_clients <em>: dict[str, type[<a href="#posei_trader.live.config.LiveDataClientConfig">LiveDataClientConfig</a>]] | None</em><a href="#data_clients--dictstr-typelivedataclientconfig--none" class="hash-link" aria-label="Direct link to data_clients--dictstr-typelivedataclientconfig--none" title="Direct link to data_clients--dictstr-typelivedataclientconfig--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="dict--dictstr-any-3">dict() → dict[str, Any]<a href="#dict--dictstr-any-3" class="hash-link" aria-label="Direct link to dict() → dict[str, Any]" title="Direct link to dict() → dict[str, Any]">​</a></h4>
 <p>Return a dictionary representation of the configuration.</p>
 <ul>
@@ -461,9 +461,9 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-simulationmoduleconfig"><em>class</em> SimulationModuleConfig<a href="#class-simulationmoduleconfig" class="hash-link" aria-label="Direct link to class-simulationmoduleconfig" title="Direct link to class-simulationmoduleconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.ActorConfig"><code>ActorConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.ActorConfig"><code>ActorConfig</code></a></p>
 <p>Configuration for <code>SimulationModule</code> instances.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="component_id--componentid--none">component_id <em>: <a href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ComponentId">ComponentId</a> | None</em><a href="#component_id--componentid--none" class="hash-link" aria-label="Direct link to component_id--componentid--none" title="Direct link to component_id--componentid--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="component_id--componentid--none">component_id <em>: <a href="../model/identifiers/index.htm#posei_trader.model.identifiers.ComponentId">ComponentId</a> | None</em><a href="#component_id--componentid--none" class="hash-link" aria-label="Direct link to component_id--componentid--none" title="Direct link to component_id--componentid--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="dict--dictstr-any-4">dict() → dict[str, Any]<a href="#dict--dictstr-any-4" class="hash-link" aria-label="Direct link to dict() → dict[str, Any]" title="Direct link to dict() → dict[str, Any]">​</a></h4>
 <p>Return a dictionary representation of the configuration.</p>
 <ul>
@@ -522,7 +522,7 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-fillmodelconfig"><em>class</em> FillModelConfig<a href="#class-fillmodelconfig" class="hash-link" aria-label="Direct link to class-fillmodelconfig" title="Direct link to class-fillmodelconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Configuration for <code>FillModel</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -594,7 +594,7 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-importablefillmodelconfig"><em>class</em> ImportableFillModelConfig<a href="#class-importablefillmodelconfig" class="hash-link" aria-label="Direct link to class-importablefillmodelconfig" title="Direct link to class-importablefillmodelconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Configuration for a fill model instance.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -666,18 +666,18 @@ bool</li>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-fillmodelfactory"><em>class</em> FillModelFactory<a href="#class-fillmodelfactory" class="hash-link" aria-label="Direct link to class-fillmodelfactory" title="Direct link to class-fillmodelfactory">​</a></h3>
 <p>Bases: <code>object</code></p>
 <p>Provides fill model creation from importable configurations.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createconfig-importablefillmodelconfig"><em>static</em> create(config: <a href="#nautilus_trader.backtest.config.ImportableFillModelConfig">ImportableFillModelConfig</a>)<a href="#static-createconfig-importablefillmodelconfig" class="hash-link" aria-label="Direct link to static-createconfig-importablefillmodelconfig" title="Direct link to static-createconfig-importablefillmodelconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createconfig-importablefillmodelconfig"><em>static</em> create(config: <a href="#posei_trader.backtest.config.ImportableFillModelConfig">ImportableFillModelConfig</a>)<a href="#static-createconfig-importablefillmodelconfig" class="hash-link" aria-label="Direct link to static-createconfig-importablefillmodelconfig" title="Direct link to static-createconfig-importablefillmodelconfig">​</a></h4>
 <p>Create a fill model from the given configuration.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>config</strong> (<a href="#nautilus_trader.backtest.config.ImportableFillModelConfig"><em>ImportableFillModelConfig</em></a>) – The configuration for the building step.</li>
+<strong>config</strong> (<a href="#posei_trader.backtest.config.ImportableFillModelConfig"><em>ImportableFillModelConfig</em></a>) – The configuration for the building step.</li>
 <li><strong>Return type:</strong>
-<a href="../backtest/index.htm#nautilus_trader.backtest.models.FillModel">FillModel</a></li>
+<a href="../backtest/index.htm#posei_trader.backtest.models.FillModel">FillModel</a></li>
 <li><strong>Raises:</strong>
 <strong>TypeError</strong> – If config is not of type ImportableFillModelConfig.</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-latencymodelconfig"><em>class</em> LatencyModelConfig<a href="#class-latencymodelconfig" class="hash-link" aria-label="Direct link to class-latencymodelconfig" title="Direct link to class-latencymodelconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Configuration for <code>LatencyModel</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -749,7 +749,7 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-importablelatencymodelconfig"><em>class</em> ImportableLatencyModelConfig<a href="#class-importablelatencymodelconfig" class="hash-link" aria-label="Direct link to class-importablelatencymodelconfig" title="Direct link to class-importablelatencymodelconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Configuration for a latency model instance.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -821,18 +821,18 @@ bool</li>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-latencymodelfactory"><em>class</em> LatencyModelFactory<a href="#class-latencymodelfactory" class="hash-link" aria-label="Direct link to class-latencymodelfactory" title="Direct link to class-latencymodelfactory">​</a></h3>
 <p>Bases: <code>object</code></p>
 <p>Provides latency model creation from importable configurations.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createconfig-importablelatencymodelconfig"><em>static</em> create(config: <a href="#nautilus_trader.backtest.config.ImportableLatencyModelConfig">ImportableLatencyModelConfig</a>)<a href="#static-createconfig-importablelatencymodelconfig" class="hash-link" aria-label="Direct link to static-createconfig-importablelatencymodelconfig" title="Direct link to static-createconfig-importablelatencymodelconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createconfig-importablelatencymodelconfig"><em>static</em> create(config: <a href="#posei_trader.backtest.config.ImportableLatencyModelConfig">ImportableLatencyModelConfig</a>)<a href="#static-createconfig-importablelatencymodelconfig" class="hash-link" aria-label="Direct link to static-createconfig-importablelatencymodelconfig" title="Direct link to static-createconfig-importablelatencymodelconfig">​</a></h4>
 <p>Create a latency model from the given configuration.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>config</strong> (<a href="#nautilus_trader.backtest.config.ImportableLatencyModelConfig"><em>ImportableLatencyModelConfig</em></a>) – The configuration for the building step.</li>
+<strong>config</strong> (<a href="#posei_trader.backtest.config.ImportableLatencyModelConfig"><em>ImportableLatencyModelConfig</em></a>) – The configuration for the building step.</li>
 <li><strong>Return type:</strong>
-<a href="../backtest/index.htm#nautilus_trader.backtest.models.LatencyModel">LatencyModel</a></li>
+<a href="../backtest/index.htm#posei_trader.backtest.models.LatencyModel">LatencyModel</a></li>
 <li><strong>Raises:</strong>
 <strong>TypeError</strong> – If config is not of type ImportableLatencyModelConfig.</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-feemodelconfig"><em>class</em> FeeModelConfig<a href="#class-feemodelconfig" class="hash-link" aria-label="Direct link to class-feemodelconfig" title="Direct link to class-feemodelconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Base configuration for <code>FeeModel</code> instances.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="dict--dictstr-any-9">dict() → dict[str, Any]<a href="#dict--dictstr-any-9" class="hash-link" aria-label="Direct link to dict() → dict[str, Any]" title="Direct link to dict() → dict[str, Any]">​</a></h4>
 <p>Return a dictionary representation of the configuration.</p>
@@ -890,7 +890,7 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-makertakerfeemodelconfig"><em>class</em> MakerTakerFeeModelConfig<a href="#class-makertakerfeemodelconfig" class="hash-link" aria-label="Direct link to class-makertakerfeemodelconfig" title="Direct link to class-makertakerfeemodelconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.backtest.config.FeeModelConfig"><code>FeeModelConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.backtest.config.FeeModelConfig"><code>FeeModelConfig</code></a></p>
 <p>Configuration for <code>MakerTakerFeeModel</code> instances.</p>
 <p>This fee model uses the maker/taker fees defined on the instrument.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="dict--dictstr-any-10">dict() → dict[str, Any]<a href="#dict--dictstr-any-10" class="hash-link" aria-label="Direct link to dict() → dict[str, Any]" title="Direct link to dict() → dict[str, Any]">​</a></h4>
@@ -949,12 +949,12 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-fixedfeemodelconfig"><em>class</em> FixedFeeModelConfig<a href="#class-fixedfeemodelconfig" class="hash-link" aria-label="Direct link to class-fixedfeemodelconfig" title="Direct link to class-fixedfeemodelconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.backtest.config.FeeModelConfig"><code>FeeModelConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.backtest.config.FeeModelConfig"><code>FeeModelConfig</code></a></p>
 <p>Configuration for <code>FixedFeeModel</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>commission</strong> (<a href="../model/index.htm#nautilus_trader.model.Money"><em>Money</em></a> <em>|</em> <em>str</em>) – The fixed commission amount for trades.</li>
+<li><strong>commission</strong> (<a href="../model/index.htm#posei_trader.model.Money"><em>Money</em></a> <em>|</em> <em>str</em>) – The fixed commission amount for trades.</li>
 <li><strong>charge_commission_once</strong> (<em>bool</em> <em>,</em> <em>default True</em>) – Whether to charge the commission once per order or per fill.</li>
 </ul>
 </li>
@@ -1017,11 +1017,11 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-percontractfeemodelconfig"><em>class</em> PerContractFeeModelConfig<a href="#class-percontractfeemodelconfig" class="hash-link" aria-label="Direct link to class-percontractfeemodelconfig" title="Direct link to class-percontractfeemodelconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.backtest.config.FeeModelConfig"><code>FeeModelConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.backtest.config.FeeModelConfig"><code>FeeModelConfig</code></a></p>
 <p>Configuration for <code>PerContractFeeModel</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>commission</strong> (<a href="../model/index.htm#nautilus_trader.model.Money"><em>Money</em></a> <em>|</em> <em>str</em>) – The commission amount per contract.</li>
+<strong>commission</strong> (<a href="../model/index.htm#posei_trader.model.Money"><em>Money</em></a> <em>|</em> <em>str</em>) – The commission amount per contract.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="commission--str-1">commission <em>: str</em><a href="#commission--str-1" class="hash-link" aria-label="Direct link to commission--str-1" title="Direct link to commission--str-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="dict--dictstr-any-12">dict() → dict[str, Any]<a href="#dict--dictstr-any-12" class="hash-link" aria-label="Direct link to dict() → dict[str, Any]" title="Direct link to dict() → dict[str, Any]">​</a></h4>
@@ -1080,7 +1080,7 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-importablefeemodelconfig"><em>class</em> ImportableFeeModelConfig<a href="#class-importablefeemodelconfig" class="hash-link" aria-label="Direct link to class-importablefeemodelconfig" title="Direct link to class-importablefeemodelconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Configuration for a fee model instance.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -1152,25 +1152,25 @@ bool</li>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-feemodelfactory"><em>class</em> FeeModelFactory<a href="#class-feemodelfactory" class="hash-link" aria-label="Direct link to class-feemodelfactory" title="Direct link to class-feemodelfactory">​</a></h3>
 <p>Bases: <code>object</code></p>
 <p>Provides fee model creation from importable configurations.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createconfig-importablefeemodelconfig"><em>static</em> create(config: <a href="#nautilus_trader.backtest.config.ImportableFeeModelConfig">ImportableFeeModelConfig</a>)<a href="#static-createconfig-importablefeemodelconfig" class="hash-link" aria-label="Direct link to static-createconfig-importablefeemodelconfig" title="Direct link to static-createconfig-importablefeemodelconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createconfig-importablefeemodelconfig"><em>static</em> create(config: <a href="#posei_trader.backtest.config.ImportableFeeModelConfig">ImportableFeeModelConfig</a>)<a href="#static-createconfig-importablefeemodelconfig" class="hash-link" aria-label="Direct link to static-createconfig-importablefeemodelconfig" title="Direct link to static-createconfig-importablefeemodelconfig">​</a></h4>
 <p>Create a fee model from the given configuration.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>config</strong> (<a href="#nautilus_trader.backtest.config.ImportableFeeModelConfig"><em>ImportableFeeModelConfig</em></a>) – The configuration for the building step.</li>
+<strong>config</strong> (<a href="#posei_trader.backtest.config.ImportableFeeModelConfig"><em>ImportableFeeModelConfig</em></a>) – The configuration for the building step.</li>
 <li><strong>Return type:</strong>
-<a href="../backtest/index.htm#nautilus_trader.backtest.models.FeeModel">FeeModel</a></li>
+<a href="../backtest/index.htm#posei_trader.backtest.models.FeeModel">FeeModel</a></li>
 <li><strong>Raises:</strong>
 <strong>TypeError</strong> – If config is not of type ImportableFeeModelConfig.</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-fxrolloverinterestconfig"><em>class</em> FXRolloverInterestConfig<a href="#class-fxrolloverinterestconfig" class="hash-link" aria-label="Direct link to class-fxrolloverinterestconfig" title="Direct link to class-fxrolloverinterestconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.backtest.config.SimulationModuleConfig"><code>SimulationModuleConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.backtest.config.SimulationModuleConfig"><code>SimulationModuleConfig</code></a></p>
 <p>Provides an FX rollover interest simulation module.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <strong>rate_data</strong> (<em>pd.DataFrame</em>) – The interest rate data for the internal rollover interest calculator.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="rate_data--pddataframe">rate_data <em>: pd.DataFrame</em><a href="#rate_data--pddataframe" class="hash-link" aria-label="Direct link to rate_data--pddataframe" title="Direct link to rate_data--pddataframe">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="component_id--componentid--none-1">component_id <em>: <a href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ComponentId">ComponentId</a> | None</em><a href="#component_id--componentid--none-1" class="hash-link" aria-label="Direct link to component_id--componentid--none-1" title="Direct link to component_id--componentid--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="component_id--componentid--none-1">component_id <em>: <a href="../model/identifiers/index.htm#posei_trader.model.identifiers.ComponentId">ComponentId</a> | None</em><a href="#component_id--componentid--none-1" class="hash-link" aria-label="Direct link to component_id--componentid--none-1" title="Direct link to component_id--componentid--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="dict--dictstr-any-14">dict() → dict[str, Any]<a href="#dict--dictstr-any-14" class="hash-link" aria-label="Direct link to dict() → dict[str, Any]" title="Direct link to dict() → dict[str, Any]">​</a></h4>
 <p>Return a dictionary representation of the configuration.</p>
 <ul>
@@ -1230,12 +1230,12 @@ bool</li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="cache">Cache<a href="#cache" class="hash-link" aria-label="Direct link to Cache" title="Direct link to Cache">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-cacheconfig"><em>class</em> CacheConfig<a href="#class-cacheconfig" class="hash-link" aria-label="Direct link to class-cacheconfig" title="Direct link to class-cacheconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Configuration for <code>Cache</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>database</strong> (<a href="#nautilus_trader.common.config.DatabaseConfig"><em>DatabaseConfig</em></a> <em>,</em> <em>optional</em>) – The configuration for the cache backing database.</li>
+<li><strong>database</strong> (<a href="#posei_trader.common.config.DatabaseConfig"><em>DatabaseConfig</em></a> <em>,</em> <em>optional</em>) – The configuration for the cache backing database.</li>
 <li><strong>encoding</strong> (<em>str</em> <em>,</em>  <em>{&#x27;msgpack&#x27;</em> <em>,</em>  <em>&#x27;json&#x27;}</em> <em>,</em> <em>default &#x27;msgpack&#x27;</em>) – The encoding for database operations, controls the type of serializer used.</li>
 <li><strong>timestamps_as_iso8601</strong> – If timestamps should be persisted as ISO 8601 strings.
 If False then will persit as UNIX nanoseconds.</li>
@@ -1253,7 +1253,7 @@ with a good compromise being 100 milliseconds.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="database--databaseconfig--none">database <em>: <a href="#nautilus_trader.common.config.DatabaseConfig">DatabaseConfig</a> | None</em><a href="#database--databaseconfig--none" class="hash-link" aria-label="Direct link to database--databaseconfig--none" title="Direct link to database--databaseconfig--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="database--databaseconfig--none">database <em>: <a href="#posei_trader.common.config.DatabaseConfig">DatabaseConfig</a> | None</em><a href="#database--databaseconfig--none" class="hash-link" aria-label="Direct link to database--databaseconfig--none" title="Direct link to database--databaseconfig--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="encoding--str">encoding <em>: str</em><a href="#encoding--str" class="hash-link" aria-label="Direct link to encoding--str" title="Direct link to encoding--str">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="timestamps_as_iso8601--bool">timestamps_as_iso8601 <em>: bool</em><a href="#timestamps_as_iso8601--bool" class="hash-link" aria-label="Direct link to timestamps_as_iso8601--bool" title="Direct link to timestamps_as_iso8601--bool">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="buffer_interval_ms--annotatedint-msgspecmetagt0--none">buffer_interval_ms <em>: Annotated[int, msgspec.Meta(gt=0)] | None</em><a href="#buffer_interval_ms--annotatedint-msgspecmetagt0--none" class="hash-link" aria-label="Direct link to buffer_interval_ms--annotatedint-msgspecmetagt0--none" title="Direct link to buffer_interval_ms--annotatedint-msgspecmetagt0--none">​</a></h4>
@@ -1330,13 +1330,13 @@ add a note to the exception</p>
 <p>Exception.with_traceback(tb) –
 set self.<em>_traceback</em>_ to tb and return self.</p>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="resolve_pathpath-str--type">resolve_path(path: str) → type<a href="#resolve_pathpath-str--type" class="hash-link" aria-label="Direct link to resolve_path(path: str) → type" title="Direct link to resolve_path(path: str) → type">​</a></h3>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="resolve_config_pathpath-str--typenautilusconfig">resolve_config_path(path: str) → type[<a href="#nautilus_trader.common.config.PoseiConfig">PoseiConfig</a>]<a href="#resolve_config_pathpath-str--typenautilusconfig" class="hash-link" aria-label="Direct link to resolve_config_pathpath-str--typenautilusconfig" title="Direct link to resolve_config_pathpath-str--typenautilusconfig">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="resolve_config_pathpath-str--typenautilusconfig">resolve_config_path(path: str) → type[<a href="#posei_trader.common.config.PoseiConfig">PoseiConfig</a>]<a href="#resolve_config_pathpath-str--typenautilusconfig" class="hash-link" aria-label="Direct link to resolve_config_pathpath-str--typenautilusconfig" title="Direct link to resolve_config_pathpath-str--typenautilusconfig">​</a></h3>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="nautilus_schema_hooktype_-typeany--dictstr-any">nautilus_schema_hook(type_: type[Any]) → dict[str, Any]<a href="#nautilus_schema_hooktype_-typeany--dictstr-any" class="hash-link" aria-label="Direct link to nautilus_schema_hook(type_: type[Any]) → dict[str, Any]" title="Direct link to nautilus_schema_hook(type_: type[Any]) → dict[str, Any]">​</a></h3>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="msgspec_encoding_hookobj-any--any">msgspec_encoding_hook(obj: Any) → Any<a href="#msgspec_encoding_hookobj-any--any" class="hash-link" aria-label="Direct link to msgspec_encoding_hook(obj: Any) → Any" title="Direct link to msgspec_encoding_hook(obj: Any) → Any">​</a></h3>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="msgspec_decoding_hookobj_type-type-obj-any--any">msgspec_decoding_hook(obj_type: type, obj: Any) → Any<a href="#msgspec_decoding_hookobj_type-type-obj-any--any" class="hash-link" aria-label="Direct link to msgspec_decoding_hook(obj_type: type, obj: Any) → Any" title="Direct link to msgspec_decoding_hook(obj_type: type, obj: Any) → Any">​</a></h3>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="register_config_encodingtype_-type-encoder-callable--none">register_config_encoding(type_: type, encoder: Callable) → None<a href="#register_config_encodingtype_-type-encoder-callable--none" class="hash-link" aria-label="Direct link to register_config_encoding(type_: type, encoder: Callable) → None" title="Direct link to register_config_encoding(type_: type, encoder: Callable) → None">​</a></h3>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="register_config_decodingtype_-type-decoder-callable--none">register_config_decoding(type_: type, decoder: Callable) → None<a href="#register_config_decodingtype_-type-decoder-callable--none" class="hash-link" aria-label="Direct link to register_config_decoding(type_: type, decoder: Callable) → None" title="Direct link to register_config_decoding(type_: type, decoder: Callable) → None">​</a></h3>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="tokenize_configobj-nautilusconfig--str">tokenize_config(obj: <a href="#nautilus_trader.common.config.PoseiConfig">PoseiConfig</a>) → str<a href="#tokenize_configobj-nautilusconfig--str" class="hash-link" aria-label="Direct link to tokenize_configobj-nautilusconfig--str" title="Direct link to tokenize_configobj-nautilusconfig--str">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="tokenize_configobj-nautilusconfig--str">tokenize_config(obj: <a href="#posei_trader.common.config.PoseiConfig">PoseiConfig</a>) → str<a href="#tokenize_configobj-nautilusconfig--str" class="hash-link" aria-label="Direct link to tokenize_configobj-nautilusconfig--str" title="Direct link to tokenize_configobj-nautilusconfig--str">​</a></h3>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-nautilusconfig"><em>class</em> PoseiConfig<a href="#class-nautilusconfig" class="hash-link" aria-label="Direct link to class-nautilusconfig" title="Direct link to class-nautilusconfig">​</a></h3>
 <p>Bases: <code>Struct</code></p>
 <p>The base class for all Posei configuration objects.</p>
@@ -1396,7 +1396,7 @@ dict[str, Any]</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-databaseconfig"><em>class</em> DatabaseConfig<a href="#class-databaseconfig" class="hash-link" aria-label="Direct link to class-databaseconfig" title="Direct link to class-databaseconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Configuration for database connections.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -1475,12 +1475,12 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-messagebusconfig"><em>class</em> MessageBusConfig<a href="#class-messagebusconfig" class="hash-link" aria-label="Direct link to class-messagebusconfig" title="Direct link to class-messagebusconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Configuration for <code>MessageBus</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>database</strong> (<a href="#nautilus_trader.common.config.DatabaseConfig"><em>DatabaseConfig</em></a> <em>,</em> <em>optional</em>) – The configuration for the message bus backing database.</li>
+<li><strong>database</strong> (<a href="#posei_trader.common.config.DatabaseConfig"><em>DatabaseConfig</em></a> <em>,</em> <em>optional</em>) – The configuration for the message bus backing database.</li>
 <li><strong>encoding</strong> (<em>str</em> <em>,</em>  <em>{&#x27;msgpack&#x27;</em> <em>,</em>  <em>&#x27;json&#x27;}</em> <em>,</em> <em>default &#x27;msgpack&#x27;</em>) – The encoding for database operations, controls the type of serializer used.</li>
 <li><strong>timestamps_as_iso8601</strong> – If timestamps should be persisted as ISO 8601 strings.
 If False then will persit as UNIX nanoseconds.</li>
@@ -1509,7 +1509,7 @@ payloads on the internal message bus.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="database--databaseconfig--none-1">database <em>: <a href="#nautilus_trader.common.config.DatabaseConfig">DatabaseConfig</a> | None</em><a href="#database--databaseconfig--none-1" class="hash-link" aria-label="Direct link to database--databaseconfig--none-1" title="Direct link to database--databaseconfig--none-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="database--databaseconfig--none-1">database <em>: <a href="#posei_trader.common.config.DatabaseConfig">DatabaseConfig</a> | None</em><a href="#database--databaseconfig--none-1" class="hash-link" aria-label="Direct link to database--databaseconfig--none-1" title="Direct link to database--databaseconfig--none-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="encoding--str-1">encoding <em>: str</em><a href="#encoding--str-1" class="hash-link" aria-label="Direct link to encoding--str-1" title="Direct link to encoding--str-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="timestamps_as_iso8601--bool-1">timestamps_as_iso8601 <em>: bool</em><a href="#timestamps_as_iso8601--bool-1" class="hash-link" aria-label="Direct link to timestamps_as_iso8601--bool-1" title="Direct link to timestamps_as_iso8601--bool-1">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="buffer_interval_ms--annotatedint-msgspecmetagt0--none-1">buffer_interval_ms <em>: Annotated[int, msgspec.Meta(gt=0)] | None</em><a href="#buffer_interval_ms--annotatedint-msgspecmetagt0--none-1" class="hash-link" aria-label="Direct link to buffer_interval_ms--annotatedint-msgspecmetagt0--none-1" title="Direct link to buffer_interval_ms--annotatedint-msgspecmetagt0--none-1">​</a></h4>
@@ -1578,13 +1578,13 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-instrumentproviderconfig"><em>class</em> InstrumentProviderConfig<a href="#class-instrumentproviderconfig" class="hash-link" aria-label="Direct link to class-instrumentproviderconfig" title="Direct link to class-instrumentproviderconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Configuration for <code>InstrumentProvider</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>load_all</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If all venue instruments should be loaded on start.</li>
-<li><strong>load_ids</strong> (<em>frozenset</em> <em>[</em><a href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The list of instrument IDs to be loaded on start (if load_all is False).</li>
+<li><strong>load_ids</strong> (<em>frozenset</em> <em>[</em><a href="../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em> <em>,</em> <em>optional</em>) – The list of instrument IDs to be loaded on start (if load_all is False).</li>
 <li><strong>filters</strong> (<em>frozendict</em> <em>or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 <li><strong>filter_callable</strong> (<em>str</em> <em>,</em> <em>optional</em>) – A fully qualified path to a callable that takes a single argument, instrument and returns a bool, indicating
 whether the instrument should be loaded</li>
@@ -1593,7 +1593,7 @@ whether the instrument should be loaded</li>
 </li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_all--bool">load_all <em>: bool</em><a href="#load_all--bool" class="hash-link" aria-label="Direct link to load_all--bool" title="Direct link to load_all--bool">​</a></h4>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_ids--frozensetinstrumentid--none">load_ids <em>: frozenset[<a href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>] | None</em><a href="#load_ids--frozensetinstrumentid--none" class="hash-link" aria-label="Direct link to load_ids--frozensetinstrumentid--none" title="Direct link to load_ids--frozensetinstrumentid--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_ids--frozensetinstrumentid--none">load_ids <em>: frozenset[<a href="../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>] | None</em><a href="#load_ids--frozensetinstrumentid--none" class="hash-link" aria-label="Direct link to load_ids--frozensetinstrumentid--none" title="Direct link to load_ids--frozensetinstrumentid--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="filters--dictstr-any--none">filters <em>: dict[str, Any] | None</em><a href="#filters--dictstr-any--none" class="hash-link" aria-label="Direct link to filters--dictstr-any--none" title="Direct link to filters--dictstr-any--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="filter_callable--str--none">filter_callable <em>: str | None</em><a href="#filter_callable--str--none" class="hash-link" aria-label="Direct link to filter_callable--str--none" title="Direct link to filter_callable--str--none">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="log_warnings--bool">log_warnings <em>: bool</em><a href="#log_warnings--bool" class="hash-link" aria-label="Direct link to log_warnings--bool" title="Direct link to log_warnings--bool">​</a></h4>
@@ -1653,7 +1653,7 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-orderemulatorconfig"><em>class</em> OrderEmulatorConfig<a href="#class-orderemulatorconfig" class="hash-link" aria-label="Direct link to class-orderemulatorconfig" title="Direct link to class-orderemulatorconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Configuration for <code>OrderEmulator</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -1716,12 +1716,12 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-actorconfig"><em>class</em> ActorConfig<a href="#class-actorconfig" class="hash-link" aria-label="Direct link to class-actorconfig" title="Direct link to class-actorconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>The base model for all actor configurations.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>component_id</strong> (<a href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ComponentId"><em>ComponentId</em></a> <em>,</em> <em>optional</em>) – The component ID. If <code>None</code> then the identifier will be taken from
+<li><strong>component_id</strong> (<a href="../model/identifiers/index.htm#posei_trader.model.identifiers.ComponentId"><em>ComponentId</em></a> <em>,</em> <em>optional</em>) – The component ID. If <code>None</code> then the identifier will be taken from
 type(self).<em>_name</em>_.</li>
 <li><strong>log_events</strong> (<em>bool</em> <em>,</em> <em>default True</em>) – If events should be logged by the actor.
 If False, then only warning events and above are logged.</li>
@@ -1729,7 +1729,7 @@ If False, then only warning events and above are logged.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="component_id--componentid--none-2">component_id <em>: <a href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.ComponentId">ComponentId</a> | None</em><a href="#component_id--componentid--none-2" class="hash-link" aria-label="Direct link to component_id--componentid--none-2" title="Direct link to component_id--componentid--none-2">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="component_id--componentid--none-2">component_id <em>: <a href="../model/identifiers/index.htm#posei_trader.model.identifiers.ComponentId">ComponentId</a> | None</em><a href="#component_id--componentid--none-2" class="hash-link" aria-label="Direct link to component_id--componentid--none-2" title="Direct link to component_id--componentid--none-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="log_events--bool-2">log_events <em>: bool</em><a href="#log_events--bool-2" class="hash-link" aria-label="Direct link to log_events--bool-2" title="Direct link to log_events--bool-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="log_commands--bool-2">log_commands <em>: bool</em><a href="#log_commands--bool-2" class="hash-link" aria-label="Direct link to log_commands--bool-2" title="Direct link to log_commands--bool-2">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="dict--dictstr-any-21">dict() → dict[str, Any]<a href="#dict--dictstr-any-21" class="hash-link" aria-label="Direct link to dict() → dict[str, Any]" title="Direct link to dict() → dict[str, Any]">​</a></h4>
@@ -1788,7 +1788,7 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-importableactorconfig"><em>class</em> ImportableActorConfig<a href="#class-importableactorconfig" class="hash-link" aria-label="Direct link to class-importableactorconfig" title="Direct link to class-importableactorconfig">​</a></h3>
-<p>Bases: <a href="#nautilus_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
+<p>Bases: <a href="#posei_trader.common.config.PoseiConfig"><code>PoseiConfig</code></a></p>
 <p>Configuration for an actor instance.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -1860,13 +1860,13 @@ bool</li>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-actorfactory"><em>class</em> ActorFactory<a href="#class-actorfactory" class="hash-link" aria-label="Direct link to class-actorfactory" title="Direct link to class-actorfactory">​</a></h3>
 <p>Bases: <code>object</code></p>
 <p>Provides actor creation from importable configurations.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createconfig-importableactorconfig"><em>static</em> create(config: <a href="#nautilus_trader.common.config.ImportableActorConfig">ImportableActorConfig</a>)<a href="#static-createconfig-importableactorconfig" class="hash-link" aria-label="Direct link to static-createconfig-importableactorconfig" title="Direct link to static-createconfig-importableactorconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createconfig-importableactorconfig"><em>static</em> create(config: <a href="#posei_trader.common.config.ImportableActorConfig">ImportableActorConfig</a>)<a href="#static-createconfig-importableactorconfig" class="hash-link" aria-label="Direct link to static-createconfig-importableactorconfig" title="Direct link to static-createconfig-importableactorconfig">​</a></h4>
 <p>Create an actor from the given configuration.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>config</strong> (<a href="#nautilus_trader.common.config.ImportableActorConfig"><em>ImportableActorConfig</em></a>) – The configuration for the building step.</li>
+<strong>config</strong> (<a href="#posei_trader.common.config.ImportableActorConfig"><em>ImportableActorConfig</em></a>) – The configuration for the building step.</li>
 <li><strong>Return type:</strong>
-<a href="../common/index.htm#nautilus_trader.common.actor.Actor">Actor</a></li>
+<a href="../common/index.htm#posei_trader.common.actor.Actor">Actor</a></li>
 <li><strong>Raises:</strong>
 <strong>TypeError</strong> – If config is not of type ImportableActorConfig.</li>
 </ul>

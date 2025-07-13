@@ -22,7 +22,7 @@
 factories, constants, and data loaders for connecting to and interacting with
 Tardis APIs and the Tardis Machine server.</p>
 <p>For convenience, the most commonly used symbols are re-exported at the subpackage’s
-top level, so downstream code can simply import from <code>nautilus_trader.adapters.tardis</code>.</p>
+top level, so downstream code can simply import from <code>posei_trader.adapters.tardis</code>.</p>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-tardiscsvdataloader"><em>class</em> TardisCSVDataLoader<a href="#class-tardiscsvdataloader" class="hash-link" aria-label="Direct link to class-tardiscsvdataloader" title="Direct link to class-tardiscsvdataloader">​</a></h3>
 <p>Bases: <code>object</code></p>
 <p>Loads CSV data in the Tardis format with optional GZip decompression.</p>
@@ -34,13 +34,13 @@ top level, so downstream code can simply import from <code>nautilus_trader.adapt
 If not provided, the precision will be inferred from the data.</li>
 <li><strong>size_precision</strong> (<em>int</em> <em>,</em> <em>optional</em>) – The size precision for parsing.
 If not provided, the precision will be inferred from the data.</li>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>,</em> <em>optional</em>) – The instrument ID to override in the data.
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>,</em> <em>optional</em>) – The instrument ID to override in the data.
 This can be more efficient if the instrument is definitely know (file does not contain
 mixed instruments), or to maintain consistent symbology (such as BTCUSDT-PERP.BINANCE).</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta">load_deltas(filepath: PathLike[str] | str, as_legacy_cython: bool = True, limit: int | None = None) → list[<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta">OrderBookDelta</a>] | list[OrderBookDelta]<a href="#load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta" class="hash-link" aria-label="Direct link to load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta" title="Direct link to load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta">load_deltas(filepath: PathLike[str] | str, as_legacy_cython: bool = True, limit: int | None = None) → list[<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta">OrderBookDelta</a>] | list[OrderBookDelta]<a href="#load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta" class="hash-link" aria-label="Direct link to load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta" title="Direct link to load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta">​</a></h4>
 <p>Load order book deltas data from the given filepath.</p>
 <p>CSV file must be Tardis incremental book L2 format.</p>
 <ul>
@@ -54,9 +54,9 @@ directly to a data catalog for the data to then be written in Nautilus Parquet f
 </ul>
 </li>
 <li><strong>Return type:</strong>
-list[<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta">OrderBookDelta</a>] | list[nautilus_pyo3.OrderBookDelta]</li>
+list[<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta">OrderBookDelta</a>] | list[nautilus_pyo3.OrderBookDelta]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10">load_depth10(filepath: PathLike[str] | str, levels: int, as_legacy_cython: bool = True, limit: int | None = None) → list[<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDepth10">OrderBookDepth10</a>] | list[OrderBookDepth10]<a href="#load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10" class="hash-link" aria-label="Direct link to load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10" title="Direct link to load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10">load_depth10(filepath: PathLike[str] | str, levels: int, as_legacy_cython: bool = True, limit: int | None = None) → list[<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDepth10">OrderBookDepth10</a>] | list[OrderBookDepth10]<a href="#load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10" class="hash-link" aria-label="Direct link to load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10" title="Direct link to load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10">​</a></h4>
 <p>Load order book depth snapshots from the given filepath.</p>
 <p>CSV file must be Tardis book snapshot 5 or snapshot 25 format.</p>
 <ul>
@@ -75,11 +75,11 @@ directly to a data catalog for the data to then be written in Nautilus Parquet f
 </ul>
 </li>
 <li><strong>Return type:</strong>
-list[<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDepth10">OrderBookDepth10</a>] | list[nautilus_pyo3.OrderBookDepth10]</li>
+list[<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDepth10">OrderBookDepth10</a>] | list[nautilus_pyo3.OrderBookDepth10]</li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If levels is not either 5 or 25.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_quotesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listquotetick--listquotetick">load_quotes(filepath: PathLike[str] | str, as_legacy_cython: bool = True, limit: int | None = None) → list[<a href="../../model/data/index.htm#nautilus_trader.model.data.QuoteTick">QuoteTick</a>] | list[QuoteTick]<a href="#load_quotesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listquotetick--listquotetick" class="hash-link" aria-label="Direct link to load_quotesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listquotetick--listquotetick" title="Direct link to load_quotesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listquotetick--listquotetick">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_quotesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listquotetick--listquotetick">load_quotes(filepath: PathLike[str] | str, as_legacy_cython: bool = True, limit: int | None = None) → list[<a href="../../model/data/index.htm#posei_trader.model.data.QuoteTick">QuoteTick</a>] | list[QuoteTick]<a href="#load_quotesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listquotetick--listquotetick" class="hash-link" aria-label="Direct link to load_quotesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listquotetick--listquotetick" title="Direct link to load_quotesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listquotetick--listquotetick">​</a></h4>
 <p>Load quote tick data from the given filepath.</p>
 <p>CSV file must be Tardis quotes format.</p>
 <ul>
@@ -93,9 +93,9 @@ directly to a data catalog for the data to then be written in Nautilus Parquet f
 </ul>
 </li>
 <li><strong>Return type:</strong>
-list[<a href="../../model/data/index.htm#nautilus_trader.model.data.QuoteTick">QuoteTick</a>] | list[nautilus_pyo3.QuoteTick]</li>
+list[<a href="../../model/data/index.htm#posei_trader.model.data.QuoteTick">QuoteTick</a>] | list[nautilus_pyo3.QuoteTick]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_tradesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listtradetick--listtradetick">load_trades(filepath: PathLike[str] | str, as_legacy_cython: bool = True, limit: int | None = None) → list[<a href="../../model/data/index.htm#nautilus_trader.model.data.TradeTick">TradeTick</a>] | list[TradeTick]<a href="#load_tradesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listtradetick--listtradetick" class="hash-link" aria-label="Direct link to load_tradesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listtradetick--listtradetick" title="Direct link to load_tradesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listtradetick--listtradetick">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_tradesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listtradetick--listtradetick">load_trades(filepath: PathLike[str] | str, as_legacy_cython: bool = True, limit: int | None = None) → list[<a href="../../model/data/index.htm#posei_trader.model.data.TradeTick">TradeTick</a>] | list[TradeTick]<a href="#load_tradesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listtradetick--listtradetick" class="hash-link" aria-label="Direct link to load_tradesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listtradetick--listtradetick" title="Direct link to load_tradesfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listtradetick--listtradetick">​</a></h4>
 <p>Load trade tick data from the given filepath.</p>
 <p>CSV file must be Tardis trades format.</p>
 <ul>
@@ -109,10 +109,10 @@ directly to a data catalog for the data to then be written in Nautilus Parquet f
 </ul>
 </li>
 <li><strong>Return type:</strong>
-list[<a href="../../model/data/index.htm#nautilus_trader.model.data.TradeTick">TradeTick</a>] | list[nautilus_pyo3.TradeTick]</li>
+list[<a href="../../model/data/index.htm#posei_trader.model.data.TradeTick">TradeTick</a>] | list[nautilus_pyo3.TradeTick]</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-tardisdataclientconfig"><em>class</em> TardisDataClientConfig<a href="#class-tardisdataclientconfig" class="hash-link" aria-label="Direct link to class-tardisdataclientconfig" title="Direct link to class-tardisdataclientconfig">​</a></h3>
-<p>Bases: <a href="../../config/index.htm#nautilus_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
+<p>Bases: <a href="../../config/index.htm#posei_trader.live.config.LiveDataClientConfig"><code>LiveDataClientConfig</code></a></p>
 <p>Configuration for <code>TardisDataClient</code> instances.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -152,7 +152,7 @@ str</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig">instrument_provider <em>: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig" title="Direct link to instrument_provider--instrumentproviderconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="instrument_provider--instrumentproviderconfig">instrument_provider <em>: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a></em><a href="#instrument_provider--instrumentproviderconfig" class="hash-link" aria-label="Direct link to instrument_provider--instrumentproviderconfig" title="Direct link to instrument_provider--instrumentproviderconfig">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="json--bytes">json() → bytes<a href="#json--bytes" class="hash-link" aria-label="Direct link to json() → bytes" title="Direct link to json() → bytes">​</a></h4>
 <p>Return serialized JSON encoded bytes.</p>
 <ul>
@@ -184,7 +184,7 @@ dict[str, Any]</li>
 <li><strong>Return type:</strong>
 Any</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig">routing <em>: <a href="../../config/index.htm#nautilus_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig" class="hash-link" aria-label="Direct link to routing--routingconfig" title="Direct link to routing--routingconfig">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="routing--routingconfig">routing <em>: <a href="../../config/index.htm#posei_trader.live.config.RoutingConfig">RoutingConfig</a></em><a href="#routing--routingconfig" class="hash-link" aria-label="Direct link to routing--routingconfig" title="Direct link to routing--routingconfig">​</a></h4>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="validate--bool">validate() → bool<a href="#validate--bool" class="hash-link" aria-label="Direct link to validate() → bool" title="Direct link to validate() → bool">​</a></h4>
 <p>Return whether the configuration can be represented as valid JSON.</p>
 <ul>
@@ -192,33 +192,33 @@ Any</li>
 bool</li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-tardisinstrumentprovider"><em>class</em> TardisInstrumentProvider<a href="#class-tardisinstrumentprovider" class="hash-link" aria-label="Direct link to class-tardisinstrumentprovider" title="Direct link to class-tardisinstrumentprovider">​</a></h3>
-<p>Bases: <a href="../../common/index.htm#nautilus_trader.common.providers.InstrumentProvider"><code>InstrumentProvider</code></a></p>
+<p>Bases: <a href="../../common/index.htm#posei_trader.common.providers.InstrumentProvider"><code>InstrumentProvider</code></a></p>
 <p>Provides Nautilus instrument definitions from Tardis.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>client</strong> (<em>TardisHttpClient</em>) – The Tardis HTTP client.</li>
-<li><strong>config</strong> (<a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a> <em>,</em> <em>optional</em>) – The instrument provider configuration, by default None.</li>
+<li><strong>config</strong> (<a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a> <em>,</em> <em>optional</em>) – The instrument provider configuration, by default None.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="addinstrument-instrument--none">add(instrument: <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>) → None<a href="#addinstrument-instrument--none" class="hash-link" aria-label="Direct link to addinstrument-instrument--none" title="Direct link to addinstrument-instrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="addinstrument-instrument--none">add(instrument: <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>) → None<a href="#addinstrument-instrument--none" class="hash-link" aria-label="Direct link to addinstrument-instrument--none" title="Direct link to addinstrument-instrument--none">​</a></h4>
 <p>Add the given instrument to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instrument</strong> (<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"><em>Instrument</em></a>) – The instrument to add.</li>
+<strong>instrument</strong> (<a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"><em>Instrument</em></a>) – The instrument to add.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_bulkinstruments-listinstrument--none">add_bulk(instruments: list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]) → None<a href="#add_bulkinstruments-listinstrument--none" class="hash-link" aria-label="Direct link to add_bulkinstruments-listinstrument--none" title="Direct link to add_bulkinstruments-listinstrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_bulkinstruments-listinstrument--none">add_bulk(instruments: list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]) → None<a href="#add_bulkinstruments-listinstrument--none" class="hash-link" aria-label="Direct link to add_bulkinstruments-listinstrument--none" title="Direct link to add_bulkinstruments-listinstrument--none">​</a></h4>
 <p>Add the given instruments bulk to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instruments</strong> (<em>list</em> <em>[</em><a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"><em>Instrument</em></a> <em>]</em>) – The instruments to add.</li>
+<strong>instruments</strong> (<em>list</em> <em>[</em><a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument"><em>Instrument</em></a> <em>]</em>) – The instruments to add.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_currencycurrency-currency--none">add_currency(currency: <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a>) → None<a href="#add_currencycurrency-currency--none" class="hash-link" aria-label="Direct link to add_currencycurrency-currency--none" title="Direct link to add_currencycurrency-currency--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="add_currencycurrency-currency--none">add_currency(currency: <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a>) → None<a href="#add_currencycurrency-currency--none" class="hash-link" aria-label="Direct link to add_currencycurrency-currency--none" title="Direct link to add_currencycurrency-currency--none">​</a></h4>
 <p>Add the given currency to the provider.</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>currency</strong> (<a href="../../model/index.htm#nautilus_trader.model.Currency"><em>Currency</em></a>) – The currency to add.</li>
+<strong>currency</strong> (<a href="../../model/index.htm#posei_trader.model.Currency"><em>Currency</em></a>) – The currency to add.</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="property-count--int"><em>property</em> count <em>: int</em><a href="#property-count--int" class="hash-link" aria-label="Direct link to property-count--int" title="Direct link to property-count--int">​</a></h4>
 <p>Return the count of instruments held by the provider.</p>
@@ -226,13 +226,13 @@ bool</li>
 <li><strong>Return type:</strong>
 int</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencies--dictstr-currency">currencies() → dict[str, <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a>]<a href="#currencies--dictstr-currency" class="hash-link" aria-label="Direct link to currencies--dictstr-currency" title="Direct link to currencies--dictstr-currency">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencies--dictstr-currency">currencies() → dict[str, <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a>]<a href="#currencies--dictstr-currency" class="hash-link" aria-label="Direct link to currencies--dictstr-currency" title="Direct link to currencies--dictstr-currency">​</a></h4>
 <p>Return all currencies held by the instrument provider.</p>
 <ul>
 <li><strong>Return type:</strong>
-dict[str, <a href="../../model/index.htm#nautilus_trader.model.Currency">Currency</a>]</li>
+dict[str, <a href="../../model/index.htm#posei_trader.model.Currency">Currency</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencycode-str--currency--none">currency(code: str) → <a href="../../model/objects/index.htm#nautilus_trader.model.objects.Currency">Currency</a> | None<a href="#currencycode-str--currency--none" class="hash-link" aria-label="Direct link to currencycode-str--currency--none" title="Direct link to currencycode-str--currency--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currencycode-str--currency--none">currency(code: str) → <a href="../../model/objects/index.htm#posei_trader.model.objects.Currency">Currency</a> | None<a href="#currencycode-str--currency--none" class="hash-link" aria-label="Direct link to currencycode-str--currency--none" title="Direct link to currencycode-str--currency--none">​</a></h4>
 <p>Return the currency with the given code (if found).</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -242,20 +242,20 @@ Currency or <code>None</code></li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If code is not a valid string.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="findinstrument_id-instrumentid--instrument--none">find(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>) → <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a> | None<a href="#findinstrument_id-instrumentid--instrument--none" class="hash-link" aria-label="Direct link to findinstrument_id-instrumentid--instrument--none" title="Direct link to findinstrument_id-instrumentid--instrument--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="findinstrument_id-instrumentid--instrument--none">find(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>) → <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a> | None<a href="#findinstrument_id-instrumentid--instrument--none" class="hash-link" aria-label="Direct link to findinstrument_id-instrumentid--instrument--none" title="Direct link to findinstrument_id-instrumentid--instrument--none">​</a></h4>
 <p>Return the instrument for the given instrument ID (if found).</p>
 <ul>
 <li><strong>Parameters:</strong>
-<strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The ID for the instrument</li>
+<strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The ID for the instrument</li>
 <li><strong>Return type:</strong>
 Instrument or <code>None</code></li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_all--dictinstrumentid-instrument">get_all() → dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#get_all--dictinstrumentid-instrument" class="hash-link" aria-label="Direct link to get_all--dictinstrumentid-instrument" title="Direct link to get_all--dictinstrumentid-instrument">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_all--dictinstrumentid-instrument">get_all() → dict[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#get_all--dictinstrumentid-instrument" class="hash-link" aria-label="Direct link to get_all--dictinstrumentid-instrument" title="Direct link to get_all--dictinstrumentid-instrument">​</a></h4>
 <p>Return all loaded instruments as a map keyed by instrument ID.</p>
 <p>If no instruments loaded, will return an empty dict.</p>
 <ul>
 <li><strong>Return type:</strong>
-dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument">Instrument</a>]</li>
+dict[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, <a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument">Instrument</a>]</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-initializereload-bool--false--none"><em>async</em> initialize(reload: bool = False) → None<a href="#async-initializereload-bool--false--none" class="hash-link" aria-label="Direct link to async-initializereload-bool--false--none" title="Direct link to async-initializereload-bool--false--none">​</a></h4>
 <p>Initialize the instrument provider.</p>
@@ -264,19 +264,19 @@ dict[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifier
 <strong>reload</strong> (<em>bool</em> <em>,</em> <em>default False</em>) – If True, then will always reload instruments.
 If False, then will immediately return if already loaded.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="list_all--listinstrument">list_all() → list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#list_all--listinstrument" class="hash-link" aria-label="Direct link to list_all--listinstrument" title="Direct link to list_all--listinstrument">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="list_all--listinstrument">list_all() → list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument">Instrument</a>]<a href="#list_all--listinstrument" class="hash-link" aria-label="Direct link to list_all--listinstrument" title="Direct link to list_all--listinstrument">​</a></h4>
 <p>Return all loaded instruments.</p>
 <ul>
 <li><strong>Return type:</strong>
-list[<a href="../../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument">Instrument</a>]</li>
+list[<a href="../../model/instruments/index.htm#posei_trader.model.instruments.Instrument">Instrument</a>]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loadinstrument_id-instrumentid-filters-dict--none--none--none">load(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#loadinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loadinstrument_id-instrumentid-filters-dict--none--none--none">load(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#loadinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to loadinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instrument for the given ID into the provider, optionally applying the
 given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
@@ -291,37 +291,37 @@ filters.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_all_asyncfilters-dict--none--none--none"><em>async</em> load_all_async(filters: dict | None = None) → None<a href="#async-load_all_asyncfilters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_all_asyncfilters-dict--none--none--none" title="Direct link to async-load_all_asyncfilters-dict--none--none--none">​</a></h4>
 <p>Load the latest instruments into the provider asynchronously, optionally
 applying the given filters.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none"><em>async</em> load_async(instrument_id: <a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none"><em>async</em> load_async(instrument_id: <a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>, filters: dict | None = None) → None<a href="#async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none" title="Direct link to async-load_asyncinstrument_id-instrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instrument for the given ID into the provider asynchronously,
 optionally applying the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a>) – The instrument ID to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If instrument_id.venue is not equal to self.venue.</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">load_ids(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">load_ids(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to load_idsinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instruments for the given IDs into the provider, optionally applying
 the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none"><em>async</em> load_ids_async(instrument_ids: list[<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none"><em>async</em> load_ids_async(instrument_ids: list[<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId">InstrumentId</a>], filters: dict | None = None) → None<a href="#async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" class="hash-link" aria-label="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none" title="Direct link to async-load_ids_asyncinstrument_ids-listinstrumentid-filters-dict--none--none--none">​</a></h4>
 <p>Load the instruments for the given IDs into the provider, optionally applying
 the given filters.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
+<li><strong>instrument_ids</strong> (<em>list</em> <em>[</em><a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>]</em>) – The instrument IDs to load.</li>
 <li><strong>filters</strong> (<em>frozendict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>] or</em> <em>dict</em> *[*<em>str</em> <em>,</em> <em>Any</em> <em>]</em> <em>,</em> <em>optional</em>) – The venue specific instrument loading filters to apply.</li>
 </ul>
 </li>
@@ -331,21 +331,21 @@ the given filters.</p>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-tardislivedataclientfactory"><em>class</em> TardisLiveDataClientFactory<a href="#class-tardislivedataclientfactory" class="hash-link" aria-label="Direct link to class-tardislivedataclientfactory" title="Direct link to class-tardislivedataclientfactory">​</a></h3>
 <p>Bases: <code>LiveDataClientFactory</code></p>
 <p>Provides a Tardis live data client factory.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-tardisdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--tardisdataclient"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#nautilus_trader.adapters.tardis.config.TardisDataClientConfig">TardisDataClientConfig</a>, msgbus: <a href="../../common/index.htm#nautilus_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#nautilus_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#nautilus_trader.common.component.LiveClock">LiveClock</a>) → <a href="#nautilus_trader.adapters.tardis.data.TardisDataClient">TardisDataClient</a><a href="#static-createloop-abstracteventloop-name-str-config-tardisdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--tardisdataclient" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-tardisdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--tardisdataclient" title="Direct link to static-createloop-abstracteventloop-name-str-config-tardisdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--tardisdataclient">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-createloop-abstracteventloop-name-str-config-tardisdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--tardisdataclient"><em>static</em> create(loop: AbstractEventLoop, name: str, config: <a href="#posei_trader.adapters.tardis.config.TardisDataClientConfig">TardisDataClientConfig</a>, msgbus: <a href="../../common/index.htm#posei_trader.common.component.MessageBus">MessageBus</a>, cache: <a href="../../cache/index.htm#posei_trader.cache.cache.Cache">Cache</a>, clock: <a href="../../common/index.htm#posei_trader.common.component.LiveClock">LiveClock</a>) → <a href="#posei_trader.adapters.tardis.data.TardisDataClient">TardisDataClient</a><a href="#static-createloop-abstracteventloop-name-str-config-tardisdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--tardisdataclient" class="hash-link" aria-label="Direct link to static-createloop-abstracteventloop-name-str-config-tardisdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--tardisdataclient" title="Direct link to static-createloop-abstracteventloop-name-str-config-tardisdataclientconfig-msgbus-messagebus-cache-cache-clock-liveclock--tardisdataclient">​</a></h4>
 <p>Create a new Tardis data client.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>loop</strong> (<em>asyncio.AbstractEventLoop</em>) – The event loop for the client.</li>
 <li><strong>name</strong> (<em>str</em>) – The custom client ID.</li>
-<li><strong>config</strong> (<a href="#nautilus_trader.adapters.tardis.TardisDataClientConfig"><em>TardisDataClientConfig</em></a>) – The client configuration.</li>
-<li><strong>msgbus</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
-<li><strong>cache</strong> (<a href="../../cache/index.htm#nautilus_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
-<li><strong>clock</strong> (<a href="../../common/index.htm#nautilus_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
+<li><strong>config</strong> (<a href="#posei_trader.adapters.tardis.TardisDataClientConfig"><em>TardisDataClientConfig</em></a>) – The client configuration.</li>
+<li><strong>msgbus</strong> (<a href="../../common/index.htm#posei_trader.common.component.MessageBus"><em>MessageBus</em></a>) – The message bus for the client.</li>
+<li><strong>cache</strong> (<a href="../../cache/index.htm#posei_trader.cache.Cache"><em>Cache</em></a>) – The cache for the client.</li>
+<li><strong>clock</strong> (<a href="../../common/index.htm#posei_trader.common.component.LiveClock"><em>LiveClock</em></a>) – The clock for the instrument provider.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.tardis.data.TardisDataClient">TardisDataClient</a></li>
+<a href="#posei_trader.adapters.tardis.data.TardisDataClient">TardisDataClient</a></li>
 </ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_tardis_http_clientapi_key-str--none--none-base_url-str--none--none-timeout_secs-int--60--tardishttpclient">get_tardis_http_client(api_key: str | None = None, base_url: str | None = None, timeout_secs: int = 60) → TardisHttpClient<a href="#get_tardis_http_clientapi_key-str--none--none-base_url-str--none--none-timeout_secs-int--60--tardishttpclient" class="hash-link" aria-label="Direct link to get_tardis_http_client(api_key: str | None = None, base_url: str | None = None, timeout_secs: int = 60) → TardisHttpClient" title="Direct link to get_tardis_http_client(api_key: str | None = None, base_url: str | None = None, timeout_secs: int = 60) → TardisHttpClient">​</a></h3>
 <p>Cache and return a Tardis HTTP client with the given key and secret.</p>
@@ -362,18 +362,18 @@ client will be returned.</p>
 <li><strong>Return type:</strong>
 TardisHttpClient</li>
 </ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_tardis_instrument_providerclient-tardishttpclient-config-instrumentproviderconfig--tardisinstrumentprovider">get_tardis_instrument_provider(client: TardisHttpClient, config: <a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a>) → <a href="#nautilus_trader.adapters.tardis.providers.TardisInstrumentProvider">TardisInstrumentProvider</a><a href="#get_tardis_instrument_providerclient-tardishttpclient-config-instrumentproviderconfig--tardisinstrumentprovider" class="hash-link" aria-label="Direct link to get_tardis_instrument_providerclient-tardishttpclient-config-instrumentproviderconfig--tardisinstrumentprovider" title="Direct link to get_tardis_instrument_providerclient-tardishttpclient-config-instrumentproviderconfig--tardisinstrumentprovider">​</a></h3>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="get_tardis_instrument_providerclient-tardishttpclient-config-instrumentproviderconfig--tardisinstrumentprovider">get_tardis_instrument_provider(client: TardisHttpClient, config: <a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig">InstrumentProviderConfig</a>) → <a href="#posei_trader.adapters.tardis.providers.TardisInstrumentProvider">TardisInstrumentProvider</a><a href="#get_tardis_instrument_providerclient-tardishttpclient-config-instrumentproviderconfig--tardisinstrumentprovider" class="hash-link" aria-label="Direct link to get_tardis_instrument_providerclient-tardishttpclient-config-instrumentproviderconfig--tardisinstrumentprovider" title="Direct link to get_tardis_instrument_providerclient-tardishttpclient-config-instrumentproviderconfig--tardisinstrumentprovider">​</a></h3>
 <p>Cache and return a Tardis instrument provider.</p>
 <p>If a cached provider already exists, then that provider will be returned.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>client</strong> (<em>TardisHttpClient</em>) – The client for the instrument provider.</li>
-<li><strong>config</strong> (<a href="../../config/index.htm#nautilus_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the instrument provider.</li>
+<li><strong>config</strong> (<a href="../../config/index.htm#posei_trader.common.config.InstrumentProviderConfig"><em>InstrumentProviderConfig</em></a>) – The configuration for the instrument provider.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.adapters.tardis.TardisInstrumentProvider">TardisInstrumentProvider</a></li>
+<a href="#posei_trader.adapters.tardis.TardisInstrumentProvider">TardisInstrumentProvider</a></li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="loaders">Loaders<a href="#loaders" class="hash-link" aria-label="Direct link to Loaders" title="Direct link to Loaders">​</a></h2>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="class-tardiscsvdataloader-1"><em>class</em> TardisCSVDataLoader<a href="#class-tardiscsvdataloader-1" class="hash-link" aria-label="Direct link to class-tardiscsvdataloader-1" title="Direct link to class-tardiscsvdataloader-1">​</a></h3>
@@ -387,13 +387,13 @@ TardisHttpClient</li>
 If not provided, the precision will be inferred from the data.</li>
 <li><strong>size_precision</strong> (<em>int</em> <em>,</em> <em>optional</em>) – The size precision for parsing.
 If not provided, the precision will be inferred from the data.</li>
-<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>,</em> <em>optional</em>) – The instrument ID to override in the data.
+<li><strong>instrument_id</strong> (<a href="../../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>,</em> <em>optional</em>) – The instrument ID to override in the data.
 This can be more efficient if the instrument is definitely know (file does not contain
 mixed instruments), or to maintain consistent symbology (such as BTCUSDT-PERP.BINANCE).</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta-1">load_deltas(filepath: PathLike[str] | str, as_legacy_cython: bool = True, limit: int | None = None) → list[<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta">OrderBookDelta</a>] | list[OrderBookDelta]<a href="#load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta-1" class="hash-link" aria-label="Direct link to load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta-1" title="Direct link to load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta-1">load_deltas(filepath: PathLike[str] | str, as_legacy_cython: bool = True, limit: int | None = None) → list[<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta">OrderBookDelta</a>] | list[OrderBookDelta]<a href="#load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta-1" class="hash-link" aria-label="Direct link to load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta-1" title="Direct link to load_deltasfilepath-pathlikestr--str-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdelta--listorderbookdelta-1">​</a></h4>
 <p>Load order book deltas data from the given filepath.</p>
 <p>CSV file must be Tardis incremental book L2 format.</p>
 <ul>
@@ -407,9 +407,9 @@ directly to a data catalog for the data to then be written in Nautilus Parquet f
 </ul>
 </li>
 <li><strong>Return type:</strong>
-list[<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta">OrderBookDelta</a>] | list[nautilus_pyo3.OrderBookDelta]</li>
+list[<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDelta">OrderBookDelta</a>] | list[nautilus_pyo3.OrderBookDelta]</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10-1">load_depth10(filepath: PathLike[str] | str, levels: int, as_legacy_cython: bool = True, limit: int | None = None) → list[<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDepth10">OrderBookDepth10</a>] | list[OrderBookDepth10]<a href="#load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10-1" class="hash-link" aria-label="Direct link to load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10-1" title="Direct link to load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10-1">load_depth10(filepath: PathLike[str] | str, levels: int, as_legacy_cython: bool = True, limit: int | None = None) → list[<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDepth10">OrderBookDepth10</a>] | list[OrderBookDepth10]<a href="#load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10-1" class="hash-link" aria-label="Direct link to load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10-1" title="Direct link to load_depth10filepath-pathlikestr--str-levels-int-as_legacy_cython-bool--true-limit-int--none--none--listorderbookdepth10--listorderbookdepth10-1">​</a></h4>
 <p>Load order book depth snapshots from the given filepath.</p>
 <p>CSV file must be Tardis book snapshot 5 or snapshot 25 format.</p>
 <ul>
@@ -428,7 +428,7 @@ directly to a data catalog for the data to then be written in Nautilus Parquet f
 </ul>
 </li>
 <li><strong>Return type:</strong>
-list[<a href="../../model/data/index.htm#nautilus_trader.model.data.OrderBookDepth10">OrderBookDepth10</a>] | list[nautilus_pyo3.OrderBookDepth10]</li>
+list[<a href="../../model/data/index.htm#posei_trader.model.data.OrderBookDepth10">OrderBookDepth10</a>] | list[nautilus_pyo3.OrderBookDepth10]</li>
 <li><strong>Raises:</strong>
 <strong>ValueError</strong> – If levels is not either 5 or 25.</li>
 </ul>

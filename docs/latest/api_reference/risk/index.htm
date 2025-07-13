@@ -747,7 +747,7 @@
                               management through position sizing.
                             </p>
                             <p>
-                              <a id="module-nautilus_trader.risk.engine"></a>
+                              <a id="module-posei_trader.risk.engine"></a>
                             </p>
                             <h3
                               class="anchor anchorWithHideOnScrollNavbar_WYt5"
@@ -764,7 +764,7 @@
                             <p>
                               Bases:
                               <a
-                                href="../common/index.htm#nautilus_trader.common.component.Component"
+                                href="../common/index.htm#posei_trader.common.component.Component"
                                 ><code>Component</code></a
                               >
                             </p>
@@ -801,31 +801,31 @@
                                 <ul>
                                   <li>
                                     <strong>portfolio</strong> (<a
-                                      href="../portfolio/index.htm#nautilus_trader.portfolio.PortfolioFacade"
+                                      href="../portfolio/index.htm#posei_trader.portfolio.PortfolioFacade"
                                       ><em>PortfolioFacade</em></a
                                     >) – The portfolio for the engine.
                                   </li>
                                   <li>
                                     <strong>msgbus</strong> (<a
-                                      href="../common/index.htm#nautilus_trader.common.component.MessageBus"
+                                      href="../common/index.htm#posei_trader.common.component.MessageBus"
                                       ><em>MessageBus</em></a
                                     >) – The message bus for the engine.
                                   </li>
                                   <li>
                                     <strong>cache</strong> (<a
-                                      href="../cache/index.htm#nautilus_trader.cache.Cache"
+                                      href="../cache/index.htm#posei_trader.cache.Cache"
                                       ><em>Cache</em></a
                                     >) – The cache for the engine.
                                   </li>
                                   <li>
                                     <strong>clock</strong> (<a
-                                      href="../common/index.htm#nautilus_trader.common.component.Clock"
+                                      href="../common/index.htm#posei_trader.common.component.Clock"
                                       ><em>Clock</em></a
                                     >) – The clock for the engine.
                                   </li>
                                   <li>
                                     <strong>config</strong> (<a
-                                      href="../config/index.htm#nautilus_trader.risk.config.RiskEngineConfig"
+                                      href="../config/index.htm#posei_trader.risk.config.RiskEngineConfig"
                                       ><em>RiskEngineConfig</em></a
                                     >
                                     <em>,</em> <em>optional</em>) – The
@@ -986,7 +986,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>command</strong> (<a
-                                  href="../core/index.htm#nautilus_trader.core.Command"
+                                  href="../core/index.htm#posei_trader.core.Command"
                                   ><em>Command</em></a
                                 >) – The command to execute.
                               </li>
@@ -1261,7 +1261,7 @@
                             <ul>
                               <li>
                                 <strong>Return type:</strong> dict[<a
-                                  href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  href="../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                   >InstrumentId</a
                                 >, Decimal]
                               </li>
@@ -1333,7 +1333,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>event</strong> (<a
-                                  href="../core/index.htm#nautilus_trader.core.Event"
+                                  href="../core/index.htm#posei_trader.core.Event"
                                   ><em>Event</em></a
                                 >) – The event to process.
                               </li>
@@ -1443,7 +1443,7 @@
                                 <ul>
                                   <li>
                                     <strong>instrument_id</strong> (<a
-                                      href="../model/identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
                                       ><em>InstrumentId</em></a
                                     >) – The instrument ID for the max notional.
                                   </li>
@@ -1668,7 +1668,7 @@
                               <li><strong>Returns:</strong> type</li>
                             </ul>
                             <p>
-                              <a id="module-nautilus_trader.risk.sizing"></a>
+                              <a id="module-posei_trader.risk.sizing"></a>
                             </p>
                             <h3
                               class="anchor anchorWithHideOnScrollNavbar_WYt5"
@@ -1685,7 +1685,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.risk.sizing.PositionSizer"
+                                href="#posei_trader.risk.sizing.PositionSizer"
                                 ><code>PositionSizer</code></a
                               >
                             </p>
@@ -1698,7 +1698,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>instrument</strong> (<a
-                                  href="../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"
+                                  href="../model/instruments/index.htm#posei_trader.model.instruments.Instrument"
                                   ><em>Instrument</em></a
                                 >) – The instrument for position sizing.
                               </li>
@@ -1714,7 +1714,7 @@
                               unit_batch_size: Decimal = Decimal(1), int
                               units=1) →
                               <a
-                                href="../model/index.htm#nautilus_trader.model.Quantity"
+                                href="../model/index.htm#posei_trader.model.Quantity"
                                 >Quantity</a
                               ><a
                                 href="#calculateself-price-entry-price-stop_loss-money-equity-risk-decimal-commission_rate-decimal--decimal0-exchange_rate-decimal--decimal1-hard_limit-decimal--none--none-unit_batch_size-decimal--decimal1-int-units1--quantity"
@@ -1731,19 +1731,19 @@
                                 <ul>
                                   <li>
                                     <strong>entry</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Price"
+                                      href="../model/index.htm#posei_trader.model.Price"
                                       ><em>Price</em></a
                                     >) – The entry price.
                                   </li>
                                   <li>
                                     <strong>stop_loss</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Price"
+                                      href="../model/index.htm#posei_trader.model.Price"
                                       ><em>Price</em></a
                                     >) – The stop loss price.
                                   </li>
                                   <li>
                                     <strong>equity</strong> (<a
-                                      href="../model/index.htm#nautilus_trader.model.Money"
+                                      href="../model/index.htm#posei_trader.model.Money"
                                       ><em>Money</em></a
                                     >) – The account equity.
                                   </li>
@@ -1814,7 +1814,7 @@
                               <li>
                                 <strong>Return type:</strong>
                                 <a
-                                  href="../model/index.htm#nautilus_trader.model.Quantity"
+                                  href="../model/index.htm#posei_trader.model.Quantity"
                                   >Quantity</a
                                 >
                               </li>
@@ -1856,7 +1856,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>instrument</strong> (<a
-                                  href="../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"
+                                  href="../model/instruments/index.htm#posei_trader.model.instruments.Instrument"
                                   ><em>Instrument</em></a
                                 >)
                               </li>

@@ -727,7 +727,7 @@
                             </p>
                             <p>
                               <a
-                                id="module-nautilus_trader.persistence.catalog.base"
+                                id="module-posei_trader.persistence.catalog.base"
                               ></a>
                             </p>
                             <h3
@@ -753,7 +753,7 @@
                             >
                               <em>abstractmethod classmethod</em> from_env() →
                               <a
-                                href="#nautilus_trader.persistence.catalog.base.BaseDataCatalog"
+                                href="#posei_trader.persistence.catalog.base.BaseDataCatalog"
                                 >BaseDataCatalog</a
                               ><a
                                 href="#abstractmethod-classmethod-from_env--basedatacatalog"
@@ -770,7 +770,7 @@
                               <em>abstractmethod classmethod</em> from_uri(uri:
                               str) →
                               <a
-                                href="#nautilus_trader.persistence.catalog.base.BaseDataCatalog"
+                                href="#posei_trader.persistence.catalog.base.BaseDataCatalog"
                                 >BaseDataCatalog</a
                               ><a
                                 href="#abstractmethod-classmethod-from_uriuri-str--basedatacatalog"
@@ -788,7 +788,7 @@
                               instrument_ids: list[str] | None = None,
                               bar_types: list[str] | None = None, **kwargs: Any)
                               → list[<a
-                                href="../core/index.htm#nautilus_trader.core.Data"
+                                href="../core/index.htm#posei_trader.core.Data"
                                 >Data</a
                               >]<a
                                 href="#abstractmethod-querydata_cls-type-instrument_ids-liststr--none--none-bar_types-liststr--none--none-kwargs-any--listdata"
@@ -821,7 +821,7 @@
                               instruments(instrument_type: type | None = None,
                               instrument_ids: list[str] | None = None, **kwargs:
                               Any) → list[<a
-                                href="../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument"
+                                href="../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument"
                                 >Instrument</a
                               >]<a
                                 href="#instrumentsinstrument_type-type--none--none-instrument_ids-liststr--none--none-kwargs-any--listinstrument"
@@ -837,7 +837,7 @@
                             >
                               instrument_status(instrument_ids: list[str] | None
                               = None, **kwargs: Any) → list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.InstrumentStatus"
+                                href="../model/data/index.htm#posei_trader.model.data.InstrumentStatus"
                                 >InstrumentStatus</a
                               >]<a
                                 href="#instrument_statusinstrument_ids-liststr--none--none-kwargs-any--listinstrumentstatus"
@@ -853,7 +853,7 @@
                             >
                               instrument_closes(instrument_ids: list[str] | None
                               = None, **kwargs: Any) → list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.InstrumentClose"
+                                href="../model/data/index.htm#posei_trader.model.data.InstrumentClose"
                                 >InstrumentClose</a
                               >]<a
                                 href="#instrument_closesinstrument_ids-liststr--none--none-kwargs-any--listinstrumentclose"
@@ -870,10 +870,10 @@
                               order_book_deltas(instrument_ids: list[str] | None
                               = None, batched: bool = False, **kwargs: Any) →
                               list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta"
+                                href="../model/data/index.htm#posei_trader.model.data.OrderBookDelta"
                                 >OrderBookDelta</a
                               >] | list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.OrderBookDeltas"
+                                href="../model/data/index.htm#posei_trader.model.data.OrderBookDeltas"
                                 >OrderBookDeltas</a
                               >]<a
                                 href="#order_book_deltasinstrument_ids-liststr--none--none-batched-bool--false-kwargs-any--listorderbookdelta--listorderbookdeltas"
@@ -889,7 +889,7 @@
                             >
                               order_book_depth10(instrument_ids: list[str] |
                               None = None, **kwargs: Any) → list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.OrderBookDepth10"
+                                href="../model/data/index.htm#posei_trader.model.data.OrderBookDepth10"
                                 >OrderBookDepth10</a
                               >]<a
                                 href="#order_book_depth10instrument_ids-liststr--none--none-kwargs-any--listorderbookdepth10"
@@ -905,7 +905,7 @@
                             >
                               quote_ticks(instrument_ids: list[str] | None =
                               None, **kwargs: Any) → list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.QuoteTick"
+                                href="../model/data/index.htm#posei_trader.model.data.QuoteTick"
                                 >QuoteTick</a
                               >]<a
                                 href="#quote_ticksinstrument_ids-liststr--none--none-kwargs-any--listquotetick"
@@ -921,7 +921,7 @@
                             >
                               trade_ticks(instrument_ids: list[str] | None =
                               None, **kwargs: Any) → list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.TradeTick"
+                                href="../model/data/index.htm#posei_trader.model.data.TradeTick"
                                 >TradeTick</a
                               >]<a
                                 href="#trade_ticksinstrument_ids-liststr--none--none-kwargs-any--listtradetick"
@@ -937,7 +937,7 @@
                             >
                               bars(bar_types: list[str] | None = None, **kwargs:
                               Any) → list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.Bar"
+                                href="../model/data/index.htm#posei_trader.model.data.Bar"
                                 >Bar</a
                               >]<a
                                 href="#barsbar_types-liststr--none--none-kwargs-any--listbar"
@@ -954,7 +954,7 @@
                               custom_data(cls: type, as_posei: bool = False,
                               metadata: dict | None = None, **kwargs: Any) →
                               list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.CustomData"
+                                href="../model/data/index.htm#posei_trader.model.data.CustomData"
                                 >CustomData</a
                               >]<a
                                 href="#custom_datacls-type-as_nautilus-bool--false-metadata-dict--none--none-kwargs-any--listcustomdata"
@@ -1043,7 +1043,7 @@
                             </h4>
                             <p>
                               <a
-                                id="module-nautilus_trader.persistence.catalog.parquet"
+                                id="module-posei_trader.persistence.catalog.parquet"
                               ></a>
                             </p>
                             <h3
@@ -1132,7 +1132,7 @@
                             <p>
                               Bases:
                               <a
-                                href="#nautilus_trader.persistence.catalog.base.BaseDataCatalog"
+                                href="#posei_trader.persistence.catalog.base.BaseDataCatalog"
                                 ><code>BaseDataCatalog</code></a
                               >
                             </p>
@@ -1230,7 +1230,7 @@
                             >
                               <em>classmethod</em> from_env() →
                               <a
-                                href="#nautilus_trader.persistence.catalog.parquet.ParquetDataCatalog"
+                                href="#posei_trader.persistence.catalog.parquet.ParquetDataCatalog"
                                 >ParquetDataCatalog</a
                               ><a
                                 href="#classmethod-from_env--parquetdatacatalog"
@@ -1248,7 +1248,7 @@
                               <li>
                                 <strong>Return type:</strong>
                                 <a
-                                  href="#nautilus_trader.persistence.catalog.parquet.ParquetDataCatalog"
+                                  href="#posei_trader.persistence.catalog.parquet.ParquetDataCatalog"
                                   >ParquetDataCatalog</a
                                 >
                               </li>
@@ -1264,7 +1264,7 @@
                             >
                               <em>classmethod</em> from_uri(uri: str) →
                               <a
-                                href="#nautilus_trader.persistence.catalog.parquet.ParquetDataCatalog"
+                                href="#posei_trader.persistence.catalog.parquet.ParquetDataCatalog"
                                 >ParquetDataCatalog</a
                               ><a
                                 href="#classmethod-from_uriuri-str--parquetdatacatalog"
@@ -1286,7 +1286,7 @@
                               <li>
                                 <strong>Return type:</strong>
                                 <a
-                                  href="#nautilus_trader.persistence.catalog.parquet.ParquetDataCatalog"
+                                  href="#posei_trader.persistence.catalog.parquet.ParquetDataCatalog"
                                   >ParquetDataCatalog</a
                                 >
                               </li>
@@ -1296,12 +1296,12 @@
                               id="write_datadata-listdata--event--listorderbookdelta--orderbookdepth10--quotetick--tradetick--bar-basename_template-str--part-i-mode-catalogwritemode--catalogwritemodeoverwrite-kwargs-any--none"
                             >
                               write_data(data: list[<a
-                                href="../core/index.htm#nautilus_trader.core.Data"
+                                href="../core/index.htm#posei_trader.core.Data"
                                 >Data</a
                               >
                               |
                               <a
-                                href="../core/index.htm#nautilus_trader.core.message.Event"
+                                href="../core/index.htm#posei_trader.core.message.Event"
                                 >Event</a
                               >] | list[OrderBookDelta | OrderBookDepth10 |
                               QuoteTick | TradeTick | Bar], basename_template:
@@ -1330,12 +1330,12 @@
                                     <strong>data</strong> (<em>list</em>
                                     <em>[</em
                                     ><a
-                                      href="../core/index.htm#nautilus_trader.core.Data"
+                                      href="../core/index.htm#posei_trader.core.Data"
                                       ><em>Data</em></a
                                     >
                                     <em>|</em>
                                     <a
-                                      href="../core/index.htm#nautilus_trader.core.Event"
+                                      href="../core/index.htm#posei_trader.core.Event"
                                       ><em>Event</em></a
                                     >
                                     <em>]</em>) – The data or event objects to
@@ -1428,10 +1428,10 @@
                               id="write_chunkdata-listdata-data_cls-typedata-instrument_id-str--none--none-basename_template-str--part-i-mode-catalogwritemode--catalogwritemodeoverwrite-kwargs-any--none"
                             >
                               write_chunk(data: list[<a
-                                href="../core/index.htm#nautilus_trader.core.Data"
+                                href="../core/index.htm#posei_trader.core.Data"
                                 >Data</a
                               >], data_cls: type[<a
-                                href="../core/index.htm#nautilus_trader.core.Data"
+                                href="../core/index.htm#posei_trader.core.Data"
                                 >Data</a
                               >], instrument_id: str | None = None,
                               basename_template: str = &#x27;part-{i}&#x27;,
@@ -1531,12 +1531,12 @@
                               start: int | str | float | None = None, end: int |
                               str | float | None = None, where: str | None =
                               None, **kwargs: Any) → list[<a
-                                href="../core/index.htm#nautilus_trader.core.Data"
+                                href="../core/index.htm#posei_trader.core.Data"
                                 >Data</a
                               >
                               |
                               <a
-                                href="../model/data/index.htm#nautilus_trader.model.data.CustomData"
+                                href="../model/data/index.htm#posei_trader.model.data.CustomData"
                                 >CustomData</a
                               >]<a
                                 href="#querydata_cls-type-instrument_ids-liststr--none--none-bar_types-liststr--none--none-start-int--str--float--none--none-end-int--str--float--none--none-where-str--none--none-kwargs-any--listdata--customdata"
@@ -1555,7 +1555,7 @@
                               None = None, start: int | str | float | None =
                               None, end: int | str | float | None = None, where:
                               str | None = None, **kwargs: Any) → list[<a
-                                href="../core/index.htm#nautilus_trader.core.Data"
+                                href="../core/index.htm#posei_trader.core.Data"
                                 >Data</a
                               >]<a
                                 href="#query_rustdata_cls-type-instrument_ids-liststr--none--none-bar_types-liststr--none--none-start-int--str--float--none--none-end-int--str--float--none--none-where-str--none--none-kwargs-any--listdata"
@@ -1592,7 +1592,7 @@
                               None, end: int | str | float | None = None,
                               filter_expr: str | None = None, **kwargs: Any) →
                               list[<a
-                                href="../core/index.htm#nautilus_trader.core.Data"
+                                href="../core/index.htm#posei_trader.core.Data"
                                 >Data</a
                               >]<a
                                 href="#query_pyarrowdata_cls-type-instrument_ids-liststr--none--none-bar_types-liststr--none--none-start-int--str--float--none--none-end-int--str--float--none--none-filter_expr-str--none--none-kwargs-any--listdata"
@@ -1659,7 +1659,7 @@
                             >
                               read_live_run(instance_id: str, **kwargs: Any) →
                               list[<a
-                                href="../core/index.htm#nautilus_trader.core.Data"
+                                href="../core/index.htm#posei_trader.core.Data"
                                 >Data</a
                               >]<a
                                 href="#read_live_runinstance_id-str-kwargs-any--listdata"
@@ -1675,7 +1675,7 @@
                             >
                               read_backtest(instance_id: str, **kwargs: Any) →
                               list[<a
-                                href="../core/index.htm#nautilus_trader.core.Data"
+                                href="../core/index.htm#posei_trader.core.Data"
                                 >Data</a
                               >]<a
                                 href="#read_backtestinstance_id-str-kwargs-any--listdata"
@@ -1692,7 +1692,7 @@
                               convert_stream_to_data(instance_id: str, data_cls:
                               type, other_catalog:
                               <a
-                                href="#nautilus_trader.persistence.catalog.parquet.ParquetDataCatalog"
+                                href="#posei_trader.persistence.catalog.parquet.ParquetDataCatalog"
                                 >ParquetDataCatalog</a
                               >
                               | None = None, subdirectory: str =
@@ -1710,7 +1710,7 @@
                             >
                               bars(bar_types: list[str] | None = None, **kwargs:
                               Any) → list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.Bar"
+                                href="../model/data/index.htm#posei_trader.model.data.Bar"
                                 >Bar</a
                               >]<a
                                 href="#barsbar_types-liststr--none--none-kwargs-any--listbar-1"
@@ -1727,7 +1727,7 @@
                               custom_data(cls: type, as_posei: bool = False,
                               metadata: dict | None = None, **kwargs: Any) →
                               list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.CustomData"
+                                href="../model/data/index.htm#posei_trader.model.data.CustomData"
                                 >CustomData</a
                               >]<a
                                 href="#custom_datacls-type-as_nautilus-bool--false-metadata-dict--none--none-kwargs-any--listcustomdata-1"
@@ -1743,7 +1743,7 @@
                             >
                               instrument_closes(instrument_ids: list[str] | None
                               = None, **kwargs: Any) → list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.InstrumentClose"
+                                href="../model/data/index.htm#posei_trader.model.data.InstrumentClose"
                                 >InstrumentClose</a
                               >]<a
                                 href="#instrument_closesinstrument_ids-liststr--none--none-kwargs-any--listinstrumentclose-1"
@@ -1759,7 +1759,7 @@
                             >
                               instrument_status(instrument_ids: list[str] | None
                               = None, **kwargs: Any) → list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.InstrumentStatus"
+                                href="../model/data/index.htm#posei_trader.model.data.InstrumentStatus"
                                 >InstrumentStatus</a
                               >]<a
                                 href="#instrument_statusinstrument_ids-liststr--none--none-kwargs-any--listinstrumentstatus-1"
@@ -1776,7 +1776,7 @@
                               instruments(instrument_type: type | None = None,
                               instrument_ids: list[str] | None = None, **kwargs:
                               Any) → list[<a
-                                href="../model/instruments/index.htm#nautilus_trader.model.instruments.base.Instrument"
+                                href="../model/instruments/index.htm#posei_trader.model.instruments.base.Instrument"
                                 >Instrument</a
                               >]<a
                                 href="#instrumentsinstrument_type-type--none--none-instrument_ids-liststr--none--none-kwargs-any--listinstrument-1"
@@ -1805,10 +1805,10 @@
                               order_book_deltas(instrument_ids: list[str] | None
                               = None, batched: bool = False, **kwargs: Any) →
                               list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.OrderBookDelta"
+                                href="../model/data/index.htm#posei_trader.model.data.OrderBookDelta"
                                 >OrderBookDelta</a
                               >] | list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.OrderBookDeltas"
+                                href="../model/data/index.htm#posei_trader.model.data.OrderBookDeltas"
                                 >OrderBookDeltas</a
                               >]<a
                                 href="#order_book_deltasinstrument_ids-liststr--none--none-batched-bool--false-kwargs-any--listorderbookdelta--listorderbookdeltas-1"
@@ -1824,7 +1824,7 @@
                             >
                               order_book_depth10(instrument_ids: list[str] |
                               None = None, **kwargs: Any) → list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.OrderBookDepth10"
+                                href="../model/data/index.htm#posei_trader.model.data.OrderBookDepth10"
                                 >OrderBookDepth10</a
                               >]<a
                                 href="#order_book_depth10instrument_ids-liststr--none--none-kwargs-any--listorderbookdepth10-1"
@@ -1840,7 +1840,7 @@
                             >
                               quote_ticks(instrument_ids: list[str] | None =
                               None, **kwargs: Any) → list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.QuoteTick"
+                                href="../model/data/index.htm#posei_trader.model.data.QuoteTick"
                                 >QuoteTick</a
                               >]<a
                                 href="#quote_ticksinstrument_ids-liststr--none--none-kwargs-any--listquotetick-1"
@@ -1856,7 +1856,7 @@
                             >
                               trade_ticks(instrument_ids: list[str] | None =
                               None, **kwargs: Any) → list[<a
-                                href="../model/data/index.htm#nautilus_trader.model.data.TradeTick"
+                                href="../model/data/index.htm#posei_trader.model.data.TradeTick"
                                 >TradeTick</a
                               >]<a
                                 href="#trade_ticksinstrument_ids-liststr--none--none-kwargs-any--listtradetick-1"
@@ -1868,7 +1868,7 @@
                             </h4>
                             <p>
                               <a
-                                id="module-nautilus_trader.persistence.wranglers"
+                                id="module-posei_trader.persistence.wranglers"
                               ></a>
                             </p>
                             <h3
@@ -1895,13 +1895,13 @@
                                 <ul>
                                   <li>
                                     <strong>bar_type</strong> (<a
-                                      href="../model/data/index.htm#nautilus_trader.model.data.BarType"
+                                      href="../model/data/index.htm#posei_trader.model.data.BarType"
                                       ><em>BarType</em></a
                                     >) – The bar type for the wrangler.
                                   </li>
                                   <li>
                                     <strong>instrument</strong> (<a
-                                      href="../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"
+                                      href="../model/instruments/index.htm#posei_trader.model.instruments.Instrument"
                                       ><em>Instrument</em></a
                                     >) – The instrument for the wrangler.
                                   </li>
@@ -1982,7 +1982,7 @@
                               </li>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../model/data/index.htm#nautilus_trader.model.data.Bar"
+                                  href="../model/data/index.htm#posei_trader.model.data.Bar"
                                   >Bar</a
                                 >]
                               </li>
@@ -2013,7 +2013,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>instrument</strong> (<a
-                                  href="../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"
+                                  href="../model/instruments/index.htm#posei_trader.model.instruments.Instrument"
                                   ><em>Instrument</em></a
                                 >) – The instrument for the data wrangler.
                               </li>
@@ -2098,7 +2098,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>instrument</strong> (<a
-                                  href="../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"
+                                  href="../model/instruments/index.htm#posei_trader.model.instruments.Instrument"
                                   ><em>Instrument</em></a
                                 >) – The instrument for the data wrangler.
                               </li>
@@ -2166,7 +2166,7 @@
                               </li>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../model/data/index.htm#nautilus_trader.model.data.QuoteTick"
+                                  href="../model/data/index.htm#posei_trader.model.data.QuoteTick"
                                   >QuoteTick</a
                                 >]
                               </li>
@@ -2288,7 +2288,7 @@
                               <li>
                                 <strong>Parameters:</strong>
                                 <strong>instrument</strong> (<a
-                                  href="../model/instruments/index.htm#nautilus_trader.model.instruments.Instrument"
+                                  href="../model/instruments/index.htm#posei_trader.model.instruments.Instrument"
                                   ><em>Instrument</em></a
                                 >) – The instrument for the data wrangler.
                               </li>
@@ -2348,7 +2348,7 @@
                               </li>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../model/data/index.htm#nautilus_trader.model.data.TradeTick"
+                                  href="../model/data/index.htm#posei_trader.model.data.TradeTick"
                                   >TradeTick</a
                                 >]
                               </li>
@@ -2443,7 +2443,7 @@
                               </li>
                               <li>
                                 <strong>Return type:</strong> list[<a
-                                  href="../model/data/index.htm#nautilus_trader.model.data.TradeTick"
+                                  href="../model/data/index.htm#posei_trader.model.data.TradeTick"
                                   >TradeTick</a
                                 >]
                               </li>
@@ -2711,7 +2711,7 @@
                             </ul>
                             <p>
                               <a
-                                id="module-nautilus_trader.persistence.writer"
+                                id="module-posei_trader.persistence.writer"
                               ></a>
                             </p>
                             <h3
@@ -2807,13 +2807,13 @@
                                   </li>
                                   <li>
                                     <strong>cache</strong> (<a
-                                      href="../cache/index.htm#nautilus_trader.cache.Cache"
+                                      href="../cache/index.htm#posei_trader.cache.Cache"
                                       ><em>Cache</em></a
                                     >) – The cache for the query info.
                                   </li>
                                   <li>
                                     <strong>clock</strong> (<a
-                                      href="../common/index.htm#nautilus_trader.common.component.Clock"
+                                      href="../common/index.htm#posei_trader.common.component.Clock"
                                       ><em>Clock</em></a
                                     >) – The clock to use for time-related
                                     operations.

@@ -25,9 +25,9 @@
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>total</strong> (<a href="#nautilus_trader.model.objects.Money"><em>Money</em></a>) – The total account balance.</li>
-<li><strong>locked</strong> (<a href="#nautilus_trader.model.objects.Money"><em>Money</em></a>) – The account balance locked (assigned to pending orders).</li>
-<li><strong>free</strong> (<a href="#nautilus_trader.model.objects.Money"><em>Money</em></a>) – The account balance free for trading.</li>
+<li><strong>total</strong> (<a href="#posei_trader.model.objects.Money"><em>Money</em></a>) – The total account balance.</li>
+<li><strong>locked</strong> (<a href="#posei_trader.model.objects.Money"><em>Money</em></a>) – The account balance locked (assigned to pending orders).</li>
+<li><strong>free</strong> (<a href="#posei_trader.model.objects.Money"><em>Money</em></a>) – The account balance free for trading.</li>
 </ul>
 </li>
 <li><strong>Raises:</strong>
@@ -38,11 +38,11 @@
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="copyself--accountbalance">copy(self) → <a href="#nautilus_trader.model.objects.AccountBalance">AccountBalance</a><a href="#copyself--accountbalance" class="hash-link" aria-label="Direct link to copyself--accountbalance" title="Direct link to copyself--accountbalance">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="copyself--accountbalance">copy(self) → <a href="#posei_trader.model.objects.AccountBalance">AccountBalance</a><a href="#copyself--accountbalance" class="hash-link" aria-label="Direct link to copyself--accountbalance" title="Direct link to copyself--accountbalance">​</a></h4>
 <p>Return a copy of this account balance.</p>
 <ul>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.model.objects.AccountBalance">AccountBalance</a></li>
+<a href="#posei_trader.model.objects.AccountBalance">AccountBalance</a></li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currency">currency<a href="#currency" class="hash-link" aria-label="Direct link to currency" title="Direct link to currency">​</a></h4>
 <p>The currency of the account.</p>
@@ -56,13 +56,13 @@ Currency</li>
 <li><strong>Returns:</strong>
 Money</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_dictdict-values--accountbalance"><em>static</em> from_dict(dict values) → <a href="#nautilus_trader.model.objects.AccountBalance">AccountBalance</a><a href="#static-from_dictdict-values--accountbalance" class="hash-link" aria-label="Direct link to static-from_dictdict-values--accountbalance" title="Direct link to static-from_dictdict-values--accountbalance">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_dictdict-values--accountbalance"><em>static</em> from_dict(dict values) → <a href="#posei_trader.model.objects.AccountBalance">AccountBalance</a><a href="#static-from_dictdict-values--accountbalance" class="hash-link" aria-label="Direct link to static-from_dictdict-values--accountbalance" title="Direct link to static-from_dictdict-values--accountbalance">​</a></h4>
 <p>Return an account balance from the given dict values.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <strong>values</strong> (<em>dict</em> *[*<em>str</em> <em>,</em> <em>object</em> <em>]</em>) – The values for initialization.</li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.model.objects.AccountBalance">AccountBalance</a></li>
+<a href="#posei_trader.model.objects.AccountBalance">AccountBalance</a></li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="locked">locked<a href="#locked" class="hash-link" aria-label="Direct link to locked" title="Direct link to locked">​</a></h4>
 <p>The account balance locked (assigned to pending orders).</p>
@@ -204,7 +204,7 @@ Currency.precision</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>currency</strong> (<a href="#nautilus_trader.model.objects.Currency"><em>Currency</em></a>) – The currency to register</li>
+<li><strong>currency</strong> (<a href="#posei_trader.model.objects.Currency"><em>Currency</em></a>) – The currency to register</li>
 <li><strong>overwrite</strong> (<em>bool</em>) – If the currency in the internal currency map should be overwritten.</li>
 </ul>
 </li>
@@ -216,9 +216,9 @@ Currency.precision</li>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><strong>initial</strong> (<a href="#nautilus_trader.model.objects.Money"><em>Money</em></a>) – The initial (order) margin requirement for the instrument.</li>
-<li><strong>maintenance</strong> (<a href="#nautilus_trader.model.objects.Money"><em>Money</em></a>) – The maintenance (position) margin requirement for the instrument.</li>
-<li><strong>instrument_id</strong> (<a href="../identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>,</em> <em>optional</em>) – The instrument ID associated with the margin.</li>
+<li><strong>initial</strong> (<a href="#posei_trader.model.objects.Money"><em>Money</em></a>) – The initial (order) margin requirement for the instrument.</li>
+<li><strong>maintenance</strong> (<a href="#posei_trader.model.objects.Money"><em>Money</em></a>) – The maintenance (position) margin requirement for the instrument.</li>
+<li><strong>instrument_id</strong> (<a href="../identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"><em>InstrumentId</em></a> <em>,</em> <em>optional</em>) – The instrument ID associated with the margin.</li>
 </ul>
 </li>
 <li><strong>Raises:</strong>
@@ -229,11 +229,11 @@ Currency.precision</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="copyself--marginbalance">copy(self) → <a href="#nautilus_trader.model.objects.MarginBalance">MarginBalance</a><a href="#copyself--marginbalance" class="hash-link" aria-label="Direct link to copyself--marginbalance" title="Direct link to copyself--marginbalance">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="copyself--marginbalance">copy(self) → <a href="#posei_trader.model.objects.MarginBalance">MarginBalance</a><a href="#copyself--marginbalance" class="hash-link" aria-label="Direct link to copyself--marginbalance" title="Direct link to copyself--marginbalance">​</a></h4>
 <p>Return a copy of this margin balance.</p>
 <ul>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.model.objects.MarginBalance">MarginBalance</a></li>
+<a href="#posei_trader.model.objects.MarginBalance">MarginBalance</a></li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="currency-1">currency<a href="#currency-1" class="hash-link" aria-label="Direct link to currency" title="Direct link to currency">​</a></h4>
 <p>The currency of the margin.</p>
@@ -241,7 +241,7 @@ Currency.precision</li>
 <li><strong>Returns:</strong>
 Currency</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_dictdict-values--marginbalance"><em>static</em> from_dict(dict values) → <a href="#nautilus_trader.model.objects.MarginBalance">MarginBalance</a><a href="#static-from_dictdict-values--marginbalance" class="hash-link" aria-label="Direct link to static-from_dictdict-values--marginbalance" title="Direct link to static-from_dictdict-values--marginbalance">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_dictdict-values--marginbalance"><em>static</em> from_dict(dict values) → <a href="#posei_trader.model.objects.MarginBalance">MarginBalance</a><a href="#static-from_dictdict-values--marginbalance" class="hash-link" aria-label="Direct link to static-from_dictdict-values--marginbalance" title="Direct link to static-from_dictdict-values--marginbalance">​</a></h4>
 <p>Return a margin balance from the given dict values.</p>
 <ul>
 <li><strong>Parameters:</strong>
@@ -285,7 +285,7 @@ dict[str, object]</li>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>value</strong> (<em>integer</em> <em>,</em> <em>float</em> <em>,</em> <em>string</em> <em>or</em> <em>Decimal</em>) – The amount of money in the currency denomination.</li>
-<li><strong>currency</strong> (<a href="#nautilus_trader.model.objects.Currency"><em>Currency</em></a>) – The currency of the money.</li>
+<li><strong>currency</strong> (<a href="#posei_trader.model.objects.Currency"><em>Currency</em></a>) – The currency of the money.</li>
 </ul>
 </li>
 <li><strong>Raises:</strong>
@@ -312,25 +312,25 @@ double</li>
 <p>Return the currency for the money.</p>
 <ul>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.model.objects.Currency">Currency</a></li>
+<a href="#posei_trader.model.objects.Currency">Currency</a></li>
 <li><strong>Type:</strong>
 Money.currency</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_rawint-raw-int-currency-currency--money"><em>static</em> from_raw(int raw: int, Currency currency) → <a href="#nautilus_trader.model.objects.Money">Money</a><a href="#static-from_rawint-raw-int-currency-currency--money" class="hash-link" aria-label="Direct link to static-from_rawint-raw-int-currency-currency--money" title="Direct link to static-from_rawint-raw-int-currency-currency--money">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_rawint-raw-int-currency-currency--money"><em>static</em> from_raw(int raw: int, Currency currency) → <a href="#posei_trader.model.objects.Money">Money</a><a href="#static-from_rawint-raw-int-currency-currency--money" class="hash-link" aria-label="Direct link to static-from_rawint-raw-int-currency-currency--money" title="Direct link to static-from_rawint-raw-int-currency-currency--money">​</a></h4>
 <p>Return money from the given raw fixed-point integer and currency.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
 <li><strong>raw</strong> (<em>int</em>) – The raw fixed-point money amount.</li>
-<li><strong>currency</strong> (<a href="#nautilus_trader.model.objects.Currency"><em>Currency</em></a>) – The currency of the money.</li>
+<li><strong>currency</strong> (<a href="#posei_trader.model.objects.Currency"><em>Currency</em></a>) – The currency of the money.</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.model.objects.Money">Money</a></li>
+<a href="#posei_trader.model.objects.Money">Money</a></li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="warning">WARNING<a href="#warning" class="hash-link" aria-label="Direct link to WARNING" title="Direct link to WARNING">​</a></h4>
 <p>Small raw values can produce a zero money amount depending on the precision of the currency.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_strstr-value--money"><em>static</em> from_str(str value) → <a href="#nautilus_trader.model.objects.Money">Money</a><a href="#static-from_strstr-value--money" class="hash-link" aria-label="Direct link to static-from_strstr-value--money" title="Direct link to static-from_strstr-value--money">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_strstr-value--money"><em>static</em> from_str(str value) → <a href="#posei_trader.model.objects.Money">Money</a><a href="#static-from_strstr-value--money" class="hash-link" aria-label="Direct link to static-from_strstr-value--money" title="Direct link to static-from_strstr-value--money">​</a></h4>
 <p>Return money parsed from the given string.</p>
 <p>Must be correctly formatted with a value and currency separated by a
 whitespace delimiter.</p>
@@ -339,7 +339,7 @@ whitespace delimiter.</p>
 <li><strong>Parameters:</strong>
 <strong>value</strong> (<em>str</em>) – The value to parse.</li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.model.objects.Money">Money</a></li>
+<a href="#posei_trader.model.objects.Money">Money</a></li>
 <li><strong>Raises:</strong>
 <ul>
 <li><strong>ValueError</strong> – If inferred currency precision is greater than 16.</li>
@@ -403,16 +403,16 @@ Decimal</li>
 <li><strong>Return type:</strong>
 double</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_intint-value-int--price"><em>static</em> from_int(int value: int) → <a href="#nautilus_trader.model.objects.Price">Price</a><a href="#static-from_intint-value-int--price" class="hash-link" aria-label="Direct link to static-from_intint-value-int--price" title="Direct link to static-from_intint-value-int--price">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_intint-value-int--price"><em>static</em> from_int(int value: int) → <a href="#posei_trader.model.objects.Price">Price</a><a href="#static-from_intint-value-int--price" class="hash-link" aria-label="Direct link to static-from_intint-value-int--price" title="Direct link to static-from_intint-value-int--price">​</a></h4>
 <p>Return a price from the given integer value.</p>
 <p>A precision of zero will be inferred.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <strong>value</strong> (<em>int</em>) – The value for the price.</li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.model.objects.Price">Price</a></li>
+<a href="#posei_trader.model.objects.Price">Price</a></li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_rawint-raw-int-uint8_t-precision--price"><em>static</em> from_raw(int raw: int, uint8_t precision) → <a href="#nautilus_trader.model.objects.Price">Price</a><a href="#static-from_rawint-raw-int-uint8_t-precision--price" class="hash-link" aria-label="Direct link to static-from_rawint-raw-int-uint8_t-precision--price" title="Direct link to static-from_rawint-raw-int-uint8_t-precision--price">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_rawint-raw-int-uint8_t-precision--price"><em>static</em> from_raw(int raw: int, uint8_t precision) → <a href="#posei_trader.model.objects.Price">Price</a><a href="#static-from_rawint-raw-int-uint8_t-precision--price" class="hash-link" aria-label="Direct link to static-from_rawint-raw-int-uint8_t-precision--price" title="Direct link to static-from_rawint-raw-int-uint8_t-precision--price">​</a></h4>
 <p>Return a price from the given raw fixed-point integer and precision.</p>
 <p>Handles up to 16 decimals of precision (in high-precision mode).</p>
 <ul>
@@ -424,7 +424,7 @@ double</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.model.objects.Price">Price</a></li>
+<a href="#posei_trader.model.objects.Price">Price</a></li>
 <li><strong>Raises:</strong>
 <ul>
 <li><strong>ValueError</strong> – If precision is greater than 16.</li>
@@ -434,14 +434,14 @@ double</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="warning-1">WARNING<a href="#warning-1" class="hash-link" aria-label="Direct link to WARNING" title="Direct link to WARNING">​</a></h4>
 <p>Small raw values can produce a zero price depending on the precision.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_strstr-value--price"><em>static</em> from_str(str value) → <a href="#nautilus_trader.model.objects.Price">Price</a><a href="#static-from_strstr-value--price" class="hash-link" aria-label="Direct link to static-from_strstr-value--price" title="Direct link to static-from_strstr-value--price">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_strstr-value--price"><em>static</em> from_str(str value) → <a href="#posei_trader.model.objects.Price">Price</a><a href="#static-from_strstr-value--price" class="hash-link" aria-label="Direct link to static-from_strstr-value--price" title="Direct link to static-from_strstr-value--price">​</a></h4>
 <p>Return a price parsed from the given string.</p>
 <p>Handles up to 16 decimals of precision (in high-precision mode).</p>
 <ul>
 <li><strong>Parameters:</strong>
 <strong>value</strong> (<em>str</em>) – The value to parse.</li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.model.objects.Price">Price</a></li>
+<a href="#posei_trader.model.objects.Price">Price</a></li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="warning-2">WARNING<a href="#warning-2" class="hash-link" aria-label="Direct link to WARNING" title="Direct link to WARNING">​</a></h4>
 <p>The decimal precision will be inferred from the number of digits
@@ -519,16 +519,16 @@ Decimal</li>
 <li><strong>Return type:</strong>
 double</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_intint-value-int--quantity"><em>static</em> from_int(int value: int) → <a href="#nautilus_trader.model.objects.Quantity">Quantity</a><a href="#static-from_intint-value-int--quantity" class="hash-link" aria-label="Direct link to static-from_intint-value-int--quantity" title="Direct link to static-from_intint-value-int--quantity">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_intint-value-int--quantity"><em>static</em> from_int(int value: int) → <a href="#posei_trader.model.objects.Quantity">Quantity</a><a href="#static-from_intint-value-int--quantity" class="hash-link" aria-label="Direct link to static-from_intint-value-int--quantity" title="Direct link to static-from_intint-value-int--quantity">​</a></h4>
 <p>Return a quantity from the given integer value.</p>
 <p>A precision of zero will be inferred.</p>
 <ul>
 <li><strong>Parameters:</strong>
 <strong>value</strong> (<em>int</em>) – The value for the quantity.</li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.model.objects.Quantity">Quantity</a></li>
+<a href="#posei_trader.model.objects.Quantity">Quantity</a></li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_rawint-raw-int-uint8_t-precision--quantity"><em>static</em> from_raw(int raw: int, uint8_t precision) → <a href="#nautilus_trader.model.objects.Quantity">Quantity</a><a href="#static-from_rawint-raw-int-uint8_t-precision--quantity" class="hash-link" aria-label="Direct link to static-from_rawint-raw-int-uint8_t-precision--quantity" title="Direct link to static-from_rawint-raw-int-uint8_t-precision--quantity">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_rawint-raw-int-uint8_t-precision--quantity"><em>static</em> from_raw(int raw: int, uint8_t precision) → <a href="#posei_trader.model.objects.Quantity">Quantity</a><a href="#static-from_rawint-raw-int-uint8_t-precision--quantity" class="hash-link" aria-label="Direct link to static-from_rawint-raw-int-uint8_t-precision--quantity" title="Direct link to static-from_rawint-raw-int-uint8_t-precision--quantity">​</a></h4>
 <p>Return a quantity from the given raw fixed-point integer and precision.</p>
 <p>Handles up to 16 decimals of precision (in high-precision mode).</p>
 <ul>
@@ -540,7 +540,7 @@ double</li>
 </ul>
 </li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.model.objects.Quantity">Quantity</a></li>
+<a href="#posei_trader.model.objects.Quantity">Quantity</a></li>
 <li><strong>Raises:</strong>
 <ul>
 <li><strong>ValueError</strong> – If precision is greater than 16.</li>
@@ -550,14 +550,14 @@ double</li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="warning-3">WARNING<a href="#warning-3" class="hash-link" aria-label="Direct link to WARNING" title="Direct link to WARNING">​</a></h4>
 <p>Small raw values can produce a zero quantity depending on the precision.</p>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_strstr-value--quantity"><em>static</em> from_str(str value) → <a href="#nautilus_trader.model.objects.Quantity">Quantity</a><a href="#static-from_strstr-value--quantity" class="hash-link" aria-label="Direct link to static-from_strstr-value--quantity" title="Direct link to static-from_strstr-value--quantity">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-from_strstr-value--quantity"><em>static</em> from_str(str value) → <a href="#posei_trader.model.objects.Quantity">Quantity</a><a href="#static-from_strstr-value--quantity" class="hash-link" aria-label="Direct link to static-from_strstr-value--quantity" title="Direct link to static-from_strstr-value--quantity">​</a></h4>
 <p>Return a quantity parsed from the given string.</p>
 <p>Handles up to 16 decimals of precision (in high-precision mode).</p>
 <ul>
 <li><strong>Parameters:</strong>
 <strong>value</strong> (<em>str</em>) – The value to parse.</li>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.model.objects.Quantity">Quantity</a></li>
+<a href="#posei_trader.model.objects.Quantity">Quantity</a></li>
 <li><strong>Raises:</strong>
 <ul>
 <li><strong>ValueError</strong> – If inferred precision is greater than 16.</li>
@@ -593,13 +593,13 @@ Quantity.raw</li>
 <li><strong>Return type:</strong>
 str</li>
 </ul>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-zerouint8_t-precision0--quantity"><em>static</em> zero(uint8_t precision=0) → <a href="#nautilus_trader.model.objects.Quantity">Quantity</a><a href="#static-zerouint8_t-precision0--quantity" class="hash-link" aria-label="Direct link to static-zerouint8_t-precision0--quantity" title="Direct link to static-zerouint8_t-precision0--quantity">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="static-zerouint8_t-precision0--quantity"><em>static</em> zero(uint8_t precision=0) → <a href="#posei_trader.model.objects.Quantity">Quantity</a><a href="#static-zerouint8_t-precision0--quantity" class="hash-link" aria-label="Direct link to static-zerouint8_t-precision0--quantity" title="Direct link to static-zerouint8_t-precision0--quantity">​</a></h4>
 <p>Return a quantity with a value of zero.</p>
 <p>precision
 : The precision for the quantity.</p>
 <ul>
 <li><strong>Return type:</strong>
-<a href="#nautilus_trader.model.objects.Quantity">Quantity</a></li>
+<a href="#posei_trader.model.objects.Quantity">Quantity</a></li>
 <li><strong>Raises:</strong>
 <ul>
 <li><strong>ValueError</strong> – If precision is greater than 16.</li>
@@ -608,6 +608,6 @@ str</li>
 </li>
 </ul>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="warning-5">WARNING<a href="#warning-5" class="hash-link" aria-label="Direct link to WARNING" title="Direct link to WARNING">​</a></h4>
-<p>The default precision is zero.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="../instruments/index.htm"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Instruments</div></a><a class="pagination-nav__link pagination-nav__link--next" href="../orders/index.htm"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Orders</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#class-accountbalance" class="table-of-contents__link toc-highlight"><em>class</em> AccountBalance</a></li><li><a href="#class-currency" class="table-of-contents__link toc-highlight"><em>class</em> Currency</a></li><li><a href="#class-marginbalance" class="table-of-contents__link toc-highlight"><em>class</em> MarginBalance</a></li><li><a href="#class-money" class="table-of-contents__link toc-highlight"><em>class</em> Money</a></li><li><a href="#class-price" class="table-of-contents__link toc-highlight"><em>class</em> Price</a></li><li><a href="#class-quantity" class="table-of-contents__link toc-highlight"><em>class</em> Quantity</a></li></ul></div></div></div><div class="footer-wrapper MuiBox-root css-0"><div class="social-footer-box MuiBox-root css-0"><style data-emotion="css 17rjyz3">.css-17rjyz3{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(25, 118, 210, 0.4);padding:12px;margin-right:10px;}.css-17rjyz3:hover{text-decoration-color:inherit;}</style><style data-emotion="css jl1bw5">.css-jl1bw5{margin:0;font:inherit;color:#1976d2;-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(25, 118, 210, 0.4);padding:12px;margin-right:10px;}.css-jl1bw5:hover{text-decoration-color:inherit;}</style><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways github-footer css-jl1bw5" href="https://github.com/poseisysstems" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways discord-footer css-jl1bw5" href="" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways linkedin-footer css-jl1bw5" href="https://www.linkedin.com/company/nautechsystems/" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways x-footer css-jl1bw5" href="https://twitter.com/PoseiTrader" target="_blank"></a></div><div class="footer-copyright">© 2025 Posei Systems Pty Ltd. All rights reserved.</div></div></div></div></main></div></div></div></div>
+<p>The default precision is zero.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="../instruments/index.htm"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Instruments</div></a><a class="pagination-nav__link pagination-nav__link--next" href="../orders/index.htm"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Orders</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#class-accountbalance" class="table-of-contents__link toc-highlight"><em>class</em> AccountBalance</a></li><li><a href="#class-currency" class="table-of-contents__link toc-highlight"><em>class</em> Currency</a></li><li><a href="#class-marginbalance" class="table-of-contents__link toc-highlight"><em>class</em> MarginBalance</a></li><li><a href="#class-money" class="table-of-contents__link toc-highlight"><em>class</em> Money</a></li><li><a href="#class-price" class="table-of-contents__link toc-highlight"><em>class</em> Price</a></li><li><a href="#class-quantity" class="table-of-contents__link toc-highlight"><em>class</em> Quantity</a></li></ul></div></div></div><div class="footer-wrapper MuiBox-root css-0"><div class="social-footer-box MuiBox-root css-0"><style data-emotion="css 17rjyz3">.css-17rjyz3{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(25, 118, 210, 0.4);padding:12px;margin-right:10px;}.css-17rjyz3:hover{text-decoration-color:inherit;}</style><style data-emotion="css jl1bw5">.css-jl1bw5{margin:0;font:inherit;color:#1976d2;-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(25, 118, 210, 0.4);padding:12px;margin-right:10px;}.css-jl1bw5:hover{text-decoration-color:inherit;}</style><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways github-footer css-jl1bw5" href="https://github.com/poseisysstems" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways discord-footer css-jl1bw5" href="" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways linkedin-footer css-jl1bw5" href="https://www.linkedin.com/company/poseitrader/" target="_blank"></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways x-footer css-jl1bw5" href="https://twitter.com/PoseiTrader" target="_blank"></a></div><div class="footer-copyright">© 2025 Posei Systems Pty Ltd. All rights reserved.</div></div></div></div></main></div></div></div></div>
 </body>
 </html>

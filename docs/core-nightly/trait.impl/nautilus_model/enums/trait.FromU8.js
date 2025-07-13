@@ -1,5 +1,5 @@
 (function() {
-    var implementors = Object.fromEntries([["nautilus_databento",[["impl FromU8 for <a class=\"enum\" href=\"nautilus_databento/enums/enum.DatabentoStatisticType.html\" title=\"enum nautilus_databento::enums::DatabentoStatisticType\">DatabentoStatisticType</a>"],["impl FromU8 for <a class=\"enum\" href=\"nautilus_databento/enums/enum.DatabentoStatisticUpdateAction.html\" title=\"enum nautilus_databento::enums::DatabentoStatisticUpdateAction\">DatabentoStatisticUpdateAction</a>"]]],["nautilus_model",[]]]);
+    var implementors = Object.fromEntries([["posei_traderbento",[["impl FromU8 for <a class=\"enum\" href=\"posei_traderbento/enums/enum.DatabentoStatisticType.html\" title=\"enum posei_traderbento::enums::DatabentoStatisticType\">DatabentoStatisticType</a>"],["impl FromU8 for <a class=\"enum\" href=\"posei_traderbento/enums/enum.DatabentoStatisticUpdateAction.html\" title=\"enum posei_traderbento::enums::DatabentoStatisticUpdateAction\">DatabentoStatisticUpdateAction</a>"]]],["nautilus_model",[]]]);
     if (window.register_implementors) {
         window.register_implementors(implementors);
     } else {
