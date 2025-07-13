@@ -300,7 +300,7 @@
               animate: f ? { opacity: 1, y: 0, x: 0 } : {},
               transition: { duration: 1 },
               children: (0, i.jsx)(x(), {
-                href: "/blog/".concat(e),
+                href: "/blog".concat(e),
                 children: (0, i.jsxs)(a.default, {
                   sx: {
                     borderRadius: "15px",
