@@ -503,7 +503,7 @@
                           lineHeight: "1.2",
                           mb: "1rem",
                           zIndex: "1",
-                          children: "Blog",
+                          children: "The Open-Source Powerhouse for Algorithmic Trading",
                         }),
                         (0, i.jsx)(o.default, {
                           color: "#eee",
@@ -514,7 +514,7 @@
                           lineHeight: { md: "1.3", xs: "1.5" },
                           zIndex: "1",
                           children:
-                            "Explore in-depth articles, tutorials, and tips to help you master the platform and optimize your trading strategies.",
+                            "Algorithmic trading doesn’t have to be locked behind expensive platforms or opaque code. With PoseiTrader, you get a free, open-source toolkit designed for traders who demand performance, flexibility, and transparency.",
                         }),
                       ],
                     }),
