@@ -182,48 +182,7 @@
       src="../_next/static/chunks/polyfills-42372ed130431b0a.js"
       nomodule=""
     ></script>
-    <!-- <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        console.log('DOM loaded, starting image fix...');
-        
-        const teamImages = document.querySelectorAll('img[src*="_next/image/"]');
-        console.log('Found images:', teamImages.length);
-        
-        teamImages.forEach(function(img, index) {
-          console.log(`Processing image ${index + 1}:`, img.alt, img.src);
-          
-          if (img.hasAttribute('srcset')) {
-            console.log('Removing srcset from:', img.alt);
-            img.removeAttribute('srcset');
-          }
-          
-          const currentSrc = img.getAttribute('src');
-          if (currentSrc && currentSrc.includes('?')) {
-            const cleanSrc = currentSrc.split('?')[0];
-            console.log('Changing src from:', currentSrc, 'to:', cleanSrc);
-            img.setAttribute('src', cleanSrc);
-          }
-        });
-        
-        console.log('Image fix completed');
-      });
-      window.addEventListener('load', function() {
-        console.log('Window loaded, checking images again...');
-        
-        const teamImages = document.querySelectorAll('img[src*="_next/image/"]');
-        teamImages.forEach(function(img) {
-          if (img.hasAttribute('srcset')) {
-            img.removeAttribute('srcset');
-          }
-          
-          const currentSrc = img.getAttribute('src');
-          if (currentSrc && currentSrc.includes('?')) {
-            const cleanSrc = currentSrc.split('?')[0];
-            img.setAttribute('src', cleanSrc);
-          }
-        });
-      });
-    </script> -->
+
   </head>
   <body class="__className_e8ce0c">
     <style data-emotion="css i6bazn">
@@ -2619,5 +2578,5 @@
       ]);
     </script>
   </body>
-  
+ 
 </html>
