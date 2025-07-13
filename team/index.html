@@ -182,6 +182,20 @@
       src="../_next/static/chunks/polyfills-42372ed130431b0a.js"
       nomodule=""
     ></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const teamImages = document.querySelectorAll('img[alt*="Chris"], img[alt*="Filip"], img[alt*="Ishan"], img[alt*="Pushkar"]');
+        
+        teamImages.forEach(function(img) {
+          img.removeAttribute('srcset');
+          const currentSrc = img.getAttribute('src');
+          if (currentSrc) {
+            const cleanSrc = currentSrc.split('?')[0];
+            img.setAttribute('src', cleanSrc);
+          }
+        });
+      });
+    </script>
   </head>
   <body class="__className_e8ce0c">
     <style data-emotion="css i6bazn">
@@ -2577,18 +2591,5 @@
       ]);
     </script>
   </body>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const teamImages = document.querySelectorAll('img[alt*="Chris"], img[alt*="Filip"], img[alt*="Ishan"], img[alt*="Pushkar"]');
-      
-      teamImages.forEach(function(img) {
-        img.removeAttribute('srcset');
-        const currentSrc = img.getAttribute('src');
-        if (currentSrc) {
-          const cleanSrc = currentSrc.split('?')[0];
-          img.setAttribute('src', cleanSrc);
-        }
-      });
-    });
-  </script>
+  
 </html>
