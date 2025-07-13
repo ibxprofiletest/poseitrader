@@ -2581,32 +2581,23 @@
     document.addEventListener('DOMContentLoaded', function() {
       console.log('DOM loaded, starting image fix...');
       
-      const imageMap = {
-        'Chris Sellers': '../_next/image/ceo.jpg',
-        'Filip Macek': '../_next/image/se.jpg',
-        'Ishan Bhanuka': '../_next/image/engineer.jpg',
-        'Pushkar Mishra': '../_next/image/pushkar-mishra.jpg'
-      };
-      
-      const teamImages = document.querySelectorAll('img[alt*="Chris"], img[alt*="Filip"], img[alt*="Ishan"], img[alt*="Pushkar"]');
+      const teamImages = document.querySelectorAll('img[src*="_next/image/"]');
       console.log('Found images:', teamImages.length);
       
       teamImages.forEach(function(img, index) {
-        const alt = img.getAttribute('alt');
-        console.log(`Processing image ${index + 1}:`, alt);
+        console.log(`Processing image ${index + 1}:`, img.alt, img.src);
         
-
         if (img.hasAttribute('srcset')) {
-          console.log('Removing srcset from:', alt);
+          console.log('Removing srcset from:', img.alt);
           img.removeAttribute('srcset');
         }
         
-        for (const [name, url] of Object.entries(imageMap)) {
-          if (alt && alt.includes(name)) {
-            console.log(`Setting correct URL for ${name}:`, url);
-            img.setAttribute('src', url);
-            break;
-          }
+        const currentSrc = img.getAttribute('src');
+        if (currentSrc && currentSrc.includes('%2F')) {
+          const decodedSrc = decodeURIComponent(currentSrc);
+          const cleanSrc = decodedSrc.split('?')[0];
+          console.log('Changing src from:', currentSrc, 'to:', cleanSrc);
+          img.setAttribute('src', cleanSrc);
         }
       });
       
@@ -2616,26 +2607,17 @@
     window.addEventListener('load', function() {
       console.log('Window loaded, checking images again...');
       
-      const imageMap = {
-        'Chris Sellers': '../_next/image/ceo.jpg',
-        'Filip Macek': '../_next/image/se.jpg',
-        'Ishan Bhanuka': '../_next/image/engineer.jpg',
-        'Pushkar Mishra': '../_next/image/pushkar-mishra.jpg'
-      };
-      
-      const teamImages = document.querySelectorAll('img[alt*="Chris"], img[alt*="Filip"], img[alt*="Ishan"], img[alt*="Pushkar"]');
+      const teamImages = document.querySelectorAll('img[src*="_next/image/"]');
       teamImages.forEach(function(img) {
-        const alt = img.getAttribute('alt');
-        
         if (img.hasAttribute('srcset')) {
           img.removeAttribute('srcset');
         }
         
-        for (const [name, url] of Object.entries(imageMap)) {
-          if (alt && alt.includes(name)) {
-            img.setAttribute('src', url);
-            break;
-          }
+        const currentSrc = img.getAttribute('src');
+        if (currentSrc && currentSrc.includes('%2F')) {
+          const decodedSrc = decodeURIComponent(currentSrc);
+          const cleanSrc = decodedSrc.split('?')[0];
+          img.setAttribute('src', cleanSrc);
         }
       });
     });
