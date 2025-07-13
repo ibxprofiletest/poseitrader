@@ -25,7 +25,7 @@
         y = i(59822);
       async function b() {
         let e = await fetch(
-          "https://api.github.com/repos/nautechsystems/nautilus_trader"
+          "https://api.github.com/repos/nautechsystems/posei_trader"
         );
         if (!e.ok) console.log("Failed to fetch data");
         return e.json();
