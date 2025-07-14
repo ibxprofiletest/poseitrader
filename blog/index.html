@@ -2913,4 +2913,18 @@
       ]);
     </script>
   </body>
+  <script>
+    function bindAccordionButtonEvents() {
+      var buttons = document.querySelectorAll('.posei-topic-header');
+      buttons.forEach(function(btn) {
+        btn.onclick = function() {
+          var topicDiv = btn.parentNode;
+          var isOpen = topicDiv.classList.toggle('open');
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        };
+      });
+      console.log("Accordion button events bound!");
+    }
+    setInterval(bindAccordionButtonEvents, 2000);
+    </script>
 </html>
