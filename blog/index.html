@@ -390,12 +390,6 @@
             contentDiv.className = "posei-topic-content";
             contentDiv.innerHTML = topic.content;
 
-            // Toggle logic
-            btn.addEventListener("click", function () {
-              var isOpen = topicDiv.classList.toggle("open");
-              btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
-            });
-
             topicDiv.appendChild(btn);
             topicDiv.appendChild(contentDiv);
             wrap.appendChild(topicDiv);
@@ -407,8 +401,19 @@
           } else {
             targetP.parentNode.appendChild(wrap);
           }
+
+          wrap.addEventListener("click", function (e) {
+            var btn = e.target.closest(".posei-topic-header");
+            if (btn && wrap.contains(btn)) {
+              var topicDiv = btn.parentNode;
+              var isOpen = topicDiv.classList.toggle("open");
+              btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            }
+          });
+
           return true;
         }
+
         if (!insertAccordion()) {
           var observer = new MutationObserver(function () {
             if (insertAccordion()) observer.disconnect();
