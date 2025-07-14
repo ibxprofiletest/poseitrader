@@ -1631,24 +1631,10 @@
           [o, l] = (0, p.useState)(!1),
           [d, c] = (0, p.useState)(!1),
           x = async () => {
-            if ((l(!0), s(""), e && "SUBSCRIBE TO OUR NEWSLETTER" !== e))
-              try {
-                let i = await fetch("/api/newsletter", {
-                    body: JSON.stringify({ email: e }),
-                    headers: { "Content-Type": "application/json" },
-                    method: "POST",
-                  }),
-                  n = await i.json();
-                i.ok
-                  ? (s(n.message || "Thank you for subscribing!"),
-                    c(!1),
-                    t("SUBSCRIBE TO OUR NEWSLETTER"))
-                  : (s(n.error || "An error occurred. Please try again."),
-                    c(!0));
-              } catch (e) {
-                s("Network error. Please check your connection"), c(!0);
-              }
-            else s("Please enter a valid email address."), c(!0);
+            // Always show thank you message without backend
+            s("Thank you for subscribing!");
+            c(!1);
+            t("SUBSCRIBE TO OUR NEWSLETTER");
             l(!1);
           };
         return (0, n.jsxs)(r.default, {
