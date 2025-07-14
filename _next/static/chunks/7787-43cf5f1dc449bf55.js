@@ -361,6 +361,17 @@
                           { text: "Legal", link: "/legal" },
                         ],
                       },
+                      {
+                        category: "Resources",
+                        items: [
+                          {
+                            text: "Docs",
+                            link: "/docs/latest",
+                            newTab: !0,
+                            external: !0,
+                          },
+                        ],
+                      },
                       { category: "Blog", link: "/blog", disable: !1 },
                     ].map((e) =>
                       (0, n.jsxs)(
@@ -613,12 +624,6 @@
             {
               text: "Resources",
               items: [
-                {
-                  text: "Docs",
-                  link: "/docs/latest",
-                  newTab: !0,
-                  description: "Access PoseiTrader documentation.",
-                },
                 {
                   text: "Docs",
                   link: "/docs/latest",
