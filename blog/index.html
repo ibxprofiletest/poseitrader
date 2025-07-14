@@ -262,10 +262,7 @@
       </script>
       <script>
         (function() {
-          // Prevent duplicate insertion
-          if (document.querySelector('.posei-topic-wrap')) return;
-        
-          // Accordion data
+         
           var topics = [
             {
               title: "Where Strategy Meets Execution",
@@ -281,55 +278,60 @@
             }
           ];
         
-          // Find the target <p>
-          var allPs = document.getElementsByTagName('p');
-          var targetP = null;
-          for (var i = 0; i < allPs.length; i++) {
-            if (allPs[i].textContent.trim() === "Welcome to the PoseiTrader Blog") {
-              targetP = allPs[i];
-              break;
+          // 3. Insert accordion (with duplicate prevention)
+          function insertAccordion() {
+            // Remove any existing accordion first (prevents duplicates)
+            var old = document.querySelector('.posei-topic-wrap');
+            if (old) old.parentNode.removeChild(old);
+        
+            // Find the target <p>
+            var allPs = document.getElementsByTagName('p');
+            var targetP = null;
+            for (var i = 0; i < allPs.length; i++) {
+              if (allPs[i].textContent.trim() === "Welcome to the PoseiTrader Blog") {
+                targetP = allPs[i];
+                break;
+              }
+            }
+            if (!targetP) return;
+        
+            // Create accordion
+            var wrap = document.createElement('div');
+            wrap.className = 'posei-topic-wrap';
+            topics.forEach(function(topic) {
+              var topicDiv = document.createElement('div');
+              topicDiv.className = 'posei-topic';
+              topicDiv.innerHTML = `
+                <button class="posei-topic-header" type="button" aria-expanded="false">
+                  <span>${topic.title}</span>
+                  <span class="posei-topic-arrow">&#9660;</span>
+                </button>
+                <div class="posei-topic-content">${topic.content}</div>
+              `;
+              topicDiv.querySelector('.posei-topic-header').onclick = function() {
+                var isOpen = topicDiv.classList.toggle('open');
+                this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+              };
+              wrap.appendChild(topicDiv);
+            });
+        
+            // Insert after the target <p>
+            if (targetP.nextSibling) {
+              targetP.parentNode.insertBefore(wrap, targetP.nextSibling);
+            } else {
+              targetP.parentNode.appendChild(wrap);
             }
           }
-          if (!targetP) return;
         
-          // Create accordion container
-          var wrap = document.createElement('div');
-          wrap.className = 'posei-topic-wrap';
-        
-          topics.forEach(function(topic) {
-            var topicDiv = document.createElement('div');
-            topicDiv.className = 'posei-topic';
-        
-            // Create button
-            var btn = document.createElement('button');
-            btn.className = 'posei-topic-header';
-            btn.type = 'button';
-            btn.setAttribute('aria-expanded', 'false');
-            btn.innerHTML = '<span>' + topic.title + '</span><span class="posei-topic-arrow">&#9660;</span>';
-        
-            // Create content
-            var contentDiv = document.createElement('div');
-            contentDiv.className = 'posei-topic-content';
-            contentDiv.innerHTML = topic.content;
-        
-            // Toggle logic
-            btn.onclick = function() {
-              var isOpen = topicDiv.classList.toggle('open');
-              btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-            };
-        
-            topicDiv.appendChild(btn);
-            topicDiv.appendChild(contentDiv);
-            wrap.appendChild(topicDiv);
+          // 4. MutationObserver: re-insert if React wipes it out
+          var observer = new MutationObserver(function() {
+            insertAccordion();
           });
+          observer.observe(document.body, { childList: true, subtree: true });
         
-          // Insert after the target <p>
-          if (targetP.nextSibling) {
-            targetP.parentNode.insertBefore(wrap, targetP.nextSibling);
-          } else {
-            targetP.parentNode.appendChild(wrap);
-          }
-        })(); // 1.5s delay to ensure hydration is done
+          // 5. Initial insert
+          insertAccordion();
+        })();
         </script>
   </head>
   <body class="__className_e8ce0c">
