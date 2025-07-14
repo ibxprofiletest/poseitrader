@@ -261,7 +261,7 @@
       }, 1500); // 1.5s delay to ensure hydration is done
       </script>
       <script>
-        setTimeout(function() {
+        (function() {
           // Prevent duplicate insertion
           if (document.querySelector('.posei-topic-wrap')) return;
         
@@ -329,7 +329,7 @@
           } else {
             targetP.parentNode.appendChild(wrap);
           }
-        }, 1500); // 1.5s delay to ensure hydration is done
+        })(); // 1.5s delay to ensure hydration is done
         </script>
   </head>
   <body class="__className_e8ce0c">
