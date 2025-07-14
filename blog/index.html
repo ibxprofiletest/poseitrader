@@ -278,7 +278,6 @@
             }
           ];
         
-          // 3. Insert accordion (with duplicate prevention)
           function insertAccordion() {
             // Remove any existing accordion first (prevents duplicates)
             var old = document.querySelector('.posei-topic-wrap');
@@ -323,13 +322,11 @@
             }
           }
         
-          // 4. MutationObserver: re-insert if React wipes it out
           var observer = new MutationObserver(function() {
             insertAccordion();
           });
           observer.observe(document.body, { childList: true, subtree: true });
         
-          // 5. Initial insert
           insertAccordion();
         })();
         </script>
