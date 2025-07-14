@@ -506,54 +506,111 @@
                           marginBottom: "50px",
                           children: "Welcome to the PoseiTrader Blog",
                         }),
-                        (0, i.jsx)(o.default, {
-                          color: "#eee",
-                          fontFamily: p.Tv.style.fontFamily,
-                          fontWeight: "370",
-                          fontSize: { md: "24px", xs: "15.5px" },
-                          letterSpacing: "-0.1px",
-                          lineHeight: { md: "1.3", xs: "1.5" },
-                          zIndex: "1",
-                          marginBottom: "30px",
-                          children:
-                            "At PoseiTrader, we're building tools for traders who want more from their algorithmic trading platform. Our open-source solution gives you the power to test strategies thoroughly and deploy them confidently—all without changing a line of code between backtesting and live markets.",
+                                                (0, i.jsx)(a.default, {
+                          sx: {
+                            width: "100%",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "1rem",
+                            zIndex: "1",
+                            marginBottom: "30px",
+                          },
+                          children: (0, i.jsx)(function() {
+                            let topics = [
+                              {
+                                title: "Where Strategy Meets Execution",
+                                content: "Discover how our open-source platform bridges the gap between backtesting and live trading. We've built PoseiTrader to give quant traders unprecedented control - test complex strategies with confidence and deploy them to real markets without code changes. The event-driven engine and portfolio-wide analysis tools provide the accuracy serious traders demand.",
+                              },
+                              {
+                                title: "The Flexibility You Need",
+                                content: "PoseiTrader isn't just powerful - it's adaptable. Every component is designed to work together seamlessly while giving you room to customize. Whether you're running simple strategies or complex multi-asset portfolios, our framework adjusts to your needs, not the other way around.",
+                              },
+                              {
+                                title: "Practical Insights for Real Trading",
+                                content: "This blog cuts through complexity with actionable knowledge. We break down advanced concepts, share implementation examples, and highlight features that deliver real trading edge. Our documentation covers the technical details - here we focus on applying that knowledge effectively.",
+                              },
+                            ];
+                            
+                            return topics.map((topic, index) => {
+                              let [isOpen, setIsOpen] = (0, r.useState)(false);
+                              
+                              return (0, i.jsxs)(a.default, {
+                                key: index,
+                                sx: {
+                                  border: "1px solid #2D2930",
+                                  borderRadius: "12px",
+                                  overflow: "hidden",
+                                  backgroundColor: "rgba(27, 27, 29, 0.6)",
+                                  backdropFilter: "blur(10px)",
+                                  transition: "all 0.3s ease",
+                                  "&:hover": {
+                                    borderColor: "#1DBAC9",
+                                    backgroundColor: "rgba(27, 27, 29, 0.8)",
+                                  },
+                                },
+                                children: [
+                                  (0, i.jsxs)(a.default, {
+                                    onClick: () => setIsOpen(!isOpen),
+                                    sx: {
+                                      padding: { md: "1.5rem", xs: "1rem" },
+                                      cursor: "pointer",
+                                      display: "flex",
+                                      justifyContent: "space-between",
+                                      alignItems: "center",
+                                      transition: "all 0.3s ease",
+                                      "&:hover": {
+                                        backgroundColor: "rgba(29, 186, 201, 0.1)",
+                                      },
+                                    },
+                                    children: [
+                                      (0, i.jsx)(o.default, {
+                                        color: "#eee",
+                                        fontFamily: p.Tv.style.fontFamily,
+                                        fontWeight: "600",
+                                        fontSize: { md: "20px", xs: "18px" },
+                                        letterSpacing: "-0.2px",
+                                        lineHeight: "1.3",
+                                        children: topic.title,
+                                      }),
+                                      (0, i.jsx)(a.default, {
+                                        sx: {
+                                          transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                                          transition: "transform 0.3s ease",
+                                          color: "#1DBAC9",
+                                          fontSize: "1.5rem",
+                                        },
+                                        children: "▼",
+                                      }),
+                                    ],
+                                  }),
+                                  (0, i.jsx)(a.default, {
+                                    sx: {
+                                      maxHeight: isOpen ? "500px" : "0px",
+                                      overflow: "hidden",
+                                      transition: "all 0.3s ease",
+                                      opacity: isOpen ? 1 : 0,
+                                    },
+                                    children: (0, i.jsx)(a.default, {
+                                      sx: {
+                                        padding: { md: "0 1.5rem 1.5rem", xs: "0 1rem 1rem" },
+                                        borderTop: isOpen ? "1px solid #2D2930" : "none",
+                                      },
+                                      children: (0, i.jsx)(o.default, {
+                                        color: "#ccc",
+                                        fontFamily: p.Tv.style.fontFamily,
+                                        fontWeight: "370",
+                                        fontSize: { md: "16px", xs: "14px" },
+                                        letterSpacing: "-0.1px",
+                                        lineHeight: "1.6",
+                                        children: topic.content,
+                                      }),
+                                    }),
+                                  }),
+                                ],
+                              });
+                            });
+                          }, {}),
                         }),
-                        (0, i.jsx)(o.default, {
-                            color: "#eee",
-                            fontFamily: p.Tv.style.fontFamily,
-                            fontWeight: "370",
-                            fontSize: { md: "24px", xs: "15.5px" },
-                            letterSpacing: "-0.1px",
-                            lineHeight: { md: "1.3", xs: "1.5" },
-                            zIndex: "1",
-                            marginBottom: "30px",
-                            children:
-                              "What makes PoseiTrader different isn't just what it can do (though the event-driven engine and portfolio-wide backtesting are impressive), but how it does it. We've designed every component to work together seamlessly while giving you the flexibility to customize what matters to your strategy.",
-                          }),
-                          (0, i.jsx)(o.default, {
-                            color: "#eee",
-                            fontFamily: p.Tv.style.fontFamily,
-                            fontWeight: "370",
-                            fontSize: { md: "24px", xs: "15.5px" },
-                            letterSpacing: "-0.1px",
-                            lineHeight: { md: "1.3", xs: "1.5" },
-                            zIndex: "1",
-                            marginBottom: "30px",
-                            children:
-                              "Yes, there's a learning curve—serious trading tools require serious understanding. That's why we created this blog. Here, we'll break down complex concepts, share practical examples, and highlight features that can make a real difference in your trading. Whether you're evaluating PoseiTrader or pushing its limits in production, you'll find useful insights here.",
-                          }),
-                          (0, i.jsx)(o.default, {
-                            color: "#eee",
-                            fontFamily: p.Tv.style.fontFamily,
-                            fontWeight: "370",
-                            fontSize: { md: "24px", xs: "15.5px" },
-                            letterSpacing: "-0.1px",
-                            lineHeight: { md: "1.3", xs: "1.5" },
-                            zIndex: "1",
-                            marginBottom: "30px",
-                            children:
-                              "The documentation covers the technical details—consider this your guide to putting that knowledge to work. Have a question we haven't answered? Our community is always ready to help.",
-                          }),
                       ],
                     }),
                   }),
