@@ -260,6 +260,77 @@
         }
       }, 1500); // 1.5s delay to ensure hydration is done
       </script>
+      <script>
+        setTimeout(function() {
+          // Prevent duplicate insertion
+          if (document.querySelector('.posei-topic-wrap')) return;
+        
+          // Accordion data
+          var topics = [
+            {
+              title: "Where Strategy Meets Execution",
+              content: "Discover how our open-source platform bridges the gap between backtesting and live trading. We've built PoseiTrader to give quant traders unprecedented control - test complex strategies with confidence and deploy them to real markets without code changes. The event-driven engine and portfolio-wide analysis tools provide the accuracy serious traders demand."
+            },
+            {
+              title: "The Flexibility You Need",
+              content: "PoseiTrader isn't just powerful - it's adaptable. Every component is designed to work together seamlessly while giving you room to customize. Whether you're running simple strategies or complex multi-asset portfolios, our framework adjusts to your needs, not the other way around."
+            },
+            {
+              title: "Practical Insights for Real Trading",
+              content: "This blog cuts through complexity with actionable knowledge. We break down advanced concepts, share implementation examples, and highlight features that deliver real trading edge. Our documentation covers the technical details - here we focus on applying that knowledge effectively."
+            }
+          ];
+        
+          // Find the target <p>
+          var allPs = document.getElementsByTagName('p');
+          var targetP = null;
+          for (var i = 0; i < allPs.length; i++) {
+            if (allPs[i].textContent.trim() === "Welcome to the PoseiTrader Blog") {
+              targetP = allPs[i];
+              break;
+            }
+          }
+          if (!targetP) return;
+        
+          // Create accordion container
+          var wrap = document.createElement('div');
+          wrap.className = 'posei-topic-wrap';
+        
+          topics.forEach(function(topic) {
+            var topicDiv = document.createElement('div');
+            topicDiv.className = 'posei-topic';
+        
+            // Create button
+            var btn = document.createElement('button');
+            btn.className = 'posei-topic-header';
+            btn.type = 'button';
+            btn.setAttribute('aria-expanded', 'false');
+            btn.innerHTML = '<span>' + topic.title + '</span><span class="posei-topic-arrow">&#9660;</span>';
+        
+            // Create content
+            var contentDiv = document.createElement('div');
+            contentDiv.className = 'posei-topic-content';
+            contentDiv.innerHTML = topic.content;
+        
+            // Toggle logic
+            btn.onclick = function() {
+              var isOpen = topicDiv.classList.toggle('open');
+              btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            };
+        
+            topicDiv.appendChild(btn);
+            topicDiv.appendChild(contentDiv);
+            wrap.appendChild(topicDiv);
+          });
+        
+          // Insert after the target <p>
+          if (targetP.nextSibling) {
+            targetP.parentNode.insertBefore(wrap, targetP.nextSibling);
+          } else {
+            targetP.parentNode.appendChild(wrap);
+          }
+        }, 1500); // 1.5s delay to ensure hydration is done
+        </script>
   </head>
   <body class="__className_e8ce0c">
     <style data-emotion="css i6bazn">
