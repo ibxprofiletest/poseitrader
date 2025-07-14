@@ -2690,10 +2690,7 @@
     </script>
   </body>
   <script>
-    setTimeout(function() {
-      // Prevent duplicate insertion
-      if (document.querySelector('.posei-topic-wrap')) return;
-    
+    (function() {
       // Accordion data
       var topics = [
         {
@@ -2710,55 +2707,70 @@
         }
       ];
     
-      // Find the target <p>
-      var allPs = document.getElementsByTagName('p');
-      var targetP = null;
-      for (var i = 0; i < allPs.length; i++) {
-        if (allPs[i].textContent.trim() === "Welcome to the PoseiTrader Blog") {
-          targetP = allPs[i];
-          break;
+      function insertAccordion() {
+        // Remove any existing accordion
+        var old = document.querySelector('.posei-topic-wrap');
+        if (old) old.parentNode.removeChild(old);
+    
+        // Find the target <p>
+        var allPs = document.getElementsByTagName('p');
+        var targetP = null;
+        for (var i = 0; i < allPs.length; i++) {
+          if (allPs[i].textContent.trim() === "Welcome to the PoseiTrader Blog") {
+            targetP = allPs[i];
+            break;
+          }
         }
+        if (!targetP) return false;
+    
+        // Create accordion container
+        var wrap = document.createElement('div');
+        wrap.className = 'posei-topic-wrap';
+    
+        topics.forEach(function(topic) {
+          var topicDiv = document.createElement('div');
+          topicDiv.className = 'posei-topic';
+    
+          // Create button
+          var btn = document.createElement('button');
+          btn.className = 'posei-topic-header';
+          btn.type = 'button';
+          btn.setAttribute('aria-expanded', 'false');
+          btn.innerHTML = '<span>' + topic.title + '</span><span class="posei-topic-arrow">&#9660;</span>';
+    
+          // Create content
+          var contentDiv = document.createElement('div');
+          contentDiv.className = 'posei-topic-content';
+          contentDiv.innerHTML = topic.content;
+    
+          // Toggle logic
+          btn.onclick = function() {
+            var isOpen = topicDiv.classList.toggle('open');
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          };
+    
+          topicDiv.appendChild(btn);
+          topicDiv.appendChild(contentDiv);
+          wrap.appendChild(topicDiv);
+        });
+    
+        // Insert after the target <p>
+        if (targetP.nextSibling) {
+          targetP.parentNode.insertBefore(wrap, targetP.nextSibling);
+        } else {
+          targetP.parentNode.appendChild(wrap);
+        }
+        return true;
       }
-      if (!targetP) return;
     
-      // Create accordion container
-      var wrap = document.createElement('div');
-      wrap.className = 'posei-topic-wrap';
-    
-      topics.forEach(function(topic) {
-        var topicDiv = document.createElement('div');
-        topicDiv.className = 'posei-topic';
-    
-        // Create button
-        var btn = document.createElement('button');
-        btn.className = 'posei-topic-header';
-        btn.type = 'button';
-        btn.setAttribute('aria-expanded', 'false');
-        btn.innerHTML = '<span>' + topic.title + '</span><span class="posei-topic-arrow">&#9660;</span>';
-    
-        // Create content
-        var contentDiv = document.createElement('div');
-        contentDiv.className = 'posei-topic-content';
-        contentDiv.innerHTML = topic.content;
-    
-        // Toggle logic
-        btn.onclick = function() {
-          var isOpen = topicDiv.classList.toggle('open');
-          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        };
-    
-        topicDiv.appendChild(btn);
-        topicDiv.appendChild(contentDiv);
-        wrap.appendChild(topicDiv);
-      });
-    
-      // Insert after the target <p>
-      if (targetP.nextSibling) {
-        targetP.parentNode.insertBefore(wrap, targetP.nextSibling);
-      } else {
-        targetP.parentNode.appendChild(wrap);
+      // Try to insert immediately, and if not, observe until possible
+      if (!insertAccordion()) {
+        var observer = new MutationObserver(function() {
+          if (insertAccordion()) observer.disconnect();
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
       }
-    }, 1500); // 1.5s delay to ensure hydration is done
+    })();
     </script>
 
 </html>
