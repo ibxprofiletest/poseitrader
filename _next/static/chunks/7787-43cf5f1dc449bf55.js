@@ -619,6 +619,12 @@
                   newTab: !0,
                   description: "Access PoseiTrader documentation.",
                 },
+                {
+                  text: "Docs",
+                  link: "/docs/latest",
+                  newTab: !0,
+                  description: "Access PoseiTrader documentation.",
+                },
               ],
             },
           ],
