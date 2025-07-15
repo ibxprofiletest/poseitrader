@@ -546,7 +546,7 @@
                                     className: "post-content",
                                     children: [
                                       (0, i.jsx)("a", {
-                                        href: "The_Flexibility_You_Need.html",
+                                        href: "/The_Flexibility_You_Need.html",
                                         children: "The Flexibility You Need",
                                       }),
                                       (0, i.jsx)("div", {
@@ -556,7 +556,7 @@
                                     ],
                                   }),
                                   (0, i.jsx)("a", {
-                                    href: "The_Flexibility_You_Need.html",
+                                    href: "/The_Flexibility_You_Need.html",
                                     className: "read-more-btn",
                                     children: "Read more",
                                   }),
@@ -569,7 +569,7 @@
                                     className: "post-content",
                                     children: [
                                       (0, i.jsx)("a", {
-                                        href: "Practical_Insights_for_Real_Trading.html",
+                                        href: "/Practical_Insights_for_Real_Trading.html",
                                         children: "Practical Insights for Real Trading",
                                       }),
                                       (0, i.jsx)("div", {
