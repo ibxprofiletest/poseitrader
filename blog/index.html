@@ -161,7 +161,6 @@
           'body link[rel="icon"], body link[rel="apple-touch-icon"]'
         )
         .forEach((el) => document.head.appendChild(el));
-
     </script>
 
     <script
@@ -182,6 +181,9 @@
       }
       .MuiTypography-root.MuiTypography-body1.css-1sv54r:hover {
         color: #eee !important;
+      }
+      .post {
+        margin-bottom: 30px;
       }
     </style>
   </head>
@@ -1213,7 +1215,9 @@
                   <div class="MuiBox-root css-1cgwo5n">
                     <div class="blog-posts">
                       <div class="post">
-                        <a href="article1.html">Where Strategy Meets Execution</a>
+                        <a href="article1.html"
+                          >Where Strategy Meets Execution</a
+                        >
                         <div class="date">2025-07-15</div>
                       </div>
                       <div class="post">
@@ -1221,7 +1225,9 @@
                         <div class="date">2025-07-15</div>
                       </div>
                       <div class="post">
-                        <a href="article3.html">Practical Insights for Real Trading</a>
+                        <a href="article3.html"
+                          >Practical Insights for Real Trading</a
+                        >
                         <div class="date">2025-07-15</div>
                       </div>
                     </div>
@@ -2672,58 +2678,28 @@
         z-index: 1;
         position: relative;
       }
-      
-      .post {
-        border: 1px solid #2d2930;
-        border-radius: 15px;
-        background: rgba(43, 43, 43, 0.8);
-        margin-bottom: 20px;
-        padding: 1.5rem 2rem;
+
+            .post {
+        margin-bottom: 30px;
+        padding: 0;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         position: relative;
-        overflow: hidden;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-      
-      .post::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, rgba(29, 186, 201, 0.05) 0%, rgba(47, 173, 215, 0.05) 100%);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        pointer-events: none;
-      }
-      
-      .post:hover {
-        border-color: #1dbac9;
-        background: rgba(43, 43, 43, 0.95);
-        box-shadow: 0 8px 25px rgba(29, 186, 201, 0.15), 0 4px 10px rgba(0, 0, 0, 0.2);
-        transform: translateY(-2px);
-      }
-      
-      .post:hover::before {
-        opacity: 1;
       }
       
       .post a {
         color: #eee;
         text-decoration: none;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-weight: 600;
         letter-spacing: -0.3px;
         transition: all 0.3s ease;
         position: relative;
         z-index: 2;
-        flex: 1;
-        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
       }
       
       .post a:hover {
@@ -2733,44 +2709,43 @@
       
       .post .date {
         color: #848895;
-        font-size: 0.85rem;
-        font-weight: 500;
+        font-size: 0.9rem;
+        font-weight: 400;
         letter-spacing: -0.1px;
         position: relative;
         z-index: 2;
-        background: rgba(27, 27, 29, 0.6);
-        padding: 0.4rem 0.8rem;
-        border-radius: 8px;
-        border: 1px solid rgba(45, 41, 48, 0.3);
         transition: all 0.3s ease;
-        white-space: nowrap;
       }
       
       .post:hover .date {
-        background: rgba(29, 186, 201, 0.1);
-        border-color: rgba(29, 186, 201, 0.2);
         color: #1dbac9;
       }
-      
+
       /* Add subtle animation on page load */
       .post {
         animation: fadeInUp 0.6s ease forwards;
         opacity: 0;
         transform: translateY(20px);
       }
-      
-      .post:nth-child(1) { animation-delay: 0.1s; }
-      .post:nth-child(2) { animation-delay: 0.2s; }
-      .post:nth-child(3) { animation-delay: 0.3s; }
-      
+
+      .post:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .post:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .post:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+
       @keyframes fadeInUp {
         to {
           opacity: 1;
           transform: translateY(0);
         }
       }
-      
-      /* Responsive design */
+
+            /* Responsive design */
       @media (max-width: 768px) {
         .blog-posts {
           max-width: 100%;
@@ -2779,61 +2754,69 @@
         }
         
         .post {
-          padding: 1.2rem 1.5rem;
-          margin-bottom: 16px;
+          margin-bottom: 25px;
         }
         
         .post a {
-          font-size: 1rem;
+          font-size: 1.1rem;
         }
       }
       
       @media (max-width: 600px) {
         .post {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 0.8rem;
-          padding: 1.2rem 1.5rem;
+          margin-bottom: 20px;
         }
         
         .post a {
-          margin-right: 0;
-          margin-bottom: 0.5rem;
+          font-size: 1rem;
+          margin-bottom: 0.4rem;
         }
         
         .post .date {
-          align-self: flex-end;
-          font-size: 0.8rem;
-          padding: 0.3rem 0.6rem;
+          font-size: 0.85rem;
         }
       }
-      
-      /* Dark mode enhancements */
+
+            /* Dark mode enhancements */
       @media (prefers-color-scheme: dark) {
-        .post {
-          background: rgba(27, 27, 29, 0.8);
+        .post a {
+          color: #eee;
         }
         
-        .post:hover {
-          background: rgba(27, 27, 29, 0.95);
+        .post .date {
+          color: #848895;
         }
       }
-      
+
       /* Focus states for accessibility */
       .post a:focus {
         outline: 2px solid #1dbac9;
         outline-offset: 2px;
         border-radius: 4px;
       }
-      
+
       /* Loading state */
       .blog-posts.loading .post {
         animation: pulse 1.5s ease-in-out infinite;
       }
-      
+
       @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.7; }
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+
+      .MuiBox-root.css-x3fsw6 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p.MuiTypography-root.MuiTypography-body1.css-12wonab {
+        margin-bottom: 100px;
       }
     </style>
     <script>
@@ -2876,4 +2859,3 @@
 </html>
 
 <!-- / -->
-
