@@ -330,7 +330,7 @@
                           " ",
                           "Posei Systems Pty Ltd. | ",
                           (0, n.jsx)(o(), {
-                            href: "/terms-of-use",
+                            href: "/terms-of-use/",
                             style: {
                               color: "#848895",
                               textDecoration: "none",
