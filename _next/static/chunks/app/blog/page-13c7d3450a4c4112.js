@@ -519,39 +519,69 @@
                               (0, i.jsxs)("div", {
                                 className: "post",
                                 children: [
+                                  (0, i.jsxs)("div", {
+                                    className: "post-content",
+                                    children: [
+                                      (0, i.jsx)("a", {
+                                        href: "Where_Strategy_Meets_Execution.html",
+                                        children: "Where Strategy Meets Execution",
+                                      }),
+                                      (0, i.jsx)("div", {
+                                        className: "date",
+                                        children: "2025-07-15",
+                                      }),
+                                    ],
+                                  }),
                                   (0, i.jsx)("a", {
                                     href: "Where_Strategy_Meets_Execution.html",
-                                    children: "Where Strategy Meets Execution",
-                                  }),
-                                  (0, i.jsx)("div", {
-                                    className: "date",
-                                    children: "2025-07-15",
+                                    className: "read-more-btn",
+                                    children: "Read more",
                                   }),
                                 ],
                               }),
                               (0, i.jsxs)("div", {
                                 className: "post",
                                 children: [
+                                  (0, i.jsxs)("div", {
+                                    className: "post-content",
+                                    children: [
+                                      (0, i.jsx)("a", {
+                                        href: "The_Flexibility_You_Need.html",
+                                        children: "The Flexibility You Need",
+                                      }),
+                                      (0, i.jsx)("div", {
+                                        className: "date",
+                                        children: "2025-07-15",
+                                      }),
+                                    ],
+                                  }),
                                   (0, i.jsx)("a", {
                                     href: "The_Flexibility_You_Need.html",
-                                    children: "The Flexibility You Need",
-                                  }),
-                                  (0, i.jsx)("div", {
-                                    className: "date",
-                                    children: "2025-07-15",
+                                    className: "read-more-btn",
+                                    children: "Read more",
                                   }),
                                 ],
                               }),
                               (0, i.jsxs)("div", {
                                 className: "post",
                                 children: [
+                                  (0, i.jsxs)("div", {
+                                    className: "post-content",
+                                    children: [
+                                      (0, i.jsx)("a", {
+                                        href: "Practical_Insights_for_Real_Trading.html",
+                                        children: "Practical Insights for Real Trading",
+                                      }),
+                                      (0, i.jsx)("div", {
+                                        className: "date",
+                                        children: "2025-07-15",
+                                      }),
+                                    ],
+                                  }),
                                   (0, i.jsx)("a", {
                                     href: "Practical_Insights_for_Real_Trading.html",
-                                    children: "Practical Insights for Real Trading",
-                                  }),
-                                  (0, i.jsx)("div", {
-                                    className: "date",
-                                    children: "2025-07-15",
+                                    className: "read-more-btn",
+                                    children: "Read more",
                                   }),
                                 ],
                               }),
