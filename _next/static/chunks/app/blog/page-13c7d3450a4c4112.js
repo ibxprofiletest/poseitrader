@@ -504,7 +504,7 @@
                           mb: "1rem",
                           zIndex: "1",
                           marginBottom: "50px",
-                          children: "Welcome to the PoseiTrader Blog",
+                          children: "Posei Trader Blog",
                         }),
                         (0, i.jsx)(a.default, {
                           sx: {
@@ -519,39 +519,69 @@
                               (0, i.jsxs)("div", {
                                 className: "post",
                                 children: [
+                                  (0, i.jsxs)("div", {
+                                    className: "post-content",
+                                    children: [
+                                      (0, i.jsx)("a", {
+                                        href: "Getting_Started.html",
+                                        children: "Getting Started with PoseiTrader",
+                                      }),
+                                      (0, i.jsx)("div", {
+                                        className: "date",
+                                        children: "2025-07-15",
+                                      }),
+                                    ],
+                                  }),
                                   (0, i.jsx)("a", {
                                     href: "Getting_Started.html",
-                                    children: "Getting Started with PoseiTrader",
-                                  }),
-                                  (0, i.jsx)("div", {
-                                    className: "date",
-                                    children: "2025-07-15",
+                                    className: "read-more-btn",
+                                    children: "Read more",
                                   }),
                                 ],
                               }),
                               (0, i.jsxs)("div", {
                                 className: "post",
                                 children: [
+                                  (0, i.jsxs)("div", {
+                                    className: "post-content",
+                                    children: [
+                                      (0, i.jsx)("a", {
+                                        href: "Backtesting_vs_Live_Trading.html",
+                                        children: "Backtesting vs. Live Trading",
+                                      }),
+                                      (0, i.jsx)("div", {
+                                        className: "date",
+                                        children: "2025-07-15",
+                                      }),
+                                    ],
+                                  }),
                                   (0, i.jsx)("a", {
                                     href: "Backtesting_vs_Live_Trading.html",
-                                    children: "Backtesting vs. Live Trading",
-                                  }),
-                                  (0, i.jsx)("div", {
-                                    className: "date",
-                                    children: "2025-07-15",
+                                    className: "read-more-btn",
+                                    children: "Read more",
                                   }),
                                 ],
                               }),
                               (0, i.jsxs)("div", {
                                 className: "post",
                                 children: [
+                                  (0, i.jsxs)("div", {
+                                    className: "post-content",
+                                    children: [
+                                      (0, i.jsx)("a", {
+                                        href: "Practical_Insights_for_Real_Trading.html",
+                                        children: "Practical Insights for Real Trading",
+                                      }),
+                                      (0, i.jsx)("div", {
+                                        className: "date",
+                                        children: "2025-07-15",
+                                      }),
+                                    ],
+                                  }),
                                   (0, i.jsx)("a", {
                                     href: "Practical_Insights_for_Real_Trading.html",
-                                    children: "Practical Insights for Real Trading",
-                                  }),
-                                  (0, i.jsx)("div", {
-                                    className: "date",
-                                    children: "2025-07-15",
+                                    className: "read-more-btn",
+                                    children: "Read more",
                                   }),
                                 ],
                               }),
