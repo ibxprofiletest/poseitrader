@@ -328,7 +328,26 @@
                           " ",
                           new Date().getFullYear(),
                           " ",
-                          "Posei Systems Pty Ltd. All rights reserved.",
+                          "Posei Systems Pty Ltd. | ",
+                          (0, n.jsx)(o(), {
+                            href: "/terms-of-use",
+                            style: {
+                              color: "#848895",
+                              textDecoration: "underline",
+                              cursor: "pointer",
+                            },
+                            children: "Terms of Use",
+                          }),
+                          " | ",
+                          (0, n.jsx)(o(), {
+                            href: "mailto:hello@poseitrader.com",
+                            style: {
+                              color: "#848895",
+                              textDecoration: "underline",
+                              cursor: "pointer",
+                            },
+                            children: "hello@poseitrader.com",
+                          }),
                         ],
                       }),
                     ],
