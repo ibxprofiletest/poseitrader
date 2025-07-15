@@ -328,40 +328,7 @@
                           " ",
                           new Date().getFullYear(),
                           " ",
-                          "Posei Systems Pty Ltd. | ",
-                          (0, n.jsx)(o(), {
-                            href: "/terms-of-use/",
-                            style: {
-                              color: "#848895",
-                              textDecoration: "none",
-                              cursor: "pointer",
-                              transition: "color 0.2s ease",
-                            },
-                            onMouseEnter: (e) => {
-                              e.target.style.color = "#eee";
-                            },
-                            onMouseLeave: (e) => {
-                              e.target.style.color = "#848895";
-                            },
-                            children: "Terms of Use",
-                          }),
-                          " | ",
-                          (0, n.jsx)(o(), {
-                            href: "mailto:hello@poseitrader.com",
-                            style: {
-                              color: "#848895",
-                              textDecoration: "none",
-                              cursor: "pointer",
-                              transition: "color 0.2s ease",
-                            },
-                            onMouseEnter: (e) => {
-                              e.target.style.color = "#eee";
-                            },
-                            onMouseLeave: (e) => {
-                              e.target.style.color = "#848895";
-                            },
-                            children: "hello@poseitrader.com",
-                          }),
+                          "Posei Systems Pty Ltd. All rights reserved.",
                         ],
                       }),
                     ],
@@ -405,16 +372,7 @@
                           },
                         ],
                       },
-                      { category: "Blog", 
-                        items: [
-                          {
-                            text: "Blog",
-                            link: "/blog",
-                            newTab: !0,
-                            external: !0,
-                          },
-                        ],
-                       },
+                      { category: "Blog", link: "/blog", disable: !1 },
                     ].map((e) =>
                       (0, n.jsxs)(
                         i.default,
