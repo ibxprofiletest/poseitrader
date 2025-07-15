@@ -504,7 +504,7 @@
                           mb: "1rem",
                           zIndex: "1",
                           marginBottom: "50px",
-                          children: "Welcome to the PoseiTrader Blog",
+                          children: "Posei Trader Blog",
                         }),
                         (0, i.jsx)(a.default, {
                           sx: {
