@@ -520,7 +520,7 @@
                                 className: "post",
                                 children: [
                                   (0, i.jsx)("a", {
-                                    href: "article1.html",
+                                    href: "Where_Strategy_Meets_Execution",
                                     children: "Where Strategy Meets Execution",
                                   }),
                                   (0, i.jsx)("div", {
