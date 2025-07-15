@@ -333,8 +333,15 @@
                             href: "/terms-of-use",
                             style: {
                               color: "#848895",
-                              textDecoration: "underline",
+                              textDecoration: "none",
                               cursor: "pointer",
+                              transition: "color 0.2s ease",
+                            },
+                            onMouseEnter: (e) => {
+                              e.target.style.color = "#eee";
+                            },
+                            onMouseLeave: (e) => {
+                              e.target.style.color = "#848895";
                             },
                             children: "Terms of Use",
                           }),
@@ -343,8 +350,15 @@
                             href: "mailto:hello@poseitrader.com",
                             style: {
                               color: "#848895",
-                              textDecoration: "underline",
+                              textDecoration: "none",
                               cursor: "pointer",
+                              transition: "color 0.2s ease",
+                            },
+                            onMouseEnter: (e) => {
+                              e.target.style.color = "#eee";
+                            },
+                            onMouseLeave: (e) => {
+                              e.target.style.color = "#848895";
                             },
                             children: "hello@poseitrader.com",
                           }),
