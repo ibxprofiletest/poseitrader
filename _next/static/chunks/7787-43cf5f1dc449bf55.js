@@ -372,7 +372,17 @@
                           },
                         ],
                       },
-                      { category: "Blog", link: "/blog", disable: !1 },
+                      {
+                        category: "Blog",
+                        items: [
+                          {
+                            text: "Blog",
+                            link: "/blog/",
+                            newTab: !0,
+                            external: !0,
+                          },
+                        ],
+                      },
                     ].map((e) =>
                       (0, n.jsxs)(
                         i.default,
